@@ -1,361 +1,216 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>24/7 Vehicle Recovery in Portsmouth | Lightning Recovery</title>
-  <meta name="description" content="24/7 emergency vehicle recovery and breakdown service in Portsmouth and surrounding areas. Fast local tow trucks, clear prices and free quotes over the phone." />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <title>Recovero | 24/7 Vehicle Recovery in Portsmouth</title>
+  <meta name="description" content="Recovero provides fast, 24/7 breakdown and accident recovery for cars and vans in Portsmouth and surrounding areas. Call now for an instant quote.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="images/recovero-logo.png">
 </head>
 <body>
-  <div class="page">
-    <!-- Top bar -->
-    <div class="top-bar">
-      <div class="top-bar-inner">
-        <div class="top-bar-left">
-          <span>🚨 Stuck right now? 24/7 vehicle recovery in Portsmouth &amp; surrounding areas.</span>
-        </div>
-        <div class="top-bar-right">
-          <span class="top-bar-phone">Call now: <a href="tel:07XXXXXXXXX">07XX XXX XXXX</a></span>
-        </div>
+
+  <!-- Top alert bar -->
+  <div class="top-bar">
+    <span class="emoji">🚨</span>
+    <span>Stuck right now? 24/7 vehicle recovery in Portsmouth &amp; nearby.</span>
+    <a href="tel:07366302341" class="top-bar-call">Call: 07366 302341</a>
+  </div>
+
+  <!-- Header / navigation -->
+  <header class="site-header">
+    <div class="logo-wrap">
+      <img src="images/recovero-logo.png" alt="Recovero logo" class="logo-img">
+      <div class="logo-text">
+        <span class="brand-name">Recovero</span>
+        <span class="brand-tagline">The Vehicle Recovery Network</span>
       </div>
     </div>
 
-    <!-- Header -->
-    <header>
-      <div class="header-inner">
-        <div class="logo">
-          Lightning Recovery
-          <span>24/7 Vehicle Recovery</span>
+    <nav class="main-nav">
+      <a href="index.html" class="nav-link active">Home</a>
+      <a href="breakdown-recovery.html" class="nav-link">Breakdown Recovery</a>
+      <a href="accident-recovery.html" class="nav-link">Accident Recovery</a>
+      <a href="vehicle-transport.html" class="nav-link">Vehicle Transport</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- Hero section -->
+    <section class="hero">
+      <div class="hero-text">
+        <h1>24/7 Vehicle Recovery in Portsmouth</h1>
+        <p class="hero-sub">
+          Fast local recovery for cars and vans in Portsmouth, Havant, Fareham, Gosport and surrounding areas.
+        </p>
+        <ul class="hero-list">
+          <li>Typical arrival time <strong>30–60 minutes</strong> (traffic dependent)</li>
+          <li>Breakdowns, accidents &amp; vehicle transport</li>
+          <li>Clear price before we set off – no membership</li>
+        </ul>
+        <a href="tel:07366302341" class="btn btn-primary hero-call-btn">
+          📞 Call Now for an Instant Quote
+        </a>
+        <p class="hero-note">
+          Don’t want to call? Use the WhatsApp form – we’ll open WhatsApp with your details ready to send.
+        </p>
+      </div>
+
+      <div class="hero-image-card">
+        <img src="images/recovery-truck.jpg" alt="Recovery truck loading a car in Portsmouth">
+      </div>
+    </section>
+
+    <!-- WhatsApp form + quick summary -->
+    <section class="two-column">
+      <div class="two-col-block">
+        <h2>Quick WhatsApp Call-Back</h2>
+        <p>Fill this in and we’ll open WhatsApp with everything pre-filled to <a href="tel:07366302341">07366 302341</a>. You just hit send.</p>
+
+        <form id="whatsappForm">
+          <div class="form-row">
+            <label for="name">Your name</label>
+            <input id="name" name="name" type="text" placeholder="e.g. James" required>
+          </div>
+
+          <div class="form-row">
+            <label for="mobile">Your mobile number</label>
+            <input id="mobile" name="mobile" type="tel" placeholder="07…" required>
+          </div>
+
+          <div class="form-row two-cols">
+            <div>
+              <label for="location">Location / postcode</label>
+              <input id="location" name="location" type="text" placeholder="e.g. PO1 1AA" required>
+            </div>
+            <div>
+              <label for="vehicle">Vehicle (make &amp; model)</label>
+              <input id="vehicle" name="vehicle" type="text" placeholder="e.g. BMW 3 Series" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label for="issue">What’s happened?</label>
+            <textarea id="issue" name="issue" rows="2" placeholder="Broke down, won’t start, accident, etc." required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-dark full-width">
+            💬 Open WhatsApp &amp; Send Details
+          </button>
+        </form>
+
+        <p class="small-note">
+          If WhatsApp doesn’t open, or it’s an emergency, please call us directly on <a href="tel:07366302341">07366 302341</a>.
+        </p>
+      </div>
+
+      <div class="two-col-block">
+        <h2>Why Drivers Use Recovero</h2>
+        <ul class="icon-list">
+          <li><strong>Fast local response</strong> – focused on Portsmouth and surrounding areas for quicker ETAs.</li>
+          <li><strong>No membership required</strong> – pay only when you actually need recovery.</li>
+          <li><strong>Clear, upfront pricing</strong> – guide prices before we set off.</li>
+          <li><strong>Cars &amp; vans</strong> – running or non-running, roadside or home start.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Services summary cards -->
+    <section class="services">
+      <h2>What We Can Help With</h2>
+      <div class="service-grid">
+        <article class="service-card">
+          <h3>Breakdown Recovery</h3>
+          <p>Car won’t start? Broken down at the roadside or at home? We’ll recover you and your vehicle safely.</p>
+          <a href="breakdown-recovery.html" class="text-link">More about breakdown recovery →</a>
+        </article>
+
+        <article class="service-card">
+          <h3>Accident Recovery</h3>
+          <p>Had a bump or serious accident? We can recover your vehicle and take it to a safe location or chosen garage.</p>
+          <a href="accident-recovery.html" class="text-link">More about accident recovery →</a>
+        </article>
+
+        <article class="service-card">
+          <h3>Vehicle Transport</h3>
+          <p>Need a car or van moved between addresses, garages or buyers? We offer pre-booked transport across the region.</p>
+          <a href="vehicle-transport.html" class="text-link">More about vehicle transport →</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- Prices -->
+    <section class="prices">
+      <h2>Guide Prices</h2>
+      <p class="prices-intro">Every job is different, but these guides keep things simple and transparent.</p>
+      <div class="price-grid">
+        <div class="price-card">
+          <h3>Local recovery</h3>
+          <p class="price-main">From <strong>£60</strong></p>
+          <p class="price-note">Short-distance recovery within Portsmouth (exact price depends on distance and access).</p>
         </div>
-        <nav class="nav-links">
-          <a href="index.html">Home</a>
-          <a href="breakdown-recovery.html">Breakdown Recovery</a>
-          <a href="accident-recovery.html">Accident Recovery</a>
-          <a href="vehicle-transport.html">Vehicle Transport</a>
-        </nav>
-        <div class="header-cta">
-          <div class="header-hours">Open 24/7 – Cars &amp; Vans</div>
-          <a href="tel:07XXXXXXXXX" class="btn-call-header">
-            <span>📞</span>
-            <span>Call Now</span>
-          </a>
+        <div class="price-card">
+          <h3>Longer distance</h3>
+          <p class="price-main">From <strong>£1.50 per mile</strong></p>
+          <p class="price-note">For recoveries outside the immediate area or between towns.</p>
         </div>
       </div>
-    </header>
+      <p class="small-note">
+        You’ll always get a quote before we set off – no surprise add-ons.
+      </p>
+    </section>
 
-    <main>
-      <!-- Hero -->
-      <section class="section hero">
-        <div class="section-inner hero-inner">
-          <!-- Left copy -->
-          <div>
-            <h1 class="hero-title">24/7 Vehicle Recovery in Portsmouth</h1>
-            <p class="hero-subtitle">
-              Fast local breakdown and accident recovery for cars and vans across Portsmouth, Havant, Fareham, Gosport and nearby areas. Clear prices before we set off.
-            </p>
-
-            <ul class="hero-bullets">
-              <li>Typical arrival time <strong>30–60 minutes</strong> (traffic dependent)</li>
-              <li>Cars, vans &amp; 4x4s recovered – running or non-running</li>
-              <li>Breakdowns, accidents, motorway &amp; long-distance recovery</li>
-              <li>No membership needed – one-off fixed price</li>
-            </ul>
-
-            <div class="hero-cta-row">
-              <a href="tel:07XXXXXXXXX" class="btn-call-main">
-                <span>📞</span>
-                <span>Call Now for an Instant Quote</span>
-              </a>
-            </div>
-            <div class="hero-secondary-text">
-              Or request a call back using the form – we’ll ring you as soon as possible.
-            </div>
-          </div>
-
-          <!-- Right form card -->
-          <div class="hero-card">
-            <div class="hero-card-title">Request a Call Back</div>
-            <div class="hero-card-subtitle">
-              Tell us where you are and what’s happened. We’ll call you back with a price and ETA.
-            </div>
-
-            <form>
-              <div class="form-grid form-grid--two">
-                <div class="form-field">
-                  <label for="name">Name</label>
-                  <input id="name" name="name" type="text" placeholder="Your name" required />
-                </div>
-                <div class="form-field">
-                  <label for="phone">Mobile number</label>
-                  <input id="phone" name="phone" type="tel" placeholder="07XX XXX XXXX" required />
-                </div>
-              </div>
-
-              <div class="form-grid form-grid--two">
-                <div class="form-field">
-                  <label for="location">Location / postcode</label>
-                  <input id="location" name="location" type="text" placeholder="e.g. PO1 1AA" required />
-                </div>
-                <div class="form-field">
-                  <label for="vehicle">Vehicle (make &amp; model)</label>
-                  <input id="vehicle" name="vehicle" type="text" placeholder="e.g. BMW 3 Series" />
-                </div>
-              </div>
-
-              <div class="form-field">
-                <label for="issue">What’s happened?</label>
-                <textarea id="issue" name="issue" placeholder="Broke down on the M27, car won’t start, accident damage..."></textarea>
-              </div>
-
-              <button type="submit" class="btn-submit">Request My Call Back</button>
-              <p class="form-note">
-                🚨 If you’re in a dangerous location (e.g. motorway hard shoulder), it’s always quickest to call us directly on
-                <span class="hero-phone-inline">07XX XXX XXXX</span>.
-              </p>
-            </form>
-          </div>
-        </div>
-      </section>
-
-      <!-- Why choose us -->
-      <section class="section section--grey">
-        <div class="section-inner">
-          <h2 class="section-title">Why Choose Lightning Recovery?</h2>
-          <p class="section-lead">
-            When you’re stuck, you don’t want forms and call centres – you want someone local who can give you a straight price and get a truck on the way.
-          </p>
-
-          <div class="cards-3">
-            <div class="card">
-              <h3>Fast Local Response</h3>
-              <p>
-                We focus on Portsmouth and the surrounding areas so we can get to you quickly – typical arrival time is 30–60 minutes,
-                depending on traffic and exact location.
-              </p>
-            </div>
-            <div class="card">
-              <h3>No Membership Required</h3>
-              <p>
-                No need for yearly breakdown cover. You only pay for the recovery you need, when you actually need it – simple, one-off pricing.
-              </p>
-            </div>
-            <div class="card">
-              <h3>Clear, Upfront Quotes</h3>
-              <p>
-                We confirm the price and estimated arrival time before a truck sets off. No hidden call-out fees when the driver arrives.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Services overview -->
-      <section class="section">
-        <div class="section-inner">
-          <h2 class="section-title">Recovery Services We Provide</h2>
-          <p class="section-lead">
-            Whatever’s gone wrong, we’ll help get you and your vehicle to a safe place – whether that’s home, your regular garage or somewhere else.
-          </p>
-
-          <div class="cards-3">
-            <div class="card">
-              <h3><a href="breakdown-recovery.html">Breakdown Recovery</a></h3>
-              <ul class="list-check">
-                <li>Won’t start at home or at work</li>
-                <li>Cut out while driving</li>
-                <li>Warning lights, overheating or mechanical failure</li>
-              </ul>
-            </div>
-            <div class="card">
-              <h3><a href="accident-recovery.html">Accident &amp; Motorway Recovery</a></h3>
-              <ul class="list-check">
-                <li>Non-drivable vehicles after an accident</li>
-                <li>Recovery from roads, lay-bys and car parks</li>
-                <li>Coverage on local motorways and A-roads</li>
-              </ul>
-            </div>
-            <div class="card">
-              <h3><a href="vehicle-transport.html">Vehicle Transport</a></h3>
-              <ul class="list-check">
-                <li>Garage-to-home or home-to-garage moves</li>
-                <li>Auction &amp; dealer collections</li>
-                <li>Project cars and non-runners transported</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- How it works -->
-      <section class="section section--grey">
-        <div class="section-inner">
-          <h2 class="section-title">How It Works</h2>
-          <p class="section-lead">
-            We keep it simple – no complicated paperwork or long forms. A quick call is usually all it takes to get help on the way.
-          </p>
-
-          <div class="steps">
-            <div>
-              <div class="step-num">Step 1</div>
-              <div class="step-title">You Call or Request a Call Back</div>
-              <p class="step-text">
-                Tell us where you are, what you’re driving and what’s happened – breakdown, accident or just need a tow.
-              </p>
-            </div>
-            <div>
-              <div class="step-num">Step 2</div>
-              <div class="step-title">We Give You a Price &amp; ETA</div>
-              <p class="step-text">
-                We confirm the cost and estimated arrival time. If you’re happy, we dispatch a local recovery truck to you.
-              </p>
-            </div>
-            <div>
-              <div class="step-num">Step 3</div>
-              <div class="step-title">We Recover You &amp; Your Vehicle</div>
-              <p class="step-text">
-                Your vehicle is loaded safely and taken to your chosen destination – home, garage or agreed location.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Prices -->
-      <section class="section">
-        <div class="section-inner prices-wrap">
-          <div>
-            <h2 class="section-title">Straightforward “From” Prices</h2>
-            <p class="section-lead">
-              Every job is slightly different – distance, vehicle size and situation – but these guide prices give you an honest idea of what to expect.
-            </p>
-
-            <ul class="price-list">
-              <li>
-                <span class="price-highlight">Local recovery in the Portsmouth area from £60</span><br />
-                Ideal for short-distance breakdowns and non-starts.
-              </li>
-              <li>
-                <span class="price-highlight">Longer-distance recovery from £1.50 per mile</span><br />
-                For transport to garages, home or buyers further away.
-              </li>
-              <li>
-                <span class="price-highlight">Accident &amp; motorway recovery – priced on situation</span><br />
-                We’ll give you a clear quote based on location and condition of the vehicle.
-              </li>
-            </ul>
-
-            <p class="price-note">
-              You will always get a confirmed price and ETA over the phone before a recovery truck sets off.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>What affects the price?</h3>
-            <p>
-              Our quotes are based on:
-            </p>
-            <ul class="list-check" style="margin-top:0.4rem;">
-              <li>Distance from pickup to drop-off</li>
-              <li>Vehicle size and weight</li>
-              <li>Location (home, roadside, motorway, car park, etc.)</li>
-              <li>How easy it is to access and load the vehicle</li>
-            </ul>
-            <p style="font-size:0.9rem; color:var(--text-muted); margin-top:0.7rem;">
-              We’ll explain everything on the call so you know exactly what you’re paying for before you agree to anything.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- Areas covered -->
-      <section class="section section--grey">
-        <div class="section-inner">
-          <h2 class="section-title">Areas We Cover</h2>
-          <p class="section-lead">
-            We cover Portsmouth and the surrounding area. If you’re nearby and not sure whether we can reach you, just call and we’ll let you know.
-          </p>
-
-          <ul class="areas-list">
-            <li>Portsmouth &amp; Southsea</li>
-            <li>Cosham &amp; Drayton</li>
-            <li>Havant &amp; Waterlooville</li>
-            <li>Fareham &amp; Portchester</li>
-            <li>Gosport</li>
-            <li>Nearby sections of the M27</li>
-            <li>Nearby sections of the A27 &amp; A3</li>
-            <li>Other nearby towns by arrangement</li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- Reviews -->
-      <section class="section">
-        <div class="section-inner">
-          <h2 class="section-title">What Drivers Say</h2>
-          <p class="section-lead">
-            Once you have real reviews, drop them in here. Until then, these are placeholders you can replace.
-          </p>
-
-          <div class="reviews">
-            <div class="review-card">
-              <p class="review-text">
-                “Broke down on the way home from work – they picked up the phone straight away, quoted me a price and were with me in under an hour.”
-              </p>
-              <div class="review-name">James P, Portsmouth</div>
-              <div class="review-meta">Local breakdown recovery</div>
-            </div>
-            <div class="review-card">
-              <p class="review-text">
-                “Car wouldn’t start on the drive. They got it loaded and taken to my usual garage with no hassle and kept me updated on arrival time.”
-              </p>
-              <div class="review-name">Sarah L, Gosport</div>
-              <div class="review-meta">Home start &amp; transport</div>
-            </div>
-            <div class="review-card">
-              <p class="review-text">
-                “Really clear on price from the beginning and no surprise extras. Exactly what you want when you’re already stressed about the car.”
-              </p>
-              <div class="review-name">Ahmed K, Havant</div>
-              <div class="review-meta">Longer-distance recovery</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Bottom CTA -->
-      <section class="section section--grey">
-        <div class="section-inner bottom-cta">
-          <h2 class="section-title">Need Recovery Right Now?</h2>
-          <p>
-            If it’s urgent, calling is always quickest. If it’s not an emergency, send us a call-back request and we’ll get in touch as soon as we can.
-          </p>
-          <div style="margin-top:1rem;">
-            <a href="tel:07XXXXXXXXX" class="btn-call-main">
-              <span>📞</span>
-              <span>Call Now for 24/7 Recovery</span>
-            </a>
-          </div>
-          <p style="margin-top:0.6rem; font-size:0.88rem; color:var(--text-muted);">
-            Lightning Recovery – Portsmouth &amp; surrounding areas
-          </p>
-        </div>
-      </section>
-    </main>
-
-    <!-- Footer -->
-    <footer>
-      <div class="footer-inner">
-        <div>
-          © 2025 Lightning Recovery – 24/7 Vehicle Recovery &amp; Breakdown Service, Portsmouth.
-        </div>
-        <div class="footer-links">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms &amp; Conditions</a>
-          <a href="#">Contact</a>
-        </div>
+    <!-- Reviews placeholder -->
+    <section class="reviews">
+      <h2>What Drivers Say</h2>
+      <div class="review-grid">
+        <article class="review-card">
+          <p>“Called at 11pm, they answered straight away and had my car on the truck within 45 minutes. Clear price and no drama.”</p>
+          <p class="review-name">— James, Portsmouth</p>
+        </article>
+        <article class="review-card">
+          <p>“Recovered our van from the motorway after a breakdown. Kept us updated and took it straight to our garage.”</p>
+          <p class="review-name">— Kelly, Gosport</p>
+        </article>
       </div>
-    </footer>
-  </div>
+      <p class="small-note">Real Google reviews coming soon as we complete more recoveries.</p>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>© Recovero – The Vehicle Recovery Network. 24/7 vehicle recovery in Portsmouth &amp; surrounding areas.</p>
+  </footer>
+
+  <!-- Sticky mobile call bar -->
+  <a href="tel:07366302341" class="sticky-call">
+    <span>📞 Call Recovero Now</span>
+    <span class="sticky-call-small">24/7 Breakdown &amp; Accident Recovery</span>
+  </a>
+
+  <script>
+    // WhatsApp form logic
+    document.getElementById('whatsappForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      var name = document.getElementById('name').value.trim();
+      var mobile = document.getElementById('mobile').value.trim();
+      var location = document.getElementById('location').value.trim();
+      var vehicle = document.getElementById('vehicle').value.trim();
+      var issue = document.getElementById('issue').value.trim();
+
+      var message = "Hi, it's " + name +
+        ". My number is " + mobile +
+        ". I'm in " + location +
+        " with a " + vehicle +
+        ". Issue: " + issue;
+
+      var encoded = encodeURIComponent(message);
+      var phone = "447366302341"; // UK number without the leading 0
+      var url = "https://wa.me/" + phone + "?text=" + encoded;
+
+      window.location.href = url;
+    });
+  </script>
 </body>
 </html>
