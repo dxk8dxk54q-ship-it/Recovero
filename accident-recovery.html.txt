@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Accident &amp; Motorway Recovery in Portsmouth | Lightning Recovery</title>
+  <meta name="description" content="Accident and motorway vehicle recovery in Portsmouth, M27, A27 and surrounding routes. Fast response and safe transport for damaged vehicles." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page">
+    <div class="top-bar">
+      <div class="top-bar-inner">
+        <div class="top-bar-left">
+          <span>🚨 Had an accident? We recover non-drivable vehicles in Portsmouth &amp; nearby.</span>
+        </div>
+        <div class="top-bar-right">
+          <span class="top-bar-phone">Call now: <a href="tel:07XXXXXXXXX">07XX XXX XXXX</a></span>
+        </div>
+      </div>
+    </div>
+
+    <header>
+      <div class="header-inner">
+        <div class="logo">
+          Lightning Recovery
+          <span>Accident &amp; Motorway Recovery</span>
+        </div>
+        <nav class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="breakdown-recovery.html">Breakdown Recovery</a>
+          <a href="accident-recovery.html">Accident Recovery</a>
+          <a href="vehicle-transport.html">Vehicle Transport</a>
+        </nav>
+        <div class="header-cta">
+          <div class="header-hours">Open 24/7 – Cars &amp; Vans</div>
+          <a href="tel:07XXXXXXXXX" class="btn-call-header">
+            <span>📞</span>
+            <span>Call Now</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section hero">
+        <div class="section-inner">
+          <h1 class="hero-title">Accident &amp; Motorway Recovery in Portsmouth</h1>
+          <p class="hero-subtitle">
+            Non-drivable or badly damaged vehicle? We arrange safe recovery across Portsmouth, the M27, A27, A3 and surrounding routes – 24 hours a day.
+          </p>
+
+          <ul class="hero-bullets">
+            <li>Accident-damaged and non-drivable vehicles recovered</li>
+            <li>Roadside, junction, car park and motorway recovery</li>
+            <li>Delivered to your chosen garage, home or storage yard</li>
+            <li>Clear quote and ETA before we dispatch a truck</li>
+          </ul>
+
+          <div class="hero-cta-row">
+            <a href="tel:07XXXXXXXXX" class="btn-call-main">
+              <span>📞</span>
+              <span>Call Now for Accident Recovery</span>
+            </a>
+          </div>
+          <div class="hero-secondary-text">
+            We’ll ask where you are, whether the scene is safe and where you want the vehicle taken.
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--grey">
+        <div class="section-inner">
+          <h2 class="section-title">What We Can Help With</h2>
+          <p class="section-lead">
+            From low-speed bumps to more serious damage, we’ll help get you and your vehicle moved safely.
+          </p>
+          <ul class="list-check">
+            <li>Accident-damaged cars and vans that can’t be driven</li>
+            <li>Vehicles stuck on local roads, roundabouts and junctions</li>
+            <li>Motorway and A-road recovery (M27, A27, A3 and more)</li>
+            <li>Transport to bodyshops, repairers or storage sites</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-inner">
+          <h2 class="section-title">Accident &amp; Motorway Recovery Prices</h2>
+          <p class="section-lead">
+            Pricing depends on location, access and vehicle condition. As a guide:
+          </p>
+          <ul class="price-list">
+            <li><span class="price-highlight">Local accident recovery typically from £80–£120</span></li>
+            <li><span class="price-highlight">Motorway and complex recoveries priced individually</span></li>
+          </ul>
+          <p class="price-note">
+            We’ll give you a clear quote and estimated arrival time over the phone before we send a truck.
+          </p>
+        </div>
+      </section>
+
+      <section class="section section--grey">
+        <div class="section-inner bottom-cta">
+          <h2 class="section-title">Need Accident Recovery Now?</h2>
+          <p>
+            If you’re in a dangerous position, call us immediately so we can help move you and your vehicle to safety.
+          </p>
+          <div style="margin-top:1rem;">
+            <a href="tel:07XXXXXXXXX" class="btn-call-main">
+              <span>📞</span>
+              <span>Call Now</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <div>© 2025 Lightning Recovery – Accident &amp; Motorway Recovery Portsmouth.</div>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

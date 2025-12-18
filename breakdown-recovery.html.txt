@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Breakdown Recovery in Portsmouth | Lightning Recovery</title>
+  <meta name="description" content="24/7 breakdown recovery in Portsmouth and surrounding areas. Fast local response, clear prices and no membership needed." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page">
+    <div class="top-bar">
+      <div class="top-bar-inner">
+        <div class="top-bar-left">
+          <span>🚨 Broken down? 24/7 breakdown recovery in Portsmouth &amp; nearby.</span>
+        </div>
+        <div class="top-bar-right">
+          <span class="top-bar-phone">Call now: <a href="tel:07XXXXXXXXX">07XX XXX XXXX</a></span>
+        </div>
+      </div>
+    </div>
+
+    <header>
+      <div class="header-inner">
+        <div class="logo">
+          Lightning Recovery
+          <span>Breakdown Recovery</span>
+        </div>
+        <nav class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="breakdown-recovery.html">Breakdown Recovery</a>
+          <a href="accident-recovery.html">Accident Recovery</a>
+          <a href="vehicle-transport.html">Vehicle Transport</a>
+        </nav>
+        <div class="header-cta">
+          <div class="header-hours">Open 24/7 – Cars &amp; Vans</div>
+          <a href="tel:07XXXXXXXXX" class="btn-call-header">
+            <span>📞</span>
+            <span>Call Now</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section hero">
+        <div class="section-inner">
+          <h1 class="hero-title">Breakdown Recovery in Portsmouth</h1>
+          <p class="hero-subtitle">
+            24/7 breakdown recovery for cars and vans in Portsmouth, Havant, Fareham, Gosport and nearby areas. No membership – just a straightforward, one-off price.
+          </p>
+
+          <ul class="hero-bullets">
+            <li>Typical arrival time <strong>30–60 minutes</strong> (traffic dependent)</li>
+            <li>Home start, roadside and car park recovery</li>
+            <li>Cars, vans &amp; 4x4s – running or non-running</li>
+            <li>Clear quote before we set off</li>
+          </ul>
+
+          <div class="hero-cta-row">
+            <a href="tel:07XXXXXXXXX" class="btn-call-main">
+              <span>📞</span>
+              <span>Call Now for Breakdown Recovery</span>
+            </a>
+          </div>
+          <div class="hero-secondary-text">
+            Or request a call back using the form on our <a href="index.html">home page</a>.
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--grey">
+        <div class="section-inner">
+          <h2 class="section-title">When to Call Us</h2>
+          <p class="section-lead">
+            We can help whether your vehicle has let you down at home, at work or on the road.
+          </p>
+          <ul class="list-check">
+            <li>Car won’t start on the drive or in a car park</li>
+            <li>Breakdown on local roads, roundabouts or junctions</li>
+            <li>Engine or gearbox problems making the car unsafe to drive</li>
+            <li>Overheating, oil or battery warning lights</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-inner">
+          <h2 class="section-title">Breakdown Recovery Prices</h2>
+          <p class="section-lead">
+            Prices depend on distance, access and vehicle type, but our breakdown recoveries in the Portsmouth area typically start from:
+          </p>
+          <ul class="price-list">
+            <li><span class="price-highlight">Local breakdown recovery from £60</span></li>
+            <li><span class="price-highlight">Longer-distance breakdown recovery from £1.50 per mile</span></li>
+          </ul>
+          <p class="price-note">
+            You’ll always get a confirmed price and ETA over the phone before we send a truck.
+          </p>
+        </div>
+      </section>
+
+      <section class="section section--grey">
+        <div class="section-inner bottom-cta">
+          <h2 class="section-title">Need Breakdown Recovery Now?</h2>
+          <p>
+            If it’s urgent, calling is always quickest. We’ll take a few details and get a truck on the way.
+          </p>
+          <div style="margin-top:1rem;">
+            <a href="tel:07XXXXXXXXX" class="btn-call-main">
+              <span>📞</span>
+              <span>Call Now</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <div>© 2025 Lightning Recovery – Breakdown Recovery Portsmouth.</div>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
