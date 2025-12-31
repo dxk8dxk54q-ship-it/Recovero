@@ -9,8 +9,8 @@
 body {
   margin: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  color: #1b2533;
-  background-color: #f5f7fb;
+  color: #e6edf7;
+  background-color: #0b1f3f;
   line-height: 1.5;
 }
 
@@ -88,8 +88,8 @@ a:hover {
   justify-content: space-between;
   align-items: center;
   padding: 0.8rem 1.5rem;
-  background-color: #ffffff;
-  border-bottom: 1px solid #e5e7eb;
+  background-color: #0f274f;
+  border-bottom: 1px solid #1f3b6a;
   position: sticky;
   top: 0;
   z-index: 20;
@@ -115,12 +115,12 @@ a:hover {
 .brand-name {
   font-weight: 700;
   font-size: 1.1rem;
-  color: #111827;
+  color: #e6edf7;
 }
 
 .brand-tagline {
   font-size: 0.75rem;
-  color: #6b7280;
+  color: #cbd8f5;
 }
 
 .main-nav {
@@ -130,14 +130,14 @@ a:hover {
 }
 
 .nav-link {
-  color: #4b5563;
+  color: #cbd8f5;
   padding-bottom: 0.25rem;
   border-bottom: 2px solid transparent;
 }
 
 .nav-link.active,
 .nav-link:hover {
-  color: #111827;
+  color: #ffffff;
   border-bottom-color: #f97316;
 }
 
@@ -166,13 +166,13 @@ main {
 
 .hero-sub {
   margin: 0 0 0.75rem;
-  color: #4b5563;
+  color: #cbd8f5;
 }
 
 .hero-list {
   padding-left: 1.1rem;
   margin: 0 0 1rem;
-  color: #374151;
+  color: #d9e4f8;
 }
 
 .hero-call-btn {
@@ -181,14 +181,14 @@ main {
 
 .hero-note {
   font-size: 0.85rem;
-  color: #6b7280;
+  color: #b7c6e8;
 }
 
 .hero-image-card {
-  background-color: #ffffff;
+  background-color: #10294e;
   border-radius: 1rem;
   padding: 0.5rem;
-  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .hero-image-card img {
@@ -207,10 +207,11 @@ main {
 }
 
 .two-col-block {
-  background-color: #ffffff;
+  background-color: #10294e;
   border-radius: 1rem;
   padding: 1.2rem 1.3rem;
-  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  color: #e6edf7;
 }
 
 .two-col-block h2 {
@@ -232,7 +233,7 @@ form {
   font-size: 0.85rem;
   font-weight: 600;
   margin-bottom: 0.2rem;
-  color: #374151;
+  color: #d9e4f8;
 }
 
 .form-row input,
@@ -240,15 +241,17 @@ form {
   width: 100%;
   padding: 0.55rem 0.75rem;
   border-radius: 0.5rem;
-  border: 1px solid #d1d5db;
+  border: 1px solid #37558c;
+  background-color: #0f1d3a;
   font-size: 0.9rem;
+  color: #e6edf7;
 }
 
 .form-row input:focus,
 .form-row textarea:focus {
   outline: none;
   border-color: #f97316;
-  box-shadow: 0 0 0 1px rgba(249, 115, 22, 0.25);
+  box-shadow: 0 0 0 1px rgba(249, 115, 22, 0.35);
 }
 
 .form-row.two-cols {
@@ -300,11 +303,12 @@ form {
 }
 
 .service-card {
-  background-color: #ffffff;
+  background-color: #10294e;
   border-radius: 1rem;
   padding: 1.1rem 1.2rem;
-  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
   font-size: 0.9rem;
+  color: #e6edf7;
 }
 
 /* Prices */
@@ -314,7 +318,7 @@ form {
 }
 
 .prices-intro {
-  color: #4b5563;
+  color: #cfd9f3;
 }
 
 .price-grid {
@@ -325,10 +329,11 @@ form {
 }
 
 .price-card {
-  background-color: #ffffff;
+  background-color: #10294e;
   border-radius: 1rem;
   padding: 1rem 1.1rem;
-  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
+  color: #e6edf7;
 }
 
 .price-main {
@@ -338,7 +343,7 @@ form {
 
 .price-note {
   font-size: 0.85rem;
-  color: #6b7280;
+  color: #cbd8f5;
 }
 
 /* Reviews */
@@ -354,27 +359,29 @@ form {
 }
 
 .review-card {
-  background-color: #ffffff;
+  background-color: #10294e;
   border-radius: 1rem;
   padding: 1rem 1.1rem;
-  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
   font-size: 0.9rem;
+  color: #e6edf7;
 }
 
 .review-name {
   font-size: 0.8rem;
   font-weight: 600;
-  color: #4b5563;
+  color: #cfd9f3;
 }
 
 /* Page hero */
 
 .page-hero {
   margin-bottom: 2rem;
-  background-color: #ffffff;
+  background-color: #10294e;
   border-radius: 1rem;
   padding: 1.3rem 1.4rem;
-  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  color: #e6edf7;
 }
 
 .page-hero h1 {
@@ -386,7 +393,7 @@ form {
 .site-footer {
   text-align: center;
   font-size: 0.8rem;
-  color: #6b7280;
+  color: #d5def2;
   padding: 1.2rem 1rem 1.5rem;
 }
 
