@@ -367,6 +367,11 @@ form {
   color: #4b5563;
 }
 
+.section-lead {
+  color: #4b5563;
+  margin-top: -0.3rem;
+}
+
 /* Page hero */
 
 .page-hero {
@@ -388,6 +393,30 @@ form {
   font-size: 0.8rem;
   color: #6b7280;
   padding: 1.2rem 1rem 1.5rem;
+}
+
+.areas-intro {
+  margin-bottom: 2.5rem;
+}
+
+.areas-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.2rem;
+  margin-top: 1rem;
+}
+
+.area-card {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 1rem 1.1rem;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.05);
+  font-size: 0.9rem;
+}
+
+.area-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.4rem;
 }
 
 /* Sticky call bar (mobile focus) */
@@ -439,6 +468,10 @@ form {
   }
 
   .service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .areas-grid {
     grid-template-columns: 1fr;
   }
 
