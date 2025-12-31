@@ -9,8 +9,8 @@
 body {
   margin: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  color: #e6edf7;
-  background-color: #0b1f3f;
+  color: #1b2533;
+  background-color: #f5f7fb;
   line-height: 1.5;
 }
 
@@ -166,13 +166,13 @@ main {
 
 .hero-sub {
   margin: 0 0 0.75rem;
-  color: #cbd8f5;
+  color: #4b5563;
 }
 
 .hero-list {
   padding-left: 1.1rem;
   margin: 0 0 1rem;
-  color: #d9e4f8;
+  color: #374151;
 }
 
 .hero-call-btn {
@@ -181,7 +181,7 @@ main {
 
 .hero-note {
   font-size: 0.85rem;
-  color: #b7c6e8;
+  color: #6b7280;
 }
 
 .hero-image-card {
@@ -211,7 +211,6 @@ main {
   border-radius: 1rem;
   padding: 1.2rem 1.3rem;
   box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
-  color: #1b2533;
 }
 
 .two-col-block h2 {
@@ -242,9 +241,7 @@ form {
   padding: 0.55rem 0.75rem;
   border-radius: 0.5rem;
   border: 1px solid #d1d5db;
-  background-color: #ffffff;
   font-size: 0.9rem;
-  color: #1b2533;
 }
 
 .form-row input:focus,
@@ -308,7 +305,6 @@ form {
   padding: 1.1rem 1.2rem;
   box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
   font-size: 0.9rem;
-  color: #1b2533;
 }
 
 /* Prices */
@@ -318,7 +314,7 @@ form {
 }
 
 .prices-intro {
-  color: #cfd9f3;
+  color: #4b5563;
 }
 
 .price-grid {
@@ -333,7 +329,6 @@ form {
   border-radius: 1rem;
   padding: 1rem 1.1rem;
   box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
-  color: #1b2533;
 }
 
 .price-main {
@@ -364,7 +359,6 @@ form {
   padding: 1rem 1.1rem;
   box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
   font-size: 0.9rem;
-  color: #1b2533;
 }
 
 .review-name {
@@ -381,7 +375,6 @@ form {
   border-radius: 1rem;
   padding: 1.3rem 1.4rem;
   box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
-  color: #1b2533;
 }
 
 .page-hero h1 {
@@ -393,7 +386,7 @@ form {
 .site-footer {
   text-align: center;
   font-size: 0.8rem;
-  color: #d5def2;
+  color: #6b7280;
   padding: 1.2rem 1rem 1.5rem;
 }
 
