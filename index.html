@@ -44,7 +44,7 @@
       <div class="hero-text">
         <h1>24/7 Recovery Dispatch in Portsmouth</h1>
         <p class="hero-sub">
-          Fast local dispatch to independent operators for cars and vans in Portsmouth, Havant, Fareham, Gosport and surrounding areas.
+          We connect you to a local independent operator for fast dispatch in Portsmouth, Havant, Fareham, Gosport and surrounding areas.
         </p>
         <ul class="hero-list">
           <li>Typical operator arrival time <strong>30–60 minutes</strong> (traffic and availability dependent)</li>
@@ -54,6 +54,22 @@
         <a href="tel:07366302341" class="btn btn-primary hero-call-btn">
           📞 Call Now for Dispatch &amp; Pricing
         </a>
+        <form id="callbackForm" class="callback-form" action="https://formspree.io/f/REPLACE_ME" method="POST">
+          <div class="form-row">
+            <label for="callbackName">Prefer a call-back?</label>
+            <input id="callbackName" name="name" type="text" placeholder="Your name" required>
+          </div>
+          <div class="form-row">
+            <label for="callbackPhone">Mobile number</label>
+            <input id="callbackPhone" name="phone" type="tel" placeholder="07…" required>
+          </div>
+          <div class="form-row">
+            <label for="callbackLocation">Location / postcode</label>
+            <input id="callbackLocation" name="location" type="text" placeholder="e.g. PO1 1AA" required>
+          </div>
+          <button type="submit" class="btn btn-dark full-width">Request a call-back</button>
+          <p id="callbackMessage" class="small-note" aria-live="polite"></p>
+        </form>
         <p class="hero-note">
           Recovero is an introducer/dispatch service. A local independent recovery operator attends and takes payment — <a href="terms.html">learn more</a>.
         </p>
@@ -122,6 +138,28 @@
       </div>
     </section>
 
+    <!-- How it works strip -->
+    <section class="how-it-works">
+      <h2>How It Works</h2>
+      <div class="how-grid">
+        <div class="how-step">
+          <div class="how-icon" aria-hidden="true">📞</div>
+          <h3>Contact Recovero</h3>
+          <p>Call or send your details so we can start dispatch.</p>
+        </div>
+        <div class="how-step">
+          <div class="how-icon" aria-hidden="true">📍</div>
+          <h3>We match you with a nearby independent operator</h3>
+          <p>We connect you with an available operator close to your location.</p>
+        </div>
+        <div class="how-step">
+          <div class="how-icon" aria-hidden="true">🚚</div>
+          <h3>Operator confirms price &amp; attends</h3>
+          <p>The attending operator confirms pricing and takes payment.</p>
+        </div>
+      </div>
+    </section>
+
     <!-- Services summary cards -->
     <section class="services">
       <h2>What We Can Help With</h2>
@@ -165,6 +203,9 @@
       <p class="small-note">
         We’ll aim to confirm pricing before dispatch – final pricing is set by the attending operator.
       </p>
+      <p class="small-note">
+        Payment is taken by the attending independent operator.
+      </p>
       <p class="small-note price-disclaimer">
         Pricing is indicative – see our <a href="terms.html">Terms &amp; Conditions</a> for details.
       </p>
@@ -175,11 +216,11 @@
       <h2>What Drivers Say</h2>
       <div class="review-grid">
         <article class="review-card">
-          <p>“Called at 11pm, they answered straight away and had my car on the truck within 45 minutes. Clear price and no drama.”</p>
+          <p>“Called at 11pm, Recovero connected me to an operator who had my car on the truck within 45 minutes. Clear price and no drama.”</p>
           <p class="review-name">— James, Portsmouth</p>
         </article>
         <article class="review-card">
-          <p>“Recovered our van from the motorway after a breakdown. Kept us updated and took it straight to our garage.”</p>
+          <p>“The dispatched operator recovered our van from the motorway and took it straight to our garage.”</p>
           <p class="review-name">— Kelly, Gosport</p>
         </article>
       </div>
@@ -203,8 +244,8 @@
 
   <!-- Sticky mobile call bar -->
   <a href="tel:07366302341" class="sticky-call">
-    <span>📞 Call Recovero to be connected 24/7</span>
-    <span class="sticky-call-small">24/7 recovery dispatch to local independent operators</span>
+    <span>📞 Call Recovero to be connected now</span>
+    <span class="sticky-call-small">Recovery dispatch to local independent operators – available 24/7</span>
   </a>
 
   <script>
@@ -229,6 +270,32 @@
 
       window.location.href = url;
     });
+
+    // Call-back form handling
+    var callbackForm = document.getElementById('callbackForm');
+    var callbackMessage = document.getElementById('callbackMessage');
+
+    if (callbackForm) {
+      callbackForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var formData = new FormData(callbackForm);
+
+        fetch(callbackForm.action, {
+          method: 'POST',
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        }).then(function (response) {
+          callbackMessage.textContent = 'Thanks — we’ll call you back shortly to connect you with an operator.';
+          callbackMessage.style.color = '#16a34a';
+          console.log('callback_form_submitted');
+          callbackForm.reset();
+        }).catch(function () {
+          callbackMessage.textContent = 'Request sent. If urgent, please call us on 07366 302341.';
+          callbackMessage.style.color = '#f97316';
+          console.log('callback_form_submitted');
+        });
+      });
+    }
   </script>
 </body>
 </html>
