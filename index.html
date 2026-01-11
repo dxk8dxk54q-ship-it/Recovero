@@ -261,10 +261,16 @@
   </footer>
 
   <!-- Sticky mobile call bar -->
-  <a href="tel:07366302341" class="sticky-call">
-    <span>📞 Call Recovero to be connected now</span>
-    <span class="sticky-call-small">Recovery dispatch to local independent operators – available 24/7</span>
-  </a>
+  <div class="sticky-bar" role="group" aria-label="Sticky contact options">
+    <a href="tel:07366302341" class="sticky-button sticky-call js-sticky-call" aria-label="Call Recovero on 07366 302341">
+      <span class="sticky-button-title">📞 Call</span>
+      <span class="sticky-button-sub">Recovero 24/7 dispatch</span>
+    </a>
+    <a href="https://wa.me/447366302341?text=Hi%20Recovero%2C%20I%20need%20recovery.%20My%20location%20is%3A%20%5BPOSTCODE%5D.%20Vehicle%3A%20%5BMAKE%2FMODEL%5D.%20Issue%3A%20%5BBRIEF%5D." class="sticky-button sticky-whatsapp js-sticky-whatsapp" aria-label="WhatsApp Recovero on 07366 302341" target="_blank" rel="noopener">
+      <span class="sticky-button-title">💬 WhatsApp</span>
+      <span class="sticky-button-sub">Message your details</span>
+    </a>
+  </div>
 
   <script>
     // WhatsApp form logic
@@ -314,6 +320,30 @@
         });
       });
     }
+
+    function trackStickyEvent(name) {
+      if (window.dataLayer && typeof window.dataLayer.push === 'function') {
+        window.dataLayer.push({ event: name });
+        return;
+      }
+      if (typeof window.gtag === 'function') {
+        window.gtag('event', name);
+        return;
+      }
+      console.log(name);
+    }
+
+    document.querySelectorAll('.js-sticky-call').forEach(function (el) {
+      el.addEventListener('click', function () {
+        trackStickyEvent('click_call_sticky');
+      });
+    });
+
+    document.querySelectorAll('.js-sticky-whatsapp').forEach(function (el) {
+      el.addEventListener('click', function () {
+        trackStickyEvent('click_whatsapp_sticky');
+      });
+    });
   </script>
 </body>
 </html>

@@ -488,38 +488,66 @@ form {
 
 /* Sticky call bar (mobile focus) */
 
-.sticky-call {
+.sticky-bar {
   position: fixed;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #f97316;
+  background-color: #111827;
   color: #ffffff;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 0.6rem 1rem;
-  text-decoration: none;
-  font-weight: 600;
+  gap: 0.6rem;
+  padding: 0.6rem 0.8rem;
   box-shadow: 0 -4px 14px rgba(15, 23, 42, 0.25);
   z-index: 40;
 }
 
-.sticky-call span {
+.sticky-button {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.15rem;
+  min-height: 52px;
+  border-radius: 0.9rem;
+  text-decoration: none;
+  font-weight: 600;
+  text-align: center;
   line-height: 1.1;
 }
 
-.sticky-call-small {
-  font-size: 0.8rem;
+.sticky-call {
+  background-color: #f97316;
+  color: #ffffff;
+}
+
+.sticky-whatsapp {
+  background-color: #111827;
+  border: 1px solid #f97316;
+  color: #ffffff;
+}
+
+.sticky-button-title {
+  font-size: 0.95rem;
+}
+
+.sticky-button-sub {
+  font-size: 0.75rem;
   font-weight: 400;
   opacity: 0.95;
 }
 
 /* Make room for sticky bar on small screens */
 @media (max-width: 768px) {
-  main {
-    padding-bottom: 5rem;
+  body {
+    padding-bottom: 5.8rem;
+  }
+}
+
+@media (min-width: 769px) {
+  .sticky-bar {
+    display: none;
   }
 }
 
