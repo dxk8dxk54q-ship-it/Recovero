@@ -169,6 +169,12 @@ main {
   color: #4b5563;
 }
 
+.hero-emphasis {
+  margin: 0 0 0.75rem;
+  font-weight: 600;
+  color: #111827;
+}
+
 .hero-list {
   padding-left: 1.1rem;
   margin: 0 0 1rem;
