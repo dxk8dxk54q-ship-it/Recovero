@@ -65,33 +65,17 @@
           <a href="tel:07366302341" class="btn btn-primary hero-call-btn">
             📞 Call Now – ETA &amp; Price
           </a>
-          <a href="#whatsappForm" class="btn btn-outline hero-whatsapp-btn">
-            💬 WhatsApp Instead
-          </a>
         </div>
-        <form id="callbackForm" class="callback-form" action="https://formspree.io/f/REPLACE_ME" method="POST">
-          <div class="form-row">
-            <label for="callbackName">Prefer a call-back?</label>
-            <input id="callbackName" name="name" type="text" placeholder="Your name" required>
-          </div>
-          <div class="form-row">
-            <label for="callbackPhone">Mobile number</label>
-            <input id="callbackPhone" name="phone" type="tel" placeholder="07…" required>
-          </div>
-          <div class="form-row">
-            <label for="callbackLocation">Location / postcode</label>
-            <input id="callbackLocation" name="location" type="text" placeholder="e.g. PO1 1AA" required>
-          </div>
-          <button type="submit" class="btn btn-dark full-width">Request a call-back</button>
-          <p class="small-note">By submitting, you agree to our <a href="privacy-policy.html">Privacy Policy</a>.</p>
-          <p class="small-note">We may share your details with an independent recovery operator to confirm price and availability.</p>
-          <p id="callbackMessage" class="small-note" aria-live="polite"></p>
-        </form>
+        <div class="whatsapp-fallback" id="whatsappFallback">
+          <h2>Can’t call?</h2>
+          <p>Send your location and what’s happened on WhatsApp.</p>
+          <a href="https://wa.me/447366302341?text=Hi%20Recovero%2C%20I%20need%20recovery.%20Location%2Fpostcode%3A%20____%20.%20Vehicle%3A%20____%20.%20Issue%3A%20____%20." class="btn btn-outline">
+            WhatsApp – Send Details
+          </a>
+          <p class="whatsapp-note">Best for noisy locations / if you can’t talk.</p>
+        </div>
         <p class="hero-note">
           Recovero is an introducer/dispatch service. A local independent recovery operator attends and takes payment — <a href="terms.html">learn more</a>.
-        </p>
-        <p class="hero-note">
-          Don’t want to call? Use the WhatsApp form – we’ll open WhatsApp with your details ready to send to be connected with an operator.
         </p>
       </div>
 
@@ -100,61 +84,15 @@
       </div>
     </section>
 
-    <!-- WhatsApp form + quick summary -->
-    <section class="two-column">
-      <div class="two-col-block">
-        <h2>Quick WhatsApp Call-Back</h2>
-        <p>Fill this in and we’ll open WhatsApp with everything pre-filled to <a href="tel:07366302341">07366 302341</a>. You just hit send.</p>
-
-        <form id="whatsappForm">
-          <div class="form-row">
-            <label for="name">Your name</label>
-            <input id="name" name="name" type="text" placeholder="e.g. James" required>
-          </div>
-
-          <div class="form-row">
-            <label for="mobile">Your mobile number</label>
-            <input id="mobile" name="mobile" type="tel" placeholder="07…" required>
-          </div>
-
-          <div class="form-row two-cols">
-            <div>
-              <label for="location">Location / postcode</label>
-              <input id="location" name="location" type="text" placeholder="e.g. PO1 1AA" required>
-            </div>
-            <div>
-              <label for="vehicle">Vehicle (make &amp; model)</label>
-              <input id="vehicle" name="vehicle" type="text" placeholder="e.g. BMW 3 Series" required>
-            </div>
-          </div>
-
-          <div class="form-row">
-            <label for="issue">What’s happened?</label>
-            <textarea id="issue" name="issue" rows="2" placeholder="Broke down, won’t start, accident, etc." required></textarea>
-          </div>
-
-          <button type="submit" class="btn btn-dark full-width">
-            💬 Open WhatsApp &amp; Send Details
-          </button>
-          <p class="small-note">By submitting, you agree to our <a href="privacy-policy.html">Privacy Policy</a>.</p>
-          <p class="small-note">We may share your details with an independent recovery operator to confirm price and availability.</p>
-        </form>
-
-        <p class="small-note">
-          If WhatsApp doesn’t open, or it’s an emergency, please call Recovero on <a href="tel:07366302341">07366 302341</a> to be connected with an operator.
-        </p>
-      </div>
-
-      <div class="two-col-block">
-        <h2>Why Drivers Use Recovero</h2>
-        <ul class="icon-list">
-          <li><strong>Introducer service</strong> – we match you with a local operator; they provide the service and take payment.</li>
-          <li><strong>Fast local response</strong> – focused on Portsmouth and surrounding areas for quicker operator ETAs.</li>
-          <li><strong>No membership required</strong> – pay the operator only when you actually need recovery or transport.</li>
-          <li><strong>Clear, upfront pricing</strong> – guide prices before dispatch where possible.</li>
-          <li><strong>Cars &amp; vans</strong> – running or non-running, roadside or home start handled by local operators.</li>
-        </ul>
-      </div>
+    <section class="content-card">
+      <h2>Why Drivers Use Recovero</h2>
+      <ul class="icon-list">
+        <li><strong>Introducer service</strong> – we match you with a local operator; they provide the service and take payment.</li>
+        <li><strong>Fast local response</strong> – focused on Portsmouth and surrounding areas for quicker operator ETAs.</li>
+        <li><strong>No membership required</strong> – pay the operator only when you actually need recovery or transport.</li>
+        <li><strong>Clear, upfront pricing</strong> – guide prices before dispatch where possible.</li>
+        <li><strong>Cars &amp; vans</strong> – running or non-running, roadside or home start handled by local operators.</li>
+      </ul>
     </section>
 
     <!-- How it works strip -->
@@ -280,35 +218,13 @@
       <span class="sticky-button-title">📞 Call</span>
       <span class="sticky-button-sub">Recovero 24/7 dispatch</span>
     </a>
-    <a href="https://wa.me/447366302341?text=Hi%20Recovero%2C%20I%20need%20recovery.%20My%20location%20is%3A%20%5BPOSTCODE%5D.%20Vehicle%3A%20%5BMAKE%2FMODEL%5D.%20Issue%3A%20%5BBRIEF%5D." class="sticky-button sticky-whatsapp js-sticky-whatsapp" aria-label="WhatsApp Recovero on 07366 302341" target="_blank" rel="noopener">
+    <a href="https://wa.me/447366302341?text=Hi%20Recovero%2C%20I%20need%20recovery.%20Location%2Fpostcode%3A%20____%20.%20Vehicle%3A%20____%20.%20Issue%3A%20____%20." class="sticky-button sticky-whatsapp js-sticky-whatsapp" aria-label="WhatsApp Recovero on 07366 302341" target="_blank" rel="noopener">
       <span class="sticky-button-title">💬 WhatsApp</span>
       <span class="sticky-button-sub">Message your details</span>
     </a>
   </div>
 
   <script>
-    // WhatsApp form logic
-    document.getElementById('whatsappForm').addEventListener('submit', function (e) {
-      e.preventDefault();
-      var name = document.getElementById('name').value.trim();
-      var mobile = document.getElementById('mobile').value.trim();
-      var location = document.getElementById('location').value.trim();
-      var vehicle = document.getElementById('vehicle').value.trim();
-      var issue = document.getElementById('issue').value.trim();
-
-      var message = "Hi, it's " + name +
-        ". My number is " + mobile +
-        ". I'm in " + location +
-        " with a " + vehicle +
-        ". Issue: " + issue;
-
-      var encoded = encodeURIComponent(message);
-      var phone = "447366302341"; // UK number without the leading 0
-      var url = "https://wa.me/" + phone + "?text=" + encoded;
-
-      window.location.href = url;
-    });
-
     var navToggle = document.querySelector('.nav-toggle');
     var primaryNav = document.getElementById('primaryNav');
 
@@ -316,32 +232,6 @@
       navToggle.addEventListener('click', function () {
         var isOpen = primaryNav.classList.toggle('is-open');
         navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-      });
-    }
-
-    // Call-back form handling
-    var callbackForm = document.getElementById('callbackForm');
-    var callbackMessage = document.getElementById('callbackMessage');
-
-    if (callbackForm) {
-      callbackForm.addEventListener('submit', function (e) {
-        e.preventDefault();
-        var formData = new FormData(callbackForm);
-
-        fetch(callbackForm.action, {
-          method: 'POST',
-          body: formData,
-          headers: { 'Accept': 'application/json' }
-        }).then(function (response) {
-          callbackMessage.textContent = 'Thanks — we’ll call you back shortly to connect you with an operator.';
-          callbackMessage.style.color = '#16a34a';
-          console.log('callback_form_submitted');
-          callbackForm.reset();
-        }).catch(function () {
-          callbackMessage.textContent = 'Request sent. If urgent, please call us on 07366 302341.';
-          callbackMessage.style.color = '#f97316';
-          console.log('callback_form_submitted');
-        });
       });
     }
 
