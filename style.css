@@ -93,6 +93,8 @@ a:hover {
   position: sticky;
   top: 0;
   z-index: 20;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .logo-wrap {
@@ -127,6 +129,7 @@ a:hover {
   display: flex;
   gap: 1rem;
   font-size: 0.9rem;
+  align-items: center;
 }
 
 .nav-link {
@@ -139,6 +142,39 @@ a:hover {
 .nav-link:hover {
   color: #111827;
   border-bottom-color: #f97316;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.header-call-btn {
+  font-size: 0.9rem;
+  padding: 0.6rem 1.1rem;
+  white-space: nowrap;
+}
+
+.nav-toggle {
+  display: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  border: 1px solid #e5e7eb;
+  background-color: #ffffff;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background-color: #111827;
 }
 
 /* Layout helpers */
@@ -181,8 +217,30 @@ main {
   color: #374151;
 }
 
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 0.6rem;
+}
+
 .hero-call-btn {
-  margin-bottom: 0.4rem;
+  margin-bottom: 0;
+}
+
+.btn-outline {
+  border: 2px solid #f97316;
+  color: #f97316;
+  background-color: transparent;
+}
+
+.btn-outline:hover {
+  background-color: #fff7ed;
+}
+
+.hero-whatsapp-btn {
+  padding: 0.6rem 1.1rem;
+  font-size: 0.85rem;
 }
 
 .callback-form {
@@ -593,14 +651,38 @@ form {
 
 @media (max-width: 768px) {
   .site-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.6rem;
+    flex-direction: row;
+    align-items: center;
   }
 
   .main-nav {
-    flex-wrap: wrap;
-    gap: 0.6rem;
     width: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6rem;
+    padding-top: 0.4rem;
+    flex-basis: 100%;
+  }
+
+  .main-nav.is-open {
+    display: flex;
+  }
+
+  .nav-link {
+    padding: 0.4rem 0;
+  }
+
+  .nav-toggle {
+    display: inline-flex;
+  }
+
+  .header-actions {
+    margin-left: auto;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
   }
 }
