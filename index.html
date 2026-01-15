@@ -27,7 +27,7 @@
       </div>
     </div>
 
-    <nav class="main-nav" id="primaryNav">
+    <nav id="mobileNav" class="nav-links">
       <a href="index.html" class="nav-link active">Home</a>
       <a href="breakdown-recovery.html" class="nav-link">Breakdown Recovery</a>
       <a href="accident-recovery.html" class="nav-link">Accident Recovery</a>
@@ -37,11 +37,7 @@
     </nav>
     <div class="header-actions">
       <a href="tel:07366302341" class="btn btn-primary header-call-btn">Call 07366 302341</a>
-      <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primaryNav">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+      <button class="hamburger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="mobileNav">☰</button>
     </div>
   </header>
 
@@ -224,17 +220,8 @@
     </a>
   </div>
 
+  <script src="script.js"></script>
   <script>
-    var navToggle = document.querySelector('.nav-toggle');
-    var primaryNav = document.getElementById('primaryNav');
-
-    if (navToggle && primaryNav) {
-      navToggle.addEventListener('click', function () {
-        var isOpen = primaryNav.classList.toggle('is-open');
-        navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-      });
-    }
-
     function trackStickyEvent(name) {
       if (window.dataLayer && typeof window.dataLayer.push === 'function') {
         window.dataLayer.push({ event: name });
