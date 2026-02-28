@@ -130,6 +130,7 @@ a:hover {
   gap: 1rem;
   font-size: 0.9rem;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .nav-link {
@@ -782,25 +783,34 @@ form {
 @media (max-width: 768px) {
   .site-header {
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
   }
 
   .nav-links {
     width: 100%;
-    display: none;
-    flex-direction: column;
-    align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     gap: 0.6rem;
-    padding-top: 0.4rem;
+    padding-top: 0.5rem;
     flex-basis: 100%;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
   }
 
-  .site-header.nav-open .nav-links {
-    display: flex;
+  .nav-links::-webkit-scrollbar {
+    height: 6px;
   }
 
   .nav-link {
-    padding: 0.4rem 0;
+    padding: 0.4rem 0.8rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 999px;
+    background-color: #f9fafb;
+    flex: 0 0 auto;
+    border-bottom-width: 1px;
   }
 
   .nav-submenu {
@@ -812,19 +822,65 @@ form {
   }
 
   .nav-details summary.nav-link {
-    padding: 0.4rem 0;
-  }
-
-  .hamburger {
-    display: inline-flex;
+    padding: 0.4rem 0.8rem;
   }
 
   .header-actions {
     margin-left: auto;
   }
 
+  .header-call-btn {
+    font-size: 0.85rem;
+    padding: 0.55rem 0.95rem;
+  }
+
   .hero-actions {
     flex-direction: column;
     align-items: stretch;
   }
+}
+
+.hero-quick-questions {
+  margin: 0.8rem 0 0.8rem;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.9rem;
+  padding: 0.85rem 1rem;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+}
+
+.hero-quick-questions h2 {
+  margin: 0 0 0.45rem;
+  font-size: 1rem;
+}
+
+.hero-quick-questions ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.hero-quick-questions li {
+  margin-bottom: 0.35rem;
+}
+
+.hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: 0 0 0.4rem;
+}
+
+.hero-badge {
+  background-color: #fff7ed;
+  border: 1px solid #fdba74;
+  color: #9a3412;
+  border-radius: 999px;
+  padding: 0.2rem 0.65rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.hero-coverage {
+  margin: 0 0 0.7rem;
+  color: #111827;
 }
