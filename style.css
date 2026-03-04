@@ -743,18 +743,6 @@ form {
 /* PPC landing page */
 
 
-.ppc-test-badge {
-  display: inline-block;
-  margin: 0 0 0.9rem;
-  padding: 0.2rem 0.55rem;
-  border-radius: 999px;
-  background-color: #111827;
-  color: #ffffff;
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-}
-
 .ppc-landing .site-header {
   position: static;
 }
