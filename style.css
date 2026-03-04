@@ -838,13 +838,19 @@ form {
   text-align: center;
 }
 
-.ppc-landing main {
-  padding-bottom: 110px;
+.ppc-disclaimer {
+  margin-top: 0.9rem;
 }
 
 @media (min-width: 769px) {
   .ppc-sticky {
     display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .ppc-landing main {
+    padding-bottom: 110px;
   }
 }
 
