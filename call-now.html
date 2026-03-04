@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="images/recovero-logo.png">
 </head>
-<body class="ppc-landing">
+<body class="ppc-landing has-sticky">
   <header class="site-header ppc-header">
     <div class="logo-wrap">
       <img src="images/recovero-logo.png" alt="Recovero logo" class="logo-img">
@@ -64,10 +64,23 @@
     </section>
   </main>
 
-  <div class="ppc-sticky" role="navigation" aria-label="Quick contact">
-    <div class="ppc-sticky__row">
-      <a id="ctaCallSticky" class="btn btn-primary" href="tel:+447366302341">Call Now</a>
-      <a id="ctaWhatsAppSticky" class="btn btn-outline" href="https://wa.me/447366302341?text=Hi%20Recovero%2C%20I%20need%20recovery.%20Location%2Fpostcode%3A%20____%20.%20Vehicle%3A%20____%20.%20Issue%3A%20____%20." target="_blank" rel="noopener">WhatsApp</a>
+  <div class="sticky-cta" role="navigation" aria-label="Quick contact">
+    <div class="sticky-cta__inner">
+      <a id="ctaCallSticky" class="sticky-cta__btn sticky-cta__btn--call" href="tel:+447366302341">
+        <span class="sticky-cta__icon" aria-hidden="true">📞</span>
+        <span class="sticky-cta__text">
+          <span class="sticky-cta__title">Call</span>
+          <span class="sticky-cta__sub">Recovero 24/7 dispatch</span>
+        </span>
+      </a>
+
+      <a id="ctaWhatsAppSticky" class="sticky-cta__btn sticky-cta__btn--wa" href="https://wa.me/447366302341?text=Hi%20Recovero%2C%20I%20need%20recovery.%20Location%2Fpostcode%3A%20____%20.%20Vehicle%3A%20____%20.%20Issue%3A%20____%20." target="_blank" rel="noopener">
+        <span class="sticky-cta__icon" aria-hidden="true">💬</span>
+        <span class="sticky-cta__text">
+          <span class="sticky-cta__title">WhatsApp</span>
+          <span class="sticky-cta__sub">Best for noisy locations / if you can’t talk.</span>
+        </span>
+      </a>
     </div>
   </div>
 </body>
