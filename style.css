@@ -145,24 +145,21 @@ a:hover {
   border-bottom-color: #f97316;
 }
 
-.nav-details {
+.nav-dropdown {
   position: relative;
 }
 
-.nav-details summary {
-  list-style: none;
+.nav-dropdown-trigger {
+  display: inline-block;
   cursor: pointer;
-}
-
-.nav-details summary::-webkit-details-marker {
-  display: none;
 }
 
 .nav-submenu {
   display: none;
   position: absolute;
-  top: calc(100% + 0.4rem);
+  top: 100%;
   left: 0;
+  margin-top: 0.4rem;
   background-color: #ffffff;
   border: 1px solid #e5e7eb;
   border-radius: 0.75rem;
@@ -171,10 +168,10 @@ a:hover {
   min-width: 220px;
   flex-direction: column;
   gap: 0.4rem;
-  z-index: 20;
+  z-index: 40;
 }
 
-.nav-details[open] .nav-submenu {
+.nav-dropdown.is-open .nav-submenu {
   display: flex;
 }
 
