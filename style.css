@@ -759,10 +759,8 @@ form {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 12px;
-}
-
-.site-sticky .btn {
-  text-align: center;
+  max-width: 720px;
+  margin: 0 auto;
 }
 
 @media (min-width: 769px) {
@@ -771,10 +769,10 @@ form {
   }
 }
 
-@media (max-width: 768px) {
-  .has-sticky main {
-    padding-bottom: calc(110px + env(safe-area-inset-bottom));
-  }
+body.has-sticky main,
+body.has-sticky .main,
+body.has-sticky .container {
+  padding-bottom: 110px;
 }
 
 /* PPC landing page */
