@@ -55,11 +55,13 @@
 
     .ppc-privacy-card{
       margin: 10px 0;
-      padding: 10px 12px;
+      padding: 12px;
+      max-width: 460px;
+      width: 100%;
+      box-sizing: border-box;
       background: rgba(255,255,255,0.82);
       border: 1px solid rgba(15,34,53,0.1);
       border-radius: 12px;
-      font-size: 0.9rem;
       line-height: 1.4;
       color: #2c3a4a;
     }
@@ -70,23 +72,27 @@
 
     .ppc-privacy-heading{
       display: block;
-      margin: 0 0 4px;
-      font-size: 0.78rem;
+      margin: 0 0 6px;
+      font-size: 17px;
       font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-      color: #556070;
+      color: #0f2235;
     }
 
     .ppc-privacy-note{
-      margin-top: 6px !important;
-      font-size: 0.78rem;
+      margin-top: 8px !important;
+      font-size: 14px;
       color: #556070;
+    }
+
+    .ppc-privacy-body{
+      font-size: 14px;
+      margin: 0;
     }
 
     .ppc-privacy-note a{
       color: #0f2235;
       font-weight: 600;
+      font-size: 14px;
       text-decoration-thickness: 1px;
     }
 
@@ -138,7 +144,8 @@
 
         <p class="ppc-reassurance">✅ No forms • ✅ No obligation • ✅ If you’re in danger, call 999 first.</p>
         <div class="ppc-privacy-card" aria-label="Privacy reassurance">
-          <p><span class="ppc-privacy-heading">Privacy</span>We don’t sell your data. We’re not a form site — if you call, we only use your details to connect you to an available independent operator and to handle your request. We don’t add you to marketing lists.</p>
+          <p class="ppc-privacy-heading">We don’t sell your details.</p>
+          <p class="ppc-privacy-body">We only share what’s needed with the recovery operator who attends.</p>
           <p class="ppc-privacy-note"><a href="privacy-policy.html">See Privacy Policy</a></p>
         </div>
         <p class="ppc-disclaimer">Introducer/dispatch service — attending operator provides the service and takes payment directly.</p>
