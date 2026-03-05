@@ -1,8 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta http-equiv="refresh" content="0; url=/" />
   <meta charset="UTF-8">
+  <script>
+    (function () {
+      if (window.location.pathname.endsWith('/index.html')) {
+        window.location.replace('/');
+      }
+    })();
+  </script>
   <title>Recovero | 24/7 Recovery Dispatch in Portsmouth</title>
   <meta name="description" content="Recovero connects you with local independent operators for fast, 24/7 breakdown, accident recovery and transport in Portsmouth and surrounding areas. Call now for dispatch.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
