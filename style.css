@@ -975,6 +975,14 @@ body.has-sticky .container{
 }
 
 @media (max-width: 768px) {
+  body.has-sticky .top-call-strip {
+    display: none !important;
+  }
+
+  body.has-sticky .header-call-btn {
+    display: none !important;
+  }
+
   .site-header {
     flex-direction: row;
     align-items: flex-start;
