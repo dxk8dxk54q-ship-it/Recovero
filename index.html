@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <script>
-    // Keep /index.html off the canonical homepage URL without redirect loops.
     (function () {
       if (window.location.pathname.endsWith('/index.html')) {
         window.location.replace('/');
