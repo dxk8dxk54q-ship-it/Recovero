@@ -1142,3 +1142,300 @@ body.has-sticky .container{
   margin: 0 0 0.7rem;
   color: #111827;
 }
+
+/* =============================
+   PPC Landing Page V2 (/call-now-v2.html)
+   ============================= */
+
+.ppc {
+  margin: 0;
+  font-family: Inter, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: #f6f7fb;
+  color: #0f172a;
+}
+
+.ppc-main,
+.ppc-header,
+.ppc-footer {
+  width: min(1100px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.ppc-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.ppc-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.ppc-logo {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+}
+
+.ppc-brand-name {
+  margin: 0;
+  font-weight: 800;
+  font-size: 1.05rem;
+}
+
+.ppc-brand-sub {
+  margin: 0.15rem 0 0;
+  font-size: 0.78rem;
+  color: #64748b;
+}
+
+.ppc-header-call {
+  text-decoration: none;
+  background: #f58220;
+  color: #ffffff;
+  border-radius: 999px;
+  padding: 0.65rem 1rem;
+  font-size: 0.88rem;
+  font-weight: 700;
+  min-height: 52px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.ppc-hero {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 1.25rem;
+  align-items: center;
+  margin-top: 0.4rem;
+}
+
+.ppc h1 {
+  margin: 0;
+  font-size: clamp(1.55rem, 2.8vw, 2.4rem);
+  line-height: 1.2;
+}
+
+.ppc-hero-copy {
+  margin: 0.8rem 0 0;
+  color: #334155;
+}
+
+.ppc-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-top: 1rem;
+}
+
+.ppc-btn-primary,
+.ppc-btn-secondary {
+  text-decoration: none;
+  border-radius: 999px;
+  min-height: 52px;
+  padding: 0.8rem 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.ppc-btn-primary {
+  background: #f58220;
+  color: #ffffff;
+}
+
+.ppc-btn-secondary {
+  background: #172033;
+  color: #ffffff;
+}
+
+.ppc-reassurance {
+  margin: 0.85rem 0 0;
+  font-size: 0.95rem;
+}
+
+.ppc-disclaimer {
+  margin: 0.45rem 0 0;
+  font-size: 0.84rem;
+  color: #64748b;
+}
+
+.ppc-card {
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+}
+
+.ppc-hero-image {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  min-height: 260px;
+}
+
+.ppc-hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.ppc-section {
+  margin-top: 1.5rem;
+}
+
+.ppc-section-title {
+  text-align: center;
+  margin: 0 0 1rem;
+}
+
+.benefit-list {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.benefit-row {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 0.75rem;
+  align-items: center;
+  padding: 0.95rem;
+}
+
+.benefit-row h3,
+.expect-tile h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.benefit-row p {
+  margin: 0.2rem 0 0;
+  color: #64748b;
+  font-size: 0.84rem;
+}
+
+.benefit-check,
+.benefit-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.benefit-check {
+  background: #effaf0;
+  color: #15803d;
+}
+
+.benefit-icon {
+  background: #f1f5f9;
+}
+
+.ppc-mid-cta-wrap {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.ppc-btn-full {
+  width: min(720px, 100%);
+}
+
+.ppc-mid-cta-wrap p {
+  margin: 0.5rem 0 0;
+  font-size: 0.9rem;
+  color: #475569;
+}
+
+.expect-grid {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.expect-tile {
+  padding: 1rem;
+  text-align: center;
+}
+
+.expect-tile span {
+  font-size: 1.35rem;
+}
+
+.expect-tile h3 {
+  margin-top: 0.55rem;
+}
+
+.faq details {
+  padding: 0.9rem 1rem;
+  margin-bottom: 0.65rem;
+}
+
+.faq summary {
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.faq p {
+  margin: 0.55rem 0 0;
+  color: #334155;
+}
+
+.ppc-footer {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1.2rem 0 0.5rem;
+}
+
+.ppc-footer a {
+  color: #64748b;
+  text-decoration: none;
+  font-size: 0.85rem;
+}
+
+.ppc.has-sticky {
+  padding-bottom: calc(100px + env(safe-area-inset-bottom));
+}
+
+.ppc .sticky-cta {
+  background: rgba(8, 22, 35, 0.9);
+}
+
+@media (max-width: 900px) {
+  .ppc-hero,
+  .expect-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ppc-header {
+    align-items: flex-start;
+  }
+
+  .ppc-header-call {
+    font-size: 0.8rem;
+    padding: 0.6rem 0.8rem;
+  }
+
+  .ppc-btn-primary,
+  .ppc-btn-secondary {
+    width: 100%;
+  }
+}
+
+@media (min-width: 769px) {
+  .ppc .sticky-cta {
+    display: none;
+  }
+
+  .ppc.has-sticky {
+    padding-bottom: 0;
+  }
+}
