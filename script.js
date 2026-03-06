@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-  var hamburger = document.querySelector('.hamburger');
+  var hamburger = document.getElementById('navToggle') || document.querySelector('.hamburger');
   var mobileNav = document.getElementById('mobileNav');
   var header = document.querySelector('.site-header');
 
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
       '<span class="sticky-cta__icon" aria-hidden="true">💬</span>' +
       '<span class="sticky-cta__text">' +
       '<span class="sticky-cta__title">WhatsApp</span>' +
-      '<span class="sticky-cta__sub">Best for noisy locations / if you can’t talk.</span>' +
+      '<span class="sticky-cta__sub">Best if you can’t talk.</span>' +
       '</span>' +
       '</a>' +
       '</div>';
@@ -111,6 +111,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function setExpanded(isExpanded) {
     header.classList.toggle('nav-open', isExpanded);
+    document.body.classList.toggle('nav-open', isExpanded);
     hamburger.setAttribute('aria-expanded', isExpanded ? 'true' : 'false');
   }
 
@@ -125,4 +126,22 @@ document.addEventListener('DOMContentLoaded', function () {
       closeLocationsDropdown();
     });
   });
+
+  document.addEventListener('click', function (event) {
+    if (!document.body.classList.contains('nav-open')) {
+      return;
+    }
+
+    if (header.contains(event.target)) {
+      return;
+    }
+
+    setExpanded(false);
+  });
+
+  window.addEventListener('scroll', function () {
+    if (document.body.classList.contains('nav-open')) {
+      setExpanded(false);
+    }
+  }, { passive: true });
 });
