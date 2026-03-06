@@ -31,7 +31,7 @@
       </div>
     </a>
 
-    <nav id="mobileNav" class="nav-links">
+    <nav id="mobileNav" class="nav-links mobile-nav-panel">
       <a href="/" class="nav-link active">Home</a>
       <a href="/breakdown-recovery/" class="nav-link">Breakdown Recovery</a>
       <a href="/accident-recovery/" class="nav-link">Accident Recovery</a>
@@ -41,6 +41,7 @@
     </nav>
     <div class="header-actions">
       <a href="tel:07366302341" class="btn btn-primary header-call-btn">Call 07366 302341</a>
+      <button id="navToggle" class="hamburger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="mobileNav">☰</button>
     </div>
   </header>
 
@@ -106,24 +107,26 @@
       </ul>
     </section>
 
-    <!-- How it works strip -->
-    <section class="section how-it-works fade-up">
-      <h2>How It Works</h2>
-      <div class="how-grid">
-        <div class="how-step">
-          <div class="how-icon" aria-hidden="true">📞</div>
-          <h3>Contact Recovero</h3>
-          <p>Call or send your details so we can start dispatch.</p>
-        </div>
-        <div class="how-step">
-          <div class="how-icon" aria-hidden="true">📍</div>
-          <h3>We match you with a nearby independent operator</h3>
-          <p>We connect you with an available operator close to your location.</p>
-        </div>
-        <div class="how-step">
-          <div class="how-icon" aria-hidden="true">🚚</div>
-          <h3>Operator confirms price &amp; attends</h3>
-          <p>The attending operator confirms pricing and takes payment.</p>
+    <section class="section fade-up">
+      <div class="how-band">
+        <h2>How Recovero works</h2>
+        <p>We connect you to an available local independent operator as quickly as possible.</p>
+        <div class="how-band__grid">
+          <article class="how-band__card">
+            <div class="how-band__icon" aria-hidden="true">📍</div>
+            <h3>Call or WhatsApp</h3>
+            <p>Send your location and tell us what’s happened.</p>
+          </article>
+          <article class="how-band__card">
+            <div class="how-band__icon" aria-hidden="true">🔎</div>
+            <h3>We match the job</h3>
+            <p>We contact an available local operator based on location and availability.</p>
+          </article>
+          <article class="how-band__card">
+            <div class="how-band__icon" aria-hidden="true">✅</div>
+            <h3>Operator confirms details</h3>
+            <p>The attending operator confirms ETA and price before dispatch where possible.</p>
+          </article>
         </div>
       </div>
     </section>
