@@ -1599,3 +1599,57 @@ button:focus-visible{outline:3px solid rgba(245,130,32,.45);outline-offset:2px}
 @media (prefers-reduced-motion: reduce){
   *{animation:none !important;transition:none !important;scroll-behavior:auto !important}
 }
+
+
+
+.hero--photo{
+  position: relative;
+  overflow: hidden;
+  border-radius: 28px;
+  min-height: 520px;
+  padding: 32px 24px;
+  display: flex;
+  align-items: flex-end;
+  background:
+    linear-gradient(135deg, rgba(7,26,43,0.78), rgba(7,26,43,0.42)),
+    url('/images/recovery-truck.jpg') center center / cover no-repeat;
+  box-shadow: 0 18px 40px rgba(2,6,23,.18);
+}
+
+.hero--photo .hero-content{
+  max-width: 720px;
+  background: rgba(7,26,43,0.28);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 22px;
+  padding: 20px;
+}
+
+.hero--photo h1,
+.hero--photo h2,
+.hero--photo h3,
+.hero--photo p,
+.hero--photo li{
+  color: #ffffff;
+}
+
+.hero--photo .btn,
+.hero--photo .btn-primary,
+.hero--photo a.btn{
+  box-shadow: 0 10px 24px rgba(245,130,32,0.28);
+}
+
+@media (max-width: 768px){
+  .hero--photo{
+    min-height: 460px;
+    padding: 20px 16px;
+    background:
+      linear-gradient(180deg, rgba(7,26,43,0.80), rgba(7,26,43,0.50)),
+      url('/images/recovery-truck.jpg') 68% center / cover no-repeat;
+  }
+
+  .hero--photo .hero-content{
+    padding: 16px;
+    border-radius: 18px;
+  }
+}
