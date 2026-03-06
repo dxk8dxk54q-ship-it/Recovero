@@ -800,7 +800,7 @@ form {
   right: 0;
   bottom: 0;
   z-index: 9999;
-  padding: 8px 10px calc(8px + env(safe-area-inset-bottom));
+  padding: 7px 10px calc(7px + env(safe-area-inset-bottom));
   background: rgba(8, 22, 35, 0.96);
   border-top: 1px solid rgba(255,255,255,0.08);
   backdrop-filter: blur(8px);
@@ -818,21 +818,21 @@ form {
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 10px 12px;
-  border-radius: 18px;
+  padding: 9px 12px;
+  border-radius: 15px;
   text-decoration: none;
-  min-height: 50px;
+  min-height: 48px;
   box-shadow: 0 10px 24px rgba(0,0,0,0.25);
 }
 
 .sticky-cta__icon{
-  width: 34px;
-  height: 34px;
+  width: 32px;
+  height: 32px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   border-radius: 999px;
-  font-size: 16px;
+  font-size: 15px;
   flex: 0 0 auto;
 }
 
@@ -845,12 +845,12 @@ form {
 
 .sticky-cta__title{
   font-weight: 800;
-  font-size: 15px;
+  font-size: 14px;
   color: #ffffff;
 }
 
 .sticky-cta__sub{
-  font-size: 11px;
+  font-size: 10px;
   color: rgba(255,255,255,0.78);
   margin-top: 2px;
   white-space: nowrap;
@@ -1583,10 +1583,10 @@ button:focus-visible{outline:3px solid rgba(245,130,32,.45);outline-offset:2px}
 
 .page-hero-image{display:block;width:min(100%,340px);max-height:190px;object-fit:cover;border-radius:14px;border:1px solid rgba(2,6,23,.06);margin:.95rem 0 .35rem}
 
-.sticky-cta{padding:8px 10px calc(8px + env(safe-area-inset-bottom));background:rgba(7,26,43,.88);backdrop-filter:blur(10px)}
+.sticky-cta{padding:7px 10px calc(7px + env(safe-area-inset-bottom));background:rgba(7,26,43,.88);backdrop-filter:blur(10px)}
 .sticky-cta__inner{gap:8px}
-.sticky-cta__btn{border:1px solid rgba(255,255,255,.12)}
-.sticky-cta__icon{width:34px;height:34px}
+.sticky-cta__btn{border:1px solid rgba(255,255,255,.12);min-height:48px;padding:9px 12px;border-radius:15px}
+.sticky-cta__icon{width:32px;height:32px}
 .sticky-cta__title,.sticky-cta__sub{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 
 @media (max-width:768px){
@@ -1602,128 +1602,82 @@ button:focus-visible{outline:3px solid rgba(245,130,32,.45);outline-offset:2px}
 
 
 
+
 .hero--photo{
   position: relative;
   overflow: hidden;
   border-radius: 28px;
-  min-height: 420px;
+  min-height: 400px;
   padding: 24px 18px;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  align-items: flex-end;
   background:
-    linear-gradient(180deg, rgba(7,26,43,0.42) 0%, rgba(7,26,43,0.68) 55%, rgba(7,26,43,0.84) 100%),
-    url('/images/recovery-truck.jpg') 52% 24% / cover no-repeat;
+    linear-gradient(
+      180deg,
+      rgba(7,26,43,0.24) 0%,
+      rgba(7,26,43,0.42) 38%,
+      rgba(7,26,43,0.68) 72%,
+      rgba(7,26,43,0.86) 100%
+    ),
+    url('/images/recovery-truck.jpg') 54% 20% / cover no-repeat;
   box-shadow: 0 18px 40px rgba(2,6,23,.18);
 }
 
 .hero--photo .hero-content{
   max-width: 720px;
-  background: rgba(7,26,43,0.28);
-  backdrop-filter: blur(4px);
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 22px;
-  padding: 20px;
 }
 
-.hero--photo > .hero-content,
-.hero--photo .hero-copy{
+.hero--photo h1,
+.hero--photo h2,
+.hero--photo p,
+.hero--photo li{
   color: #ffffff;
-}
-
-.hero--photo > .hero-content h1,
-.hero--photo > .hero-content p,
-.hero--photo > .hero-content li,
-.hero--photo .hero-copy h1,
-.hero--photo .hero-copy p,
-.hero--photo .hero-copy li{
-  color: #ffffff;
-}
-
-.hero--photo .question-card,
-.hero--photo .quick-questions,
-.hero--photo .hero-card,
-.hero--photo .whatsapp-card,
-.hero--photo .card,
-.hero--photo .hero-quick-questions,
-.hero--photo .whatsapp-fallback{
-  background: #ffffff;
-  color: #0f172a;
-  border-radius: 22px;
-}
-
-.hero--photo .question-card *,
-.hero--photo .quick-questions *,
-.hero--photo .hero-card *,
-.hero--photo .whatsapp-card *,
-.hero--photo .card *,
-.hero--photo .hero-quick-questions *,
-.hero--photo .whatsapp-fallback *{
-  color: inherit;
-}
-
-.hero--photo .question-card h2,
-.hero--photo .question-card h3,
-.hero--photo .question-card p,
-.hero--photo .question-card li,
-.hero--photo .quick-questions h2,
-.hero--photo .quick-questions h3,
-.hero--photo .quick-questions p,
-.hero--photo .quick-questions li,
-.hero--photo .whatsapp-card h2,
-.hero--photo .whatsapp-card h3,
-.hero--photo .whatsapp-card p,
-.hero--photo .whatsapp-card li,
-.hero--photo .hero-quick-questions h2,
-.hero--photo .hero-quick-questions h3,
-.hero--photo .hero-quick-questions p,
-.hero--photo .hero-quick-questions li,
-.hero--photo .whatsapp-fallback h2,
-.hero--photo .whatsapp-fallback h3,
-.hero--photo .whatsapp-fallback p,
-.hero--photo .whatsapp-fallback li{
-  color: #0f172a !important;
-}
-
-.hero--photo .question-card .icon,
-.hero--photo .quick-questions .icon,
-.hero--photo .whatsapp-card .icon,
-.hero--photo .hero-quick-questions .qq-icon,
-.hero--photo .hero-quick-questions .qq-icon svg{
-  color: #f58220 !important;
-}
-
-.hero--photo .hero-quick-questions .qq-icon svg{
-  fill: #f58220 !important;
-}
-
-.hero--photo .question-card,
-.hero--photo .quick-questions,
-.hero--photo .whatsapp-card,
-.hero--photo .card,
-.hero--photo .hero-quick-questions,
-.hero--photo .whatsapp-fallback{
-  min-height: auto;
-  height: auto;
 }
 
 .hero--photo .btn,
-.hero--photo .btn-primary,
-.hero--photo a.btn{
-  box-shadow: 0 10px 24px rgba(245,130,32,0.28);
+.hero--photo .btn-primary{
+  box-shadow: 0 10px 24px rgba(245,130,32,.28);
+}
+
+.hero-followup{
+  margin-top: 18px;
+}
+
+.hero-followup .card,
+.hero-followup .question-card,
+.hero-followup .whatsapp-card,
+.hero-followup .trust-pill,
+.hero-followup .quick-questions,
+.hero-followup .hero-quick-questions,
+.hero-followup .whatsapp-fallback{
+  background: #ffffff;
+  color: #0f172a;
+}
+
+.hero-followup h2,
+.hero-followup h3,
+.hero-followup p,
+.hero-followup li{
+  color: #0f172a;
 }
 
 @media (max-width: 768px){
   .hero--photo{
-    min-height: 380px;
+    min-height: 360px;
     padding: 20px 16px;
     background:
-      linear-gradient(180deg, rgba(7,26,43,0.38) 0%, rgba(7,26,43,0.66) 58%, rgba(7,26,43,0.86) 100%),
-      url('/images/recovery-truck.jpg') 54% 18% / cover no-repeat;
+      linear-gradient(
+        180deg,
+        rgba(7,26,43,0.20) 0%,
+        rgba(7,26,43,0.38) 34%,
+        rgba(7,26,43,0.66) 70%,
+        rgba(7,26,43,0.88) 100%
+      ),
+      url('/images/recovery-truck.jpg') 56% 18% / cover no-repeat;
   }
 
-  .hero--photo .hero-content{
-    padding: 16px;
-    border-radius: 18px;
+  .hero--photo h1{
+    font-size: clamp(2rem, 7vw, 3rem);
+    line-height: 1.05;
   }
 }
