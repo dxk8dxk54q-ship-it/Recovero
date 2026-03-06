@@ -1607,24 +1607,25 @@ button:focus-visible{outline:3px solid rgba(245,130,32,.45);outline-offset:2px}
   position: relative;
   overflow: hidden;
   border-radius: 28px;
-  min-height: 400px;
-  padding: 24px 18px;
+  min-height: 620px;
+  padding: 24px 18px 28px;
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
   background:
     linear-gradient(
       180deg,
-      rgba(7,26,43,0.24) 0%,
-      rgba(7,26,43,0.42) 38%,
-      rgba(7,26,43,0.68) 72%,
+      rgba(7,26,43,0.18) 0%,
+      rgba(7,26,43,0.38) 26%,
+      rgba(7,26,43,0.66) 58%,
       rgba(7,26,43,0.86) 100%
     ),
-    url('/images/recovery-truck.jpg') 54% 20% / cover no-repeat;
+    url('/images/recovery-truck.jpg') 56% 20% / cover no-repeat;
   box-shadow: 0 18px 40px rgba(2,6,23,.18);
 }
 
 .hero--photo .hero-content{
   max-width: 720px;
+  width: 100%;
 }
 
 .hero--photo h1,
@@ -1646,9 +1647,6 @@ button:focus-visible{outline:3px solid rgba(245,130,32,.45);outline-offset:2px}
 .hero-followup .card,
 .hero-followup .question-card,
 .hero-followup .whatsapp-card,
-.hero-followup .trust-pill,
-.hero-followup .quick-questions,
-.hero-followup .hero-quick-questions,
 .hero-followup .whatsapp-fallback{
   background: #ffffff;
   color: #0f172a;
@@ -1661,19 +1659,87 @@ button:focus-visible{outline:3px solid rgba(245,130,32,.45);outline-offset:2px}
   color: #0f172a;
 }
 
+.hero--photo .quick-questions,
+.hero--photo .question-card,
+.hero--photo .hero-quick-questions{
+  background: rgba(255,255,255,0.98);
+  color: #0f172a;
+  border-radius: 22px;
+  padding: 18px 18px;
+  margin-top: 18px;
+  box-shadow: 0 12px 28px rgba(2,6,23,.16);
+  min-height: auto;
+  height: auto;
+}
+
+.hero--photo .quick-questions h2,
+.hero--photo .quick-questions h3,
+.hero--photo .quick-questions p,
+.hero--photo .quick-questions li,
+.hero--photo .question-card h2,
+.hero--photo .question-card h3,
+.hero--photo .question-card p,
+.hero--photo .question-card li,
+.hero--photo .hero-quick-questions h2,
+.hero--photo .hero-quick-questions h3,
+.hero--photo .hero-quick-questions p,
+.hero--photo .hero-quick-questions li{
+  color: #0f172a !important;
+}
+
+.hero--photo .quick-questions .icon,
+.hero--photo .question-card .icon,
+.hero--photo .hero-quick-questions .qq-icon,
+.hero--photo .hero-quick-questions .qq-icon svg{
+  color: #f58220 !important;
+  fill: #f58220 !important;
+}
+
+.hero--photo .trust-pills,
+.hero--photo .pill-row,
+.hero--photo .hero-badges{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.hero--photo .trust-pill,
+.hero--photo .pill,
+.hero--photo .hero-badge{
+  background: rgba(255,255,255,0.96);
+  color: #8a4c12;
+  border: 1px solid rgba(245,130,32,0.45);
+  border-radius: 999px;
+  padding: 8px 14px;
+  font-weight: 700;
+  box-shadow: 0 8px 20px rgba(2,6,23,.10);
+}
+
+.hero-followup .whatsapp-card h2,
+.hero-followup .whatsapp-card h3,
+.hero-followup .whatsapp-card p,
+.hero-followup .whatsapp-card li,
+.hero-followup .whatsapp-fallback h2,
+.hero-followup .whatsapp-fallback h3,
+.hero-followup .whatsapp-fallback p,
+.hero-followup .whatsapp-fallback li{
+  color: #0f172a;
+}
+
 @media (max-width: 768px){
   .hero--photo{
-    min-height: 360px;
-    padding: 20px 16px;
+    min-height: 700px;
+    padding: 20px 16px 24px;
     background:
       linear-gradient(
         180deg,
-        rgba(7,26,43,0.20) 0%,
-        rgba(7,26,43,0.38) 34%,
-        rgba(7,26,43,0.66) 70%,
+        rgba(7,26,43,0.18) 0%,
+        rgba(7,26,43,0.36) 24%,
+        rgba(7,26,43,0.64) 56%,
         rgba(7,26,43,0.88) 100%
       ),
-      url('/images/recovery-truck.jpg') 56% 18% / cover no-repeat;
+      url('/images/recovery-truck.jpg') 58% 18% / cover no-repeat;
   }
 
   .hero--photo h1{
