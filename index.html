@@ -186,37 +186,55 @@
     <!-- FAQ -->
     <section class="section faq fade-up section--alt">
       <h2>FAQs</h2>
-      <div class="faq-item">
-        <h3>Are you the recovery company?</h3>
-        <p>No. Recovero is a booking and coordination service. We connect you with an independent local recovery operator who attends.</p>
-      </div>
-      <div class="faq-item">
-        <h3>Who do I pay?</h3>
-        <p>You pay the attending operator directly on completion. Recovero does not take payment from customers.</p>
-      </div>
-      <div class="faq-item">
-        <h3>How is the price calculated?</h3>
-        <p>Pricing depends on distance, vehicle type, access, time of day, and the situation. Operator confirms price before dispatch where possible.</p>
-      </div>
-      <div class="faq-item">
-        <h3>What areas do you cover?</h3>
-        <p>Portsmouth and surrounding areas (including Havant, Fareham, Gosport and nearby). Longer-distance transport is available on request.</p>
-      </div>
-      <div class="faq-item">
-        <h3>How quickly can you attend?</h3>
-        <p>Arrival times vary based on traffic and operator availability. We’ll connect you to the nearest available operator and they’ll confirm an ETA.</p>
-      </div>
-      <div class="faq-item">
-        <h3>What information do you need from me?</h3>
-        <p>Pickup location/postcode, destination (if needed), vehicle make/model, and what’s happened (breakdown/accident/non-runner).</p>
-      </div>
-      <div class="faq-item">
-        <h3>What if I need to cancel?</h3>
-        <p>Tell us as soon as possible. If an operator has already been dispatched or attended, you may be charged by the operator for time/travel.</p>
-      </div>
-      <div class="faq-item">
-        <h3>What if I’m on a motorway / in a dangerous location?</h3>
-        <p>If you’re in immediate danger, call 999. For motorways/hard shoulder, follow safety guidance and we’ll prioritise connecting you to an available operator.</p>
+      <div class="faq-list">
+        <details class="faq-item" name="homepage-faq">
+          <summary>Are you the recovery company?</summary>
+          <div class="faq-answer">
+            <p>No. Recovero is a booking and coordination service. We connect you with an independent local recovery operator who attends.</p>
+          </div>
+        </details>
+        <details class="faq-item" name="homepage-faq">
+          <summary>Who do I pay?</summary>
+          <div class="faq-answer">
+            <p>You pay the attending operator directly on completion. Recovero does not take payment from customers.</p>
+          </div>
+        </details>
+        <details class="faq-item" name="homepage-faq">
+          <summary>How is the price calculated?</summary>
+          <div class="faq-answer">
+            <p>Pricing depends on distance, vehicle type, access, time of day, and the situation. Operator confirms price before dispatch where possible.</p>
+          </div>
+        </details>
+        <details class="faq-item" name="homepage-faq">
+          <summary>What areas do you cover?</summary>
+          <div class="faq-answer">
+            <p>Portsmouth and surrounding areas (including Havant, Fareham, Gosport and nearby). Longer-distance transport is available on request.</p>
+          </div>
+        </details>
+        <details class="faq-item" name="homepage-faq">
+          <summary>How quickly can you attend?</summary>
+          <div class="faq-answer">
+            <p>Arrival times vary based on traffic and operator availability. We’ll connect you to the nearest available operator and they’ll confirm an ETA.</p>
+          </div>
+        </details>
+        <details class="faq-item" name="homepage-faq">
+          <summary>What information do you need from me?</summary>
+          <div class="faq-answer">
+            <p>Pickup location/postcode, destination (if needed), vehicle make/model, and what’s happened (breakdown/accident/non-runner).</p>
+          </div>
+        </details>
+        <details class="faq-item" name="homepage-faq">
+          <summary>What if I need to cancel?</summary>
+          <div class="faq-answer">
+            <p>Tell us as soon as possible. If an operator has already been dispatched or attended, you may be charged by the operator for time/travel.</p>
+          </div>
+        </details>
+        <details class="faq-item" name="homepage-faq">
+          <summary>What if I’m on a motorway / in a dangerous location?</summary>
+          <div class="faq-answer">
+            <p>If you’re in immediate danger, call 999. For motorways/hard shoulder, follow safety guidance and we’ll prioritise connecting you to an available operator.</p>
+          </div>
+        </details>
       </div>
     </section>
 
@@ -225,24 +243,27 @@
         <div class="coverage-content">
           <h2 id="coverage-heading">Areas We Cover (Hampshire &amp; Surrounding)</h2>
           <p class="coverage-copy">Local recovery teams covering Portsmouth and the wider Hampshire area — fast dispatch, 24/7.</p>
-          <ul class="coverage-list" aria-label="Service areas">
-            <li>Portsmouth</li>
-            <li>Southsea</li>
-            <li>Havant</li>
-            <li>Waterlooville</li>
-            <li>Gosport</li>
-            <li>Fareham</li>
-            <li>Portchester</li>
-            <li>Cosham</li>
-            <li>Hilsea</li>
-            <li>Paulsgrove</li>
-            <li>Emsworth</li>
-            <li>Chichester</li>
-            <li>Southampton</li>
-            <li>Winchester</li>
-            <li>Petersfield</li>
-            <li>Bognor Regis</li>
-          </ul>
+          <div class="area-selector" role="tablist" aria-label="Select a location">
+            <button type="button" class="area-pill is-active" role="tab" aria-selected="true" data-area="portsmouth">Portsmouth</button>
+            <button type="button" class="area-pill" role="tab" aria-selected="false" data-area="havant">Havant</button>
+            <button type="button" class="area-pill" role="tab" aria-selected="false" data-area="fareham">Fareham</button>
+            <button type="button" class="area-pill" role="tab" aria-selected="false" data-area="gosport">Gosport</button>
+            <button type="button" class="area-pill" role="tab" aria-selected="false" data-area="waterlooville">Waterlooville</button>
+            <button type="button" class="area-pill" role="tab" aria-selected="false" data-area="southampton">Southampton</button>
+            <button type="button" class="area-pill" role="tab" aria-selected="false" data-area="chichester">Chichester</button>
+            <button type="button" class="area-pill" role="tab" aria-selected="false" data-area="winchester">Winchester</button>
+          </div>
+          <article class="area-panel" id="areaPanel" role="tabpanel" aria-live="polite" aria-labelledby="coverage-heading">
+            <h3 id="areaPanelTitle">Portsmouth</h3>
+            <p id="areaPanelSummary">Fast-response local dispatch across Portsmouth, from city centre callouts to coastal routes.</p>
+            <ul id="areaPanelRoads">
+              <li>A3</li>
+              <li>M275</li>
+              <li>Southsea &amp; Cosham</li>
+            </ul>
+            <a id="areaPanelLink" class="btn btn-primary" href="/locations/portsmouth-vehicle-recovery.html">View Portsmouth page</a>
+          </article>
+          <p class="coverage-subnote">Also covering surrounding towns and routes across Hampshire and West Sussex.</p>
           <div class="coverage-actions">
             <a href="tel:07366302341" class="btn btn-primary">Call 24/7</a>
             <a href="https://wa.me/447366302341?text=Hi%20Recovero%2C%20I%20need%20recovery.%20Location%2Fpostcode%3A%20____%20.%20Vehicle%3A%20____%20.%20Issue%3A%20____%20." class="btn btn-outline" target="_blank" rel="noopener">WhatsApp</a>
