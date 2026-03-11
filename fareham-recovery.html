@@ -190,6 +190,7 @@
     .process-card{
       scroll-snap-align:start;
       position:relative;
+      overflow:hidden;
       transition:transform .22s ease, box-shadow .22s ease, border-color .22s ease, background-color .22s ease;
     }
 
@@ -212,6 +213,39 @@
       box-shadow:0 16px 30px rgba(15,34,53,.14), 0 0 0 1px rgba(245,130,32,.18);
       transform:translateY(-3px) scale(1.01);
     }
+
+    .process-illu{
+      position:absolute;
+      right:10px;
+      top:10px;
+      width:64px;
+      height:48px;
+      color:var(--ink);
+      opacity:.72;
+      transform:translateY(8px);
+      transition:opacity .28s ease, transform .28s ease, filter .28s ease;
+      pointer-events:none;
+    }
+
+    .process-illu svg{width:100%;height:100%;display:block}
+    .process-illu .line{stroke:currentColor;stroke-width:1.9;fill:none;stroke-linecap:round;stroke-linejoin:round}
+    .process-illu .accent{stroke:var(--orange);stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+    .process-illu .fill-accent{fill:rgba(245,130,32,.14);stroke:var(--orange);stroke-width:1.5}
+
+    .process-card.in-view .process-illu,
+    .reveal.in-view .process-card .process-illu{
+      opacity:.82;
+      transform:none;
+    }
+
+    .process-card.active .process-illu{
+      opacity:1;
+      transform:translateY(-1px);
+      filter:drop-shadow(0 4px 10px rgba(245,130,32,.22));
+    }
+
+    .process-card h3,
+    .process-card p{max-width:calc(100% - 74px)}
 
     .process-progress{
       margin-top:10px;
@@ -401,6 +435,12 @@
       .sticky{display:none}
     }
 
+    @media (max-width:420px){
+      .process-illu{width:58px;height:44px;right:8px}
+      .process-card h3,
+      .process-card p{max-width:calc(100% - 66px)}
+    }
+
     @media (prefers-reduced-motion:reduce){
       *, *::before, *::after{transition:none !important; animation:none !important}
       .reveal{opacity:1;transform:none}
@@ -443,10 +483,56 @@
       <p class="section-intro">Call → we connect you → ETA + price → recovery.</p>
       <div class="process-flow" aria-label="How recovery works in four steps">
         <div class="process-track" id="processTrack">
-          <article class="card process-card active" data-step="1" tabindex="0"><span class="step-number">1</span><h3>You call</h3><p>Location + vehicle.</p></article>
-          <article class="card process-card" data-step="2" tabindex="0"><span class="step-number">2</span><h3>We connect you</h3><p>To a recovery operator.</p></article>
-          <article class="card process-card" data-step="3" tabindex="0"><span class="step-number">3</span><h3>ETA + price</h3><p>Confirmed where possible.</p></article>
-          <article class="card process-card" data-step="4" tabindex="0"><span class="step-number">4</span><h3>Recovery arranged</h3><p>Roadside help or transport.</p></article>
+          <article class="card process-card active" data-step="1" tabindex="0">
+            <span class="process-illu" aria-hidden="true">
+              <svg viewBox="0 0 64 48" focusable="false">
+                <rect x="14" y="6" width="26" height="36" rx="7" class="line"></rect>
+                <circle cx="27" cy="36" r="1.8" fill="currentColor"></circle>
+                <path d="M47 13c2.2 1.3 3.7 3.7 3.7 6.5s-1.5 5.1-3.7 6.5" class="accent"></path>
+                <path d="M43.4 15.6c1.3.8 2.2 2.2 2.2 3.9s-.9 3.1-2.2 3.9" class="accent"></path>
+              </svg>
+            </span>
+            <span class="step-number">1</span><h3>You call</h3><p>Location + vehicle.</p>
+          </article>
+          <article class="card process-card" data-step="2" tabindex="0">
+            <span class="process-illu" aria-hidden="true">
+              <svg viewBox="0 0 64 48" focusable="false">
+                <circle cx="12" cy="24" r="5" class="fill-accent"></circle>
+                <circle cx="52" cy="24" r="5" class="line"></circle>
+                <path d="M18 24h28" class="line"></path>
+                <path d="M40.5 19.5 46 24l-5.5 4.5" class="accent"></path>
+                <path d="M46 11.6c2.5 0 4.6 2.1 4.6 4.6" class="line"></path>
+                <path d="M43.2 14.4c1.2 0 2.2 1 2.2 2.2" class="line"></path>
+              </svg>
+            </span>
+            <span class="step-number">2</span><h3>We connect you</h3><p>To a recovery operator.</p>
+          </article>
+          <article class="card process-card" data-step="3" tabindex="0">
+            <span class="process-illu" aria-hidden="true">
+              <svg viewBox="0 0 64 48" focusable="false">
+                <circle cx="18" cy="24" r="10" class="line"></circle>
+                <path d="M18 24v-5.4M18 24l4.3 2.4" class="line"></path>
+                <path d="M35 17h16" class="accent"></path>
+                <path d="M43 11v12" class="line"></path>
+                <path d="M40 11h6" class="line"></path>
+                <path d="M40 23h6" class="line"></path>
+                <path d="M32 31h22" class="line"></path>
+              </svg>
+            </span>
+            <span class="step-number">3</span><h3>ETA + price</h3><p>Confirmed where possible.</p>
+          </article>
+          <article class="card process-card" data-step="4" tabindex="0">
+            <span class="process-illu" aria-hidden="true">
+              <svg viewBox="0 0 64 48" focusable="false">
+                <path d="M6 31h31.5c3.1 0 5.6-2.5 5.6-5.6v-2.9h9.2l4.8 4.8V31H58" class="line"></path>
+                <path d="M24 19h12l4 4.6H20.2" class="accent"></path>
+                <circle cx="16" cy="33" r="4" class="line"></circle>
+                <circle cx="49" cy="33" r="4" class="line"></circle>
+                <path d="M7 26h9" class="line"></path>
+              </svg>
+            </span>
+            <span class="step-number">4</span><h3>Recovery arranged</h3><p>Roadside help or transport.</p>
+          </article>
         </div>
         <div class="process-progress" aria-label="Step progress">
           <div class="progress-line" aria-hidden="true"><span id="processProgressFill"></span></div>
