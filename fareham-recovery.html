@@ -156,11 +156,149 @@
     }
     .section-intro{margin:0;color:var(--ink-soft);font-size:.97rem}
 
-    .process-grid,
-    .benefits{
+    .process-flow,
+    .benefits-wrap{
       margin-top:14px;
+    }
+
+    .reveal{
+      opacity:0;
+      transform:translateY(14px);
+      transition:opacity .45s ease, transform .45s ease;
+    }
+
+    .reveal.in-view{
+      opacity:1;
+      transform:none;
+    }
+
+    .process-track{
+      display:grid;
+      grid-auto-flow:column;
+      grid-auto-columns:minmax(78%,1fr);
+      gap:12px;
+      overflow-x:auto;
+      padding:4px 3vw 8px 0;
+      margin-right:-3vw;
+      scroll-snap-type:x mandatory;
+      -webkit-overflow-scrolling:touch;
+      scrollbar-width:none;
+    }
+
+    .process-track::-webkit-scrollbar{display:none}
+
+    .process-card{
+      scroll-snap-align:start;
+      position:relative;
+      transition:transform .22s ease, box-shadow .22s ease, border-color .22s ease, background-color .22s ease;
+    }
+
+    .process-card::after{
+      content:"";
+      position:absolute;
+      top:22px;
+      left:calc(100% + 7px);
+      width:12px;
+      height:2px;
+      background:rgba(15,34,53,.2);
+      border-radius:999px;
+    }
+
+    .process-card:last-child::after{display:none}
+
+    .process-card.active{
+      border-color:rgba(245,130,32,.55);
+      background:#fff;
+      box-shadow:0 16px 30px rgba(15,34,53,.14), 0 0 0 1px rgba(245,130,32,.18);
+      transform:translateY(-3px) scale(1.01);
+    }
+
+    .process-progress{
+      margin-top:10px;
+      display:grid;
+      gap:8px;
+    }
+
+    .progress-line{
+      height:4px;
+      border-radius:999px;
+      background:rgba(15,34,53,.12);
+      overflow:hidden;
+    }
+
+    .progress-line span{
+      display:block;
+      height:100%;
+      width:25%;
+      background:linear-gradient(90deg,var(--orange),var(--orange-deep));
+      border-radius:999px;
+      transition:width .22s ease;
+    }
+
+    .progress-dots{display:flex;gap:8px}
+    .progress-dots button{
+      appearance:none;
+      border:0;
+      width:10px;
+      height:10px;
+      border-radius:50%;
+      background:rgba(15,34,53,.24);
+      padding:0;
+      transition:transform .2s ease, background-color .2s ease;
+    }
+    .progress-dots button.active{background:var(--orange);transform:scale(1.1)}
+
+    .benefits{
       display:grid;
       gap:10px;
+    }
+
+    .benefit-card{
+      position:relative;
+      cursor:pointer;
+      text-align:left;
+      transition:transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+    }
+
+    .benefit-top{
+      display:flex;
+      align-items:flex-start;
+      gap:10px;
+    }
+
+    .benefit-icon{
+      width:34px;
+      height:34px;
+      border-radius:11px;
+      display:grid;
+      place-items:center;
+      background:rgba(245,130,32,.12);
+      color:#8a4000;
+      flex:0 0 34px;
+      border:1px solid rgba(245,130,32,.28);
+      font-size:1rem;
+    }
+
+    .benefit-card .extra{
+      max-height:0;
+      overflow:hidden;
+      opacity:0;
+      margin-top:0;
+      transition:max-height .24s ease, opacity .24s ease, margin-top .24s ease;
+    }
+
+    .benefit-card.active{
+      border-color:rgba(245,130,32,.55);
+      box-shadow:0 16px 30px rgba(15,34,53,.14), 0 0 0 1px rgba(245,130,32,.16);
+      transform:translateY(-2px) scale(1.01);
+    }
+
+    .benefit-card.active .benefit-icon{background:rgba(245,130,32,.2)}
+
+    .benefit-card.active .extra{
+      max-height:56px;
+      opacity:1;
+      margin-top:8px;
     }
 
     .card{
@@ -248,9 +386,24 @@
     @media (min-width:860px){
       body{padding-bottom:0}
       .hero-content{padding:34px}
-      .process-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+      .process-track{
+        grid-auto-flow:initial;
+        grid-template-columns:repeat(4,minmax(0,1fr));
+        grid-auto-columns:auto;
+        overflow:visible;
+        padding:4px 0 8px;
+        margin-right:0;
+      }
+      .process-card::after{
+        width:14px;
+      }
       .benefits{grid-template-columns:repeat(2,minmax(0,1fr))}
       .sticky{display:none}
+    }
+
+    @media (prefers-reduced-motion:reduce){
+      *, *::before, *::after{transition:none !important; animation:none !important}
+      .reveal{opacity:1;transform:none}
     }
   </style>
 </head>
@@ -285,24 +438,49 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section reveal" id="how-recovery-works">
       <h2 class="section-title">How recovery works</h2>
-      <p class="section-intro">Call → we connect you → ETA + price confirmed → recovery.</p>
-      <div class="process-grid">
-        <article class="card"><span class="step-number">1</span><h3>You call</h3><p>Location + vehicle.</p></article>
-        <article class="card"><span class="step-number">2</span><h3>We connect you</h3><p>To a recovery operator.</p></article>
-        <article class="card"><span class="step-number">3</span><h3>ETA + price</h3><p>Confirmed where possible.</p></article>
-        <article class="card"><span class="step-number">4</span><h3>Recovery arranged</h3><p>Roadside help or transport.</p></article>
+      <p class="section-intro">Call → we connect you → ETA + price → recovery.</p>
+      <div class="process-flow" aria-label="How recovery works in four steps">
+        <div class="process-track" id="processTrack">
+          <article class="card process-card active" data-step="1" tabindex="0"><span class="step-number">1</span><h3>You call</h3><p>Location + vehicle.</p></article>
+          <article class="card process-card" data-step="2" tabindex="0"><span class="step-number">2</span><h3>We connect you</h3><p>To a recovery operator.</p></article>
+          <article class="card process-card" data-step="3" tabindex="0"><span class="step-number">3</span><h3>ETA + price</h3><p>Confirmed where possible.</p></article>
+          <article class="card process-card" data-step="4" tabindex="0"><span class="step-number">4</span><h3>Recovery arranged</h3><p>Roadside help or transport.</p></article>
+        </div>
+        <div class="process-progress" aria-label="Step progress">
+          <div class="progress-line" aria-hidden="true"><span id="processProgressFill"></span></div>
+          <div class="progress-dots" role="tablist" aria-label="Select step">
+            <button class="active" data-target-step="1" aria-label="Show step 1"></button>
+            <button data-target-step="2" aria-label="Show step 2"></button>
+            <button data-target-step="3" aria-label="Show step 3"></button>
+            <button data-target-step="4" aria-label="Show step 4"></button>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="section">
+    <section class="section reveal" id="fareham-benefits">
       <h2 class="section-title">Why drivers in Fareham call</h2>
-      <div class="benefits">
-        <article class="card"><h3>Fast local connection</h3><p>Quick support for urgent breakdown situations.</p></article>
-        <article class="card"><h3>Live ETA updates</h3><p>Timing is based on your location and traffic.</p></article>
-        <article class="card"><h3>Price confirmed where possible</h3><p>Clear costs before recovery is arranged where possible.</p></article>
-        <article class="card"><h3>Breakdowns and transport</h3><p>Help with roadside recovery and vehicle moves.</p></article>
+      <div class="benefits-wrap">
+        <div class="benefits" role="list">
+          <button class="card benefit-card active" type="button" role="listitem" aria-expanded="true">
+            <span class="benefit-top"><span class="benefit-icon" aria-hidden="true">⚡</span><span><h3>Fast local connection</h3><p>Quick support for urgent breakdown situations.</p></span></span>
+            <p class="extra">Support depends on your location and operator availability.</p>
+          </button>
+          <button class="card benefit-card" type="button" role="listitem" aria-expanded="false">
+            <span class="benefit-top"><span class="benefit-icon" aria-hidden="true">🕒</span><span><h3>Live ETA updates</h3><p>Timing is based on your location and traffic.</p></span></span>
+            <p class="extra">We share updates as soon as confirmed by the operator.</p>
+          </button>
+          <button class="card benefit-card" type="button" role="listitem" aria-expanded="false">
+            <span class="benefit-top"><span class="benefit-icon" aria-hidden="true">£</span><span><h3>Price confirmed where possible</h3><p>Clear costs before recovery is arranged where possible.</p></span></span>
+            <p class="extra">Final pricing can vary by distance, vehicle type and time.</p>
+          </button>
+          <button class="card benefit-card" type="button" role="listitem" aria-expanded="false">
+            <span class="benefit-top"><span class="benefit-icon" aria-hidden="true">🚚</span><span><h3>Breakdowns and transport</h3><p>Help with roadside recovery and vehicle moves.</p></span></span>
+            <p class="extra">From non-starters to planned transport, support is available.</p>
+          </button>
+        </div>
       </div>
     </section>
 
@@ -338,5 +516,86 @@
       <a class="sticky-btn sticky-wa" href="https://wa.me/447366302341?text=Hi%20Recovero%2C%20I%20need%20vehicle%20recovery%20in%20Fareham.%20My%20location%20is%20____.%20Vehicle%3A%20____.%20Issue%3A%20____." target="_blank" rel="noopener" aria-label="Message Recovero on WhatsApp">💬 WhatsApp</a>
     </div>
   </div>
+
+  <script>
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    const revealItems = document.querySelectorAll('.reveal');
+    if (!reducedMotion && 'IntersectionObserver' in window) {
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.2 });
+      revealItems.forEach((item) => revealObserver.observe(item));
+    } else {
+      revealItems.forEach((item) => item.classList.add('in-view'));
+    }
+
+    const processTrack = document.getElementById('processTrack');
+    const processCards = [...document.querySelectorAll('.process-card')];
+    const progressFill = document.getElementById('processProgressFill');
+    const progressDots = [...document.querySelectorAll('.progress-dots button')];
+
+    const setActiveStep = (index, shouldScroll = false) => {
+      processCards.forEach((card, cardIndex) => {
+        card.classList.toggle('active', cardIndex === index);
+      });
+      progressDots.forEach((dot, dotIndex) => {
+        dot.classList.toggle('active', dotIndex === index);
+      });
+      progressFill.style.width = `${((index + 1) / processCards.length) * 100}%`;
+      if (shouldScroll && processTrack) {
+        processCards[index].scrollIntoView({ behavior: reducedMotion ? 'auto' : 'smooth', block: 'nearest', inline: 'start' });
+      }
+    };
+
+    processCards.forEach((card, index) => {
+      card.addEventListener('click', () => setActiveStep(index, true));
+      card.addEventListener('focus', () => setActiveStep(index));
+    });
+
+    progressDots.forEach((dot, index) => {
+      dot.addEventListener('click', () => setActiveStep(index, true));
+    });
+
+    if (processTrack) {
+      let tick;
+      processTrack.addEventListener('scroll', () => {
+        window.clearTimeout(tick);
+        tick = window.setTimeout(() => {
+          const trackRect = processTrack.getBoundingClientRect();
+          let activeIndex = 0;
+          let smallestOffset = Number.POSITIVE_INFINITY;
+          processCards.forEach((card, index) => {
+            const cardRect = card.getBoundingClientRect();
+            const offset = Math.abs(cardRect.left - trackRect.left);
+            if (offset < smallestOffset) {
+              smallestOffset = offset;
+              activeIndex = index;
+            }
+          });
+          setActiveStep(activeIndex);
+        }, 90);
+      }, { passive: true });
+    }
+
+    const benefitCards = [...document.querySelectorAll('.benefit-card')];
+    const setActiveBenefit = (activeCard) => {
+      benefitCards.forEach((card) => {
+        const isActive = card === activeCard;
+        card.classList.toggle('active', isActive);
+        card.setAttribute('aria-expanded', String(isActive));
+      });
+    };
+
+    benefitCards.forEach((card) => {
+      card.addEventListener('click', () => setActiveBenefit(card));
+      card.addEventListener('focus', () => setActiveBenefit(card));
+    });
+  </script>
 </body>
 </html>
