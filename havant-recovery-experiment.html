@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>24/7 Vehicle Recovery Dispatch – Havant | Recovero</title>
+  <meta name="description" content="Need urgent vehicle recovery in Havant? Call Recovero now for ETA and guide price. We connect you with available local independent recovery operators." />
+  <meta name="theme-color" content="#0c1426" />
+  <style>
+    :root {
+      --bg: #edf2f8;
+      --surface: #ffffff;
+      --ink: #101a2d;
+      --muted: #4a5a73;
+      --brand: #ffc300;
+      --brand-ink: #111111;
+      --brand-soft: #ffe8a3;
+      --dark: #0c1426;
+      --dark-soft: #1a2740;
+      --line: #d6e0ed;
+      --radius-lg: 22px;
+      --radius-md: 16px;
+      --radius-sm: 12px;
+      --shadow-lg: 0 18px 44px rgba(12, 20, 38, 0.18);
+      --shadow-md: 0 12px 28px rgba(12, 20, 38, 0.12);
+    }
+
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--ink);
+      background: linear-gradient(180deg, #f6f9fd 0%, var(--bg) 100%);
+      line-height: 1.5;
+      padding-bottom: 86px;
+    }
+
+    img { max-width: 100%; display: block; }
+    .container { width: min(1200px, 92vw); margin: 0 auto; }
+
+    .hero-wrap { padding: 1.1rem 0 0; }
+    .hero {
+      display: grid;
+      grid-template-columns: 1.06fr 0.94fr;
+      gap: 1rem;
+      align-items: stretch;
+    }
+
+    .hero-left {
+      background: radial-gradient(circle at top right, #1f3254 0%, var(--dark) 60%);
+      color: #fff;
+      border-radius: var(--radius-lg);
+      padding: clamp(1.2rem, 3vw, 2rem);
+      box-shadow: var(--shadow-lg);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-left::after {
+      content: "";
+      position: absolute;
+      right: -46px;
+      top: -56px;
+      width: 170px;
+      height: 170px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.05);
+      pointer-events: none;
+    }
+
+    .label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.82rem;
+      letter-spacing: 0.02em;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 999px;
+      padding: 0.42rem 0.72rem;
+      margin-bottom: 0.9rem;
+      font-weight: 700;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(1.9rem, 4.7vw, 3rem);
+      line-height: 1.08;
+      max-width: 12.5ch;
+    }
+
+    .subheadline {
+      margin: 0.5rem 0 0.7rem;
+      font-size: clamp(1.04rem, 2.2vw, 1.3rem);
+      color: #d8e4fa;
+      font-weight: 700;
+    }
+
+    .support {
+      margin: 0;
+      max-width: 56ch;
+      color: #e9f0ff;
+    }
+
+    .proof-row {
+      margin: 1rem 0 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .proof-chip {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      border-radius: 999px;
+      padding: 0.43rem 0.68rem;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #edf3ff;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+      margin-top: 1.2rem;
+    }
+
+    .btn {
+      min-height: 50px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      border-radius: 12px;
+      font-weight: 800;
+      border: 2px solid transparent;
+      padding: 0.85rem 1.15rem;
+      transition: transform 0.15s ease, box-shadow 0.2s ease, background 0.2s ease;
+    }
+
+    .btn:hover { transform: translateY(-1px); }
+
+    .btn-primary {
+      background: var(--brand);
+      color: var(--brand-ink);
+      box-shadow: 0 10px 24px rgba(255, 195, 0, 0.34);
+      min-width: 230px;
+      font-size: 1.03rem;
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.12);
+      border-color: rgba(255, 255, 255, 0.3);
+      color: #ffffff;
+      min-width: 145px;
+    }
+
+    .reassurance {
+      list-style: none;
+      margin: 1rem 0 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      color: #dce8ff;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .reassurance li {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .disclaimer {
+      margin: 0.95rem 0 0;
+      font-size: 0.83rem;
+      color: #c8d7f3;
+    }
+
+    .hero-right {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      min-height: 420px;
+      box-shadow: var(--shadow-lg);
+      background: #0f1a2f;
+    }
+
+    .hero-image {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(145deg, rgba(10, 18, 35, 0.35), rgba(10, 18, 35, 0.7)),
+        url('images/recovery-truck.jpg') center/cover no-repeat;
+    }
+
+    .hero-card {
+      position: absolute;
+      left: 1rem;
+      right: 1rem;
+      bottom: 1rem;
+      background: rgba(255, 255, 255, 0.92);
+      color: var(--ink);
+      border-radius: 14px;
+      padding: 0.8rem 0.9rem;
+      box-shadow: var(--shadow-md);
+      max-width: 300px;
+    }
+
+    .hero-card strong { display: block; font-size: 1rem; }
+    .hero-card span { color: var(--muted); font-size: 0.88rem; }
+
+    .stats-strip {
+      margin-top: 0.95rem;
+      background: #ffffff;
+      border-radius: 18px;
+      box-shadow: var(--shadow-md);
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      overflow: hidden;
+      border: 1px solid #dde6f1;
+    }
+
+    .stat {
+      padding: 1rem;
+      border-right: 1px solid #e6edf6;
+      text-align: center;
+    }
+
+    .stat:last-child { border-right: 0; }
+    .stat strong {
+      display: block;
+      font-size: 1.35rem;
+      line-height: 1.1;
+      color: #0e1f39;
+    }
+
+    .stat span {
+      display: block;
+      margin-top: 0.24rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    main { padding: 2rem 0 1.8rem; }
+    section { margin-bottom: 1.9rem; }
+
+    h2 {
+      font-size: clamp(1.35rem, 2.8vw, 2rem);
+      margin: 0 0 0.7rem;
+      color: #0f1f37;
+    }
+
+    .intro { margin: 0 0 1rem; color: var(--muted); max-width: 72ch; }
+
+    .grid-3, .grid-6 {
+      display: grid;
+      gap: 0.9rem;
+    }
+
+    .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .grid-6 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      padding: 1rem;
+      box-shadow: 0 8px 22px rgba(16, 26, 45, 0.07);
+    }
+
+    .card h3 { margin: 0 0 0.4rem; font-size: 1.04rem; color: #112542; }
+    .card p { margin: 0; color: var(--muted); font-size: 0.95rem; }
+
+    .icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      background: #e9f1fc;
+      color: #183a6b;
+      font-weight: 800;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 0.55rem;
+    }
+
+    .steps {
+      counter-reset: step;
+      display: grid;
+      gap: 0.75rem;
+    }
+
+    .step {
+      position: relative;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      padding: 0.95rem 0.95rem 0.95rem 3rem;
+    }
+
+    .step::before {
+      counter-increment: step;
+      content: counter(step);
+      position: absolute;
+      left: 0.9rem;
+      top: 0.92rem;
+      width: 1.65rem;
+      height: 1.65rem;
+      border-radius: 50%;
+      background: #102849;
+      color: #fff;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 0.87rem;
+    }
+
+    .local-box, .pricing-box, .final-cta {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      padding: 1rem;
+      box-shadow: 0 8px 22px rgba(16, 26, 45, 0.07);
+    }
+
+    .pricing-list {
+      margin: 0.4rem 0 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 0.65rem;
+      max-width: 480px;
+    }
+
+    .pricing-list li {
+      display: flex;
+      justify-content: space-between;
+      gap: 0.7rem;
+      background: #f5f8fd;
+      border: 1px solid #e2e9f3;
+      border-radius: 12px;
+      padding: 0.7rem 0.8rem;
+      font-weight: 700;
+    }
+
+    .fine-print {
+      margin-top: 0.7rem;
+      color: #52617a;
+      font-size: 0.9rem;
+    }
+
+    details {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 0.76rem 0.85rem;
+      margin-bottom: 0.6rem;
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: 700;
+      color: #142846;
+    }
+
+    details p {
+      margin: 0.55rem 0 0;
+      color: var(--muted);
+    }
+
+    .final-cta {
+      background: linear-gradient(140deg, #0d1a31 0%, #1c3154 100%);
+      border: 0;
+      color: #fff;
+      text-align: center;
+      padding: 1.2rem;
+    }
+
+    .final-cta p { color: #d8e4fa; margin: 0.3rem 0 0.9rem; }
+
+    .sticky-bar {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 30;
+      background: rgba(10, 18, 32, 0.97);
+      backdrop-filter: blur(6px);
+      border-top: 1px solid rgba(255, 255, 255, 0.14);
+      padding: 0.55rem;
+    }
+
+    .sticky-inner {
+      width: min(720px, 96vw);
+      margin: 0 auto;
+      display: grid;
+      gap: 0.5rem;
+      grid-template-columns: 1.65fr 1fr;
+    }
+
+    .sticky-bar .btn { min-height: 48px; }
+    .sticky-bar .btn-secondary { background: rgba(255, 255, 255, 0.12); }
+
+    @media (max-width: 980px) {
+      .hero { grid-template-columns: 1fr; }
+      .hero-right { min-height: 290px; }
+      .stats-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .stat:nth-child(2) { border-right: 0; }
+      .stat:nth-child(-n+2) { border-bottom: 1px solid #e6edf6; }
+      .grid-3, .grid-6 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+
+    @media (max-width: 640px) {
+      body { padding-bottom: 94px; }
+      .hero-wrap { padding-top: 0.6rem; }
+      .hero-left, .hero-right { border-radius: 16px; }
+      .cta-row { flex-direction: column; }
+      .btn-primary, .btn-secondary { width: 100%; min-width: 0; }
+      .stats-strip { grid-template-columns: 1fr; }
+      .stat, .stat:nth-child(2) { border-right: 0; border-bottom: 1px solid #e6edf6; }
+      .stat:last-child { border-bottom: 0; }
+      .grid-3, .grid-6 { grid-template-columns: 1fr; }
+      .sticky-inner { grid-template-columns: 1.8fr 1fr; }
+      .sticky-bar .btn { font-size: 0.94rem; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero-wrap">
+    <div class="container">
+      <div class="hero" aria-label="Havant vehicle recovery landing hero">
+        <section class="hero-left">
+          <p class="label">Havant 24/7 vehicle recovery dispatch</p>
+          <h1>24/7 Vehicle Recovery Dispatch – Havant</h1>
+          <p class="subheadline">Call now for ETA + guide price.</p>
+          <p class="support">Broken down, non-starting, involved in an accident, or need a vehicle moved? Recovero helps connect you with available local independent recovery support in Havant and nearby areas.</p>
+
+          <div class="proof-row" aria-label="Service facts">
+            <span class="proof-chip">24/7 help across Havant and nearby areas</span>
+            <span class="proof-chip">Cars, vans and non-starters</span>
+            <span class="proof-chip">Quote before booking where possible</span>
+            <span class="proof-chip">No need to ring around</span>
+          </div>
+
+          <div class="cta-row">
+            <a class="btn btn-primary" href="tel:07366302341" aria-label="Call now for ETA and guide price">Call Now – ETA &amp; Price</a>
+            <a class="btn btn-secondary" href="https://wa.me/447366302341" target="_blank" rel="noopener" aria-label="Message Recovero on WhatsApp">WhatsApp Us</a>
+          </div>
+
+          <ul class="reassurance" aria-label="Service reassurance">
+            <li>✓ 24/7 help</li>
+            <li>✓ Upfront quote</li>
+            <li>✓ No membership</li>
+          </ul>
+
+          <p class="disclaimer">Recovero is a dispatch and introducer service.</p>
+        </section>
+
+        <aside class="hero-right" aria-label="Roadside vehicle recovery image panel">
+          <div class="hero-image"></div>
+          <div class="hero-card">
+            <strong>Fast local help in Havant</strong>
+            <span>Cars, vans, roadside &amp; transport</span>
+          </div>
+        </aside>
+      </div>
+
+      <section class="stats-strip" aria-label="Service facts strip">
+        <div class="stat"><strong>24/7</strong><span>help available</span></div>
+        <div class="stat"><strong>From £60</strong><span>local recovery guide price</span></div>
+        <div class="stat"><strong>Cars &amp; vans</strong><span>common vehicle types covered</span></div>
+        <div class="stat"><strong>Havant + nearby</strong><span>local area coverage</span></div>
+      </section>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <section>
+        <h2>Why drivers use Recovero</h2>
+        <div class="grid-3">
+          <article class="card"><div class="icon">⏱</div><h3>No need to ring around</h3><p>One call helps you find available local recovery support without chasing multiple numbers.</p></article>
+          <article class="card"><div class="icon">📍</div><h3>Fast local recovery support</h3><p>We focus on connecting Havant drivers with operators already covering the area.</p></article>
+          <article class="card"><div class="icon">£</div><h3>Quote before booking where possible</h3><p>Clear guide pricing first, then final confirmation by the attending independent operator.</p></article>
+        </div>
+      </section>
+
+      <section>
+        <h2>How it works</h2>
+        <div class="steps">
+          <div class="step"><strong>Tell us what’s happened</strong><p class="intro">Share your location, vehicle type and issue so we can move quickly.</p></div>
+          <div class="step"><strong>We connect you to available local support</strong><p class="intro">Recovero dispatch helps find an independent recovery operator covering your area.</p></div>
+          <div class="step"><strong>The attending operator confirms details and takes payment directly</strong><p class="intro">Where possible, final price and ETA are confirmed before dispatch.</p></div>
+        </div>
+      </section>
+
+      <section>
+        <h2>What we can help with</h2>
+        <div class="grid-6">
+          <article class="card"><h3>Breakdown recovery</h3><p>Roadside breakdowns, mechanical issues and non-drivable vehicles.</p></article>
+          <article class="card"><h3>Non-starts / flat battery</h3><p>Support when your vehicle will not start at home, work or roadside.</p></article>
+          <article class="card"><h3>Accident recovery</h3><p>Post-incident transport for damaged vehicles where needed.</p></article>
+          <article class="card"><h3>Vehicle transport</h3><p>Point-to-point movement for vehicles that need moving safely.</p></article>
+          <article class="card"><h3>Cars and vans</h3><p>Common private and light commercial vehicle types covered.</p></article>
+          <article class="card"><h3>Roadside / home / garage moves</h3><p>Collection and delivery options based on operator availability.</p></article>
+        </div>
+      </section>
+
+      <section>
+        <div class="local-box">
+          <h2>Recovery support across Havant and nearby areas</h2>
+          <p class="intro">We regularly help drivers in Havant, Leigh Park, Bedhampton, Emsworth and Waterlooville, with support around routes including the A27 and A3(M).</p>
+        </div>
+      </section>
+
+      <section>
+        <div class="pricing-box">
+          <h2>Guide pricing</h2>
+          <ul class="pricing-list">
+            <li><span>Local recovery</span><span>from £60</span></li>
+            <li><span>Longer distance recovery</span><span>from £1.50 per mile</span></li>
+          </ul>
+          <p class="fine-print">Guide prices only. Final price is confirmed by the attending independent operator where possible before dispatch.</p>
+        </div>
+      </section>
+
+      <section>
+        <h2>FAQs</h2>
+        <details>
+          <summary>Are you the recovery company?</summary>
+          <p>Recovero is a dispatch and introducer service. We connect you with available local independent recovery operators.</p>
+        </details>
+        <details>
+          <summary>Who do I pay?</summary>
+          <p>The attending independent operator confirms the price and takes payment directly.</p>
+        </details>
+        <details>
+          <summary>What areas do you cover?</summary>
+          <p>Havant and nearby areas including Leigh Park, Bedhampton, Emsworth, Waterlooville and routes around the A27 and A3(M).</p>
+        </details>
+        <details>
+          <summary>How quickly can help arrive?</summary>
+          <p>ETA depends on your location, traffic and operator availability. Call for the fastest live update.</p>
+        </details>
+        <details>
+          <summary>What information do you need?</summary>
+          <p>Your location, vehicle type, what has happened, and where the vehicle needs to go.</p>
+        </details>
+        <details>
+          <summary>What if I can’t talk?</summary>
+          <p>Message us on WhatsApp with your location and vehicle details, and we will guide you through next steps.</p>
+        </details>
+        <details>
+          <summary>What if I’m in a dangerous location?</summary>
+          <p>If there is immediate danger, call emergency services first. Move to a safe place if possible, then contact us for recovery support.</p>
+        </details>
+      </section>
+
+      <section class="final-cta">
+        <h2>Need vehicle recovery in Havant now?</h2>
+        <p>Skip the hassle of ringing around and call now for ETA + guide price.</p>
+        <div class="cta-row" style="justify-content:center; margin-top:0;">
+          <a class="btn btn-primary" href="tel:07366302341">Call Now</a>
+          <a class="btn btn-secondary" href="https://wa.me/447366302341" target="_blank" rel="noopener">WhatsApp Us</a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <div class="sticky-bar" role="region" aria-label="Quick contact actions">
+    <div class="sticky-inner">
+      <a class="btn btn-primary" href="tel:07366302341">Call Now</a>
+      <a class="btn btn-secondary" href="https://wa.me/447366302341" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </div>
+</body>
+</html>
