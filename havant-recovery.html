@@ -237,35 +237,37 @@
       font-size: 0.92rem;
     }
 
-    /* Bottom stat bar */
+    /* Bottom stat/proof bar */
     .stats {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
-      background: #fff;
-      border-top: 1px solid var(--line);
+      background: linear-gradient(180deg, #f8fbff 0%, #f2f7fd 100%);
+      border-top: 1px solid rgba(16, 35, 56, 0.14);
     }
 
     .stat {
-      padding: 16px 14px;
+      padding: 22px 16px 20px;
       text-align: center;
-      border-right: 1px solid var(--line);
+      border-right: 2px solid rgba(16, 35, 56, 0.14);
     }
 
     .stat:last-child { border-right: 0; }
 
     .stat strong {
       display: block;
-      font-size: clamp(1.25rem, 2vw, 1.6rem);
+      font-size: clamp(1.45rem, 2.2vw, 1.95rem);
       line-height: 1.05;
-      letter-spacing: -0.01em;
+      letter-spacing: -0.02em;
+      font-weight: 850;
+      color: #0f2438;
     }
 
     .stat span {
       display: block;
-      margin-top: 4px;
-      color: var(--ink-soft);
-      font-size: 0.86rem;
-      font-weight: 600;
+      margin-top: 6px;
+      color: #4c5f74;
+      font-size: 0.87rem;
+      font-weight: 650;
     }
 
     section { padding: 44px 0; }
@@ -440,7 +442,7 @@
       .hero-media { min-height: 280px; }
       .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .stat:nth-child(2) { border-right: 0; }
-      .stat:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+      .stat:nth-child(-n+2) { border-bottom: 2px solid rgba(16, 35, 56, 0.14); }
       .process-grid,
       .benefits { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .top-call { right: 12px; top: 12px; }
@@ -454,11 +456,13 @@
       .cta-row { flex-direction: column; }
       .process-grid,
       .benefits,
-      .stats,
       .micro-trust { grid-template-columns: 1fr; }
+      .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .stat,
       .stat:nth-child(2),
-      .stat:nth-child(3) { border-right: 0; border-bottom: 1px solid var(--line); }
+      .stat:nth-child(3) { border-right: 2px solid rgba(16, 35, 56, 0.14); border-bottom: 2px solid rgba(16, 35, 56, 0.14); }
+      .stat:nth-child(2n) { border-right: 0; }
+      .stat:nth-child(n+3) { border-bottom: 0; }
       .sticky-mobile { display: flex; }
       .top-call { display: none; }
     }
@@ -510,11 +514,11 @@
             </div>
           </div>
 
-          <div class="stats" aria-label="Proof stats">
-            <div class="stat"><strong>24/7</strong><span>Local recovery dispatch</span></div>
-            <div class="stat"><strong>ETA + price</strong><span>Confirmed where possible</span></div>
-            <div class="stat"><strong>Breakdown + transport</strong><span>One call for both</span></div>
-            <div class="stat"><strong>Havant coverage</strong><span>Town + surrounding routes</span></div>
+          <div class="stats" aria-label="Havant recovery proof bar">
+            <div class="stat"><strong>24/7</strong><span>Recovery request line</span></div>
+            <div class="stat"><strong>Live ETA</strong><span>Based on location + traffic</span></div>
+            <div class="stat"><strong>Havant + nearby</strong><span>Local area coverage</span></div>
+            <div class="stat"><strong>Pay direct</strong><span>To attending operator</span></div>
           </div>
         </div>
       </div>
