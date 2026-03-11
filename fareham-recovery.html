@@ -172,65 +172,70 @@
       transform:none;
     }
 
-    .process-track{
-      display:grid;
-      grid-auto-flow:column;
-      grid-auto-columns:minmax(84%,1fr);
-      gap:10px;
-      overflow-x:auto;
-      padding:4px 8vw 6px 0;
-      margin-right:-8vw;
-      scroll-snap-type:x mandatory;
-      -webkit-overflow-scrolling:touch;
-      scrollbar-width:none;
+    .process-shell{
+      margin-top:14px;
+      background:linear-gradient(180deg, rgba(255,255,255,.94), rgba(249,251,255,.98));
+      border:1px solid rgba(15,34,53,.1);
+      border-radius:24px;
+      box-shadow:0 16px 34px rgba(15,34,53,.08);
+      padding:20px;
     }
 
-    .process-track::-webkit-scrollbar{display:none}
+    .process-summary{
+      margin:0;
+      text-align:center;
+      color:#39485d;
+      font-weight:600;
+      font-size:.97rem;
+    }
+
+    .process-track{
+      margin-top:18px;
+      display:grid;
+      gap:12px;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+    }
+
+    .process-step{
+      display:grid;
+      gap:10px;
+    }
 
     .process-card{
-      scroll-snap-align:start;
-      position:relative;
-      overflow:hidden;
-      border-radius:20px;
-      border:1px solid rgba(15,34,53,.14);
-      background:rgba(255,255,255,.96);
-      box-shadow:0 10px 24px rgba(15,34,53,.08);
-      min-height:148px;
-      padding:14px;
-      transition:transform .22s ease, box-shadow .22s ease, border-color .22s ease, background-color .22s ease;
-    }
-
-    .process-card.active{
-      border-color:rgba(245,130,32,.55);
-      background:#fff;
-      box-shadow:0 16px 30px rgba(15,34,53,.14), 0 0 0 1px rgba(245,130,32,.18);
-      transform:translateY(-3px) scale(1.01);
+      height:100%;
+      border-radius:16px;
+      border:1px solid rgba(15,34,53,.12);
+      background:var(--card);
+      box-shadow:0 8px 16px rgba(15,34,53,.08);
+      padding:16px;
+      min-height:126px;
     }
 
     .process-top{
-      display:flex;
-      align-items:center;
-      gap:8px;
-      margin-bottom:10px;
+      margin-bottom:8px;
     }
 
-    .icon-badge{
-      width:30px;
-      height:30px;
-      border-radius:10px;
-      display:grid;
-      place-items:center;
-      background:rgba(245,130,32,.12);
-      border:1px solid rgba(245,130,32,.28);
-      color:#7a3900;
+    .process-link{
+      display:none;
+      align-self:center;
+      justify-self:center;
+      width:44px;
+      height:3px;
+      border-radius:999px;
+      background:linear-gradient(90deg,var(--orange),var(--orange-deep));
     }
 
-    .icon-badge svg,
-    .benefit-icon svg{width:16px;height:16px;display:block}
-    .icon-badge svg path,
-    .icon-badge svg circle,
-    .icon-badge svg rect,
-    .icon-badge svg line,
+    .tow-icon{
+      width:26px;
+      height:26px;
+      color:#58657a;
+      margin-left:auto;
+      margin-top:8px;
+      display:block;
+    }
+
+    .tow-icon path,
+    .tow-icon circle,
     .benefit-icon svg path,
     .benefit-icon svg circle,
     .benefit-icon svg rect,
@@ -240,28 +245,6 @@
       fill:none;
       stroke-linecap:round;
       stroke-linejoin:round;
-    }
-
-    .process-progress{
-      margin-top:10px;
-      display:grid;
-      gap:8px;
-    }
-
-    .progress-line{
-      height:4px;
-      border-radius:999px;
-      background:rgba(15,34,53,.12);
-      overflow:hidden;
-    }
-
-    .progress-line span{
-      display:block;
-      height:100%;
-      width:25%;
-      background:linear-gradient(90deg,var(--orange),var(--orange-deep));
-      border-radius:999px;
-      transition:width .22s ease;
     }
 
     .benefits{
@@ -406,13 +389,20 @@
       body{padding-bottom:0}
       .hero-content{padding:34px}
       .process-track{
-        grid-auto-flow:initial;
         grid-template-columns:repeat(4,minmax(0,1fr));
-        grid-auto-columns:auto;
-        overflow:visible;
-        padding:4px 0 8px;
-        margin-right:0;
+        gap:10px;
       }
+
+      .process-step{
+        grid-template-columns:1fr auto;
+        align-items:stretch;
+      }
+
+      .process-step:last-child{
+        grid-template-columns:1fr;
+      }
+
+      .process-link{display:block}
       .benefits{grid-template-columns:repeat(2,minmax(0,1fr))}
       .sticky{display:none}
     }
@@ -456,52 +446,41 @@
 
     <section class="section reveal" id="how-recovery-works">
       <h2 class="section-title">How recovery works</h2>
-      <p class="section-intro">Call → we connect you → ETA + price → recovery.</p>
-      <div class="process-flow" aria-label="How recovery works in four steps">
-        <div class="process-track" id="processTrack">
-          <article class="process-card active" data-step="1" tabindex="0">
-            <div class="process-top">
-              <span class="step-number">1</span>
-              <span class="icon-badge" aria-hidden="true">
-                <svg viewBox="0 0 24 24" focusable="false"><rect x="7" y="2.5" width="10" height="19" rx="2.8"></rect><line x1="10" y1="5.5" x2="14" y2="5.5"></line><line x1="11" y1="18.5" x2="13" y2="18.5"></line></svg>
-              </span>
-            </div>
-            <h3>You call</h3>
-            <p>Location + vehicle</p>
-          </article>
-          <article class="process-card" data-step="2" tabindex="0">
-            <div class="process-top">
-              <span class="step-number">2</span>
-              <span class="icon-badge" aria-hidden="true">
-                <svg viewBox="0 0 24 24" focusable="false"><path d="M8.5 8.2a4.2 4.2 0 0 1 6.9-1.3l.5.5"></path><path d="M15.5 15.8a4.2 4.2 0 0 1-6.9 1.3l-.5-.5"></path><path d="M9.2 14.8h-1.4a2.6 2.6 0 0 1 0-5.2h1.4"></path><path d="M14.8 9.6h1.4a2.6 2.6 0 0 1 0 5.2h-1.4"></path><line x1="9" y1="12" x2="15" y2="12"></line></svg>
-              </span>
-            </div>
-            <h3>We connect you</h3>
-            <p>To a recovery operator</p>
-          </article>
-          <article class="process-card" data-step="3" tabindex="0">
-            <div class="process-top">
-              <span class="step-number">3</span>
-              <span class="icon-badge" aria-hidden="true">
-                <svg viewBox="0 0 24 24" focusable="false"><circle cx="8.2" cy="10.2" r="4.7"></circle><line x1="8.2" y1="10.2" x2="8.2" y2="7.7"></line><line x1="8.2" y1="10.2" x2="10.1" y2="11.4"></line><path d="M15.2 7.2h4.3"></path><path d="M17.35 5.05v4.3"></path><path d="M14.5 16.8h6"></path><path d="M14.5 19.6h6"></path></svg>
-              </span>
-            </div>
-            <h3>ETA + price</h3>
-            <p>Confirmed where possible</p>
-          </article>
-          <article class="process-card" data-step="4" tabindex="0">
-            <div class="process-top">
-              <span class="step-number">4</span>
-              <span class="icon-badge" aria-hidden="true">
-                <svg viewBox="0 0 24 24" focusable="false"><path d="M2.5 13.6h11.8a1.8 1.8 0 0 0 1.8-1.8V9.9h2.7l2.7 2.7v1h.5"></path><circle cx="6.7" cy="15.7" r="1.8"></circle><circle cx="17.8" cy="15.7" r="1.8"></circle><path d="M2.5 10.8h3.1"></path></svg>
-              </span>
-            </div>
-            <h3>Recovery arranged</h3>
-            <p>Roadside help or transport</p>
-          </article>
-        </div>
-        <div class="process-progress" aria-label="Step progress">
-          <div class="progress-line" aria-hidden="true"><span id="processProgressFill"></span></div>
+      <div class="process-shell" aria-label="How recovery works in four steps">
+        <p class="process-summary">Call → we connect you → operator confirms ETA + price → recovery.</p>
+        <div class="process-track">
+          <div class="process-step">
+            <article class="process-card">
+              <div class="process-top"><span class="step-number">1</span></div>
+              <h3>You call</h3>
+              <p>Location + vehicle</p>
+            </article>
+            <span class="process-link" aria-hidden="true"></span>
+          </div>
+          <div class="process-step">
+            <article class="process-card">
+              <div class="process-top"><span class="step-number">2</span></div>
+              <h3>We connect you</h3>
+              <p>To an available operator</p>
+            </article>
+            <span class="process-link" aria-hidden="true"></span>
+          </div>
+          <div class="process-step">
+            <article class="process-card">
+              <div class="process-top"><span class="step-number">3</span></div>
+              <h3>Operator confirms</h3>
+              <p>ETA + price (where possible)</p>
+            </article>
+            <span class="process-link" aria-hidden="true"></span>
+          </div>
+          <div class="process-step">
+            <article class="process-card">
+              <div class="process-top"><span class="step-number">4</span></div>
+              <h3>Recovery arranged</h3>
+              <p>Roadside help or transport</p>
+              <svg class="tow-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M2.5 13.6h11.8a1.8 1.8 0 0 0 1.8-1.8V9.9h2.7l2.7 2.7v1h.5"></path><circle cx="6.7" cy="15.7" r="1.8"></circle><circle cx="17.8" cy="15.7" r="1.8"></circle><path d="M2.5 10.8h3.1"></path></svg>
+            </article>
+          </div>
         </div>
       </div>
     </section>
@@ -579,46 +558,6 @@
       revealItems.forEach((item) => revealObserver.observe(item));
     } else {
       revealItems.forEach((item) => item.classList.add('in-view'));
-    }
-
-    const processTrack = document.getElementById('processTrack');
-    const processCards = [...document.querySelectorAll('.process-card')];
-    const progressFill = document.getElementById('processProgressFill');
-
-    const setActiveStep = (index, shouldScroll = false) => {
-      processCards.forEach((card, cardIndex) => {
-        card.classList.toggle('active', cardIndex === index);
-      });
-      progressFill.style.width = `${((index + 1) / processCards.length) * 100}%`;
-      if (shouldScroll && processTrack) {
-        processCards[index].scrollIntoView({ behavior: reducedMotion ? 'auto' : 'smooth', block: 'nearest', inline: 'start' });
-      }
-    };
-
-    processCards.forEach((card, index) => {
-      card.addEventListener('click', () => setActiveStep(index, true));
-      card.addEventListener('focus', () => setActiveStep(index));
-    });
-
-    if (processTrack) {
-      let tick;
-      processTrack.addEventListener('scroll', () => {
-        window.clearTimeout(tick);
-        tick = window.setTimeout(() => {
-          const trackRect = processTrack.getBoundingClientRect();
-          let activeIndex = 0;
-          let smallestOffset = Number.POSITIVE_INFINITY;
-          processCards.forEach((card, index) => {
-            const cardRect = card.getBoundingClientRect();
-            const offset = Math.abs(cardRect.left - trackRect.left);
-            if (offset < smallestOffset) {
-              smallestOffset = offset;
-              activeIndex = index;
-            }
-          });
-          setActiveStep(activeIndex);
-        }, 90);
-      }, { passive: true });
     }
 
     const benefitCards = [...document.querySelectorAll('.benefit-card')];
