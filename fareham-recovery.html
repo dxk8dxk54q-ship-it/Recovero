@@ -175,11 +175,11 @@
     .process-track{
       display:grid;
       grid-auto-flow:column;
-      grid-auto-columns:minmax(78%,1fr);
-      gap:12px;
+      grid-auto-columns:minmax(84%,1fr);
+      gap:10px;
       overflow-x:auto;
-      padding:4px 3vw 8px 0;
-      margin-right:-3vw;
+      padding:4px 8vw 6px 0;
+      margin-right:-8vw;
       scroll-snap-type:x mandatory;
       -webkit-overflow-scrolling:touch;
       scrollbar-width:none;
@@ -191,21 +191,14 @@
       scroll-snap-align:start;
       position:relative;
       overflow:hidden;
+      border-radius:20px;
+      border:1px solid rgba(15,34,53,.14);
+      background:rgba(255,255,255,.96);
+      box-shadow:0 10px 24px rgba(15,34,53,.08);
+      min-height:148px;
+      padding:14px;
       transition:transform .22s ease, box-shadow .22s ease, border-color .22s ease, background-color .22s ease;
     }
-
-    .process-card::after{
-      content:"";
-      position:absolute;
-      top:22px;
-      left:calc(100% + 7px);
-      width:12px;
-      height:2px;
-      background:rgba(15,34,53,.2);
-      border-radius:999px;
-    }
-
-    .process-card:last-child::after{display:none}
 
     .process-card.active{
       border-color:rgba(245,130,32,.55);
@@ -214,38 +207,40 @@
       transform:translateY(-3px) scale(1.01);
     }
 
-    .process-illu{
-      position:absolute;
-      right:10px;
-      top:10px;
-      width:64px;
-      height:48px;
-      color:var(--ink);
-      opacity:.72;
-      transform:translateY(8px);
-      transition:opacity .28s ease, transform .28s ease, filter .28s ease;
-      pointer-events:none;
+    .process-top{
+      display:flex;
+      align-items:center;
+      gap:8px;
+      margin-bottom:10px;
     }
 
-    .process-illu svg{width:100%;height:100%;display:block}
-    .process-illu .line{stroke:currentColor;stroke-width:1.9;fill:none;stroke-linecap:round;stroke-linejoin:round}
-    .process-illu .accent{stroke:var(--orange);stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
-    .process-illu .fill-accent{fill:rgba(245,130,32,.14);stroke:var(--orange);stroke-width:1.5}
-
-    .process-card.in-view .process-illu,
-    .reveal.in-view .process-card .process-illu{
-      opacity:.82;
-      transform:none;
+    .icon-badge{
+      width:30px;
+      height:30px;
+      border-radius:10px;
+      display:grid;
+      place-items:center;
+      background:rgba(245,130,32,.12);
+      border:1px solid rgba(245,130,32,.28);
+      color:#7a3900;
     }
 
-    .process-card.active .process-illu{
-      opacity:1;
-      transform:translateY(-1px);
-      filter:drop-shadow(0 4px 10px rgba(245,130,32,.22));
+    .icon-badge svg,
+    .benefit-icon svg{width:16px;height:16px;display:block}
+    .icon-badge svg path,
+    .icon-badge svg circle,
+    .icon-badge svg rect,
+    .icon-badge svg line,
+    .benefit-icon svg path,
+    .benefit-icon svg circle,
+    .benefit-icon svg rect,
+    .benefit-icon svg line{
+      stroke:currentColor;
+      stroke-width:1.8;
+      fill:none;
+      stroke-linecap:round;
+      stroke-linejoin:round;
     }
-
-    .process-card h3,
-    .process-card p{max-width:calc(100% - 74px)}
 
     .process-progress{
       margin-top:10px;
@@ -268,19 +263,6 @@
       border-radius:999px;
       transition:width .22s ease;
     }
-
-    .progress-dots{display:flex;gap:8px}
-    .progress-dots button{
-      appearance:none;
-      border:0;
-      width:10px;
-      height:10px;
-      border-radius:50%;
-      background:rgba(15,34,53,.24);
-      padding:0;
-      transition:transform .2s ease, background-color .2s ease;
-    }
-    .progress-dots button.active{background:var(--orange);transform:scale(1.1)}
 
     .benefits{
       display:grid;
@@ -313,6 +295,8 @@
       font-size:1rem;
     }
 
+    .benefit-card h3{color:var(--ink)}
+
     .benefit-card .extra{
       max-height:0;
       overflow:hidden;
@@ -344,17 +328,18 @@
     }
 
     .step-number{
-      width:30px;
+      width:32px;
       height:30px;
-      border-radius:50%;
+      border-radius:999px;
       background:rgba(245,130,32,.15);
       border:1px solid rgba(245,130,32,.45);
       display:inline-flex;
       align-items:center;
       justify-content:center;
       font-weight:800;
-      margin-bottom:8px;
+      margin-bottom:0;
       color:#7a3900;
+      font-size:.9rem;
     }
 
     h3{margin:0 0 4px;font-size:1rem}
@@ -428,17 +413,8 @@
         padding:4px 0 8px;
         margin-right:0;
       }
-      .process-card::after{
-        width:14px;
-      }
       .benefits{grid-template-columns:repeat(2,minmax(0,1fr))}
       .sticky{display:none}
-    }
-
-    @media (max-width:420px){
-      .process-illu{width:58px;height:44px;right:8px}
-      .process-card h3,
-      .process-card p{max-width:calc(100% - 66px)}
     }
 
     @media (prefers-reduced-motion:reduce){
@@ -483,65 +459,49 @@
       <p class="section-intro">Call → we connect you → ETA + price → recovery.</p>
       <div class="process-flow" aria-label="How recovery works in four steps">
         <div class="process-track" id="processTrack">
-          <article class="card process-card active" data-step="1" tabindex="0">
-            <span class="process-illu" aria-hidden="true">
-              <svg viewBox="0 0 64 48" focusable="false">
-                <rect x="14" y="6" width="26" height="36" rx="7" class="line"></rect>
-                <circle cx="27" cy="36" r="1.8" fill="currentColor"></circle>
-                <path d="M47 13c2.2 1.3 3.7 3.7 3.7 6.5s-1.5 5.1-3.7 6.5" class="accent"></path>
-                <path d="M43.4 15.6c1.3.8 2.2 2.2 2.2 3.9s-.9 3.1-2.2 3.9" class="accent"></path>
-              </svg>
-            </span>
-            <span class="step-number">1</span><h3>You call</h3><p>Location + vehicle.</p>
+          <article class="process-card active" data-step="1" tabindex="0">
+            <div class="process-top">
+              <span class="step-number">1</span>
+              <span class="icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" focusable="false"><rect x="7" y="2.5" width="10" height="19" rx="2.8"></rect><line x1="10" y1="5.5" x2="14" y2="5.5"></line><line x1="11" y1="18.5" x2="13" y2="18.5"></line></svg>
+              </span>
+            </div>
+            <h3>You call</h3>
+            <p>Location + vehicle</p>
           </article>
-          <article class="card process-card" data-step="2" tabindex="0">
-            <span class="process-illu" aria-hidden="true">
-              <svg viewBox="0 0 64 48" focusable="false">
-                <circle cx="12" cy="24" r="5" class="fill-accent"></circle>
-                <circle cx="52" cy="24" r="5" class="line"></circle>
-                <path d="M18 24h28" class="line"></path>
-                <path d="M40.5 19.5 46 24l-5.5 4.5" class="accent"></path>
-                <path d="M46 11.6c2.5 0 4.6 2.1 4.6 4.6" class="line"></path>
-                <path d="M43.2 14.4c1.2 0 2.2 1 2.2 2.2" class="line"></path>
-              </svg>
-            </span>
-            <span class="step-number">2</span><h3>We connect you</h3><p>To a recovery operator.</p>
+          <article class="process-card" data-step="2" tabindex="0">
+            <div class="process-top">
+              <span class="step-number">2</span>
+              <span class="icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" focusable="false"><path d="M8.5 8.2a4.2 4.2 0 0 1 6.9-1.3l.5.5"></path><path d="M15.5 15.8a4.2 4.2 0 0 1-6.9 1.3l-.5-.5"></path><path d="M9.2 14.8h-1.4a2.6 2.6 0 0 1 0-5.2h1.4"></path><path d="M14.8 9.6h1.4a2.6 2.6 0 0 1 0 5.2h-1.4"></path><line x1="9" y1="12" x2="15" y2="12"></line></svg>
+              </span>
+            </div>
+            <h3>We connect you</h3>
+            <p>To a recovery operator</p>
           </article>
-          <article class="card process-card" data-step="3" tabindex="0">
-            <span class="process-illu" aria-hidden="true">
-              <svg viewBox="0 0 64 48" focusable="false">
-                <circle cx="18" cy="24" r="10" class="line"></circle>
-                <path d="M18 24v-5.4M18 24l4.3 2.4" class="line"></path>
-                <path d="M35 17h16" class="accent"></path>
-                <path d="M43 11v12" class="line"></path>
-                <path d="M40 11h6" class="line"></path>
-                <path d="M40 23h6" class="line"></path>
-                <path d="M32 31h22" class="line"></path>
-              </svg>
-            </span>
-            <span class="step-number">3</span><h3>ETA + price</h3><p>Confirmed where possible.</p>
+          <article class="process-card" data-step="3" tabindex="0">
+            <div class="process-top">
+              <span class="step-number">3</span>
+              <span class="icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" focusable="false"><circle cx="8.2" cy="10.2" r="4.7"></circle><line x1="8.2" y1="10.2" x2="8.2" y2="7.7"></line><line x1="8.2" y1="10.2" x2="10.1" y2="11.4"></line><path d="M15.2 7.2h4.3"></path><path d="M17.35 5.05v4.3"></path><path d="M14.5 16.8h6"></path><path d="M14.5 19.6h6"></path></svg>
+              </span>
+            </div>
+            <h3>ETA + price</h3>
+            <p>Confirmed where possible</p>
           </article>
-          <article class="card process-card" data-step="4" tabindex="0">
-            <span class="process-illu" aria-hidden="true">
-              <svg viewBox="0 0 64 48" focusable="false">
-                <path d="M6 31h31.5c3.1 0 5.6-2.5 5.6-5.6v-2.9h9.2l4.8 4.8V31H58" class="line"></path>
-                <path d="M24 19h12l4 4.6H20.2" class="accent"></path>
-                <circle cx="16" cy="33" r="4" class="line"></circle>
-                <circle cx="49" cy="33" r="4" class="line"></circle>
-                <path d="M7 26h9" class="line"></path>
-              </svg>
-            </span>
-            <span class="step-number">4</span><h3>Recovery arranged</h3><p>Roadside help or transport.</p>
+          <article class="process-card" data-step="4" tabindex="0">
+            <div class="process-top">
+              <span class="step-number">4</span>
+              <span class="icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" focusable="false"><path d="M2.5 13.6h11.8a1.8 1.8 0 0 0 1.8-1.8V9.9h2.7l2.7 2.7v1h.5"></path><circle cx="6.7" cy="15.7" r="1.8"></circle><circle cx="17.8" cy="15.7" r="1.8"></circle><path d="M2.5 10.8h3.1"></path></svg>
+              </span>
+            </div>
+            <h3>Recovery arranged</h3>
+            <p>Roadside help or transport</p>
           </article>
         </div>
         <div class="process-progress" aria-label="Step progress">
           <div class="progress-line" aria-hidden="true"><span id="processProgressFill"></span></div>
-          <div class="progress-dots" role="tablist" aria-label="Select step">
-            <button class="active" data-target-step="1" aria-label="Show step 1"></button>
-            <button data-target-step="2" aria-label="Show step 2"></button>
-            <button data-target-step="3" aria-label="Show step 3"></button>
-            <button data-target-step="4" aria-label="Show step 4"></button>
-          </div>
         </div>
       </div>
     </section>
@@ -551,19 +511,19 @@
       <div class="benefits-wrap">
         <div class="benefits" role="list">
           <button class="card benefit-card active" type="button" role="listitem" aria-expanded="true">
-            <span class="benefit-top"><span class="benefit-icon" aria-hidden="true">⚡</span><span><h3>Fast local connection</h3><p>Quick support for urgent breakdown situations.</p></span></span>
+            <span class="benefit-top"><span class="benefit-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M11.5 3.5 6.2 12h4.2L9.7 20.5 17.8 10h-4.3l1.8-6.5z"></path></svg></span><span><h3>Fast local connection</h3><p>Quick support for urgent breakdown situations.</p></span></span>
             <p class="extra">Support depends on your location and operator availability.</p>
           </button>
           <button class="card benefit-card" type="button" role="listitem" aria-expanded="false">
-            <span class="benefit-top"><span class="benefit-icon" aria-hidden="true">🕒</span><span><h3>Live ETA updates</h3><p>Timing is based on your location and traffic.</p></span></span>
+            <span class="benefit-top"><span class="benefit-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><circle cx="12" cy="12" r="7"></circle><line x1="12" y1="12" x2="12" y2="8.8"></line><line x1="12" y1="12" x2="14.8" y2="13.5"></line></svg></span><span><h3>Live ETA updates</h3><p>Timing is based on your location and traffic.</p></span></span>
             <p class="extra">We share updates as soon as confirmed by the operator.</p>
           </button>
           <button class="card benefit-card" type="button" role="listitem" aria-expanded="false">
-            <span class="benefit-top"><span class="benefit-icon" aria-hidden="true">£</span><span><h3>Price confirmed where possible</h3><p>Clear costs before recovery is arranged where possible.</p></span></span>
+            <span class="benefit-top"><span class="benefit-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M15.8 6.8a3.7 3.7 0 0 0-2.9-1.3c-2.1 0-3.8 1.7-3.8 3.8v7.3"></path><path d="M6.8 10.1h6"></path><path d="M6.8 13.3h5"></path><path d="M8.7 18.5h8.5"></path></svg></span><span><h3>Price confirmed where possible</h3><p>Clear costs before recovery is arranged where possible.</p></span></span>
             <p class="extra">Final pricing can vary by distance, vehicle type and time.</p>
           </button>
           <button class="card benefit-card" type="button" role="listitem" aria-expanded="false">
-            <span class="benefit-top"><span class="benefit-icon" aria-hidden="true">🚚</span><span><h3>Breakdowns and transport</h3><p>Help with roadside recovery and vehicle moves.</p></span></span>
+            <span class="benefit-top"><span class="benefit-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M2.5 14h11.7a1.8 1.8 0 0 0 1.8-1.8v-2h2.8l2.7 2.7v1.1h.5"></path><circle cx="6.8" cy="16" r="1.9"></circle><circle cx="17.9" cy="16" r="1.9"></circle><path d="M2.5 11.2h3"></path></svg></span><span><h3>Breakdowns and transport</h3><p>Help with roadside recovery and vehicle moves.</p></span></span>
             <p class="extra">From non-starters to planned transport, support is available.</p>
           </button>
         </div>
@@ -624,14 +584,10 @@
     const processTrack = document.getElementById('processTrack');
     const processCards = [...document.querySelectorAll('.process-card')];
     const progressFill = document.getElementById('processProgressFill');
-    const progressDots = [...document.querySelectorAll('.progress-dots button')];
 
     const setActiveStep = (index, shouldScroll = false) => {
       processCards.forEach((card, cardIndex) => {
         card.classList.toggle('active', cardIndex === index);
-      });
-      progressDots.forEach((dot, dotIndex) => {
-        dot.classList.toggle('active', dotIndex === index);
       });
       progressFill.style.width = `${((index + 1) / processCards.length) * 100}%`;
       if (shouldScroll && processTrack) {
@@ -642,10 +598,6 @@
     processCards.forEach((card, index) => {
       card.addEventListener('click', () => setActiveStep(index, true));
       card.addEventListener('focus', () => setActiveStep(index));
-    });
-
-    progressDots.forEach((dot, index) => {
-      dot.addEventListener('click', () => setActiveStep(index, true));
     });
 
     if (processTrack) {
