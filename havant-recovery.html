@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vehicle Recovery Havant | 24/7 Local Help | Recovero</title>
+  <meta name="description" content="Need urgent vehicle recovery in Havant? Recovero connects you with available local independent recovery operators for roadside, non-start, accident and transport jobs. Call now for ETA and guide price." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Need Vehicle Recovery in Havant? Call Recovero Now" />
+  <meta property="og:description" content="Fast local recovery support in Havant and nearby areas. Recovero connects you with available independent operators. Call for ETA and guide pricing." />
+  <meta property="og:url" content="https://recovero247.co.uk/havant-recovery" />
+  <meta property="og:locale" content="en_GB" />
+  <meta name="theme-color" content="#0d1321" />
+  <style>
+    :root {
+      --bg: #f4f7fb;
+      --surface: #ffffff;
+      --ink: #0d1321;
+      --muted: #3b4252;
+      --brand: #ffc300;
+      --brand-ink: #111111;
+      --accent: #1976d2;
+      --line: #dfe6ef;
+      --ok: #116530;
+      --radius: 14px;
+      --shadow: 0 8px 24px rgba(13, 19, 33, 0.08);
+    }
+
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.55;
+      padding-bottom: 74px;
+    }
+
+    .container {
+      width: min(1100px, 92vw);
+      margin: 0 auto;
+    }
+
+    .hero {
+      position: relative;
+      isolation: isolate;
+      color: #fff;
+      background:
+        linear-gradient(120deg, rgba(13, 19, 33, 0.92), rgba(13, 19, 33, 0.6)),
+        url('https://images.unsplash.com/photo-1550355291-bbee04a92027?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      padding: 2.4rem 0 3rem;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      font-weight: 700;
+      font-size: .92rem;
+      background: rgba(255,255,255,.14);
+      border: 1px solid rgba(255,255,255,.3);
+      padding: .45rem .8rem;
+      border-radius: 999px;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-size: clamp(1.8rem, 4.6vw, 3rem);
+      line-height: 1.1;
+      margin: 0 0 .9rem;
+      max-width: 16ch;
+    }
+
+    .hero p {
+      font-size: clamp(1.02rem, 2.3vw, 1.2rem);
+      max-width: 66ch;
+      margin: 0 0 1.1rem;
+      color: #e6edf7;
+    }
+
+    .trust-points {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: .7rem;
+      margin: 1.2rem 0 1.4rem;
+      padding: 0;
+      list-style: none;
+    }
+
+    .trust-points li {
+      background: rgba(255,255,255,.12);
+      border: 1px solid rgba(255,255,255,.24);
+      padding: .7rem .8rem;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: .95rem;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .75rem;
+      margin-top: .6rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: .85rem 1.2rem;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 800;
+      border: 2px solid transparent;
+      transition: transform .15s ease, box-shadow .2s ease, background .2s ease;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .btn:hover { transform: translateY(-1px); }
+    .btn-primary {
+      background: var(--brand);
+      color: var(--brand-ink);
+      box-shadow: 0 8px 20px rgba(255, 195, 0, 0.3);
+    }
+    .btn-primary:hover { background: #ffcf33; }
+    .btn-secondary {
+      background: rgba(255,255,255,.1);
+      color: #fff;
+      border-color: rgba(255,255,255,.35);
+    }
+    .btn-secondary:hover { background: rgba(255,255,255,.18); }
+
+    .reassure {
+      margin-top: .9rem;
+      font-size: .92rem;
+      color: #d3deef;
+    }
+
+    section { padding: 2.7rem 0; }
+    h2 {
+      font-size: clamp(1.45rem, 3.6vw, 2.1rem);
+      margin: 0 0 .8rem;
+      line-height: 1.2;
+    }
+
+    .lead {
+      margin: 0 0 1.25rem;
+      color: var(--muted);
+      max-width: 68ch;
+    }
+
+    .grid {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 1rem;
+      box-shadow: var(--shadow);
+    }
+
+    .card h3 {
+      margin: 0 0 .45rem;
+      font-size: 1.06rem;
+    }
+
+    .card p { margin: 0; color: var(--muted); font-size: .96rem; }
+
+    .story {
+      background: #eaf2ff;
+      border-top: 1px solid #d2e2ff;
+      border-bottom: 1px solid #d2e2ff;
+    }
+
+    .steps {
+      display: grid;
+      gap: .9rem;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    }
+
+    .step {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 1rem;
+      position: relative;
+      box-shadow: var(--shadow);
+    }
+
+    .num {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--ink);
+      color: #fff;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      margin-bottom: .6rem;
+    }
+
+    .local-box,
+    .pricing-box,
+    .final-cta {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 1.1rem;
+    }
+
+    .pricing-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 .8rem;
+      display: grid;
+      gap: .6rem;
+    }
+
+    .pricing-list li {
+      display: flex;
+      justify-content: space-between;
+      gap: .7rem;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: .75rem .8rem;
+      background: #fbfdff;
+    }
+
+    .note { color: var(--muted); font-size: .92rem; }
+
+    details {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: .8rem .9rem;
+      box-shadow: var(--shadow);
+    }
+
+    details + details { margin-top: .7rem; }
+    summary { font-weight: 700; cursor: pointer; }
+    details p { margin: .55rem 0 0; color: var(--muted); }
+
+    .cant-talk {
+      margin-top: 1rem;
+      font-size: .92rem;
+      color: var(--muted);
+    }
+
+    .wa {
+      display: inline-block;
+      margin-top: .35rem;
+      color: var(--ok);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .final-cta h2 { margin-bottom: .5rem; }
+
+    .sticky {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(13,19,33,.96);
+      border-top: 1px solid rgba(255,255,255,.12);
+      backdrop-filter: blur(4px);
+      padding: .5rem;
+      z-index: 50;
+    }
+
+    .sticky-inner {
+      width: min(1100px, 96vw);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.35fr 1fr;
+      gap: .45rem;
+    }
+
+    .sticky .btn {
+      min-height: 44px;
+      border-radius: 10px;
+      padding: .7rem .8rem;
+      font-size: .95rem;
+    }
+
+    .sticky .btn-secondary { border-color: rgba(255,255,255,.25); }
+
+    .legal {
+      font-size: .78rem;
+      color: #cdd6e6;
+      margin-top: .5rem;
+      text-align: center;
+    }
+
+    @media (min-width: 880px) {
+      body { padding-bottom: 0; }
+      .sticky { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <span class="hero-badge">Havant 24/7 Vehicle Recovery Support</span>
+      <h1>Need vehicle recovery now? Fast local help in Havant.</h1>
+      <p>Broken down, non-starting, involved in an accident, or need a vehicle moved? Recovero helps connect you with available local recovery support in Havant and nearby areas. Call now for ETA and guide price.</p>
+      <ul class="trust-points" aria-label="Key trust points">
+        <li>24/7 help</li>
+        <li>Quote before booking where possible</li>
+        <li>No need to ring around</li>
+        <li>Cars &amp; vans</li>
+      </ul>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="tel:07366302341">Call Now</a>
+        <a class="btn btn-secondary" href="tel:07366302341">Get ETA &amp; Price</a>
+      </div>
+      <p class="reassure">Call direct: <strong>07366 302341</strong></p>
+      <p class="reassure">Recovero is a dispatch and introducer service. We connect customers with available local independent recovery operators.</p>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <div class="container">
+        <h2>Why drivers use Recovero</h2>
+        <p class="lead">When your car or van is stuck, you need a clear next step quickly. Recovero keeps it simple so you can move from stress to action with one call.</p>
+        <div class="grid">
+          <article class="card"><h3>No need to ring around</h3><p>Tell us what’s happened once. We help find available local support so you don’t lose time making multiple calls.</p></article>
+          <article class="card"><h3>Fast local recovery support</h3><p>We focus on connecting Havant-area jobs to operators who know local roads and routes.</p></article>
+          <article class="card"><h3>Quote before booking where possible</h3><p>Clear guide pricing and confirmation from the attending operator helps you decide with confidence.</p></article>
+          <article class="card"><h3>24/7 urgent help</h3><p>Day or night, we take urgent breakdown and recovery enquiries when you need help most.</p></article>
+          <article class="card"><h3>Cars, vans, roadside and transport</h3><p>From non-starts at home to planned moves to a garage, we handle the common situations quickly.</p></article>
+          <article class="card"><h3>Phone-first, low-friction process</h3><p>One short call, fast details, and a practical next step without complicated forms.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="story">
+      <div class="container">
+        <h2>Less stress when you’re stranded</h2>
+        <p class="lead">If you’re stuck in Havant, the last thing you need is uncertainty. Recovero helps simplify the moment by taking your enquiry, checking availability, and connecting you with local support quickly so you can focus on getting safe and moving again.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>How it works</h2>
+        <div class="steps">
+          <article class="step">
+            <div class="num">1</div>
+            <h3>Tell us what’s happened</h3>
+            <p>Call with your location, vehicle type, and issue. We’ll take the key details straight away.</p>
+          </article>
+          <article class="step">
+            <div class="num">2</div>
+            <h3>Get your ETA and quote</h3>
+            <p>Recovero matches your enquiry to an available local independent operator who confirms details and pricing where possible before dispatch.</p>
+          </article>
+          <article class="step">
+            <div class="num">3</div>
+            <h3>Get moving again</h3>
+            <p>The attending operator carries out the recovery or transport job, and payment is made directly to them.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>What we can help with</h2>
+        <div class="grid">
+          <article class="card"><h3>Breakdown recovery</h3><p>For roadside breakdowns where your vehicle can’t continue safely.</p></article>
+          <article class="card"><h3>Non-starts / flat battery</h3><p>If your vehicle won’t start at home, work, or after parking, we can help arrange recovery support.</p></article>
+          <article class="card"><h3>Accident recovery</h3><p>Need your vehicle moved after an incident? We help connect you to available recovery assistance.</p></article>
+          <article class="card"><h3>Vehicle transport</h3><p>Move a vehicle to a garage, home, or chosen destination with less hassle.</p></article>
+          <article class="card"><h3>Cars and vans</h3><p>Support for most standard cars and light vans, including urgent same-day scenarios.</p></article>
+          <article class="card"><h3>Home, roadside, and garage moves</h3><p>Whether you’re on the roadside or need a planned move, we help arrange the right next step.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="local-box">
+          <h2>Recovery support across Havant and nearby areas</h2>
+          <p class="lead">We regularly handle enquiries around Havant, Leigh Park, Bedhampton, Emsworth, and Waterlooville, including nearby routes such as the A27, A3(M), and Portsmouth-facing roads. Local route familiarity helps reduce delays and gets your enquiry moving faster.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="tel:07366302341">Call Now</a>
+            <a class="btn" style="background:#eef4ff;color:#0d1321;border-color:#c8d8f7;" href="tel:07366302341">Get ETA &amp; Price</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="pricing-box">
+          <h2>Guide pricing with clear expectations</h2>
+          <ul class="pricing-list">
+            <li><strong>Local recovery</strong><span>Typical from £60</span></li>
+            <li><strong>Longer distance recovery</strong><span>Typical from £1.50 per mile</span></li>
+          </ul>
+          <p class="note">These are guide prices only. Final pricing is confirmed by the attending independent recovery operator where possible before dispatch. Payment is made directly to the attending operator.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>Frequently asked questions</h2>
+        <details>
+          <summary>Are you the recovery company?</summary>
+          <p>Recovero is a dispatch and introducer service. We connect your enquiry to an available local independent operator who attends and carries out the job.</p>
+        </details>
+        <details>
+          <summary>Who do I pay?</summary>
+          <p>You pay the attending independent recovery operator directly for the service they provide.</p>
+        </details>
+        <details>
+          <summary>How is the price calculated?</summary>
+          <p>Price depends on factors like location, vehicle type, job type, and distance. Guide pricing is shown above and final costs are confirmed by the operator where possible before dispatch.</p>
+        </details>
+        <details>
+          <summary>What areas do you cover around Havant?</summary>
+          <p>Havant and nearby areas including Leigh Park, Bedhampton, Emsworth, Waterlooville, and surrounding A27/A3(M) routes.</p>
+        </details>
+        <details>
+          <summary>How quickly can you attend?</summary>
+          <p>Attendance depends on operator availability, location, traffic, and road conditions. We aim to connect you quickly and provide the clearest ETA possible.</p>
+        </details>
+        <details>
+          <summary>What information do you need from me?</summary>
+          <p>Your location, vehicle details, issue type, destination (if needed), and a contact number so the operator can confirm attendance.</p>
+        </details>
+        <details>
+          <summary>What if I can’t talk on the phone?</summary>
+          <p>If you’re unable to talk, use WhatsApp and send your location, vehicle registration, and issue details. We’ll do our best to help.</p>
+        </details>
+        <details>
+          <summary>What if I’m on a motorway or in a dangerous location?</summary>
+          <p>Your safety comes first. Move to a safe place if possible, follow emergency guidance, and share your exact location clearly when you call.</p>
+        </details>
+
+        <div class="cant-talk">
+          Can’t talk right now?
+          <a class="wa" href="https://wa.me/447366302341" target="_blank" rel="noopener">Message on WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="final-cta">
+          <h2>Stranded in Havant and need help now?</h2>
+          <p class="lead">Skip the hassle of ringing around and call now for fast local recovery support.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="tel:07366302341">Call Now</a>
+            <a class="btn" style="background:#eef4ff;color:#0d1321;border-color:#c8d8f7;" href="tel:07366302341">Get ETA &amp; Price</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="sticky" role="region" aria-label="Quick call actions">
+    <div class="sticky-inner">
+      <a class="btn btn-primary" href="tel:07366302341">Call Now</a>
+      <a class="btn btn-secondary" href="tel:07366302341">Get ETA &amp; Price</a>
+    </div>
+    <div class="legal">Recovero connects you with available local independent operators.</div>
+  </div>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Service",
+        "name": "Recovero Vehicle Recovery Dispatch - Havant",
+        "serviceType": "Vehicle recovery dispatch and introducer service",
+        "areaServed": ["Havant", "Leigh Park", "Bedhampton", "Emsworth", "Waterlooville"],
+        "provider": {
+          "@type": "Organization",
+          "name": "Recovero",
+          "telephone": "+44 7366 302341",
+          "url": "https://recovero247.co.uk"
+        },
+        "offers": {
+          "@type": "Offer",
+          "priceSpecification": [
+            {"@type": "PriceSpecification", "name": "Local recovery", "price": "60", "priceCurrency": "GBP"},
+            {"@type": "PriceSpecification", "name": "Longer distance", "price": "1.50", "priceCurrency": "GBP", "unitText": "Mile"}
+          ]
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {"@type":"Question","name":"Are you the recovery company?","acceptedAnswer":{"@type":"Answer","text":"Recovero is a dispatch and introducer service. We connect your enquiry to an available local independent operator who attends and carries out the job."}},
+          {"@type":"Question","name":"Who do I pay?","acceptedAnswer":{"@type":"Answer","text":"You pay the attending independent recovery operator directly for the service they provide."}},
+          {"@type":"Question","name":"How is the price calculated?","acceptedAnswer":{"@type":"Answer","text":"Price depends on factors like location, vehicle type, job type, and distance. Guide pricing is shown and final costs are confirmed by the operator where possible before dispatch."}},
+          {"@type":"Question","name":"What areas do you cover around Havant?","acceptedAnswer":{"@type":"Answer","text":"Havant and nearby areas including Leigh Park, Bedhampton, Emsworth, Waterlooville, and surrounding A27/A3(M) routes."}},
+          {"@type":"Question","name":"How quickly can you attend?","acceptedAnswer":{"@type":"Answer","text":"Attendance depends on operator availability, location, traffic, and road conditions. We aim to connect you quickly and provide the clearest ETA possible."}},
+          {"@type":"Question","name":"What information do you need from me?","acceptedAnswer":{"@type":"Answer","text":"Your location, vehicle details, issue type, destination if needed, and a contact number so the operator can confirm attendance."}},
+          {"@type":"Question","name":"What if I can’t talk on the phone?","acceptedAnswer":{"@type":"Answer","text":"If you’re unable to talk, use WhatsApp and send your location, vehicle registration, and issue details."}},
+          {"@type":"Question","name":"What if I’m on a motorway or in a dangerous location?","acceptedAnswer":{"@type":"Answer","text":"Safety comes first. Move to a safe place if possible, follow emergency guidance, and share your exact location clearly when you call."}}
+        ]
+      }
+    ]
+  }
+  </script>
+</body>
+</html>
