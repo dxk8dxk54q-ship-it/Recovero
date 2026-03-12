@@ -30,6 +30,16 @@
     }
 
     img { max-width: 100%; display: block; }
+    .section-image {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
+      object-position: center;
+      border-radius: var(--radius);
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 8px 22px rgba(15, 23, 42, 0.12);
+      margin-block: 2px;
+    }
     a { color: inherit; text-decoration: none; }
     .container { width: min(1120px, 92%); margin: 0 auto; }
 
@@ -225,9 +235,10 @@
       border: 1px solid #e5e7eb;
       border-radius: var(--radius);
       overflow: hidden;
+      padding: 12px;
     }
     .benefits {
-      padding: 18px;
+      padding: 16px 8px 18px;
       margin: 0;
       list-style: none;
       display: grid;
@@ -242,7 +253,7 @@
     }
     .value p.note {
       margin: 8px 0 0;
-      padding: 0 18px 18px;
+      padding: 0 8px 6px;
       color: var(--muted);
     }
 
@@ -298,8 +309,6 @@
     }
     .service img {
       width: 100%;
-      border-radius: var(--radius);
-      border: 1px solid #e5e7eb;
     }
     .service h5 {
       margin: 0 0 8px;
@@ -343,7 +352,7 @@
 
     @media (min-width: 760px) {
       .badge-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-      .service { grid-template-columns: 1fr 1fr; gap: 22px; }
+      .service { grid-template-columns: 1fr 1fr; gap: 24px; }
       .service.reverse .image { order: 2; }
       .service.reverse .text { order: 1; }
     }
@@ -361,6 +370,9 @@
       .badge {
         width: 122px;
         height: 122px;
+      }
+      .section-image {
+        aspect-ratio: 4 / 3;
       }
     }
   </style>
@@ -418,7 +430,7 @@
       <h3>RECOVERO WATERLOOVILLE</h3>
       <p class="sub">One call. Clear next step.</p>
       <div class="value-card">
-        <img src="waterlooville-breakdown.jpg" alt="Vehicle recovery operator loading a car in Waterlooville">
+        <img class="section-image" src="waterlooville-main-recovery.jpg" alt="Recovery truck loading a broken-down car at the roadside in Waterlooville" fetchpriority="high" decoding="async">
         <ul class="benefits">
           <li>Fast local recovery support</li>
           <li>Cars, vans and non-starters</li>
@@ -454,7 +466,7 @@
 
   <section class="service-section">
     <div class="container service">
-      <div class="image"><img src="waterlooville-breakdown.jpg" alt="Breakdown recovery on roadside"></div>
+      <div class="image"><img class="section-image" src="waterlooville-breakdown.jpg" alt="Roadside breakdown recovery operator attending a stranded vehicle" loading="lazy" decoding="async"></div>
       <div class="text">
         <h5>Breakdown Recovery</h5>
         <p>If your vehicle has failed at the roadside, at home, or in a workplace car park, Recovero can connect you to an available local operator quickly so you can get moving again or be taken safely to your chosen destination.</p>
@@ -464,7 +476,7 @@
 
   <section class="service-section">
     <div class="container service reverse">
-      <div class="image"><img src="waterlooville-nonstart.jpg" alt="Non-start vehicle and flat battery support"></div>
+      <div class="image"><img class="section-image" src="waterlooville-nonstart.jpg" alt="Driver with bonnet open receiving help for a non-start and flat battery" loading="lazy" decoding="async"></div>
       <div class="text">
         <h5>Non-Starts &amp; Flat Battery</h5>
         <p>When your vehicle won’t start, we help arrange the right support for flat batteries and non-start issues, including recovery to a garage, home, or another agreed location.</p>
@@ -474,7 +486,7 @@
 
   <section class="service-section">
     <div class="container service">
-      <div class="image"><img src="waterlooville-accident-recovery.jpg" alt="Accident damaged car being recovered"></div>
+      <div class="image"><img class="section-image" src="waterlooville-accident.jpg" alt="Damaged car being carefully loaded onto a recovery truck after an accident" loading="lazy" decoding="async"></div>
       <div class="text">
         <h5>Accident Recovery</h5>
         <p>After an accident, safety comes first. Recovero can help connect you with a local independent operator to move a damaged vehicle carefully from the scene to a repairer, storage site, or home address.</p>
@@ -484,7 +496,7 @@
 
   <section class="service-section">
     <div class="container service reverse">
-      <div class="image"><img src="waterlooville-transport.jpg" alt="Vehicle transport on a recovery truck"></div>
+      <div class="image"><img class="section-image" src="waterlooville-transport.jpg" alt="Vehicle transport on a flatbed recovery truck" loading="lazy" decoding="async"></div>
       <div class="text">
         <h5>Vehicle Transport</h5>
         <p>Need planned movement instead of urgent breakdown support? We can assist with transport requests to garages, homes, auction sites, or other destinations in and around Waterlooville.</p>
@@ -494,7 +506,7 @@
 
   <section class="service-section">
     <div class="container service">
-      <div class="image"><img src="waterlooville-local-coverage.jpg" alt="Car and van recovery support in local area"></div>
+      <div class="image"><img class="section-image" src="waterlooville-cars-vans.jpg" alt="Car and van recovery support with mixed vehicle types" loading="lazy" decoding="async"></div>
       <div class="text">
         <h5>Cars and Vans</h5>
         <p>Recovero supports common private and light commercial vehicle jobs, including cars and vans that are broken down, damaged, non-running, or needing transport between locations.</p>
@@ -504,7 +516,7 @@
 
   <section class="service-section">
     <div class="container service reverse">
-      <div class="image"><img src="waterlooville-local-coverage.jpg" alt="Waterlooville and nearby route coverage"></div>
+      <div class="image"><img class="section-image" src="waterlooville-local-coverage.jpg" alt="UK-style local road scene covering Waterlooville and nearby routes" loading="lazy" decoding="async"></div>
       <div class="text">
         <h5>Waterlooville &amp; Nearby Areas</h5>
         <p>We regularly help with dispatch requests across Waterlooville, Havant, Cowplain, Horndean, Denmead, Purbrook, Widley, Clanfield and nearby routes including the A3(M) and A27.</p>
