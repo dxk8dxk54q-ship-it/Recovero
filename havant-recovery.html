@@ -48,8 +48,8 @@
 
     .top-call {
       position: fixed;
-      top: 16px;
-      right: 16px;
+      top: 14px;
+      right: 14px;
       z-index: 50;
       display: inline-flex;
       align-items: center;
@@ -58,12 +58,12 @@
       background: #fff;
       border: 1px solid rgba(16, 35, 56, 0.2);
       box-shadow: 0 10px 22px rgba(16, 35, 56, 0.16);
-      padding: 10px 16px;
+      padding: 10px 15px;
       font-weight: 800;
-      font-size: 0.93rem;
+      font-size: 0.92rem;
     }
 
-    .hero-wrap { padding: 66px 0 0; }
+    .hero-wrap { padding: 64px 0 0; }
 
     .hero {
       border-radius: var(--radius-xl);
@@ -75,18 +75,18 @@
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.08fr 0.92fr;
-      min-height: 460px;
+      grid-template-columns: 1.1fr 0.9fr;
+      min-height: 395px;
     }
 
     .hero-content {
       background: linear-gradient(160deg, var(--panel) 0%, var(--panel-soft) 100%);
       color: #edf3fb;
-      padding: 24px;
+      padding: 22px;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      gap: 12px;
+      gap: 10px;
     }
 
     .brand-row {
@@ -97,20 +97,20 @@
     }
 
     .brand-row img {
-      width: 34px;
-      height: 34px;
+      width: 32px;
+      height: 32px;
       border-radius: 9px;
     }
 
-    .brand-copy strong { font-size: 1rem; display: block; }
-    .brand-copy span { font-size: 0.8rem; color: #bdccdd; }
+    .brand-copy strong { font-size: 0.98rem; display: block; }
+    .brand-copy span { font-size: 0.78rem; color: #bdccdd; }
 
     h1 {
       margin: 0;
-      font-size: clamp(1.9rem, 4vw, 3.1rem);
+      font-size: clamp(1.75rem, 3.7vw, 2.9rem);
       line-height: 1.08;
       letter-spacing: -0.02em;
-      max-width: 14ch;
+      max-width: 15ch;
     }
 
     .highlight { color: var(--accent); }
@@ -118,8 +118,8 @@
     .hero-content > p {
       margin: 0;
       color: #d1deee;
-      font-size: 0.98rem;
-      max-width: 52ch;
+      font-size: 0.95rem;
+      max-width: 50ch;
     }
 
     .cta-row {
@@ -132,12 +132,12 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-height: 56px;
+      min-height: 54px;
       border-radius: var(--radius-md);
       font-weight: 800;
-      padding: 0 18px;
+      padding: 0 16px;
       border: 1px solid transparent;
-      font-size: 1rem;
+      font-size: 0.98rem;
     }
 
     .btn-primary {
@@ -147,6 +147,12 @@
       box-shadow: 0 16px 28px rgba(245, 130, 32, 0.34);
     }
 
+    .btn-wa {
+      background: var(--wa);
+      color: #eaf9ff;
+      border-color: rgba(255,255,255,0.16);
+    }
+
     .micro-trust {
       list-style: none;
       margin: 0;
@@ -154,7 +160,7 @@
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 7px;
-      max-width: 460px;
+      max-width: 470px;
     }
 
     .micro-trust li {
@@ -165,8 +171,8 @@
       border: 1px solid rgba(255,255,255,0.14);
       border-radius: 10px;
       padding: 7px 9px;
-      font-size: 0.8rem;
-      font-weight: 600;
+      font-size: 0.79rem;
+      font-weight: 620;
     }
 
     .micro-trust i {
@@ -185,41 +191,15 @@
 
     .compliance-note {
       margin: 0;
-      font-size: 0.76rem;
+      font-size: 0.74rem;
       color: #b8c8da;
+      max-width: 57ch;
     }
 
     .hero-media {
-      position: relative;
-      background:
-        linear-gradient(180deg, rgba(10, 19, 31, 0.1), rgba(10, 19, 31, 0.66)),
+      background: linear-gradient(180deg, rgba(10, 19, 31, 0.15), rgba(10, 19, 31, 0.5)),
         url('/images/recovery-truck.jpg') center/cover no-repeat;
-      min-height: 290px;
-    }
-
-    .media-chip {
-      position: absolute;
-      bottom: 18px;
-      left: 18px;
-      right: 18px;
-      background: rgba(12, 26, 40, 0.8);
-      border: 1px solid rgba(255,255,255,0.2);
-      border-radius: 12px;
-      color: #eef5ff;
-      padding: 10px 11px;
-      font-weight: 700;
-      font-size: 0.88rem;
-    }
-
-    .local-strip {
-      margin: 12px 0 4px;
-      background: #102b44;
-      color: #e9f3ff;
-      border: 1px solid rgba(255,255,255,0.16);
-      border-radius: var(--radius-md);
-      padding: 12px 14px;
-      font-weight: 700;
-      font-size: 0.9rem;
+      min-height: 250px;
     }
 
     .stats {
@@ -230,7 +210,7 @@
     }
 
     .stat {
-      padding: 18px 14px;
+      padding: 16px 13px;
       text-align: center;
       border-right: 2px solid rgba(16, 35, 56, 0.14);
     }
@@ -239,7 +219,7 @@
 
     .stat strong {
       display: block;
-      font-size: clamp(1.25rem, 2vw, 1.7rem);
+      font-size: clamp(1.2rem, 2vw, 1.6rem);
       line-height: 1.1;
       letter-spacing: -0.02em;
       font-weight: 850;
@@ -250,14 +230,15 @@
       display: block;
       margin-top: 5px;
       color: #4c5f74;
-      font-size: 0.84rem;
+      font-size: 0.82rem;
       font-weight: 650;
     }
 
-    section { padding: 40px 0; }
+    section { padding: 34px 0; }
+
     h2 {
-      margin: 0 0 10px;
-      font-size: clamp(1.45rem, 2.7vw, 2.05rem);
+      margin: 0 0 8px;
+      font-size: clamp(1.4rem, 2.6vw, 1.95rem);
       letter-spacing: -0.015em;
     }
 
@@ -265,84 +246,106 @@
       margin: 0;
       color: var(--ink-soft);
       max-width: 62ch;
+      font-size: 0.95rem;
     }
 
-    .process-grid {
-      margin-top: 16px;
+    .process-grid,
+    .benefits {
+      margin-top: 14px;
       display: grid;
-      gap: 12px;
+      gap: 10px;
       grid-template-columns: repeat(4, minmax(0, 1fr));
     }
 
-    .step, .benefit-card {
+    .step, .benefit-card, .coverage-box {
       background: #fff;
       border: 1px solid var(--line);
       border-radius: var(--radius-lg);
-      padding: 14px;
+    }
+
+    .step,
+    .benefit-card {
+      padding: 12px;
     }
 
     .step b {
       display: inline-block;
-      margin-bottom: 6px;
+      margin-bottom: 4px;
       color: var(--accent-deep);
-      font-size: 0.78rem;
+      font-size: 0.75rem;
       text-transform: uppercase;
       letter-spacing: 0.05em;
     }
 
     .step h3, .benefit-card h3 {
-      margin: 0 0 5px;
-      font-size: 1rem;
+      margin: 0 0 4px;
+      font-size: 0.98rem;
     }
 
     .step p, .benefit-card p {
       margin: 0;
       color: var(--ink-soft);
-      font-size: 0.9rem;
-    }
-
-    .benefits {
-      display: grid;
-      gap: 12px;
-      margin-top: 16px;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
+      font-size: 0.88rem;
     }
 
     .coverage-box {
       margin-top: 14px;
-      background: #fff;
-      border: 1px solid var(--line);
-      border-radius: var(--radius-lg);
-      padding: 16px;
-      color: #2f4258;
-      font-weight: 550;
+      padding: 14px;
+    }
+
+    .chip-row {
+      margin-top: 12px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 0 12px;
+      border-radius: 999px;
+      background: #f1f6fd;
+      border: 1px solid rgba(16, 35, 56, 0.16);
+      font-size: 0.86rem;
+      font-weight: 700;
+      color: #17314b;
+    }
+
+    .coverage-note {
+      margin: 10px 0 0;
+      color: #5b6b7f;
+      font-size: 0.84rem;
+      font-weight: 560;
     }
 
     .faq {
-      margin-top: 14px;
+      margin-top: 12px;
       display: grid;
-      gap: 10px;
+      gap: 9px;
     }
 
     details {
       background: #fff;
       border-radius: 12px;
       border: 1px solid var(--line);
-      padding: 12px 14px;
+      padding: 11px 13px;
     }
 
     summary {
       cursor: pointer;
-      font-weight: 750;
+      font-weight: 760;
       list-style: none;
+      font-size: 0.94rem;
     }
 
     summary::-webkit-details-marker { display: none; }
 
     details p {
-      margin: 8px 0 0;
+      margin: 7px 0 0;
       color: var(--ink-soft);
-      font-size: 0.9rem;
+      font-size: 0.87rem;
     }
 
     .sticky-mobile {
@@ -366,15 +369,9 @@
       flex: 1;
     }
 
-    .btn-wa {
-      background: var(--wa);
-      color: #eaf9ff;
-      border-color: rgba(255,255,255,0.16);
-    }
-
     @media (max-width: 1040px) {
       .hero-grid { grid-template-columns: 1fr; }
-      .hero-media { min-height: 260px; }
+      .hero-media { min-height: 230px; }
       .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .stat:nth-child(2) { border-right: 0; }
       .stat:nth-child(-n+2) { border-bottom: 2px solid rgba(16, 35, 56, 0.14); }
@@ -384,14 +381,13 @@
 
     @media (max-width: 700px) {
       body { padding-bottom: 78px; }
-      .hero-wrap { padding-top: 74px; }
-      .hero-content { padding: 20px; gap: 10px; }
+      .hero-wrap { padding-top: 70px; }
+      .hero-content { padding: 18px; gap: 9px; }
       h1 { max-width: none; }
-      .hero-content > p { font-size: 0.94rem; }
-      .btn { min-height: 54px; }
+      .hero-content > p { font-size: 0.92rem; }
+      .btn { min-height: 52px; }
       .cta-row { flex-direction: column; }
       .process-grid, .benefits { grid-template-columns: 1fr; }
-      .micro-trust { grid-template-columns: repeat(2, minmax(0,1fr)); }
       .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .stat,
       .stat:nth-child(2),
@@ -427,6 +423,7 @@
 
               <div class="cta-row">
                 <a class="btn btn-primary" href="tel:07366302341">Get My ETA + Price — Tap to Call</a>
+                <a class="btn btn-wa" href="https://wa.me/447366302341" target="_blank" rel="noopener">WhatsApp</a>
               </div>
 
               <ul class="micro-trust" aria-label="Reassurance points">
@@ -439,20 +436,16 @@
               <p class="compliance-note">Recovero connects you to local recovery help. Payment is arranged directly with the attending provider.</p>
             </div>
 
-            <div class="hero-media" role="img" aria-label="Recovery truck assisting vehicle at roadside in low light">
-              <div class="media-chip">24/7 local coverage across Havant and nearby roads.</div>
-            </div>
+            <div class="hero-media" role="img" aria-label="Recovery truck assisting vehicle at roadside in low light"></div>
           </div>
 
-          <div class="stats" aria-label="Havant recovery proof bar">
+          <div class="stats" aria-label="Havant recovery service summary">
             <div class="stat"><strong>24/7</strong><span>Call for recovery help</span></div>
             <div class="stat"><strong>Live ETA</strong><span>Based on location + traffic</span></div>
-            <div class="stat"><strong>Havant + nearby</strong><span>A27 / A3(M) routes covered</span></div>
-            <div class="stat"><strong>Breakdown + transport</strong><span>One call for both</span></div>
+            <div class="stat"><strong>Havant area</strong><span>Bedhampton, Leigh Park, Emsworth</span></div>
+            <div class="stat"><strong>Breakdown + transport</strong><span>One number for both</span></div>
           </div>
         </div>
-
-        <div class="local-strip">Broken down in Havant, Bedhampton, Leigh Park, Emsworth, or near the A27 / A3(M)? Call now for a live ETA.</div>
       </div>
     </section>
 
@@ -464,22 +457,22 @@
           <article class="step">
             <b>Step 1</b>
             <h3>You call</h3>
-            <p>Tell us your location + vehicle.</p>
+            <p>Location + vehicle</p>
           </article>
           <article class="step">
             <b>Step 2</b>
             <h3>We find local help</h3>
-            <p>We check for available recovery cover.</p>
+            <p>Fast route to nearby cover</p>
           </article>
           <article class="step">
             <b>Step 3</b>
             <h3>ETA + price</h3>
-            <p>Confirmed where possible.</p>
+            <p>Confirmed where possible</p>
           </article>
           <article class="step">
             <b>Step 4</b>
             <h3>Recovery arranged</h3>
-            <p>Roadside help or onward transport.</p>
+            <p>Roadside help or transport</p>
           </article>
         </div>
       </div>
@@ -487,19 +480,19 @@
 
     <section>
       <div class="container">
-        <h2>Why drivers in Havant call Recovero</h2>
-        <p class="intro">Built for urgent situations where you need action quickly, not a long online process.</p>
+        <h2>Why call Recovero now</h2>
+        <p class="intro">Built for urgent situations where you need help quickly, not a long online process.</p>
         <div class="benefits">
           <article class="benefit-card">
             <h3>Fast local help</h3>
-            <p>No long forms. Just call and get moving.</p>
+            <p>No long forms. Just call.</p>
           </article>
           <article class="benefit-card">
-            <h3>Live ETA updates</h3>
-            <p>Timing based on your location and traffic.</p>
+            <h3>Live ETA</h3>
+            <p>Based on your location and traffic.</p>
           </article>
           <article class="benefit-card">
-            <h3>Clear price guidance</h3>
+            <h3>Clear price first</h3>
             <p>Confirmed where possible before dispatch.</p>
           </article>
           <article class="benefit-card">
@@ -513,7 +506,18 @@
     <section>
       <div class="container">
         <h2>Havant coverage</h2>
-        <p class="intro">Support across Havant and surrounding routes, including Bedhampton, Leigh Park, Emsworth, and links to the A27 / A3(M).</p>
+        <div class="coverage-box">
+          <p class="intro">Covering local roadside situations across Havant and nearby access routes.</p>
+          <div class="chip-row" aria-label="Havant coverage areas">
+            <span class="chip">Havant</span>
+            <span class="chip">Bedhampton</span>
+            <span class="chip">Leigh Park</span>
+            <span class="chip">Emsworth</span>
+            <span class="chip">A27</span>
+            <span class="chip">A3(M)</span>
+          </div>
+          <p class="coverage-note">ETA depends on your exact location, traffic, and live availability.</p>
+        </div>
       </div>
     </section>
 
@@ -523,23 +527,19 @@
         <div class="faq">
           <details>
             <summary>How quickly can someone reach me in Havant?</summary>
-            <p>It depends on your exact location, traffic, and availability. Call now and we’ll confirm a live ETA where possible.</p>
+            <p>It depends on location, traffic, and live availability. Call now for a live ETA where possible.</p>
           </details>
           <details>
             <summary>Do you cover nearby areas?</summary>
-            <p>Yes. We regularly help drivers in Bedhampton, Leigh Park, Emsworth, and on nearby A27 / A3(M) routes.</p>
+            <p>Yes. Including Bedhampton, Leigh Park, Emsworth, and nearby A27 / A3(M) access routes.</p>
           </details>
           <details>
             <summary>How is the price worked out?</summary>
-            <p>Price depends on vehicle type, location, distance, and access. You’ll get clear guidance and confirmation where possible.</p>
+            <p>It depends on vehicle type, location, access, and required transport distance.</p>
           </details>
           <details>
             <summary>Can you help with transport too?</summary>
-            <p>Yes. We can arrange roadside recovery or onward vehicle transport.</p>
-          </details>
-          <details>
-            <summary>Who do I pay?</summary>
-            <p>Recovero connects you to local recovery help. Payment is arranged directly with the attending provider.</p>
+            <p>Yes. One call can arrange roadside help or vehicle transport.</p>
           </details>
         </div>
       </div>
