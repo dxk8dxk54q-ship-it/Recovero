@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vehicle Recovery Waterlooville | Recovero 24/7 Dispatch</title>
+  <meta name="description" content="Need vehicle recovery in Waterlooville? Recovero connects you with available local independent recovery operators. Call now for ETA + guide price.">
+  <style>
+    :root {
+      --orange: #f58220;
+      --orange-dark: #d56b13;
+      --charcoal: #1d232d;
+      --charcoal-soft: #2a323f;
+      --bg: #f4f5f7;
+      --text: #1c1f24;
+      --muted: #5c6675;
+      --white: #fff;
+      --radius: 16px;
+      --shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.45;
+    }
+
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(1120px, 92%); margin: 0 auto; }
+
+    .top-header {
+      background: var(--white);
+      border-bottom: 1px solid #e5e7eb;
+      padding: 12px 0;
+    }
+    .top-header .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+    }
+    .brand { display: flex; align-items: center; gap: 10px; }
+    .logo-mark {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, var(--charcoal), #111);
+      color: var(--orange);
+      font-size: 22px;
+      display: grid;
+      place-items: center;
+      font-weight: 700;
+    }
+    .brand h1 {
+      margin: 0;
+      font-size: 1.25rem;
+      line-height: 1.1;
+    }
+    .brand p {
+      margin: 2px 0 0;
+      color: var(--muted);
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+    .phone-link {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--charcoal);
+      white-space: nowrap;
+    }
+
+    .location-strip {
+      background: var(--orange);
+      color: var(--white);
+      text-align: center;
+      padding: 12px 0;
+      font-weight: 700;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+    .location-strip span { display: block; margin-top: 4px; font-size: 0.78rem; font-weight: 600; }
+
+    .nav-band {
+      background: var(--charcoal);
+      color: var(--white);
+      padding: 10px 0;
+      border-top: 3px solid #111;
+      border-bottom: 3px solid #111;
+    }
+    .nav-band .container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    .nav-links {
+      display: flex;
+      gap: 14px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    .small-cta {
+      background: var(--orange);
+      color: var(--white);
+      padding: 12px 16px;
+      border-radius: 999px;
+      font-weight: 800;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+    }
+
+    .top-cta-bar {
+      background: #ff8b24;
+      color: var(--white);
+      text-align: center;
+      padding: 14px 10px;
+      font-size: 1rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    .hero {
+      background: linear-gradient(rgba(23, 28, 36, 0.72), rgba(23, 28, 36, 0.72)), url('waterlooville-hero-recovery.jpg') center/cover no-repeat;
+      color: var(--white);
+      min-height: 500px;
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+    .hero .container { padding: 64px 0; }
+    .hero h2 {
+      margin: 0 0 12px;
+      font-size: clamp(2rem, 6vw, 3.2rem);
+      line-height: 1.1;
+      max-width: 680px;
+    }
+    .hero p { font-size: 1.15rem; margin: 0 0 22px; }
+    .hero .hero-cta {
+      display: inline-block;
+      background: var(--orange);
+      color: var(--white);
+      padding: 15px 24px;
+      border-radius: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      box-shadow: var(--shadow);
+    }
+    .hero-badge {
+      position: absolute;
+      right: 5%;
+      bottom: 28px;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: var(--orange);
+      color: var(--white);
+      border: 5px solid rgba(255,255,255,0.85);
+      font-weight: 900;
+      font-size: 0.95rem;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 14px;
+      box-shadow: var(--shadow);
+    }
+
+    .badge-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin: -36px auto 28px;
+      width: min(860px, 92%);
+      position: relative;
+      z-index: 2;
+    }
+    .badge {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      background: var(--orange);
+      color: var(--white);
+      border: 6px solid var(--white);
+      margin: 0 auto;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      font-size: 0.86rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      line-height: 1.2;
+      box-shadow: var(--shadow);
+    }
+
+    .value {
+      background: var(--white);
+      padding: 28px 0 36px;
+    }
+    .value h3 {
+      margin: 0;
+      text-align: center;
+      font-size: 2rem;
+      letter-spacing: 0.03em;
+    }
+    .value .sub {
+      text-align: center;
+      color: var(--charcoal);
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin: 6px 0 20px;
+    }
+    .value-card {
+      background: #f9fafb;
+      border: 1px solid #e5e7eb;
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+    .benefits {
+      padding: 18px;
+      margin: 0;
+      list-style: none;
+      display: grid;
+      gap: 8px;
+      font-weight: 700;
+    }
+    .benefits li::before {
+      content: '➜';
+      color: var(--orange);
+      margin-right: 8px;
+      font-weight: 900;
+    }
+    .value p.note {
+      margin: 8px 0 0;
+      padding: 0 18px 18px;
+      color: var(--muted);
+    }
+
+    .form-section {
+      background: var(--charcoal);
+      color: var(--white);
+      padding: 34px 0;
+    }
+    .form-wrap {
+      background: var(--charcoal-soft);
+      border-radius: var(--radius);
+      padding: 22px;
+    }
+    .form-wrap h4 { margin: 0 0 6px; font-size: 1.6rem; }
+    .form-wrap .lead { margin: 0 0 16px; }
+    .form-wrap .fastline { color: #ffd6b5; font-weight: 700; margin-bottom: 14px; }
+    form { display: grid; gap: 10px; }
+    input, textarea {
+      width: 100%;
+      border: none;
+      border-radius: 10px;
+      padding: 13px;
+      font-size: 1rem;
+      font-family: inherit;
+    }
+    textarea { min-height: 90px; resize: vertical; }
+    .form-btn {
+      background: var(--orange);
+      border: none;
+      color: var(--white);
+      padding: 14px;
+      font-size: 1rem;
+      font-weight: 900;
+      border-radius: 10px;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+    .privacy-note {
+      margin: 6px 0 0;
+      color: #e5e7eb;
+      font-size: 0.82rem;
+    }
+
+    .service-section {
+      background: var(--white);
+      padding: 28px 0;
+      border-top: 1px solid #eceff3;
+    }
+    .service {
+      display: grid;
+      gap: 14px;
+      align-items: center;
+    }
+    .service img {
+      width: 100%;
+      border-radius: var(--radius);
+      border: 1px solid #e5e7eb;
+    }
+    .service h5 {
+      margin: 0 0 8px;
+      font-size: 1.5rem;
+      color: var(--charcoal);
+    }
+    .service p { margin: 0; color: #3a4351; }
+
+    .final-cta {
+      background: #141922;
+      color: var(--white);
+      text-align: center;
+      padding: 42px 0 30px;
+    }
+    .final-cta h6 { margin: 0; font-size: 2rem; }
+    .final-phone {
+      display: inline-block;
+      margin: 12px 0 16px;
+      font-size: 2rem;
+      font-weight: 900;
+      color: var(--white);
+    }
+    .big-cta {
+      display: inline-block;
+      background: var(--orange);
+      color: var(--white);
+      font-weight: 900;
+      padding: 14px 26px;
+      border-radius: 12px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      font-size: 0.9rem;
+      margin-bottom: 8px;
+    }
+    .honesty { margin: 0; color: #c5cad2; font-size: 0.82rem; max-width: 760px; margin-inline: auto; }
+
+    @media (min-width: 760px) {
+      .badge-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+      .service { grid-template-columns: 1fr 1fr; gap: 22px; }
+      .service.reverse .image { order: 2; }
+      .service.reverse .text { order: 1; }
+    }
+
+    @media (max-width: 680px) {
+      .phone-link { font-size: 1rem; }
+      .hero { min-height: 460px; }
+      .hero-badge {
+        width: 94px;
+        height: 94px;
+        font-size: 0.72rem;
+        bottom: 16px;
+        right: 12px;
+      }
+      .badge {
+        width: 122px;
+        height: 122px;
+      }
+    }
+  </style>
+</head>
+<body id="home">
+  <header class="top-header">
+    <div class="container">
+      <div class="brand">
+        <div class="logo-mark">R</div>
+        <div>
+          <h1>Recovero</h1>
+          <p>The Vehicle Recovery Network</p>
+        </div>
+      </div>
+      <a class="phone-link" href="tel:07366302341">07366 302341</a>
+    </div>
+  </header>
+
+  <section class="location-strip">
+    COVERING WATERLOOVILLE &amp; NEARBY AREAS
+    <span>Waterlooville - Cowplain - Horndean - Purbrook - Widley - Denmead - Havant</span>
+  </section>
+
+  <nav class="nav-band">
+    <div class="container">
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#why-recovero">Why Use Recovero</a>
+        <a href="#what-we-help">What We Help With</a>
+      </div>
+      <a class="small-cta" href="tel:07366302341">Call now for ETA + price</a>
+    </div>
+  </nav>
+
+  <div class="top-cta-bar">Need recovery now? Call 07366 302341 for immediate dispatch support</div>
+
+  <section class="hero">
+    <div class="container">
+      <h2>24/7 Vehicle Recovery Dispatch – Waterlooville</h2>
+      <p>Call now for ETA + guide price.</p>
+      <a class="hero-cta" href="tel:07366302341">Call now – ETA &amp; price</a>
+    </div>
+    <div class="hero-badge">24/7<br>LOCAL HELP</div>
+  </section>
+
+  <section class="badge-grid" aria-label="Trust badges">
+    <div class="badge">24/7<br>Dispatch</div>
+    <div class="badge">Cars &amp;<br>Vans</div>
+    <div class="badge">Quote Before<br>Booking</div>
+    <div class="badge">No<br>Membership</div>
+  </section>
+
+  <section class="value" id="why-recovero">
+    <div class="container">
+      <h3>RECOVERO WATERLOOVILLE</h3>
+      <p class="sub">One call. Clear next step.</p>
+      <div class="value-card">
+        <img src="waterlooville-breakdown.jpg" alt="Vehicle recovery operator loading a car in Waterlooville">
+        <ul class="benefits">
+          <li>Fast local recovery support</li>
+          <li>Cars, vans and non-starters</li>
+          <li>Roadside, home and garage moves</li>
+          <li>Quote before dispatch where possible</li>
+          <li>Payment direct to attending operator</li>
+          <li>No need to ring around</li>
+        </ul>
+        <p class="note">When you’re stuck, Recovero helps connect you with available local independent recovery operators in Waterlooville and nearby areas. Call once, explain what’s happened, and get a clearer next step fast.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="form-section" id="what-we-help">
+    <div class="container">
+      <div class="form-wrap">
+        <h4>FREE VEHICLE RECOVERY ENQUIRY</h4>
+        <p class="lead">Enter your details and we’ll call you back.</p>
+        <p class="fastline">For a faster response, call <a href="tel:07366302341">07366 302341</a> now or <a href="https://wa.me/447366302341?text=Hi%20Recovero%2C%20I%20need%20vehicle%20recovery%20in%20Waterlooville.%20My%20location%20is%20____.%20Vehicle%20details%3A%20____.%20Issue%3A%20____." target="_blank" rel="noopener">message us on WhatsApp</a>.</p>
+        <form>
+          <input type="text" name="name" placeholder="Full name" required>
+          <input type="tel" name="phone" placeholder="Phone number" required>
+          <input type="text" name="reg" placeholder="Vehicle registration (optional)">
+          <input type="text" name="location" placeholder="Postcode / location" required>
+          <textarea name="issue" placeholder="What’s happened?" required></textarea>
+          <input type="text" name="destination" placeholder="Where does it need to go? (optional)">
+          <button class="form-btn" type="submit">Get ETA + price</button>
+        </form>
+        <p class="privacy-note">Your details are only used to respond to your recovery enquiry.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="service-section">
+    <div class="container service">
+      <div class="image"><img src="waterlooville-breakdown.jpg" alt="Breakdown recovery on roadside"></div>
+      <div class="text">
+        <h5>Breakdown Recovery</h5>
+        <p>If your vehicle has failed at the roadside, at home, or in a workplace car park, Recovero can connect you to an available local operator quickly so you can get moving again or be taken safely to your chosen destination.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="service-section">
+    <div class="container service reverse">
+      <div class="image"><img src="waterlooville-nonstart.jpg" alt="Non-start vehicle and flat battery support"></div>
+      <div class="text">
+        <h5>Non-Starts &amp; Flat Battery</h5>
+        <p>When your vehicle won’t start, we help arrange the right support for flat batteries and non-start issues, including recovery to a garage, home, or another agreed location.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="service-section">
+    <div class="container service">
+      <div class="image"><img src="waterlooville-accident-recovery.jpg" alt="Accident damaged car being recovered"></div>
+      <div class="text">
+        <h5>Accident Recovery</h5>
+        <p>After an accident, safety comes first. Recovero can help connect you with a local independent operator to move a damaged vehicle carefully from the scene to a repairer, storage site, or home address.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="service-section">
+    <div class="container service reverse">
+      <div class="image"><img src="waterlooville-transport.jpg" alt="Vehicle transport on a recovery truck"></div>
+      <div class="text">
+        <h5>Vehicle Transport</h5>
+        <p>Need planned movement instead of urgent breakdown support? We can assist with transport requests to garages, homes, auction sites, or other destinations in and around Waterlooville.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="service-section">
+    <div class="container service">
+      <div class="image"><img src="waterlooville-local-coverage.jpg" alt="Car and van recovery support in local area"></div>
+      <div class="text">
+        <h5>Cars and Vans</h5>
+        <p>Recovero supports common private and light commercial vehicle jobs, including cars and vans that are broken down, damaged, non-running, or needing transport between locations.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="service-section">
+    <div class="container service reverse">
+      <div class="image"><img src="waterlooville-local-coverage.jpg" alt="Waterlooville and nearby route coverage"></div>
+      <div class="text">
+        <h5>Waterlooville &amp; Nearby Areas</h5>
+        <p>We regularly help with dispatch requests across Waterlooville, Havant, Cowplain, Horndean, Denmead, Purbrook, Widley, Clanfield and nearby routes including the A3(M) and A27.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="badge-grid" aria-label="More trust badges">
+    <div class="badge">24/7<br>Dispatch</div>
+    <div class="badge">Local<br>Operators</div>
+    <div class="badge">Cars &amp;<br>Vans</div>
+    <div class="badge">Guide<br>Pricing</div>
+  </section>
+
+  <section class="final-cta">
+    <div class="container">
+      <h6>Call us today</h6>
+      <a class="final-phone" href="tel:07366302341">07366 302341</a><br>
+      <a class="big-cta" href="tel:07366302341">Call now for ETA + price</a>
+      <div class="footer-links">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Use</a>
+      </div>
+      <p class="honesty">Recovero is a dispatch and introducer service connecting customers with available local independent recovery operators.</p>
+    </div>
+  </section>
+</body>
+</html>
