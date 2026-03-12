@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>24/7 Car Recovery in Havant | Get ETA + Price | Recovero</title>
+  <meta name="description" content="Need car recovery in Havant? Call now for ETA + price where possible and fast local recovery help.">
+  <meta property="og:title" content="24/7 Car Recovery in Havant | Recovero">
+  <meta property="og:description" content="Tap to call for ETA + price where possible in Havant and get local recovery help fast.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://recovero.co.uk/havant-recovery/">
+  <meta property="og:image" content="https://recovero.co.uk/images/recovery-truck.jpg">
+  <link rel="canonical" href="https://recovero.co.uk/havant-recovery/">
+  <link rel="icon" href="/images/recovero-logo.png" type="image/png">
+
+  <style>
+    :root{
+      --ink:#0f2235;
+      --ink-soft:#556070;
+      --bg:#f6f7fb;
+      --card:#ffffff;
+      --line:rgba(15,34,53,0.1);
+      --orange:#f58220;
+      --orange-deep:#de6f13;
+      --wa:#1f8f4d;
+      --radius:18px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{
+      font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      color:var(--ink);
+      background:var(--bg);
+      line-height:1.45;
+      padding-bottom:96px;
+    }
+
+    body::before{
+      content:"";
+      position:fixed;
+      inset:-20%;
+      background:
+        radial-gradient(700px 520px at 15% 15%, rgba(245,130,32,0.16), transparent 60%),
+        radial-gradient(760px 540px at 85% 10%, rgba(15,34,53,0.12), transparent 60%);
+      filter:blur(10px);
+      pointer-events:none;
+      z-index:-1;
+    }
+
+    .wrap{width:min(1020px,92vw);margin:0 auto}
+    a{text-decoration:none;color:inherit}
+
+    .header{
+      padding:14px 0;
+    }
+
+    .header-inner{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:14px;
+    }
+
+    .brand{display:flex;align-items:center;gap:10px}
+    .brand img{width:34px;height:34px;border-radius:8px}
+    .brand-name{margin:0;font-size:1rem;font-weight:800}
+    .brand-sub{margin:0;font-size:.78rem;color:var(--ink-soft)}
+
+    .header-call{
+      border:1px solid var(--line);
+      background:#fff;
+      border-radius:999px;
+      padding:10px 14px;
+      font-size:.9rem;
+      font-weight:700;
+      white-space:nowrap;
+      box-shadow:0 8px 18px rgba(15,34,53,.08);
+    }
+
+    .hero{
+      margin:6px auto 0;
+      border-radius:26px;
+      overflow:hidden;
+      background:
+        linear-gradient(180deg, rgba(8,18,28,.74), rgba(8,18,28,.86)),
+        url('/images/recovery-truck.jpg') center/cover no-repeat;
+      box-shadow:0 20px 42px rgba(15,34,53,.22);
+      border:1px solid rgba(255,255,255,.15);
+    }
+
+    .hero-content{
+      max-width:640px;
+      color:#f3f7ff;
+      padding:21px;
+    }
+
+    h1{
+      margin:0 0 8px;
+      font-size:clamp(1.9rem,6.2vw,3rem);
+      line-height:1.08;
+      letter-spacing:-.02em;
+      font-weight:800;
+      text-wrap:balance;
+    }
+
+    .headline-accent{
+      color:var(--orange);
+    }
+
+    .hero-sub{
+      margin:0 0 11px;
+      color:#dde7f8;
+      font-size:1rem;
+    }
+
+    .hero-bullets{
+      list-style:none;
+      margin:0 0 13px;
+      padding:0;
+      display:grid;
+      gap:6px;
+    }
+
+    .hero-bullets li{
+      background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.15);
+      border-radius:10px;
+      padding:6px 10px;
+      font-size:.89rem;
+      font-weight:600;
+    }
+
+    .btn-primary{
+      display:inline-flex;
+      width:100%;
+      align-items:center;
+      justify-content:center;
+      min-height:56px;
+      border-radius:12px;
+      background:linear-gradient(180deg,var(--orange),var(--orange-deep));
+      color:#1d1108;
+      font-weight:800;
+      border:1px solid rgba(0,0,0,.08);
+      box-shadow:0 12px 22px rgba(245,130,32,.32);
+      text-align:center;
+      padding:12px 16px;
+    }
+
+    .hero-note{
+      margin:10px 0 0;
+      color:#cfdae9;
+      font-size:.84rem;
+      text-align:center;
+    }
+
+    .section{padding:28px 0}
+    .section-title{
+      margin:0 0 8px;
+      font-size:clamp(1.35rem,4.4vw,2rem);
+      letter-spacing:-.01em;
+    }
+    .section-intro{margin:0;color:var(--ink-soft);font-size:.97rem}
+
+    .process-flow,
+    .benefits-wrap{
+      margin-top:14px;
+    }
+
+    .reveal{
+      opacity:0;
+      transform:translateY(14px);
+      transition:opacity .45s ease, transform .45s ease;
+    }
+
+    .reveal.in-view{
+      opacity:1;
+      transform:none;
+    }
+
+    .process-shell{
+      margin-top:14px;
+      background:linear-gradient(180deg, rgba(255,255,255,.94), rgba(249,251,255,.98));
+      border:1px solid rgba(15,34,53,.1);
+      border-radius:24px;
+      box-shadow:0 16px 34px rgba(15,34,53,.08);
+      padding:20px;
+    }
+
+    .process-summary{
+      margin:0;
+      text-align:center;
+      color:#39485d;
+      font-weight:600;
+      font-size:.97rem;
+    }
+
+    .process-track{
+      margin-top:18px;
+      display:grid;
+      gap:12px;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+    }
+
+    .process-step{
+      display:grid;
+      gap:10px;
+    }
+
+    .process-card{
+      height:100%;
+      border-radius:16px;
+      border:1px solid rgba(15,34,53,.12);
+      background:var(--card);
+      box-shadow:0 8px 16px rgba(15,34,53,.08);
+      padding:16px;
+      min-height:126px;
+    }
+
+    .process-top{
+      margin-bottom:8px;
+    }
+
+    .process-link{
+      display:none;
+      align-self:center;
+      justify-self:center;
+      width:44px;
+      height:3px;
+      border-radius:999px;
+      background:linear-gradient(90deg,var(--orange),var(--orange-deep));
+    }
+
+    .tow-icon{
+      width:26px;
+      height:26px;
+      color:#58657a;
+      margin-left:auto;
+      margin-top:8px;
+      display:block;
+    }
+
+    .tow-icon path,
+    .tow-icon circle,
+    .benefit-icon svg path,
+    .benefit-icon svg circle,
+    .benefit-icon svg rect,
+    .benefit-icon svg line{
+      stroke:currentColor;
+      stroke-width:1.8;
+      fill:none;
+      stroke-linecap:round;
+      stroke-linejoin:round;
+    }
+
+    .benefits{
+      display:grid;
+      gap:10px;
+    }
+
+    .benefit-card{
+      position:relative;
+      cursor:pointer;
+      text-align:left;
+      transition:transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+    }
+
+    .benefit-top{
+      display:flex;
+      align-items:flex-start;
+      gap:10px;
+    }
+
+    .benefit-icon{
+      width:34px;
+      height:34px;
+      border-radius:11px;
+      display:grid;
+      place-items:center;
+      background:rgba(245,130,32,.12);
+      color:#8a4000;
+      flex:0 0 34px;
+      border:1px solid rgba(245,130,32,.28);
+      font-size:1rem;
+    }
+
+    .benefit-card h3{color:var(--ink)}
+
+    .benefit-card .extra{
+      max-height:0;
+      overflow:hidden;
+      opacity:0;
+      margin-top:0;
+      transition:max-height .24s ease, opacity .24s ease, margin-top .24s ease;
+    }
+
+    .benefit-card.active{
+      border-color:rgba(245,130,32,.55);
+      box-shadow:0 16px 30px rgba(15,34,53,.14), 0 0 0 1px rgba(245,130,32,.16);
+      transform:translateY(-2px) scale(1.01);
+    }
+
+    .benefit-card.active .benefit-icon{background:rgba(245,130,32,.2)}
+
+    .benefit-card.active .extra{
+      max-height:56px;
+      opacity:1;
+      margin-top:8px;
+    }
+
+    .card{
+      background:rgba(255,255,255,.84);
+      border:1px solid var(--line);
+      border-radius:16px;
+      padding:14px;
+      box-shadow:0 12px 24px rgba(15,34,53,.08);
+    }
+
+    .step-number{
+      width:32px;
+      height:30px;
+      border-radius:999px;
+      background:rgba(245,130,32,.15);
+      border:1px solid rgba(245,130,32,.45);
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:800;
+      margin-bottom:0;
+      color:#7a3900;
+      font-size:.9rem;
+    }
+
+    h3{margin:0 0 4px;font-size:1rem}
+    p{margin:0;color:var(--ink-soft);font-size:.92rem}
+
+    .coverage{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:16px;
+      padding:14px;
+      margin-top:14px;
+    }
+
+    .faq{margin-top:14px;display:grid;gap:10px}
+    details{
+      background:rgba(255,255,255,.84);
+      border:1px solid var(--line);
+      border-radius:14px;
+      padding:12px 13px;
+    }
+    summary{cursor:pointer;font-weight:700}
+    details p{margin-top:8px}
+
+    .footer{
+      padding:16px 0 30px;
+      color:var(--ink-soft);
+      font-size:.88rem;
+    }
+
+    .footer a{color:var(--ink);font-weight:600}
+
+    .sticky{
+      position:fixed;
+      left:0;right:0;bottom:0;
+      z-index:70;
+      background:rgba(246,247,251,.94);
+      backdrop-filter:blur(8px);
+      border-top:1px solid var(--line);
+      padding:8px;
+    }
+
+    .sticky-inner{
+      width:min(780px,96vw);
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:8px;
+    }
+
+    .sticky-btn{
+      min-height:54px;
+      border-radius:12px;
+      display:grid;
+      place-items:center;
+      font-weight:800;
+      font-size:.94rem;
+      border:1px solid transparent;
+    }
+
+    .sticky-call{background:linear-gradient(180deg,var(--orange),var(--orange-deep));color:#1d1108}
+    .sticky-wa{background:#0f2235;color:#ecf2ff;border-color:rgba(15,34,53,.8)}
+
+    @media (min-width:860px){
+      body{padding-bottom:0}
+      .hero-content{padding:30px}
+      .process-track{
+        grid-template-columns:repeat(4,minmax(0,1fr));
+        gap:10px;
+      }
+
+      .process-step{
+        grid-template-columns:1fr auto;
+        align-items:stretch;
+      }
+
+      .process-step:last-child{
+        grid-template-columns:1fr;
+      }
+
+      .process-link{display:block}
+      .benefits{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .sticky{display:none}
+    }
+
+    @media (prefers-reduced-motion:reduce){
+      *, *::before, *::after{transition:none !important; animation:none !important}
+      .reveal{opacity:1;transform:none}
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="wrap header-inner">
+      <div class="brand">
+        <img src="/images/recovero-logo.png" alt="Recovero logo">
+        <div>
+          <p class="brand-name">Recovero</p>
+          <p class="brand-sub">The Vehicle Recovery Network</p>
+        </div>
+      </div>
+      <a class="header-call" href="tel:+447366302341" aria-label="Call Recovero on 07366 302341">Call 07366 302341</a>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Need car recovery in Havant? Get <span class="headline-accent">fast local help</span> now.</h1>
+        <p class="hero-sub">Call now for a live ETA + price and we’ll help get local recovery support sorted fast.</p>
+
+        <ul class="hero-bullets" aria-label="Havant recovery highlights">
+          <li>Fast local help</li>
+          <li>Live ETA + price where possible</li>
+          <li>You pay the recovery company that comes out</li>
+        </ul>
+
+        <a class="btn-primary" href="tel:+447366302341" aria-label="Get my ETA and price by calling now">Get My ETA + Price — Tap to Call</a>
+        <p class="hero-note">No forms • No obligation • If you’re in danger, call 999 first.</p>
+      </div>
+    </section>
+
+    <section class="section reveal" id="how-recovery-works">
+      <h2 class="section-title">How recovery works</h2>
+      <div class="process-shell" aria-label="How recovery works in four steps">
+        <p class="process-summary">You call → tell us what’s happened → we help get local recovery sorted → you get moving again.</p>
+        <div class="process-track">
+          <div class="process-step">
+            <article class="process-card">
+              <div class="process-top"><span class="step-number">1</span></div>
+              <h3>You call</h3>
+              <p>Tell us where you are and what’s happened</p>
+            </article>
+            <span class="process-link" aria-hidden="true"></span>
+          </div>
+          <div class="process-step">
+            <article class="process-card">
+              <div class="process-top"><span class="step-number">2</span></div>
+              <h3>We find local help</h3>
+              <p>We help get nearby recovery support sorted</p>
+            </article>
+            <span class="process-link" aria-hidden="true"></span>
+          </div>
+          <div class="process-step">
+            <article class="process-card">
+              <div class="process-top"><span class="step-number">3</span></div>
+              <h3>You get ETA + price</h3>
+              <p>Where possible before recovery starts</p>
+            </article>
+            <span class="process-link" aria-hidden="true"></span>
+          </div>
+          <div class="process-step">
+            <article class="process-card">
+              <div class="process-top"><span class="step-number">4</span></div>
+              <h3>You get moving</h3>
+              <p>Roadside help or transport, depending on what you need</p>
+              <svg class="tow-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M2.5 13.6h11.8a1.8 1.8 0 0 0 1.8-1.8V9.9h2.7l2.7 2.7v1h.5"></path><circle cx="6.7" cy="15.7" r="1.8"></circle><circle cx="17.8" cy="15.7" r="1.8"></circle><path d="M2.5 10.8h3.1"></path></svg>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="havant-benefits">
+      <h2 class="section-title">Why drivers in Havant call</h2>
+      <div class="benefits-wrap">
+        <div class="benefits" role="list">
+          <button class="card benefit-card active" type="button" role="listitem" aria-expanded="true">
+            <span class="benefit-top"><span class="benefit-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M11.5 3.5 6.2 12h4.2L9.7 20.5 17.8 10h-4.3l1.8-6.5z"></path></svg></span><span><h3>Fast local help</h3><p>Quick support for breakdowns, non-starts and urgent vehicle problems.</p></span></span>
+            <p class="extra">One call gets things moving faster.</p>
+          </button>
+          <button class="card benefit-card" type="button" role="listitem" aria-expanded="false">
+            <span class="benefit-top"><span class="benefit-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><circle cx="12" cy="12" r="7"></circle><line x1="12" y1="12" x2="12" y2="8.8"></line><line x1="12" y1="12" x2="14.8" y2="13.5"></line></svg></span><span><h3>Live ETA + price</h3><p>Clear timing and cost where possible before things move.</p></span></span>
+            <p class="extra">Timing depends on your location, traffic and availability.</p>
+          </button>
+          <button class="card benefit-card" type="button" role="listitem" aria-expanded="false">
+            <span class="benefit-top"><span class="benefit-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M15.8 6.8a3.7 3.7 0 0 0-2.9-1.3c-2.1 0-3.8 1.7-3.8 3.8v7.3"></path><path d="M6.8 10.1h6"></path><path d="M6.8 13.3h5"></path><path d="M8.7 18.5h8.5"></path></svg></span><span><h3>No need to ring around</h3><p>One call gets things moving faster.</p></span></span>
+            <p class="extra">Simple updates without having to chase multiple companies.</p>
+          </button>
+          <button class="card benefit-card" type="button" role="listitem" aria-expanded="false">
+            <span class="benefit-top"><span class="benefit-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M2.5 14h11.7a1.8 1.8 0 0 0 1.8-1.8v-2h2.8l2.7 2.7v1.1h.5"></path><circle cx="6.8" cy="16" r="1.9"></circle><circle cx="17.9" cy="16" r="1.9"></circle><path d="M2.5 11.2h3"></path></svg></span><span><h3>Breakdowns and transport</h3><p>Help for roadside recovery, non-starts and planned vehicle moves.</p></span></span>
+            <p class="extra">Also includes accident recovery and planned vehicle moves.</p>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Havant coverage</h2>
+      <div class="coverage">
+        <p>Helping drivers across Havant and nearby areas including Bedhampton, Leigh Park, Emsworth and key routes like the A27 and A3(M).</p>
+        <p style="margin-top:8px;">Tell us where you are and what’s happened, and we’ll help get local recovery help sorted as quickly as possible.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">FAQs</h2>
+      <div class="faq">
+        <details><summary>How quickly can someone reach me in Havant?</summary><p>Arrival time depends on your location, traffic and who’s available nearby. Call now for the latest live ETA.</p></details>
+        <details><summary>Do you cover nearby areas?</summary><p>Yes. We can help across Havant and nearby places such as Bedhampton, Leigh Park and Emsworth, plus routes like the A27 and A3(M).</p></details>
+        <details><summary>Do you send the recovery company?</summary><p>We help arrange local recovery support in Havant and nearby. You’ll pay the recovery company that comes out.</p></details>
+        <details><summary>How is the price worked out?</summary><p>Price depends on things like your location, vehicle, distance and timing. We’ll give you ETA + price where possible before things move.</p></details>
+        <details><summary>Do you help with transport as well as breakdowns?</summary><p>Yes. Support can include roadside recovery and planned vehicle transport.</p></details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <a href="/terms/">Terms &amp; Conditions</a> • <a href="/privacy-policy/">Privacy</a>
+    </div>
+  </footer>
+
+  <div class="sticky" role="navigation" aria-label="Quick contact tray">
+    <div class="sticky-inner">
+      <a class="sticky-btn sticky-call" href="tel:+447366302341" aria-label="Call Recovero now">📞 Call for ETA + Price</a>
+      <a class="sticky-btn sticky-wa" href="https://wa.me/447366302341?text=Hi%20Recovero%2C%20I%20need%20vehicle%20recovery%20in%20Havant.%20My%20location%20is%20____.%20Vehicle%3A%20____.%20Issue%3A%20____." target="_blank" rel="noopener" aria-label="Message Recovero on WhatsApp">💬 WhatsApp</a>
+    </div>
+  </div>
+
+  <script>
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    const revealItems = document.querySelectorAll('.reveal');
+    if (!reducedMotion && 'IntersectionObserver' in window) {
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.2 });
+      revealItems.forEach((item) => revealObserver.observe(item));
+    } else {
+      revealItems.forEach((item) => item.classList.add('in-view'));
+    }
+
+    const benefitCards = [...document.querySelectorAll('.benefit-card')];
+    const setActiveBenefit = (activeCard) => {
+      benefitCards.forEach((card) => {
+        const isActive = card === activeCard;
+        card.classList.toggle('active', isActive);
+        card.setAttribute('aria-expanded', String(isActive));
+      });
+    };
+
+    benefitCards.forEach((card) => {
+      card.addEventListener('click', () => setActiveBenefit(card));
+      card.addEventListener('focus', () => setActiveBenefit(card));
+    });
+  </script>
+</body>
+</html>
