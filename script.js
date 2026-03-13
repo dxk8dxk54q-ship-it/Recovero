@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
       '<span class="sticky-cta__icon" aria-hidden="true">📞</span>' +
       '<span class="sticky-cta__text">' +
       '<span class="sticky-cta__title">Call</span>' +
-      '<span class="sticky-cta__sub">Recovero 24/7 dispatch</span>' +
+      '<span class="sticky-cta__sub">Recovero 24/7 roadside help</span>' +
       '</span>' +
       '</a>' +
       '<a id="ctaWhatsAppSticky" class="sticky-cta__btn sticky-cta__btn--wa" href="https://wa.me/447366302341?text=Hi%20Recovero%2C%20I%20need%20recovery.%20Location%2Fpostcode%3A%20____%20.%20Vehicle%3A%20____%20.%20Issue%3A%20____%20." target="_blank" rel="noopener">' +
@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var areaData = {
     portsmouth: {
       title: 'Portsmouth',
-      summary: 'Fast-response local dispatch across Portsmouth, from city centre callouts to coastal routes.',
+      summary: 'Fast-response local recovery across Portsmouth, from city centre callouts to coastal routes.',
       roads: ['A3', 'M275', 'Southsea & Cosham'],
       href: '/locations/portsmouth-vehicle-recovery.html'
     },
@@ -137,13 +137,13 @@ document.addEventListener('DOMContentLoaded', function () {
     },
     fareham: {
       title: 'Fareham',
-      summary: 'Local operator coverage across Fareham with smooth links to nearby motorway routes.',
+      summary: 'Local recovery coverage across Fareham with smooth links to nearby motorway routes.',
       roads: ['M27', 'A27', 'Portchester & Titchfield'],
       href: '/locations/fareham-vehicle-recovery.html'
     },
     gosport: {
       title: 'Gosport',
-      summary: 'Reliable dispatch throughout Gosport and peninsula routes when you need urgent recovery.',
+      summary: 'Reliable recovery coverage throughout Gosport and peninsula routes when you need urgent help.',
       roads: ['A32', 'B3333', 'Lee-on-the-Solent'],
       href: '/locations/gosport-vehicle-recovery.html'
     },
@@ -167,7 +167,7 @@ document.addEventListener('DOMContentLoaded', function () {
     },
     winchester: {
       title: 'Winchester',
-      summary: 'Recovery dispatch available around Winchester with quick links to major Hampshire roads.',
+      summary: 'Recovery available around Winchester with quick links to major Hampshire roads.',
       roads: ['M3', 'A34', 'Kings Worthy & Harestock'],
       href: '/locations/winchester-vehicle-recovery.html'
     }
@@ -195,7 +195,7 @@ document.addEventListener('DOMContentLoaded', function () {
       areaPanelRoads.appendChild(item);
     });
     areaPanelLink.href = selected.href;
-    areaPanelLink.textContent = 'View ' + selected.title + ' page';
+    areaPanelLink.textContent = 'Vehicle recovery in ' + selected.title;
 
     areaPills.forEach(function (pill) {
       var isActive = pill.getAttribute('data-area') === areaKey;
