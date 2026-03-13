@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <span class="sticky-cta__icon" aria-hidden="true">📞</span>
         <span class="sticky-cta__text">
           <span class="sticky-cta__title">Call</span>
-          <span class="sticky-cta__sub">Recovero 24/7 dispatch</span>
+          <span class="sticky-cta__sub">Recovero 24/7 roadside help</span>
         </span>
       </a>
 
