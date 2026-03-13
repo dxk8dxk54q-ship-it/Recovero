@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex,follow">
-  <title>24/7 Car Recovery in Fareham | Get ETA + Price | Recovero</title>
-  <meta name="description" content="Need car recovery in Fareham? Call now for ETA + price where possible and fast local recovery help.">
+  <title>24/7 Car Recovery in Fareham | Get arrival time + price | Recovero</title>
+  <meta name="description" content="Need car recovery in Fareham? Call now for arrival time + price where possible and fast local recovery help.">
   <meta property="og:title" content="24/7 Car Recovery in Fareham | Recovero">
-  <meta property="og:description" content="Tap to call for ETA + price where possible in Fareham and get local recovery help fast.">
+  <meta property="og:description" content="Tap to call for arrival time + price where possible in Fareham and get local recovery help fast.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://recovero.co.uk/fareham-recovery/">
   <meta property="og:image" content="https://recovero.co.uk/images/recovery-truck.jpg">
@@ -181,23 +181,36 @@
 
     .process-shell{
       margin-top:14px;
-      background:linear-gradient(180deg, rgba(255,255,255,.94), rgba(249,251,255,.98));
-      border:1px solid rgba(15,34,53,.1);
+      background:linear-gradient(180deg, #fff, #f9fbff);
+      border:1px solid rgba(15,34,53,.14);
       border-radius:24px;
-      box-shadow:0 16px 34px rgba(15,34,53,.08);
+      box-shadow:0 20px 36px rgba(15,34,53,.12);
       padding:20px;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .process-shell::before{
+      content:"";
+      position:absolute;
+      left:20px;
+      right:20px;
+      top:58px;
+      height:1px;
+      background:linear-gradient(90deg, rgba(245,130,32,.28), rgba(245,130,32,.08));
     }
 
     .process-summary{
       margin:0;
       text-align:center;
-      color:#39485d;
-      font-weight:600;
-      font-size:.97rem;
+      color:#25364b;
+      font-weight:700;
+      font-size:.98rem;
+      line-height:1.5;
     }
 
     .process-track{
-      margin-top:18px;
+      margin-top:20px;
       display:grid;
       gap:12px;
       grid-template-columns:repeat(2,minmax(0,1fr));
@@ -210,35 +223,42 @@
 
     .process-card{
       height:100%;
-      border-radius:16px;
+      border-radius:18px;
       border:1px solid rgba(15,34,53,.12);
       background:var(--card);
-      box-shadow:0 8px 16px rgba(15,34,53,.08);
+      box-shadow:0 12px 22px rgba(15,34,53,.1);
       padding:16px;
-      min-height:126px;
+      min-height:140px;
     }
 
     .process-top{
-      margin-bottom:8px;
+      margin-bottom:10px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:8px;
+    }
+
+    .process-icon{
+      width:30px;
+      height:30px;
+      color:#8b4202;
+      padding:6px;
+      border-radius:10px;
+      border:1px solid rgba(245,130,32,.35);
+      background:rgba(245,130,32,.14);
+      flex:0 0 30px;
     }
 
     .process-link{
       display:none;
       align-self:center;
       justify-self:center;
-      width:44px;
-      height:3px;
+      width:46px;
+      height:4px;
       border-radius:999px;
       background:linear-gradient(90deg,var(--orange),var(--orange-deep));
-    }
-
-    .tow-icon{
-      width:26px;
-      height:26px;
-      color:#58657a;
-      margin-left:auto;
-      margin-top:8px;
-      display:block;
+      box-shadow:0 6px 14px rgba(245,130,32,.3);
     }
 
     .tow-icon path,
@@ -438,13 +458,13 @@
     <section class="hero">
       <div class="hero-content">
         <h1>Need car recovery in Fareham? Get <span class="headline-accent">fast local help</span> now.</h1>
-        <p class="hero-sub">Call now for a live ETA + price and we’ll help get local recovery support sorted fast.</p>
+        <p class="hero-sub">Call now for arrival time + price and we’ll help get local recovery support sorted fast.</p>
 
         <ul class="hero-bullets" aria-label="Fareham recovery highlights">
           <li>Broken down in Fareham? • Fast local help • Call now</li>
         </ul>
 
-        <a class="btn-primary" href="tel:+447366302341" aria-label="Get my ETA and price by calling now">Get My ETA + Price — Tap to Call</a>
+        <a class="btn-primary" href="tel:+447366302341" aria-label="Get arrival time and price by calling now">Get arrival time + price — Tap to Call</a>
         <p class="hero-note">No forms • No obligation • If you’re in danger, call 999 first.</p>
       </div>
     </section>
@@ -452,38 +472,37 @@
     <section class="section reveal" id="how-recovery-works">
       <h2 class="section-title">How recovery works</h2>
       <div class="process-shell" aria-label="How recovery works in four steps">
-        <p class="process-summary">You call → tell us what’s happened → we help get local recovery sorted → you get moving again.</p>
+        <p class="process-summary">Call us → Tell us what’s happened → We help get local recovery sorted → You get moving again</p>
         <div class="process-track">
           <div class="process-step">
             <article class="process-card">
-              <div class="process-top"><span class="step-number">1</span></div>
-              <h3>You call</h3>
-              <p>Tell us where you are and what’s happened</p>
+              <div class="process-top"><span class="step-number">1</span><svg class="process-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 4.5h3l1.3 3.6-1.8 1.5a16.1 16.1 0 0 0 6.9 6.9l1.5-1.8L19.5 16v3a1.5 1.5 0 0 1-1.7 1.5A16.8 16.8 0 0 1 3.5 6.2 1.5 1.5 0 0 1 5 4.5z"></path></svg></div>
+              <h3>Call us</h3>
+              <p>Tell us where you are</p>
             </article>
             <span class="process-link" aria-hidden="true"></span>
           </div>
           <div class="process-step">
             <article class="process-card">
-              <div class="process-top"><span class="step-number">2</span></div>
-              <h3>We find local help</h3>
-              <p>We help get nearby recovery support sorted</p>
+              <div class="process-top"><span class="step-number">2</span><svg class="process-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21s6-5.8 6-10a6 6 0 1 0-12 0c0 4.2 6 10 6 10z"></path><circle cx="12" cy="11" r="2.2"></circle></svg></div>
+              <h3>Tell us the problem</h3>
+              <p>Breakdown, non-start or accident</p>
             </article>
             <span class="process-link" aria-hidden="true"></span>
           </div>
           <div class="process-step">
             <article class="process-card">
-              <div class="process-top"><span class="step-number">3</span></div>
-              <h3>You get ETA + price</h3>
-              <p>Where possible before recovery starts</p>
+              <div class="process-top"><span class="step-number">3</span><svg class="process-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M2.5 14h11.7a1.8 1.8 0 0 0 1.8-1.8v-2h2.8l2.7 2.7v1.1h.5"></path><circle cx="6.8" cy="16" r="1.9"></circle><circle cx="17.9" cy="16" r="1.9"></circle><path d="M2.5 11.2h3"></path></svg></div>
+              <h3>We sort local help</h3>
+              <p>Fast nearby recovery support</p>
             </article>
             <span class="process-link" aria-hidden="true"></span>
           </div>
           <div class="process-step">
             <article class="process-card">
-              <div class="process-top"><span class="step-number">4</span></div>
-              <h3>You get moving</h3>
-              <p>Roadside help or transport, depending on what you need</p>
-              <svg class="tow-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M2.5 13.6h11.8a1.8 1.8 0 0 0 1.8-1.8V9.9h2.7l2.7 2.7v1h.5"></path><circle cx="6.7" cy="15.7" r="1.8"></circle><circle cx="17.8" cy="15.7" r="1.8"></circle><path d="M2.5 10.8h3.1"></path></svg>
+              <div class="process-top"><span class="step-number">4</span><svg class="process-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m5.5 12.5 4 4 9-9"></path></svg></div>
+              <h3>Get moving again</h3>
+              <p>Recovery or transport as needed</p>
             </article>
           </div>
         </div>
@@ -499,7 +518,7 @@
             <p class="extra">One call gets things moving faster.</p>
           </button>
           <button class="card benefit-card" type="button" role="listitem" aria-expanded="false">
-            <span class="benefit-top"><span class="benefit-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><circle cx="12" cy="12" r="7"></circle><line x1="12" y1="12" x2="12" y2="8.8"></line><line x1="12" y1="12" x2="14.8" y2="13.5"></line></svg></span><span><h3>Live ETA + price</h3><p>Clear timing and cost where possible before things move.</p></span></span>
+            <span class="benefit-top"><span class="benefit-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><circle cx="12" cy="12" r="7"></circle><line x1="12" y1="12" x2="12" y2="8.8"></line><line x1="12" y1="12" x2="14.8" y2="13.5"></line></svg></span><span><h3>Arrival time + price</h3><p>Clear timing and cost where possible before things move.</p></span></span>
             <p class="extra">Timing depends on your location, traffic and availability.</p>
           </button>
           <button class="card benefit-card" type="button" role="listitem" aria-expanded="false">
@@ -525,10 +544,10 @@
     <section class="section">
       <h2 class="section-title">FAQs</h2>
       <div class="faq">
-        <details><summary>How quickly can someone reach me in Fareham?</summary><p>Arrival time depends on your location, traffic and who’s available nearby. Call now for the latest live ETA.</p></details>
+        <details><summary>How quickly can someone reach me in Fareham?</summary><p>Arrival time depends on your location, traffic and who’s available nearby. Call now for the latest arrival time.</p></details>
         <details><summary>Do you cover nearby areas?</summary><p>Yes. We can help across Fareham and nearby places such as Portchester, Titchfield, Locks Heath, Park Gate and Whiteley.</p></details>
         <details><summary>Do you send the recovery company?</summary><p>We help arrange local recovery support in Fareham and nearby. You’ll pay the recovery company that comes out.</p></details>
-        <details><summary>How is the price worked out?</summary><p>Price depends on things like your location, vehicle, distance and timing. We’ll give you ETA + price where possible before things move.</p></details>
+        <details><summary>How is the price worked out?</summary><p>Price depends on things like your location, vehicle, distance and timing. We’ll give you arrival time + price where possible before things move.</p></details>
         <details><summary>Do you help with transport as well as breakdowns?</summary><p>Yes. Support can include roadside recovery and planned vehicle transport.</p></details>
       </div>
     </section>
@@ -542,7 +561,7 @@
 
   <div class="sticky" role="navigation" aria-label="Quick contact tray">
     <div class="sticky-inner">
-      <a class="sticky-btn sticky-call" href="tel:+447366302341" aria-label="Call Recovero now">📞 Call for ETA + Price</a>
+      <a class="sticky-btn sticky-call" href="tel:+447366302341" aria-label="Call Recovero now">📞 Call for arrival time + price</a>
       <a class="sticky-btn sticky-wa" href="https://wa.me/447366302341?text=Hi%20Recovero%2C%20I%20need%20vehicle%20recovery%20in%20Fareham.%20My%20location%20is%20____.%20Vehicle%3A%20____.%20Issue%3A%20____." target="_blank" rel="noopener" aria-label="Message Recovero on WhatsApp">💬 WhatsApp</a>
     </div>
   </div>
