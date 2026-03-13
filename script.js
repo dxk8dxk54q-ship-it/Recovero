@@ -125,49 +125,49 @@ document.addEventListener('DOMContentLoaded', function () {
   var areaData = {
     portsmouth: {
       title: 'Portsmouth',
-      summary: 'Fast-response local recovery across Portsmouth, from city centre callouts to coastal routes.',
+      summary: '24/7 vehicle recovery across Portsmouth, from city centre roads to the seafront.',
       roads: ['A3', 'M275', 'Southsea & Cosham'],
       href: '/locations/portsmouth-vehicle-recovery.html'
     },
     havant: {
       title: 'Havant',
-      summary: 'Quick access around Havant for home, roadside and non-runner recoveries.',
+      summary: 'Fast local recovery across Havant, including home, roadside, and non-runner callouts.',
       roads: ['A27', 'A3(M)', 'Emsworth & Bedhampton'],
       href: '/locations/havant-vehicle-recovery.html'
     },
     fareham: {
       title: 'Fareham',
-      summary: 'Local recovery coverage across Fareham with smooth links to nearby motorway routes.',
+      summary: '24/7 vehicle recovery across Fareham and nearby routes including the M27 and A27.',
       roads: ['M27', 'A27', 'Portchester & Titchfield'],
       href: '/locations/fareham-vehicle-recovery.html'
     },
     gosport: {
       title: 'Gosport',
-      summary: 'Reliable recovery coverage throughout Gosport and peninsula routes when you need urgent help.',
+      summary: 'Fast local recovery across Gosport and surrounding routes.',
       roads: ['A32', 'B3333', 'Lee-on-the-Solent'],
       href: '/locations/gosport-vehicle-recovery.html'
     },
     waterlooville: {
       title: 'Waterlooville',
-      summary: 'Prompt local recovery around Waterlooville with easy access to surrounding villages.',
+      summary: '24/7 vehicle recovery across Waterlooville and nearby areas including Cowplain and Purbrook.',
       roads: ['A3', 'A27', 'Purbrook & Cowplain'],
       href: '/locations/waterlooville-vehicle-recovery.html'
     },
     southampton: {
       title: 'Southampton',
-      summary: 'Coverage in Southampton for breakdowns, accident moves and planned transport jobs.',
+      summary: 'Fast vehicle recovery across Southampton for breakdowns, accidents, and non-runners.',
       roads: ['M27', 'A33', 'Shirley & Bitterne'],
       href: '/locations/southampton-vehicle-recovery.html'
     },
     chichester: {
       title: 'Chichester',
-      summary: 'Support across Chichester and nearby routes, including urgent and pre-booked callouts.',
+      summary: '24/7 vehicle recovery across Chichester and nearby A27 and A259 routes.',
       roads: ['A27', 'A259', 'Fishbourne & Bosham'],
       href: '/locations/chichester-vehicle-recovery.html'
     },
     winchester: {
       title: 'Winchester',
-      summary: 'Recovery available around Winchester with quick links to major Hampshire roads.',
+      summary: 'Fast local recovery across Winchester and nearby routes including the M3 and A34.',
       roads: ['M3', 'A34', 'Kings Worthy & Harestock'],
       href: '/locations/winchester-vehicle-recovery.html'
     }
