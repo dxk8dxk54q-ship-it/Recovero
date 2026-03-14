@@ -3,290 +3,423 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Vehicle Recovery Gosport | 24/7 Breakdown Recovery</title>
-
-<meta name="description" content="24/7 vehicle recovery in Gosport. Fast local breakdown recovery with arrival typically within 20–40 minutes. Call now for immediate help.">
-
+<title>Vehicle Recovery Gosport | 24/7 Breakdown Recovery | Recovero</title>
+<meta name="description" content="Recovero provides 24/7 vehicle recovery and breakdown recovery in Gosport. Call now for local help with cars, vans, and motorcycles.">
+<link rel="canonical" href="https://recovero247.co.uk/locations/gosport-vehicle-recovery.html">
 <style>
-
-body{
-font-family: Arial, sans-serif;
-margin:0;
-background:#f5f5f5;
-color:#222;
+:root {
+  --bg: #f3f5f7;
+  --ink: #16212b;
+  --muted: #5c6875;
+  --brand: #0f6a7c;
+  --brand-dark: #0a4f5d;
+  --accent: #db3b2c;
+  --card: #ffffff;
+  --line: #dbe3ea;
 }
 
-.hero{
-background-image:url('/images/recovery-truck.jpg');
-background-size:cover;
-background-position:center;
-padding:80px 20px;
-color:white;
+* {
+  box-sizing: border-box;
 }
 
-.hero-overlay{
-background:rgba(0,0,0,0.65);
-padding:60px 20px;
-max-width:1200px;
-margin:auto;
-display:flex;
-flex-wrap:wrap;
-align-items:center;
-justify-content:space-between;
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.5;
 }
 
-.hero-text{
-max-width:550px;
+a {
+  color: inherit;
 }
 
-.hero h1{
-font-size:40px;
-margin-bottom:10px;
+.container {
+  width: min(1100px, 92%);
+  margin: 0 auto;
 }
 
-.hero h2{
-color:#ff7a00;
-font-size:32px;
-margin-top:0;
+.top-strip {
+  background: #0d1a23;
+  color: #fff;
+  padding: 10px 0;
 }
 
-.bullets{
-margin-top:20px;
+.top-strip-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
 }
 
-.bullets li{
-margin-bottom:8px;
+.top-brand {
+  font-weight: 700;
+  letter-spacing: 0.3px;
 }
 
-.form-box{
-background:white;
-color:black;
-padding:25px;
-border-radius:8px;
-width:320px;
-box-shadow:0 4px 12px rgba(0,0,0,0.3);
+.top-service {
+  font-size: 0.95rem;
+  color: #c8d5e0;
 }
 
-.form-box input,
-.form-box select{
-width:100%;
-padding:10px;
-margin-bottom:10px;
-border:1px solid #ccc;
-border-radius:4px;
+.call-btn {
+  display: inline-block;
+  text-decoration: none;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 700;
+  padding: 12px 20px;
+  border-radius: 999px;
+  text-align: center;
 }
 
-.cta{
-background:#e53935;
-color:white;
-border:none;
-padding:14px;
-font-size:16px;
-width:100%;
-cursor:pointer;
-border-radius:5px;
+.call-btn:hover,
+.call-btn:focus-visible {
+  background: #ba2d22;
 }
 
-.badges{
-display:flex;
-justify-content:center;
-gap:60px;
-padding:35px 20px;
-background:white;
-text-align:center;
+.hero {
+  padding: 34px 0 24px;
 }
 
-.badges div{
-max-width:200px;
+.hero-inner {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
 }
 
-.section{
-padding:60px 20px;
-max-width:1100px;
-margin:auto;
+.hero-content {
+  padding: 30px;
 }
 
-.cards{
-display:flex;
-flex-wrap:wrap;
-gap:25px;
+.hero h1 {
+  margin: 0 0 12px;
+  font-size: clamp(1.9rem, 4vw, 2.8rem);
+  line-height: 1.1;
 }
 
-.card{
-background:white;
-padding:25px;
-flex:1;
-border-radius:8px;
-box-shadow:0 2px 8px rgba(0,0,0,0.1);
-text-align:center;
+.hero-sub {
+  font-size: 1.1rem;
+  margin: 0 0 10px;
+  color: var(--ink);
 }
 
-.call-banner{
-background:#e53935;
-color:white;
-text-align:center;
-padding:40px 20px;
-font-size:28px;
+.hero-support {
+  margin: 0 0 20px;
+  color: var(--muted);
 }
 
-.footer-cta{
-background:#222;
-color:white;
-text-align:center;
-padding:60px 20px;
+.trust-list {
+  list-style: none;
+  margin: 0 0 22px;
+  padding: 0;
+  display: grid;
+  gap: 8px;
 }
 
-.footer-cta button{
-background:#ff7a00;
-border:none;
-padding:18px 40px;
-font-size:20px;
-cursor:pointer;
-border-radius:6px;
+.trust-list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
 }
 
+.trust-list li::before {
+  content: "•";
+  color: var(--brand);
+  font-size: 1.3rem;
+  line-height: 1;
+}
+
+.hero-media {
+  min-height: 270px;
+}
+
+.hero-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.urgent-call {
+  background: var(--brand);
+  color: #fff;
+  text-align: center;
+  padding: 30px 16px;
+}
+
+.urgent-call p {
+  margin: 0 0 16px;
+  font-size: clamp(1.1rem, 2.1vw, 1.5rem);
+  font-weight: 700;
+}
+
+.section {
+  padding: 38px 0;
+}
+
+.section h2 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: clamp(1.45rem, 2.8vw, 2rem);
+}
+
+.problem-grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.problem-item {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 18px;
+}
+
+.problem-item h3 {
+  margin: 0 0 8px;
+  font-size: 1.1rem;
+}
+
+.problem-item p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.local-grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+}
+
+.area-list {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.area-list li {
+  margin: 5px 0;
+}
+
+.why-grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.why-item {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 18px;
+  font-weight: 600;
+}
+
+.faq-list {
+  display: grid;
+  gap: 10px;
+}
+
+.faq-item {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 14px 16px;
+}
+
+.faq-item h3 {
+  margin: 0 0 4px;
+  font-size: 1rem;
+}
+
+.faq-item p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.final-cta {
+  background: #0d1a23;
+  color: #fff;
+  text-align: center;
+  padding: 46px 16px 56px;
+}
+
+.final-cta h2 {
+  margin: 0 0 8px;
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+}
+
+.final-cta p {
+  margin: 0 0 20px;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.call-btn.large {
+  font-size: 1.15rem;
+  padding: 15px 28px;
+}
+
+@media (max-width: 900px) {
+  .problem-grid,
+  .why-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .hero-inner,
+  .local-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-media {
+    order: 2;
+    min-height: 220px;
+  }
+}
+
+@media (max-width: 560px) {
+  .top-strip-inner {
+    align-items: flex-start;
+  }
+
+  .call-btn {
+    width: 100%;
+  }
+
+  .problem-grid,
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-content {
+    padding: 22px;
+  }
+}
 </style>
 </head>
-
 <body>
+  <div class="top-strip">
+    <div class="container top-strip-inner">
+      <div class="top-brand">Recovero</div>
+      <div class="top-service">24/7 Vehicle Recovery Gosport</div>
+      <a class="call-btn" href="tel:07366302341">Call Now</a>
+    </div>
+  </div>
 
-<!-- HERO -->
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <h1>Vehicle Recovery Gosport</h1>
+          <p class="hero-sub">Fast local help for breakdowns, non-runners and roadside recovery.</p>
+          <p class="hero-support">Cars, vans and motorcycles recovered across Gosport and nearby areas, 24 hours a day.</p>
+          <ul class="trust-list">
+            <li>No forms</li>
+            <li>No obligation</li>
+            <li>Fast local response</li>
+          </ul>
+          <a class="call-btn" href="tel:07366302341">Call Now</a>
+        </div>
+        <div class="hero-media">
+          <img src="/images/recovery-truck.jpg" alt="Recovery truck assisting a broken down vehicle in Gosport">
+        </div>
+      </div>
+    </section>
 
-<section class="hero">
+    <section class="urgent-call">
+      <p>Need help now? Call Recovero for fast Gosport vehicle recovery.</p>
+      <a class="call-btn large" href="tel:07366302341">Call Now</a>
+    </section>
 
-<div class="hero-overlay">
+    <section class="section">
+      <div class="container">
+        <h2>When to call Recovero</h2>
+        <div class="problem-grid">
+          <article class="problem-item">
+            <h3>Broken down</h3>
+            <p>If your vehicle stops and you cannot continue safely, call for recovery.</p>
+          </article>
+          <article class="problem-item">
+            <h3>Won’t start</h3>
+            <p>If the engine will not start at home, work, or roadside, we can recover it.</p>
+          </article>
+          <article class="problem-item">
+            <h3>Accident recovery</h3>
+            <p>When your vehicle is not driveable after a collision, arrange safe transport.</p>
+          </article>
+          <article class="problem-item">
+            <h3>Vehicle transport</h3>
+            <p>Move a non-runner to a garage, bodyshop, or your chosen destination.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-<div class="hero-text">
+    <section class="section">
+      <div class="container">
+        <h2>Local vehicle recovery in Gosport</h2>
+        <div class="local-grid">
+          <p>Recovero provides vehicle recovery across Gosport with callouts day and night. We cover local roads, residential areas, retail parks, and nearby routes when you need breakdown support.</p>
+          <ul class="area-list">
+            <li>Gosport</li>
+            <li>Lee-on-the-Solent</li>
+            <li>Stubbington</li>
+            <li>Fareham</li>
+            <li>Portsmouth</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-<h1>Stuck On The Road?</h1>
-<h2>Fast Vehicle Recovery In Gosport</h2>
+    <section class="section">
+      <div class="container">
+        <h2>Why people call us</h2>
+        <div class="why-grid">
+          <div class="why-item">24/7 availability</div>
+          <div class="why-item">Clear pricing before recovery is arranged</div>
+          <div class="why-item">Cars, vans and motorcycles covered</div>
+        </div>
+      </div>
+    </section>
 
-<p>24/7 breakdown recovery and roadside assistance across Gosport and surrounding areas.</p>
+    <section class="section">
+      <div class="container">
+        <h2>FAQs</h2>
+        <div class="faq-list">
+          <article class="faq-item">
+            <h3>Do you cover Gosport and nearby areas?</h3>
+            <p>Yes, we cover Gosport and surrounding areas including Lee-on-the-Solent, Stubbington, Fareham, and Portsmouth.</p>
+          </article>
+          <article class="faq-item">
+            <h3>Can you recover non-runners?</h3>
+            <p>Yes, we recover vehicles that will not start or cannot be driven.</p>
+          </article>
+          <article class="faq-item">
+            <h3>Do you cover vans and motorcycles?</h3>
+            <p>Yes, we recover cars, vans, and motorcycles.</p>
+          </article>
+          <article class="faq-item">
+            <h3>Are you available 24/7?</h3>
+            <p>Yes, vehicle recovery is available day and night.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
 
-<ul class="bullets">
-<li>✔ No forms • No obligation</li>
-<li>✔ Arrival within 20–40 mins</li>
-<li>✔ Cars, vans & motorcycles</li>
-</ul>
-
-</div>
-
-<div class="form-box">
-
-<h3>Get Immediate Help</h3>
-
-<input type="text" placeholder="Your Name">
-
-<input type="tel" placeholder="Phone Number">
-
-<input type="text" placeholder="Your Location">
-
-<select>
-<option>Vehicle Issue</option>
-<option>Breakdown</option>
-<option>Accident</option>
-<option>Won't Start</option>
-<option>Flat Battery</option>
-<option>Vehicle Transport</option>
-</select>
-
-<button class="cta">GET MY ETA & PRICE</button>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- TRUST BADGES -->
-
-<section class="badges">
-
-<div>
-<h3>24/7 Service</h3>
-<p>Available anytime day or night.</p>
-</div>
-
-<div>
-<h3>Fast Response</h3>
-<p>Local recovery covering Gosport.</p>
-</div>
-
-<div>
-<h3>All Vehicles</h3>
-<p>Cars, vans and motorcycles recovered.</p>
-</div>
-
-</section>
-
-<!-- WHY CHOOSE US -->
-
-<section class="section">
-
-<h2>Vehicle Recovery Gosport</h2>
-
-<div class="cards">
-
-<div class="card">
-<h3>Rapid Assistance</h3>
-<p>Fast local response when you’re stranded.</p>
-</div>
-
-<div class="card">
-<h3>Affordable Pricing</h3>
-<p>Clear pricing before any recovery is arranged.</p>
-</div>
-
-<div class="card">
-<h3>Any Vehicle</h3>
-<p>Cars, vans, motorcycles and light commercial vehicles.</p>
-</div>
-
-</div>
-
-</section>
-
-<!-- CALL SECTION -->
-
-<section class="call-banner">
-
-Need recovery in Gosport right now?<br>
-<strong>Call now for immediate help.</strong>
-
-</section>
-
-<!-- TESTIMONIALS -->
-
-<section class="section">
-
-<h2>Customer Feedback</h2>
-
-<div class="cards">
-
-<div class="card">
-<p>"Excellent service. Arrived quickly and got us off the roadside."</p>
-</div>
-
-<div class="card">
-<p>"Professional driver and very quick response time."</p>
-</div>
-
-</div>
-
-</section>
-
-<!-- FINAL CTA -->
-
-<section class="footer-cta">
-
-<h2>24/7 Vehicle Recovery Gosport</h2>
-
-<p>Fast local help when you need it most.</p>
-
-<button>CALL NOW</button>
-
-</section>
-
+  <section class="final-cta">
+    <div class="container">
+      <h2>Need vehicle recovery in Gosport?</h2>
+      <p>Call Recovero now.</p>
+      <a class="call-btn large" href="tel:07366302341">Call Now</a>
+    </div>
+  </section>
 </body>
 </html>
