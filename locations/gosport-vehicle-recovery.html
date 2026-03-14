@@ -1,425 +1,105 @@
 <!DOCTYPE html>
-<html lang="en-GB">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vehicle Recovery Gosport | 24/7 Breakdown Recovery | Recovero</title>
-<meta name="description" content="Recovero provides 24/7 vehicle recovery and breakdown recovery in Gosport. Call now for local help with cars, vans, and motorcycles.">
-<link rel="canonical" href="https://recovero247.co.uk/locations/gosport-vehicle-recovery.html">
-<style>
-:root {
-  --bg: #f3f5f7;
-  --ink: #16212b;
-  --muted: #5c6875;
-  --brand: #0f6a7c;
-  --brand-dark: #0a4f5d;
-  --accent: #db3b2c;
-  --card: #ffffff;
-  --line: #dbe3ea;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  color: var(--ink);
-  background: var(--bg);
-  line-height: 1.5;
-}
-
-a {
-  color: inherit;
-}
-
-.container {
-  width: min(1100px, 92%);
-  margin: 0 auto;
-}
-
-.top-strip {
-  background: #0d1a23;
-  color: #fff;
-  padding: 10px 0;
-}
-
-.top-strip-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 14px;
-  flex-wrap: wrap;
-}
-
-.top-brand {
-  font-weight: 700;
-  letter-spacing: 0.3px;
-}
-
-.top-service {
-  font-size: 0.95rem;
-  color: #c8d5e0;
-}
-
-.call-btn {
-  display: inline-block;
-  text-decoration: none;
-  background: var(--accent);
-  color: #fff;
-  font-weight: 700;
-  padding: 12px 20px;
-  border-radius: 999px;
-  text-align: center;
-}
-
-.call-btn:hover,
-.call-btn:focus-visible {
-  background: #ba2d22;
-}
-
-.hero {
-  padding: 34px 0 24px;
-}
-
-.hero-inner {
-  background: var(--card);
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  overflow: hidden;
-  display: grid;
-  grid-template-columns: 1.15fr 1fr;
-}
-
-.hero-content {
-  padding: 30px;
-}
-
-.hero h1 {
-  margin: 0 0 12px;
-  font-size: clamp(1.9rem, 4vw, 2.8rem);
-  line-height: 1.1;
-}
-
-.hero-sub {
-  font-size: 1.1rem;
-  margin: 0 0 10px;
-  color: var(--ink);
-}
-
-.hero-support {
-  margin: 0 0 20px;
-  color: var(--muted);
-}
-
-.trust-list {
-  list-style: none;
-  margin: 0 0 22px;
-  padding: 0;
-  display: grid;
-  gap: 8px;
-}
-
-.trust-list li {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-weight: 600;
-}
-
-.trust-list li::before {
-  content: "•";
-  color: var(--brand);
-  font-size: 1.3rem;
-  line-height: 1;
-}
-
-.hero-media {
-  min-height: 270px;
-}
-
-.hero-media img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.urgent-call {
-  background: var(--brand);
-  color: #fff;
-  text-align: center;
-  padding: 30px 16px;
-}
-
-.urgent-call p {
-  margin: 0 0 16px;
-  font-size: clamp(1.1rem, 2.1vw, 1.5rem);
-  font-weight: 700;
-}
-
-.section {
-  padding: 38px 0;
-}
-
-.section h2 {
-  margin-top: 0;
-  margin-bottom: 16px;
-  font-size: clamp(1.45rem, 2.8vw, 2rem);
-}
-
-.problem-grid {
-  display: grid;
-  gap: 14px;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-}
-
-.problem-item {
-  background: var(--card);
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  padding: 18px;
-}
-
-.problem-item h3 {
-  margin: 0 0 8px;
-  font-size: 1.1rem;
-}
-
-.problem-item p {
-  margin: 0;
-  color: var(--muted);
-}
-
-.local-grid {
-  display: grid;
-  gap: 24px;
-  grid-template-columns: 1fr 1fr;
-  align-items: start;
-}
-
-.area-list {
-  margin: 0;
-  padding-left: 20px;
-}
-
-.area-list li {
-  margin: 5px 0;
-}
-
-.why-grid {
-  display: grid;
-  gap: 14px;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
-.why-item {
-  background: var(--card);
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  padding: 18px;
-  font-weight: 600;
-}
-
-.faq-list {
-  display: grid;
-  gap: 10px;
-}
-
-.faq-item {
-  background: var(--card);
-  border: 1px solid var(--line);
-  border-radius: 10px;
-  padding: 14px 16px;
-}
-
-.faq-item h3 {
-  margin: 0 0 4px;
-  font-size: 1rem;
-}
-
-.faq-item p {
-  margin: 0;
-  color: var(--muted);
-}
-
-.final-cta {
-  background: #0d1a23;
-  color: #fff;
-  text-align: center;
-  padding: 46px 16px 56px;
-}
-
-.final-cta h2 {
-  margin: 0 0 8px;
-  font-size: clamp(1.5rem, 3vw, 2.2rem);
-}
-
-.final-cta p {
-  margin: 0 0 20px;
-  font-size: 1.2rem;
-  font-weight: 700;
-}
-
-.call-btn.large {
-  font-size: 1.15rem;
-  padding: 15px 28px;
-}
-
-@media (max-width: 900px) {
-  .problem-grid,
-  .why-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .hero-inner,
-  .local-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .hero-media {
-    order: 2;
-    min-height: 220px;
-  }
-}
-
-@media (max-width: 560px) {
-  .top-strip-inner {
-    align-items: flex-start;
-  }
-
-  .call-btn {
-    width: 100%;
-  }
-
-  .problem-grid,
-  .why-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .hero-content {
-    padding: 22px;
-  }
-}
-</style>
+  <meta charset="UTF-8">
+  <title>Vehicle Recovery in Gosport | Recovero</title>
+  <meta name="description" content="Need vehicle recovery in Gosport? Recovero helps drivers get local recovery support for breakdowns, non-starts and vehicle moves.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="canonical" href="https://recovero247.co.uk/locations/gosport-vehicle-recovery.html">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="icon" href="/images/recovero-logo.png">
 </head>
 <body>
-  <div class="top-strip">
-    <div class="container top-strip-inner">
-      <div class="top-brand">Recovero</div>
-      <div class="top-service">24/7 Vehicle Recovery Gosport</div>
-      <a class="call-btn" href="tel:07366302341">Call Now</a>
-    </div>
+  <div class="top-bar top-call-strip">
+    <span class="emoji">🧭</span>
+    <span>Need recovery help in Gosport? Call for availability and pricing.</span>
+    <a href="tel:07366302341" class="top-bar-call">Call: 07366 302341</a>
   </div>
 
+  <header class="site-header">
+    <a href="/" class="logo-wrap" aria-label="Recovero home">
+      <img src="/images/recovero-logo.png" alt="Recovero logo" class="logo-img">
+      <div class="logo-text">
+        <span class="brand-name">Recovero</span>
+        <span class="brand-tagline">The Vehicle Recovery Network</span>
+      </div>
+    </a>
+    <nav id="mobileNav" class="nav-links">
+      <a href="/" class="nav-link">Home</a>
+      <a href="/breakdown-recovery/" class="nav-link">Breakdown Recovery</a>
+      <a href="/accident-recovery/" class="nav-link">Accident Recovery</a>
+      <a href="/vehicle-transport/" class="nav-link">Vehicle Transport</a>
+      <a href="/areas-we-cover/" class="nav-link active">Areas We Cover</a>
+      <a href="/terms/" class="nav-link">Terms &amp; Conditions</a>
+    </nav>
+    <div class="header-actions">
+      <a href="tel:07366302341" class="btn btn-primary header-call-btn">Call 07366 302341</a>
+      <button class="hamburger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="mobileNav">☰</button>
+    </div>
+  </header>
+
   <main>
-    <section class="hero">
-      <div class="container hero-inner">
-        <div class="hero-content">
-          <h1>Vehicle Recovery Gosport</h1>
-          <p class="hero-sub">Fast local help for breakdowns, non-runners and roadside recovery.</p>
-          <p class="hero-support">Cars, vans and motorcycles recovered across Gosport and nearby areas, 24 hours a day.</p>
-          <ul class="trust-list">
-            <li>No forms</li>
-            <li>No obligation</li>
-            <li>Fast local response</li>
-          </ul>
-          <a class="call-btn" href="tel:07366302341">Call Now</a>
-        </div>
-        <div class="hero-media">
-          <img src="/images/recovery-truck.jpg" alt="Recovery truck assisting a broken down vehicle in Gosport">
-        </div>
-      </div>
+    <section class="section section--alt page-hero fade-up">
+      <p><a href="/areas-we-cover/">← Back to Areas We Cover</a></p>
+      <h1>Vehicle Recovery in Gosport</h1>
+      <p>If you need vehicle recovery in Gosport, Recovero helps connect drivers with local recovery support in Gosport and nearby. Whether you have broken down, your car will not start, or you need a vehicle moved safely, call for availability and pricing.</p>
+      <a href="tel:07366302341" class="btn btn-primary">📞 Call for Gosport Recovery Help</a>
     </section>
 
-    <section class="urgent-call">
-      <p>Need help now? Call Recovero for fast Gosport vehicle recovery.</p>
-      <a class="call-btn large" href="tel:07366302341">Call Now</a>
+    <section class="section content-card fade-up">
+      <h2>Common Gosport callouts</h2>
+      <ul class="icon-list">
+        <li>A32 breakdowns during local and commuter journeys</li>
+        <li>Ferry and marina-side non-starts around Gosport waterfront areas</li>
+        <li>Home-to-garage moves for vehicles that are not roadworthy</li>
+        <li>Roadside recovery help across Gosport neighbourhoods</li>
+      </ul>
     </section>
 
-    <section class="section">
-      <div class="container">
-        <h2>When to call Recovero</h2>
-        <div class="problem-grid">
-          <article class="problem-item">
-            <h3>Broken down</h3>
-            <p>If your vehicle stops and you cannot continue safely, call for recovery.</p>
-          </article>
-          <article class="problem-item">
-            <h3>Won’t start</h3>
-            <p>If the engine will not start at home, work, or roadside, we can recover it.</p>
-          </article>
-          <article class="problem-item">
-            <h3>Accident recovery</h3>
-            <p>When your vehicle is not driveable after a collision, arrange safe transport.</p>
-          </article>
-          <article class="problem-item">
-            <h3>Vehicle transport</h3>
-            <p>Move a non-runner to a garage, bodyshop, or your chosen destination.</p>
-          </article>
-        </div>
-      </div>
+    <section class="section content-card fade-up">
+      <h2>Key roads and local coverage</h2>
+      <p>We regularly receive recovery requests from Gosport roads and nearby routes, including:</p>
+      <ul class="icon-list">
+        <li>A32</li>
+        <li>B3333</li>
+        <li>B3385</li>
+      </ul>
+      <p>Support is available across Gosport and nearby areas such as Lee-on-the-Solent, Stubbington, and Fareham.</p>
     </section>
 
-    <section class="section">
-      <div class="container">
-        <h2>Local vehicle recovery in Gosport</h2>
-        <div class="local-grid">
-          <p>Recovero provides vehicle recovery across Gosport with callouts day and night. We cover local roads, residential areas, retail parks, and nearby routes when you need breakdown support.</p>
-          <ul class="area-list">
-            <li>Gosport</li>
-            <li>Lee-on-the-Solent</li>
-            <li>Stubbington</li>
-            <li>Fareham</li>
-            <li>Portsmouth</li>
-          </ul>
-        </div>
-      </div>
+    <section class="section content-card fade-up">
+      <h2>FAQs for Gosport vehicle recovery</h2>
+      <dl class="definition-list">
+        <dt>Do you cover all of Gosport?</dt>
+        <dd>Yes. We help with vehicle recovery across Gosport and nearby areas, including local roads, residential streets, and waterfront locations.</dd>
+
+        <dt>Can you recover a vehicle that will not start?</dt>
+        <dd>Yes. If your vehicle will not start at home, work, or roadside, we can help arrange local recovery support.</dd>
+
+        <dt>Can you move my vehicle to a garage?</dt>
+        <dd>Yes. Home-to-garage and roadside-to-garage vehicle moves can be arranged when your vehicle is not safe to drive.</dd>
+
+        <dt>How is payment handled?</dt>
+        <dd>You will pay the recovery company that attends.</dd>
+      </dl>
     </section>
 
-    <section class="section">
-      <div class="container">
-        <h2>Why people call us</h2>
-        <div class="why-grid">
-          <div class="why-item">24/7 availability</div>
-          <div class="why-item">Clear pricing before recovery is arranged</div>
-          <div class="why-item">Cars, vans and motorcycles covered</div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <h2>FAQs</h2>
-        <div class="faq-list">
-          <article class="faq-item">
-            <h3>Do you cover Gosport and nearby areas?</h3>
-            <p>Yes, we cover Gosport and surrounding areas including Lee-on-the-Solent, Stubbington, Fareham, and Portsmouth.</p>
-          </article>
-          <article class="faq-item">
-            <h3>Can you recover non-runners?</h3>
-            <p>Yes, we recover vehicles that will not start or cannot be driven.</p>
-          </article>
-          <article class="faq-item">
-            <h3>Do you cover vans and motorcycles?</h3>
-            <p>Yes, we recover cars, vans, and motorcycles.</p>
-          </article>
-          <article class="faq-item">
-            <h3>Are you available 24/7?</h3>
-            <p>Yes, vehicle recovery is available day and night.</p>
-          </article>
-        </div>
-      </div>
+    <section class="section content-card fade-up">
+      <h2>Related recovery services</h2>
+      <ul class="icon-list">
+        <li><a href="/breakdown-recovery/">Breakdown recovery</a></li>
+        <li><a href="/accident-recovery/">Accident recovery</a></li>
+        <li><a href="/vehicle-transport/">Vehicle transport</a></li>
+        <li><a href="/areas-we-cover/">See all areas we cover</a></li>
+      </ul>
     </section>
   </main>
 
-  <section class="final-cta">
-    <div class="container">
-      <h2>Need vehicle recovery in Gosport?</h2>
-      <p>Call Recovero now.</p>
-      <a class="call-btn large" href="tel:07366302341">Call Now</a>
-    </div>
-  </section>
+  <footer class="site-footer">
+    <p>© Recovero – 24/7 vehicle recovery booking service. We connect drivers with trusted local recovery operators. <a href="/terms/">Terms &amp; Conditions</a> | <a href="/privacy-policy/">Privacy Policy</a></p>
+  </footer>
+
+  <script src="/script.js"></script>
+  <script src="/assets/js/site.js" defer></script>
 </body>
 </html>
