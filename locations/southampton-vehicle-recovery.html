@@ -1,110 +1,523 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
   <meta charset="UTF-8">
-  <title>Vehicle Recovery Southampton | Car &amp; Breakdown Recovery 24/7</title>
-  <meta name="description" content="Need vehicle recovery in Southampton? Fast 24/7 breakdown assistance, roadside help, and local recovery support across city roads and motorway links.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vehicle Recovery Southampton | 24/7 Breakdown & Roadside Help | Recovero</title>
+  <meta name="description" content="Need vehicle recovery in Southampton? Call Recovero now for 24/7 breakdown recovery, roadside recovery, and car recovery across Southampton and nearby areas.">
   <link rel="canonical" href="https://recovero247.co.uk/locations/southampton-vehicle-recovery.html">
-  <link rel="stylesheet" href="/style.css">
-  <link rel="icon" href="/images/recovero-logo.png">
+  <style>
+    :root {
+      --bg: #f3f6fa;
+      --surface: #ffffff;
+      --ink: #0d1b2a;
+      --muted: #4e5d6c;
+      --accent: #0f766e;
+      --accent-dark: #0a5d56;
+      --cta: #f97316;
+      --cta-dark: #dd640f;
+      --line: #dbe4ee;
+      --shadow: 0 14px 30px rgba(14, 28, 45, 0.12);
+      --radius: 16px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      scroll-behavior: smooth;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      width: min(1080px, calc(100% - 2rem));
+      margin-inline: auto;
+    }
+
+    .sticky-call {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: #0b1220;
+      color: #fff;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .sticky-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      padding: 0.7rem 0;
+    }
+
+    .sticky-text {
+      min-width: 0;
+    }
+
+    .sticky-text strong,
+    .sticky-text span {
+      display: block;
+      line-height: 1.25;
+      font-size: 0.83rem;
+    }
+
+    .sticky-text span { color: #b7c7dd; }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      border-radius: 999px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: 0.2s ease;
+      white-space: nowrap;
+      font-size: 0.95rem;
+      padding: 0.75rem 1.2rem;
+    }
+
+    .btn-call {
+      background: var(--cta);
+      color: #fff;
+    }
+
+    .btn-call:hover,
+    .btn-call:focus-visible { background: var(--cta-dark); }
+
+    .btn-outline {
+      border: 2px solid rgba(255, 255, 255, 0.55);
+      color: #fff;
+      background: transparent;
+    }
+
+    .btn-outline:hover,
+    .btn-outline:focus-visible {
+      background: rgba(255, 255, 255, 0.12);
+    }
+
+    .hero {
+      position: relative;
+      margin: 1rem auto 0;
+      border-radius: 22px;
+      overflow: hidden;
+      min-height: 540px;
+      display: grid;
+      align-items: end;
+      background:
+        linear-gradient(to top, rgba(4, 10, 18, 0.9), rgba(4, 10, 18, 0.35)),
+        url('/images/recovery-truck.jpg') center/cover no-repeat;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-content {
+      padding: 1.4rem 1.15rem 1.3rem;
+      color: #fff;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      background: rgba(15, 118, 110, 0.28);
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      border-radius: 999px;
+      padding: 0.35rem 0.65rem;
+      font-size: 0.75rem;
+      margin-bottom: 0.9rem;
+      letter-spacing: 0.02em;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(1.8rem, 5.7vw, 3rem);
+      line-height: 1.1;
+    }
+
+    .hero p {
+      margin: 0.9rem 0 0;
+      color: #d7e5f6;
+      line-height: 1.6;
+      max-width: 56ch;
+    }
+
+    .hero-actions {
+      margin-top: 1.2rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+    }
+
+    .trust-strip {
+      margin-top: 1rem;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.5rem;
+      font-size: 0.9rem;
+      color: #dceaf8;
+    }
+
+    .trust-strip span {
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 999px;
+      padding: 0.42rem 0.8rem;
+      width: fit-content;
+    }
+
+    section { padding: 2.2rem 0; }
+
+    h2 {
+      margin: 0 0 1rem;
+      font-size: clamp(1.45rem, 4.3vw, 2rem);
+      line-height: 1.2;
+    }
+
+    .muted { color: var(--muted); margin: 0; line-height: 1.65; }
+
+    .card-grid {
+      margin-top: 1.2rem;
+      display: grid;
+      gap: 0.95rem;
+      grid-template-columns: 1fr;
+    }
+
+    .card {
+      background: var(--surface);
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      padding: 1rem;
+      box-shadow: 0 8px 20px rgba(9, 24, 40, 0.06);
+    }
+
+    .card h3 {
+      margin: 0;
+      font-size: 1.08rem;
+    }
+
+    .card p {
+      margin: 0.6rem 0 1rem;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    .mini-link {
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 0.93rem;
+    }
+
+    .features .card h3::before {
+      content: "✓";
+      color: var(--accent);
+      margin-right: 0.5rem;
+    }
+
+    .coverage-list {
+      list-style: none;
+      margin: 1rem 0 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+    }
+
+    .coverage-list li {
+      background: #e7f1f0;
+      border: 1px solid #cae5e1;
+      color: #0a4f4a;
+      border-radius: 999px;
+      padding: 0.4rem 0.78rem;
+      font-weight: 600;
+      font-size: 0.88rem;
+    }
+
+    .steps {
+      display: grid;
+      gap: 0.9rem;
+      counter-reset: step;
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 0.85rem;
+      align-items: start;
+      background: var(--surface);
+      padding: 1rem;
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+    }
+
+    .step::before {
+      counter-increment: step;
+      content: counter(step);
+      background: var(--accent);
+      color: #fff;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-weight: 700;
+    }
+
+    .cta-band {
+      background: linear-gradient(130deg, #0f172a, #1e293b 60%, #203f65);
+      color: #fff;
+      padding: 2rem 1.1rem;
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+
+    .cta-band p { color: #d2e0f1; margin-bottom: 1.1rem; }
+
+    .faq details {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 0.8rem 0.95rem;
+      margin-bottom: 0.7rem;
+    }
+
+    .faq summary {
+      cursor: pointer;
+      font-weight: 700;
+      list-style: none;
+    }
+
+    .faq summary::-webkit-details-marker { display: none; }
+
+    .faq p {
+      margin: 0.6rem 0 0;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    .final-cta {
+      background: #071120;
+      color: #fff;
+      padding: 2rem 1rem;
+      border-radius: 20px 20px 0 0;
+      text-align: center;
+      margin-top: 0.5rem;
+    }
+
+    .final-cta p { color: #c6d7ef; }
+
+    footer {
+      background: #040b16;
+      color: #a5b9d1;
+      padding: 1.3rem 1rem 2.3rem;
+      text-align: center;
+      font-size: 0.92rem;
+    }
+
+    footer a {
+      color: #d7e8ff;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      margin: 0 0.45rem;
+    }
+
+    @media (min-width: 700px) {
+      .sticky-text strong,
+      .sticky-text span { font-size: 0.92rem; }
+      .hero-content { padding: 2rem; }
+      .trust-strip { grid-template-columns: repeat(3, auto); }
+      .card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .steps { grid-template-columns: repeat(3, 1fr); }
+      .step { grid-template-columns: auto 1fr; }
+      .final-cta,
+      footer { border-radius: 0; }
+    }
+
+    @media (min-width: 1000px) {
+      .hero { min-height: 590px; }
+      section { padding: 3rem 0; }
+      .card-grid.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    }
+  </style>
 </head>
 <body>
-  <div class="top-bar top-call-strip">
-    <span class="emoji">🧭</span>
-    <span>Need car recovery in Southampton? Call now for fast local help.</span>
-    <a href="tel:07366302341" class="top-bar-call">Call: 07366 302341</a>
+  <div class="sticky-call">
+    <div class="container sticky-inner">
+      <div class="sticky-text">
+        <strong>Need vehicle recovery in Southampton?</strong>
+        <span>Call now for a fast quote</span>
+      </div>
+      <a class="btn btn-call" href="tel:02380000000">Call Now</a>
+    </div>
   </div>
 
-  <header class="site-header">
-    <a href="/" class="logo-wrap" aria-label="Recovero home">
-      <img src="/images/recovero-logo.png" alt="Recovero logo" class="logo-img">
-      <div class="logo-text">
-        <span class="brand-name">Recovero</span>
-        <span class="brand-tagline">The Vehicle Recovery Network</span>
-      </div>
-    </a>
-    <nav id="mobileNav" class="nav-links">
-      <a href="/" class="nav-link">Home</a>
-      <a href="/breakdown-recovery/" class="nav-link">Breakdown Recovery</a>
-      <a href="/accident-recovery/" class="nav-link">Accident Recovery</a>
-      <a href="/vehicle-transport/" class="nav-link">Vehicle Transport</a>
-      <a href="/areas-we-cover/" class="nav-link active">Areas We Cover</a>
-      <a href="/terms/" class="nav-link">Terms &amp; Conditions</a>
-    </nav>
-    <div class="header-actions">
-      <a href="tel:07366302341" class="btn btn-primary header-call-btn">Call 07366 302341</a>
-      <button class="hamburger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="mobileNav">☰</button>
-    </div>
-  </header>
-
   <main>
-    <section class="section section--alt page-hero fade-up">
-      <p><a href="/areas-we-cover/">← Back to Areas We Cover</a></p>
-      <h1>Vehicle Recovery in Southampton</h1>
-      <p>Need vehicle recovery in Southampton? We provide 24/7 car recovery and breakdown recovery across city roads, dock routes, retail areas, and motorway links. From a non-starter in Shirley to a breakdown near the M271 or M27, we help you get recovered safely.</p>
-      <a href="tel:07366302341" class="btn btn-primary">📞 Call now for vehicle recovery in Southampton</a>
+    <div class="container hero" id="top">
+      <div class="hero-content">
+        <span class="eyebrow">Recovero · 24/7 Vehicle Recovery</span>
+        <h1>Vehicle Recovery Southampton</h1>
+        <p>Fast help for breakdowns, non-starters, and roadside recovery. Recovero covers Southampton day and night with quick call-outs and clear pricing guidance over the phone.</p>
+        <div class="hero-actions">
+          <a class="btn btn-call" href="tel:02380000000">Call Now</a>
+          <a class="btn btn-outline" href="#callback">Request A Call Back</a>
+        </div>
+        <div class="trust-strip" aria-label="Service trust points">
+          <span>24/7 Availability</span>
+          <span>Southampton Coverage</span>
+          <span>Fast Response</span>
+        </div>
+      </div>
+    </div>
+
+    <section class="container">
+      <h2>Emergency vehicle recovery help</h2>
+      <div class="card-grid">
+        <article class="card">
+          <h3>Broken down</h3>
+          <p>Stuck at the roadside or in traffic? Call Recovero and we will arrange vehicle recovery quickly.</p>
+          <a class="mini-link" href="tel:02380000000">Get Help Now →</a>
+        </article>
+        <article class="card">
+          <h3>Car won’t start</h3>
+          <p>If your car will not start at home, work, or in a car park, we can help get you moving.</p>
+          <a class="mini-link" href="tel:02380000000">Speak To Recovero →</a>
+        </article>
+        <article class="card">
+          <h3>Flat battery / jump start</h3>
+          <p>Need assistance with a flat battery in Southampton? Call for immediate support and next steps.</p>
+          <a class="mini-link" href="tel:02380000000">Call Now →</a>
+        </article>
+        <article class="card">
+          <h3>Need roadside recovery</h3>
+          <p>For urgent roadside recovery Southampton drivers can call Recovero for straightforward help.</p>
+          <a class="mini-link" href="tel:02380000000">Get Help Now →</a>
+        </article>
+      </div>
     </section>
 
-    <section class="section content-card fade-up">
-      <h2>How to get car recovery in Southampton quickly</h2>
-      <ul class="icon-list">
-        <li>Tell us your exact location, postcode, vehicle type, and issue.</li>
-        <li>We check live local availability and prioritise urgent Southampton callouts.</li>
-        <li>You get an ETA and pricing guidance as early as possible.</li>
+    <section class="container features">
+      <h2>Why drivers choose Recovero</h2>
+      <div class="card-grid three">
+        <article class="card"><h3>Fast call handling</h3><p>We keep calls clear and focused so you can get help arranged without delay.</p></article>
+        <article class="card"><h3>Southampton area covered</h3><p>From city roads to residential streets, we cover Southampton and nearby locations.</p></article>
+        <article class="card"><h3>Cars, vans, and light commercial</h3><p>We support most everyday vehicle recovery situations, including non-runners.</p></article>
+        <article class="card"><h3>Straightforward service</h3><p>No confusing process. Just tell us the issue and location so we can act quickly.</p></article>
+        <article class="card"><h3>24/7 support</h3><p>Recovero is available day and night for urgent breakdown recovery Southampton drivers need.</p></article>
+      </div>
+    </section>
+
+    <section class="container">
+      <h2>Southampton coverage</h2>
+      <p class="muted">Recovero provides vehicle recovery Southampton drivers can rely on across the city and surrounding areas. Whether you are near home, work, or on a busy road, call and we will help arrange recovery quickly.</p>
+      <ul class="coverage-list" aria-label="Areas covered around Southampton">
+        <li>Southampton</li>
+        <li>Totton</li>
+        <li>Eastleigh</li>
+        <li>Hedge End</li>
+        <li>Shirley</li>
+        <li>Portswood</li>
+        <li>Bitterne</li>
+        <li>Woolston</li>
       </ul>
     </section>
 
-    <section class="section content-card fade-up">
-      <h2>Common Southampton breakdown and recovery callouts</h2>
-      <ul class="icon-list">
-        <li>M27 and M271 breakdowns near city junctions and approach roads</li>
-        <li>M3 southbound issues approaching Southampton from Winchester</li>
-        <li>A33 and A35 city-route breakdowns during commuter traffic</li>
-        <li>Dock and port approach recoveries where gate or terminal details are needed</li>
-        <li>West Quay, city-centre, and retail car-park non-starters</li>
-        <li>Residential non-runners in Shirley, Bitterne, Portswood, and Woolston</li>
-      </ul>
-      <h3>Key roads and areas we often receive calls from</h3>
-      <ul class="icon-list">
-        <li>M27</li>
-        <li>M271</li>
-        <li>M3</li>
-        <li>A33 (The Avenue / Mountbatten Way)</li>
-        <li>A35 (Burgess Road corridor)</li>
-        <li>Redbridge, Millbrook, and docks approach routes</li>
-      </ul>
+    <section class="container">
+      <h2>Simple 3-step process</h2>
+      <div class="steps">
+        <article class="step"><div><h3>Call Recovero</h3><p class="muted">Use the call button and speak to us straight away.</p></div></article>
+        <article class="step"><div><h3>Tell us your location and issue</h3><p class="muted">Share your postcode and what is wrong with the vehicle.</p></div></article>
+        <article class="step"><div><h3>Get help arranged quickly</h3><p class="muted">We move fast so your recovery can be sorted without hassle.</p></div></article>
+      </div>
     </section>
 
-    <section class="section content-card fade-up">
-      <h2>FAQs for Southampton</h2>
-      <dl class="definition-list">
-        <dt>How quickly can someone attend?</dt>
-        <dd>Attendance times depend on your exact location, traffic, and local availability when you call.</dd>
-        <dt>Do you cover docks and port-side roads?</dt>
-        <dd>Yes, where access rules and availability allow. Give the exact gate, terminal, or access road details so recovery can reach the right pickup point quickly.</dd>
-        <dt>How are payments handled?</dt>
-        <dd>Recovero arranges support through independent recovery partners. The attending recovery partner confirms final pricing and takes payment at completion.</dd>
-      </dl>
+    <section class="container">
+      <h2>Vehicle types and situations</h2>
+      <div class="card-grid three">
+        <article class="card"><h3>Cars</h3><p>Everyday car recovery and transport support.</p></article>
+        <article class="card"><h3>Vans</h3><p>Van recovery for work and personal vehicles.</p></article>
+        <article class="card"><h3>Non-runners</h3><p>Help when your vehicle will not move under its own power.</p></article>
+        <article class="card"><h3>Accident recovery</h3><p>Safe recovery support after vehicle incidents.</p></article>
+        <article class="card"><h3>Breakdown recovery</h3><p>Roadside and local breakdown recovery assistance.</p></article>
+        <article class="card"><h3>Home start issues</h3><p>If your car will not start at home, call for help.</p></article>
+      </div>
     </section>
 
-    <section class="section content-card fade-up">
-      <h2>Service and payment information</h2>
-      <p>Recovero arranges vehicle recovery through independent local operators. Final price and payment are confirmed by the attending recovery partner. Full details are in our <a href="/terms/">Terms &amp; Conditions</a>.</p>
+    <section class="container">
+      <div class="cta-band">
+        <h2>Need Recovery In Southampton Right Now?</h2>
+        <p>Call Recovero now and get help arranged quickly.</p>
+        <a class="btn btn-call" href="tel:02380000000">Speak To Recovero</a>
+      </div>
     </section>
 
-    <section class="section content-card fade-up">
-      <h2>Related services</h2>
-      <p>See our <a href="/breakdown-recovery/">24/7 breakdown recovery service</a>, <a href="/accident-recovery/">accident recovery and damaged vehicle transport</a>, <a href="/vehicle-transport/">planned vehicle transport between home and garage</a>, or browse <a href="/areas-we-cover/">all local vehicle recovery areas</a>.</p>
+    <section class="container faq" id="callback">
+      <h2>Frequently asked questions</h2>
+      <details>
+        <summary>Do you cover all of Southampton?</summary>
+        <p>Yes. We cover Southampton and nearby areas including Totton, Eastleigh, Hedge End, Shirley, Portswood, Bitterne, and Woolston.</p>
+      </details>
+      <details>
+        <summary>Can you help if my car won’t start at home?</summary>
+        <p>Yes. Call Recovero with your location and issue, and we will help arrange the right recovery support.</p>
+      </details>
+      <details>
+        <summary>Do you offer 24/7 vehicle recovery?</summary>
+        <p>Yes, we are available 24/7 for urgent vehicle recovery and roadside assistance calls.</p>
+      </details>
+      <details>
+        <summary>Can you recover vans as well as cars?</summary>
+        <p>Yes. We help with cars, vans, and light commercial vehicles in many common recovery situations.</p>
+      </details>
+      <details>
+        <summary>How do I get a quote?</summary>
+        <p>Call us on <a href="tel:02380000000">02380 000000</a> and we will give clear pricing guidance based on your location and issue.</p>
+      </details>
+      <details>
+        <summary>Can you help with roadside breakdowns?</summary>
+        <p>Yes. If you are broken down roadside in Southampton, call now and we will help arrange recovery quickly.</p>
+      </details>
+    </section>
+
+    <section class="container final-cta">
+      <h2>Need help now?</h2>
+      <p>Call Recovero for vehicle recovery Southampton drivers can trust when it matters most.</p>
+      <a class="btn btn-call" href="tel:02380000000">Call Now</a>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <p>© Recovero – 24/7 vehicle recovery booking service. We connect drivers with trusted local recovery operators. <a href="/terms/">Terms &amp; Conditions</a> | <a href="/privacy-policy/">Privacy Policy</a></p>
+  <footer>
+    <p><strong>Recovero</strong></p>
+    <p><a href="/privacy-policy.html">Privacy Policy</a> | <a href="/terms.html">Terms</a></p>
   </footer>
 
-  <script src="/script.js"></script>
-
-  <script src="/assets/js/site.js" defer></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Recovero",
+    "description": "Vehicle recovery and breakdown recovery service in Southampton.",
+    "areaServed": [
+      "Southampton",
+      "Totton",
+      "Eastleigh",
+      "Hedge End",
+      "Shirley",
+      "Portswood",
+      "Bitterne",
+      "Woolston"
+    ],
+    "telephone": "02380 000000",
+    "url": "https://recovero247.co.uk/locations/southampton-vehicle-recovery.html",
+    "serviceType": [
+      "Vehicle recovery Southampton",
+      "Breakdown recovery Southampton",
+      "Roadside recovery Southampton",
+      "Car recovery Southampton"
+    ]
+  }
+  </script>
 </body>
 </html>
