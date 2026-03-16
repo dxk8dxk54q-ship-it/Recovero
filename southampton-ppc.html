@@ -7,20 +7,21 @@
   <meta name="description" content="Need vehicle recovery in Southampton? Recovero provides fast breakdown recovery, roadside assistance and non-starter help. Call now for a quick phone quote." />
   <style>
     :root {
-      --navy: #0b1f43;
-      --navy-2: #102a55;
-      --navy-deep: #071633;
+      --navy: #0a1d42;
+      --navy-2: #112d5a;
+      --navy-3: #173a6d;
+      --navy-deep: #06132d;
       --red: #c92222;
-      --red-dark: #a31a1a;
+      --red-dark: #a61c1c;
       --yellow: #ffcc29;
-      --yellow-hover: #efbe18;
-      --light: #f3f5f8;
+      --yellow-hover: #eab814;
+      --light: #eef2f9;
       --white: #ffffff;
-      --text: #152642;
-      --muted: #6a7b97;
-      --container: 1180px;
-      --radius-sm: 4px;
-      --shadow: 0 10px 24px rgba(4, 12, 28, 0.28);
+      --text: #1a2d4f;
+      --muted: #5d7091;
+      --container: 1160px;
+      --radius: 6px;
+      --shadow: 0 14px 28px rgba(4, 13, 34, 0.3);
     }
 
     * { box-sizing: border-box; }
@@ -28,26 +29,54 @@
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      background: var(--white);
       color: var(--text);
+      background: var(--white);
       line-height: 1.45;
     }
 
-    a { text-decoration: none; color: inherit; }
+    a { color: inherit; text-decoration: none; }
 
     .container {
       width: min(var(--container), calc(100% - 2.4rem));
       margin-inline: auto;
     }
 
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid transparent;
+      border-radius: var(--radius);
+      font-size: 0.92rem;
+      font-weight: 700;
+      letter-spacing: 0.1px;
+      padding: 0.72rem 1.2rem;
+      transition: background 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .btn-yellow {
+      background: var(--yellow);
+      color: #1a2231;
+      border-color: #d3a80f;
+    }
+
+    .btn-yellow:hover { background: var(--yellow-hover); }
+
+    .btn-light {
+      background: #e7edf7;
+      color: #12284b;
+      border-color: #c6d3e7;
+    }
+
     .top-strip {
       background: var(--red);
       color: var(--white);
-      border-bottom: 1px solid rgba(0, 0, 0, 0.16);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.15);
     }
 
     .top-strip-inner {
-      min-height: 44px;
+      min-height: 46px;
       display: grid;
       grid-template-columns: 1fr auto auto;
       align-items: center;
@@ -58,113 +87,126 @@
 
     .top-strip .center-text { justify-self: center; }
 
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      border: 1px solid transparent;
-      font-size: 0.92rem;
-      font-weight: 700;
-      letter-spacing: 0.1px;
-      padding: 0.68rem 1.1rem;
-      border-radius: var(--radius-sm);
-      transition: background 0.2s ease;
-      white-space: nowrap;
-    }
-
-    .btn-yellow {
-      background: var(--yellow);
-      color: #1b2230;
-      border-color: #d6a913;
-    }
-
-    .btn-yellow:hover { background: var(--yellow-hover); }
-
-    .btn-light {
-      background: #edf1f6;
-      color: #132646;
-      border-color: #ccd6e3;
-    }
-
     .hero {
-      position: relative;
-      background:
-        linear-gradient(90deg, rgba(7, 20, 43, 0.92) 18%, rgba(8, 23, 49, 0.79) 57%, rgba(8, 23, 49, 0.5) 100%),
-        url('images/recovery-truck.jpg') center right/cover no-repeat;
+      background: linear-gradient(180deg, #0a1d42 0%, #081833 100%);
       color: var(--white);
       border-bottom: 4px solid var(--red);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .hero::before,
+    .hero::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .hero::before {
+      width: 430px;
+      height: 430px;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.09) 0%, rgba(255, 255, 255, 0) 72%);
+      right: -120px;
+      top: -140px;
+    }
+
+    .hero::after {
+      width: 360px;
+      height: 360px;
+      background: radial-gradient(circle, rgba(255, 207, 63, 0.15) 0%, rgba(255, 207, 63, 0) 70%);
+      right: 20%;
+      bottom: -240px;
     }
 
     .hero-inner {
-      min-height: 470px;
       display: grid;
-      grid-template-columns: minmax(0, 700px) 1fr;
+      grid-template-columns: minmax(0, 520px) minmax(0, 1fr);
       gap: 2rem;
       align-items: center;
+      min-height: 530px;
+      padding: 3rem 0;
       position: relative;
-      padding: 3.2rem 0;
+      z-index: 1;
     }
 
-    .hero-copy h1 {
+    h1 {
       margin: 0;
-      font-size: clamp(2rem, 4.7vw, 3.25rem);
-      line-height: 1.06;
+      font-size: clamp(2.05rem, 4.8vw, 3.3rem);
+      line-height: 1.05;
       letter-spacing: 0.2px;
     }
 
-    .hero-copy .sub {
-      margin: 0.6rem 0 1.15rem;
-      color: #d8e3ff;
-      font-size: clamp(1.05rem, 2vw, 1.32rem);
+    .hero .sub {
+      margin: 0.7rem 0 1.2rem;
+      color: #d8e5ff;
+      font-size: clamp(1.05rem, 1.9vw, 1.3rem);
       font-weight: 600;
     }
 
     .hero-points {
-      margin: 0 0 1.5rem;
+      margin: 0 0 1.45rem;
       padding: 0;
       list-style: none;
       display: grid;
-      gap: 0.5rem;
-      max-width: 430px;
+      gap: 0.48rem;
+      max-width: 420px;
     }
 
     .hero-points li {
-      font-size: 1.02rem;
-      color: #ecf3ff;
+      color: #edf4ff;
+      font-size: 1rem;
       font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
     }
 
     .hero-points li::before {
-      content: "•";
-      display: inline-block;
-      color: #ffcf3f;
-      margin-right: 0.55rem;
-      font-size: 1.12rem;
+      content: "";
+      width: 12px;
+      height: 12px;
+      border-radius: 2px;
+      background: var(--yellow);
+      box-shadow: inset 0 0 0 2px rgba(11, 30, 66, 0.5);
+      flex-shrink: 0;
     }
 
     .hero-actions {
       display: flex;
-      align-items: center;
-      gap: 0.7rem;
+      gap: 0.75rem;
       flex-wrap: wrap;
     }
 
-    .hero-actions .btn {
-      padding: 0.73rem 1.3rem;
-      min-width: 150px;
-      font-size: 0.92rem;
+    .hero-visual-wrap {
+      display: grid;
+      gap: 0.9rem;
+      align-items: start;
     }
 
-    .trust-box {
-      width: min(300px, 100%);
-      justify-self: end;
-      align-self: start;
-      margin-top: 1.1rem;
-      background: rgba(5, 14, 32, 0.9);
-      border: 1px solid rgba(255, 255, 255, 0.24);
-      border-radius: var(--radius-sm);
+    .hero-visual {
+      background: linear-gradient(180deg, #112d5a 0%, #0a2145 100%);
+      border: 1px solid #32537e;
+      border-radius: var(--radius);
+      padding: 1rem;
       box-shadow: var(--shadow);
-      padding: 1rem 1rem 0.9rem;
+    }
+
+    .hero-visual svg,
+    .service-graphic svg,
+    .why-icon svg,
+    .step-art svg,
+    .coverage-map svg { width: 100%; height: auto; display: block; }
+
+    .trust-box {
+      background: rgba(4, 12, 29, 0.92);
+      border: 1px solid rgba(204, 222, 255, 0.3);
+      border-radius: var(--radius);
+      padding: 0.95rem 1rem;
+      box-shadow: var(--shadow);
+      width: 100%;
+      max-width: 340px;
+      justify-self: end;
     }
 
     .trust-box ul {
@@ -172,27 +214,34 @@
       padding: 0;
       list-style: none;
       display: grid;
-      gap: 0.45rem;
+      gap: 0.48rem;
       color: #e4edff;
       font-size: 0.95rem;
       font-weight: 600;
     }
 
+    .trust-box li {
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
+    }
+
     .trust-box li::before {
-      content: "✔";
-      color: #ffcf3f;
-      margin-right: 0.5rem;
-      font-size: 0.86rem;
-      vertical-align: 1px;
+      content: "";
+      width: 10px;
+      height: 10px;
+      border-radius: 2px;
+      background: #ffd147;
+      flex-shrink: 0;
     }
 
     section { padding: 3.3rem 0; }
 
     h2 {
-      margin: 0 0 1.35rem;
+      margin: 0 0 1.3rem;
       font-size: clamp(1.75rem, 3vw, 2.2rem);
-      line-height: 1.15;
-      letter-spacing: 0.15px;
+      line-height: 1.14;
+      letter-spacing: 0.12px;
     }
 
     .dark-section {
@@ -210,118 +259,129 @@
 
     .service-card {
       background: var(--navy-2);
-      border: 1px solid #264473;
-      border-radius: var(--radius-sm);
-      min-height: 192px;
+      border: 1px solid #2a4b7a;
+      border-radius: var(--radius);
+      min-height: 230px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       overflow: hidden;
     }
 
-    .service-card .content {
-      padding: 1rem 0.9rem 0.8rem;
+    .service-card .content { padding: 0.85rem 0.85rem 0.6rem; }
+
+    .service-graphic {
+      border-bottom: 1px solid #2a4b7a;
+      background: linear-gradient(180deg, #153564 0%, #122d56 100%);
+      padding: 0.55rem;
     }
 
     .service-card h3 {
-      margin: 0 0 0.5rem;
-      font-size: 1rem;
-      line-height: 1.28;
+      margin: 0 0 0.45rem;
       color: #f5f8ff;
+      font-size: 1rem;
+      line-height: 1.25;
     }
 
     .service-card p {
       margin: 0;
-      color: #c6d5f0;
-      font-size: 0.89rem;
+      color: #cbd8ef;
+      font-size: 0.88rem;
       line-height: 1.4;
     }
 
     .service-footer {
       background: var(--red);
-      padding: 0.7rem 0.9rem;
       border-top: 1px solid var(--red-dark);
+      padding: 0.68rem 0.85rem;
     }
 
     .service-footer .btn {
       width: 100%;
-      padding: 0.58rem 0.8rem;
-      font-size: 0.85rem;
+      padding: 0.56rem 0.75rem;
+      font-size: 0.84rem;
     }
 
     .cta-band {
       background: var(--red);
       color: var(--white);
       text-align: center;
-      padding: 2.85rem 0;
+      padding: 2.8rem 0;
     }
 
     .cta-band h2 { margin-bottom: 0.45rem; }
 
     .cta-band p {
       margin: 0 0 1.2rem;
-      font-size: 1.03rem;
-      color: #ffe4e4;
+      color: #ffe9e9;
+      font-size: 1.02rem;
     }
 
     .why-grid {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 0;
-      border-top: 1px solid rgba(210, 224, 255, 0.25);
-      border-bottom: 1px solid rgba(210, 224, 255, 0.25);
-      margin-top: 1.2rem;
+      border: 1px solid rgba(206, 221, 249, 0.28);
+      border-left: 0;
+      border-right: 0;
+      margin-top: 1.1rem;
     }
 
     .why-item {
       text-align: center;
-      padding: 1.3rem 0.8rem 1.2rem;
-      border-right: 1px solid rgba(210, 224, 255, 0.25);
+      padding: 1.2rem 0.9rem;
+      border-right: 1px solid rgba(206, 221, 249, 0.28);
     }
 
     .why-item:last-child { border-right: 0; }
 
     .why-icon {
-      width: 44px;
-      height: 44px;
-      border: 1px solid #4c6594;
-      background: #153360;
-      margin: 0 auto 0.7rem;
+      width: 56px;
+      height: 56px;
+      margin: 0 auto 0.65rem;
+      background: #163463;
+      border: 1px solid #3d618f;
+      border-radius: 50%;
       display: grid;
       place-items: center;
-      border-radius: 50%;
-      font-size: 1.1rem;
+      padding: 0.65rem;
     }
 
     .why-item h3 {
       margin: 0;
+      color: #edf3ff;
       font-size: 1rem;
-      color: #e8f0ff;
     }
 
     .light-section {
       background: var(--light);
       text-align: center;
+      position: relative;
+    }
+
+    .coverage-map {
+      max-width: 560px;
+      margin: 0.45rem auto 1rem;
+      opacity: 0.9;
     }
 
     .areas {
-      margin: 0.25rem 0 0.9rem;
-      color: #1e355b;
+      margin: 0.3rem 0 0.9rem;
+      color: #19345c;
       font-size: 1rem;
-      font-weight: 600;
+      font-weight: 700;
     }
 
     .areas span:not(:last-child)::after {
       content: "|";
-      color: #8ca0bd;
+      color: #8da2c3;
       margin: 0 0.52rem;
       font-weight: 500;
     }
 
     .light-copy {
       margin: 0;
-      color: #546885;
-      font-size: 0.98rem;
+      color: #536884;
+      font-size: 0.97rem;
     }
 
     .steps {
@@ -329,46 +389,60 @@
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 1rem;
+      text-align: left;
     }
 
     .step {
       background: #fff;
-      border: 1px solid #d7deea;
-      border-radius: var(--radius-sm);
-      padding: 1.15rem 1rem;
+      border: 1px solid #d5ddeb;
+      border-radius: var(--radius);
+      padding: 0.95rem;
+      box-shadow: 0 8px 20px rgba(13, 29, 56, 0.08);
+      position: relative;
     }
 
-    .step-icon {
-      width: 48px;
-      height: 48px;
+    .step-number {
+      position: absolute;
+      top: 0.7rem;
+      right: 0.7rem;
+      width: 30px;
+      height: 30px;
       border-radius: 50%;
-      background: #11305d;
+      background: #163464;
       color: #fff;
-      margin: 0 auto 0.65rem;
+      font-weight: 700;
+      font-size: 0.95rem;
       display: grid;
       place-items: center;
-      font-weight: 700;
-      border: 2px solid #294d81;
+      border: 2px solid #3e6593;
+    }
+
+    .step-art {
+      border-radius: 5px;
+      border: 1px solid #d8e0ef;
+      overflow: hidden;
+      margin-bottom: 0.7rem;
+      background: #f7f9fe;
     }
 
     .step h3 {
       margin: 0;
-      font-size: 1.02rem;
-      color: #142847;
+      font-size: 1rem;
+      color: #122746;
+      text-align: center;
     }
 
     .faq-wrap {
       max-width: 980px;
-      margin: 1.1rem auto 0;
+      margin: 1.05rem auto 0;
       text-align: left;
       display: grid;
-      gap: 0.55rem;
+      gap: 0.58rem;
     }
 
     .faq-item {
       background: #fff;
-      border: 1px solid #d8dfea;
-      border-radius: 0;
+      border: 1px solid #d8dfeb;
       overflow: hidden;
     }
 
@@ -376,15 +450,15 @@
       width: 100%;
       background: #fff;
       border: 0;
-      padding: 0.92rem 1rem;
-      font-size: 0.98rem;
-      font-weight: 700;
-      color: #162a49;
       text-align: left;
       display: flex;
       justify-content: space-between;
       align-items: center;
       cursor: pointer;
+      padding: 0.92rem 1rem;
+      font-size: 0.98rem;
+      font-weight: 700;
+      color: #162a49;
     }
 
     .faq-answer {
@@ -418,38 +492,35 @@
     }
 
     @media (max-width: 1080px) {
-      .services { grid-template-columns: repeat(3, minmax(0, 1fr)); }
       .hero-inner {
         grid-template-columns: 1fr;
         min-height: auto;
-        padding: 2.8rem 0;
+        gap: 1.3rem;
+        padding: 2.6rem 0;
       }
-      .trust-box {
-        justify-self: start;
-        margin-top: 0.2rem;
-      }
+      .trust-box { justify-self: start; }
+      .services { grid-template-columns: repeat(3, minmax(0, 1fr)); }
     }
 
     @media (max-width: 780px) {
       .top-strip-inner {
         grid-template-columns: 1fr;
-        gap: 0.45rem;
-        justify-items: center;
         text-align: center;
-        padding: 0.6rem 0;
+        justify-items: center;
+        gap: 0.45rem;
+        padding: 0.62rem 0;
       }
-      .top-strip .center-text { justify-self: center; }
       .services { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .why-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .why-item:nth-child(2) { border-right: 0; }
-      .why-item:nth-child(-n + 2) { border-bottom: 1px solid rgba(210, 224, 255, 0.25); }
+      .why-item:nth-child(-n + 2) { border-bottom: 1px solid rgba(206, 221, 249, 0.28); }
       .steps { grid-template-columns: 1fr; }
+      .step h3 { text-align: left; }
     }
 
     @media (max-width: 540px) {
       .container { width: min(var(--container), calc(100% - 1.2rem)); }
       section { padding: 2.6rem 0; }
-      .hero { background-position: 64% center; }
       .services { grid-template-columns: 1fr; }
       .hero-actions .btn { width: 100%; }
     }
@@ -479,14 +550,55 @@
           <a href="tel:02380000000" class="btn btn-light">Request Call Back</a>
         </div>
       </div>
-      <aside class="trust-box" aria-label="Trust points">
-        <ul>
-          <li>Available 24/7</li>
-          <li>Southampton Coverage</li>
-          <li>Cars &amp; Vans Assisted</li>
-          <li>Rapid Response</li>
-        </ul>
-      </aside>
+
+      <div class="hero-visual-wrap">
+        <div class="hero-visual" aria-hidden="true">
+          <svg viewBox="0 0 760 360" role="img" aria-label="Illustrated vehicle recovery scene">
+            <rect x="0" y="0" width="760" height="360" fill="#0d2650"/>
+            <rect x="0" y="250" width="760" height="110" fill="#123362"/>
+            <rect x="0" y="286" width="760" height="18" fill="#274f86"/>
+            <line x1="38" y1="295" x2="722" y2="295" stroke="#a7bfdc" stroke-width="6" stroke-dasharray="24 16"/>
+
+            <rect x="96" y="216" width="44" height="26" rx="4" fill="#c92222"/>
+            <rect x="136" y="198" width="218" height="16" rx="4" fill="#8fb0d9"/>
+            <rect x="344" y="186" width="144" height="14" rx="4" fill="#7a9cc9"/>
+            <rect x="482" y="160" width="16" height="62" rx="6" fill="#9bb9de"/>
+            <circle cx="118" cy="262" r="22" fill="#091a39"/>
+            <circle cx="118" cy="262" r="10" fill="#7b95bc"/>
+
+            <rect x="194" y="172" width="224" height="70" rx="8" fill="#cf2b2b"/>
+            <rect x="208" y="182" width="54" height="34" rx="5" fill="#d9e8ff"/>
+            <rect x="270" y="182" width="54" height="34" rx="5" fill="#d9e8ff"/>
+            <rect x="338" y="193" width="66" height="36" rx="6" fill="#b32121"/>
+            <rect x="202" y="220" width="196" height="14" rx="4" fill="#9a1d1d"/>
+
+            <circle cx="236" cy="258" r="30" fill="#0a1e41"/>
+            <circle cx="236" cy="258" r="14" fill="#8ea8cc"/>
+            <circle cx="372" cy="258" r="30" fill="#0a1e41"/>
+            <circle cx="372" cy="258" r="14" fill="#8ea8cc"/>
+
+            <rect x="470" y="200" width="132" height="36" rx="7" fill="#ffcc29"/>
+            <circle cx="526" cy="258" r="24" fill="#0a1e41"/>
+            <circle cx="526" cy="258" r="11" fill="#8ea8cc"/>
+            <circle cx="590" cy="258" r="24" fill="#0a1e41"/>
+            <circle cx="590" cy="258" r="11" fill="#8ea8cc"/>
+            <rect x="494" y="166" width="54" height="34" rx="7" fill="#dce9ff"/>
+
+            <circle cx="647" cy="98" r="18" fill="#ffcc29"/>
+            <rect x="628" y="141" width="74" height="7" rx="3.5" fill="#45699a"/>
+            <rect x="616" y="158" width="98" height="7" rx="3.5" fill="#45699a"/>
+          </svg>
+        </div>
+
+        <aside class="trust-box" aria-label="Trust points">
+          <ul>
+            <li>Available 24/7</li>
+            <li>Southampton Coverage</li>
+            <li>Cars &amp; Vans Assisted</li>
+            <li>Rapid Response</li>
+          </ul>
+        </aside>
+      </div>
     </div>
   </header>
 
@@ -495,6 +607,9 @@
       <h2 class="center-title">What Do You Need Help With?</h2>
       <div class="services">
         <article class="service-card">
+          <div class="service-graphic" aria-hidden="true">
+            <svg viewBox="0 0 220 90"><rect width="220" height="90" fill="#13335f"/><rect x="20" y="58" width="112" height="14" rx="4" fill="#cf2b2b"/><rect x="126" y="50" width="60" height="12" rx="3" fill="#9fbbe0"/><circle cx="46" cy="75" r="10" fill="#0b1e41"/><circle cx="116" cy="75" r="10" fill="#0b1e41"/><rect x="36" y="48" width="40" height="10" rx="3" fill="#dce9ff"/></svg>
+          </div>
           <div class="content">
             <h3>Breakdown Recovery</h3>
             <p>Fast support when your vehicle has stopped and needs safe local recovery.</p>
@@ -502,6 +617,9 @@
           <div class="service-footer"><a href="tel:02380000000" class="btn btn-yellow">Get Help</a></div>
         </article>
         <article class="service-card">
+          <div class="service-graphic" aria-hidden="true">
+            <svg viewBox="0 0 220 90"><rect width="220" height="90" fill="#13335f"/><rect x="18" y="58" width="120" height="14" rx="4" fill="#ffcc29"/><rect x="26" y="47" width="44" height="12" rx="3" fill="#dce9ff"/><path d="M152 34l9 13h-8l8 15-18-20h8z" fill="#cf2b2b"/><circle cx="50" cy="75" r="10" fill="#0b1e41"/><circle cx="122" cy="75" r="10" fill="#0b1e41"/></svg>
+          </div>
           <div class="content">
             <h3>Car Won’t Start</h3>
             <p>Home or roadside non-starter help with straightforward phone support.</p>
@@ -509,6 +627,9 @@
           <div class="service-footer"><a href="tel:02380000000" class="btn btn-yellow">Get Help</a></div>
         </article>
         <article class="service-card">
+          <div class="service-graphic" aria-hidden="true">
+            <svg viewBox="0 0 220 90"><rect width="220" height="90" fill="#13335f"/><rect x="24" y="50" width="66" height="26" rx="5" fill="#ffcc29"/><rect x="95" y="56" width="32" height="14" rx="4" fill="#cf2b2b"/><rect x="130" y="56" width="50" height="14" rx="4" fill="#9fbbe0"/><text x="55" y="67" fill="#203253" font-size="14" text-anchor="middle" font-family="Arial" font-weight="700">+</text></svg>
+          </div>
           <div class="content">
             <h3>Flat Battery</h3>
             <p>Battery gone flat? Call Recovero for practical help in Southampton.</p>
@@ -516,6 +637,9 @@
           <div class="service-footer"><a href="tel:02380000000" class="btn btn-yellow">Get Help</a></div>
         </article>
         <article class="service-card">
+          <div class="service-graphic" aria-hidden="true">
+            <svg viewBox="0 0 220 90"><rect width="220" height="90" fill="#13335f"/><circle cx="58" cy="45" r="18" fill="#cf2b2b"/><rect x="80" y="39" width="78" height="12" rx="6" fill="#9fbbe0"/><rect x="28" y="63" width="160" height="8" rx="4" fill="#33598b"/><circle cx="48" cy="67" r="6" fill="#ffcc29"/><circle cx="92" cy="67" r="6" fill="#ffcc29"/><circle cx="136" cy="67" r="6" fill="#ffcc29"/></svg>
+          </div>
           <div class="content">
             <h3>Roadside Assistance</h3>
             <p>Get roadside support quickly with simple next steps over the phone.</p>
@@ -523,6 +647,9 @@
           <div class="service-footer"><a href="tel:02380000000" class="btn btn-yellow">Get Help</a></div>
         </article>
         <article class="service-card">
+          <div class="service-graphic" aria-hidden="true">
+            <svg viewBox="0 0 220 90"><rect width="220" height="90" fill="#13335f"/><rect x="18" y="56" width="106" height="14" rx="4" fill="#cf2b2b"/><rect x="122" y="48" width="76" height="12" rx="4" fill="#9fbbe0"/><rect x="130" y="36" width="58" height="10" rx="4" fill="#ffcc29"/><circle cx="42" cy="74" r="10" fill="#0b1e41"/><circle cx="108" cy="74" r="10" fill="#0b1e41"/><circle cx="166" cy="74" r="10" fill="#0b1e41"/></svg>
+          </div>
           <div class="content">
             <h3>Non-Runner Transport</h3>
             <p>Need a non-runner moved? We can help with secure local transport.</p>
@@ -546,19 +673,27 @@
       <h2 class="center-title">Why Choose Recovero?</h2>
       <div class="why-grid">
         <article class="why-item">
-          <div class="why-icon">🕒</div>
+          <div class="why-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#ffcc29"/><circle cx="12" cy="12" r="7" fill="#173564"/><rect x="11" y="7" width="2" height="6" fill="#dce8ff"/><rect x="12" y="12" width="4" height="2" transform="rotate(35 12 12)" fill="#dce8ff"/></svg>
+          </div>
           <h3>24/7 Support</h3>
         </article>
         <article class="why-item">
-          <div class="why-icon">📍</div>
+          <div class="why-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 2c-3.9 0-7 3-7 6.8 0 5 7 12.2 7 12.2s7-7.2 7-12.2C19 5 15.9 2 12 2z" fill="#ffcc29"/><circle cx="12" cy="9" r="3" fill="#173564"/></svg>
+          </div>
           <h3>Local &amp; Reliable</h3>
         </article>
         <article class="why-item">
-          <div class="why-icon">🚐</div>
+          <div class="why-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><rect x="3" y="10" width="11" height="6" rx="1" fill="#ffcc29"/><rect x="14" y="11" width="7" height="5" rx="1" fill="#cf2b2b"/><circle cx="8" cy="17" r="2" fill="#dce8ff"/><circle cx="18" cy="17" r="2" fill="#dce8ff"/></svg>
+          </div>
           <h3>Cars, Vans &amp; More</h3>
         </article>
         <article class="why-item">
-          <div class="why-icon">🤝</div>
+          <div class="why-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><circle cx="8" cy="9" r="3" fill="#ffcc29"/><circle cx="16" cy="9" r="3" fill="#ffcc29"/><path d="M4 20v-2c0-2.2 1.8-4 4-4h8c2.2 0 4 1.8 4 4v2" fill="#dce8ff"/></svg>
+          </div>
           <h3>Quick &amp; Friendly Service</h3>
         </article>
       </div>
@@ -568,6 +703,19 @@
   <section class="light-section">
     <div class="container">
       <h2>Serving Southampton &amp; Nearby Areas</h2>
+      <div class="coverage-map" aria-hidden="true">
+        <svg viewBox="0 0 620 150">
+          <rect x="0" y="0" width="620" height="150" fill="none"/>
+          <path d="M34 112C102 84 138 96 192 68C232 47 272 52 326 71C394 95 472 100 586 56" stroke="#88a3c8" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <path d="M58 38C134 62 198 36 250 52C304 68 342 36 420 50C478 60 536 44 590 28" stroke="#b5c7df" stroke-width="2" fill="none" stroke-linecap="round" stroke-dasharray="6 8"/>
+          <circle cx="210" cy="74" r="6" fill="#c92222"/>
+          <circle cx="267" cy="59" r="6" fill="#c92222"/>
+          <circle cx="331" cy="74" r="6" fill="#c92222"/>
+          <circle cx="392" cy="82" r="6" fill="#c92222"/>
+          <circle cx="446" cy="86" r="6" fill="#c92222"/>
+          <circle cx="498" cy="77" r="6" fill="#c92222"/>
+        </svg>
+      </div>
       <p class="areas">
         <span>Southampton</span>
         <span>Totton</span>
@@ -585,15 +733,24 @@
       <h2>How It Works</h2>
       <div class="steps">
         <article class="step">
-          <div class="step-icon">1</div>
+          <div class="step-number">1</div>
+          <div class="step-art" aria-hidden="true">
+            <svg viewBox="0 0 320 130"><rect width="320" height="130" fill="#edf2fb"/><rect x="18" y="54" width="90" height="52" rx="8" fill="#173564"/><rect x="28" y="64" width="70" height="32" rx="4" fill="#dce9ff"/><circle cx="226" cy="70" r="26" fill="#cf2b2b"/><rect x="120" y="66" width="72" height="8" rx="4" fill="#8aa7cb"/><rect x="120" y="80" width="58" height="8" rx="4" fill="#8aa7cb"/></svg>
+          </div>
           <h3>Call Recovero</h3>
         </article>
         <article class="step">
-          <div class="step-icon">2</div>
+          <div class="step-number">2</div>
+          <div class="step-art" aria-hidden="true">
+            <svg viewBox="0 0 320 130"><rect width="320" height="130" fill="#edf2fb"/><path d="M44 92l42-58 62 32 76-36 50 55z" fill="#d4e1f4"/><path d="M86 36c-12 0-22 9-22 21 0 16 22 40 22 40s22-24 22-40c0-12-10-21-22-21z" fill="#cf2b2b"/><circle cx="86" cy="57" r="9" fill="#f2f7ff"/><rect x="148" y="48" width="132" height="10" rx="5" fill="#8aa7cb"/><rect x="148" y="66" width="100" height="10" rx="5" fill="#8aa7cb"/></svg>
+          </div>
           <h3>Tell Us Your Location</h3>
         </article>
         <article class="step">
-          <div class="step-icon">3</div>
+          <div class="step-number">3</div>
+          <div class="step-art" aria-hidden="true">
+            <svg viewBox="0 0 320 130"><rect width="320" height="130" fill="#edf2fb"/><rect x="34" y="70" width="146" height="18" rx="5" fill="#cf2b2b"/><rect x="162" y="58" width="74" height="14" rx="4" fill="#9fbbe0"/><circle cx="64" cy="94" r="14" fill="#173564"/><circle cx="152" cy="94" r="14" fill="#173564"/><path d="M240 60l18 16-18 16" fill="none" stroke="#ffcc29" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/><rect x="206" y="72" width="44" height="8" rx="4" fill="#ffcc29"/></svg>
+          </div>
           <h3>Get Help On The Way</h3>
         </article>
       </div>
