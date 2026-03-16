@@ -3,314 +3,384 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vehicle Recovery Southampton | 24/7 Breakdown & Roadside Help | Recovero</title>
-  <meta name="description" content="Need vehicle recovery in Southampton? Recovero provides fast breakdown recovery, roadside recovery and car recovery support. Call now for a quick phone quote." />
+  <title>Vehicle Recovery Southampton | 24/7 Breakdown &amp; Roadside Help | Recovero</title>
+  <meta name="description" content="Need vehicle recovery in Southampton? Recovero provides fast breakdown recovery, roadside assistance and non-starter help. Call now for a quick phone quote." />
   <style>
     :root {
-      --navy: #0e2244;
-      --navy-deep: #091630;
-      --blue-overlay: rgba(8, 23, 49, 0.84);
-      --red: #c92020;
-      --yellow: #ffcb28;
-      --yellow-hover: #f2bb07;
-      --slate: #1b2f58;
-      --light: #f4f7fc;
-      --text: #11213d;
-      --muted: #5f6f89;
+      --navy: #0b1f43;
+      --navy-2: #102a55;
+      --navy-deep: #071633;
+      --red: #c92222;
+      --red-dark: #a31a1a;
+      --yellow: #ffcc29;
+      --yellow-hover: #efbe18;
+      --light: #f3f5f8;
       --white: #ffffff;
-      --shadow: 0 14px 30px rgba(6, 17, 38, 0.22);
-      --radius: 14px;
-      --container: 1160px;
+      --text: #152642;
+      --muted: #6a7b97;
+      --container: 1180px;
+      --radius-sm: 4px;
+      --shadow: 0 10px 24px rgba(4, 12, 28, 0.28);
     }
 
     * { box-sizing: border-box; }
 
     body {
       margin: 0;
-      font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--white);
       color: var(--text);
-      line-height: 1.5;
-      background: #fff;
+      line-height: 1.45;
     }
 
-    a { color: inherit; text-decoration: none; }
+    a { text-decoration: none; color: inherit; }
 
     .container {
-      width: min(var(--container), calc(100% - 2rem));
+      width: min(var(--container), calc(100% - 2.4rem));
       margin-inline: auto;
     }
 
-    .urgent-strip {
+    .top-strip {
       background: var(--red);
       color: var(--white);
-      padding: 0.75rem 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.16);
+    }
+
+    .top-strip-inner {
+      min-height: 44px;
+      display: grid;
+      grid-template-columns: 1fr auto auto;
+      align-items: center;
+      gap: 1rem;
+      font-size: 0.95rem;
       font-weight: 700;
     }
 
-    .urgent-strip .container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
+    .top-strip .center-text { justify-self: center; }
 
-    .cta-btn {
+    .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 0.45rem;
-      font-weight: 800;
-      border-radius: 999px;
-      border: 0;
-      padding: 0.85rem 1.3rem;
-      transition: 0.2s ease;
-      cursor: pointer;
-      letter-spacing: 0.2px;
+      border: 1px solid transparent;
+      font-size: 0.92rem;
+      font-weight: 700;
+      letter-spacing: 0.1px;
+      padding: 0.68rem 1.1rem;
+      border-radius: var(--radius-sm);
+      transition: background 0.2s ease;
+      white-space: nowrap;
     }
 
-    .cta-primary {
+    .btn-yellow {
       background: var(--yellow);
-      color: #1a2028;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      color: #1b2230;
+      border-color: #d6a913;
     }
 
-    .cta-primary:hover { background: var(--yellow-hover); transform: translateY(-1px); }
+    .btn-yellow:hover { background: var(--yellow-hover); }
 
-    .cta-secondary {
-      background: #edf3ff;
-      color: #17396f;
-      border: 1px solid #c8d8f6;
+    .btn-light {
+      background: #edf1f6;
+      color: #132646;
+      border-color: #ccd6e3;
     }
 
     .hero {
       position: relative;
       background:
-        linear-gradient(90deg, var(--blue-overlay) 10%, rgba(8, 23, 49, 0.68) 60%, rgba(8, 23, 49, 0.35) 100%),
-        url('images/recovery-truck.jpg') center/cover no-repeat;
+        linear-gradient(90deg, rgba(7, 20, 43, 0.92) 18%, rgba(8, 23, 49, 0.79) 57%, rgba(8, 23, 49, 0.5) 100%),
+        url('images/recovery-truck.jpg') center right/cover no-repeat;
       color: var(--white);
-      padding: 4.2rem 0 3.8rem;
-      overflow: hidden;
+      border-bottom: 4px solid var(--red);
     }
 
-    .hero-grid {
+    .hero-inner {
+      min-height: 470px;
       display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
+      grid-template-columns: minmax(0, 700px) 1fr;
       gap: 2rem;
       align-items: center;
+      position: relative;
+      padding: 3.2rem 0;
     }
 
-    .hero h1 {
-      margin: 0 0 0.7rem;
-      font-size: clamp(2rem, 5vw, 3.2rem);
-      line-height: 1.08;
+    .hero-copy h1 {
+      margin: 0;
+      font-size: clamp(2rem, 4.7vw, 3.25rem);
+      line-height: 1.06;
+      letter-spacing: 0.2px;
     }
 
-    .hero .sub {
-      margin: 0 0 1.2rem;
-      color: #d6e2ff;
-      font-size: clamp(1.05rem, 2.5vw, 1.3rem);
+    .hero-copy .sub {
+      margin: 0.6rem 0 1.15rem;
+      color: #d8e3ff;
+      font-size: clamp(1.05rem, 2vw, 1.32rem);
+      font-weight: 600;
     }
 
-    .hero-list {
-      list-style: none;
+    .hero-points {
+      margin: 0 0 1.5rem;
       padding: 0;
-      margin: 0 0 1.4rem;
+      list-style: none;
       display: grid;
-      gap: 0.55rem;
+      gap: 0.5rem;
+      max-width: 430px;
     }
 
-    .hero-list li::before {
-      content: "✓";
-      color: #8ff0b0;
-      font-weight: 900;
+    .hero-points li {
+      font-size: 1.02rem;
+      color: #ecf3ff;
+      font-weight: 600;
+    }
+
+    .hero-points li::before {
+      content: "•";
+      display: inline-block;
+      color: #ffcf3f;
       margin-right: 0.55rem;
+      font-size: 1.12rem;
     }
 
     .hero-actions {
       display: flex;
-      gap: 0.8rem;
+      align-items: center;
+      gap: 0.7rem;
       flex-wrap: wrap;
     }
 
-    .trust-panel {
+    .hero-actions .btn {
+      padding: 0.73rem 1.3rem;
+      min-width: 150px;
+      font-size: 0.92rem;
+    }
+
+    .trust-box {
+      width: min(300px, 100%);
       justify-self: end;
-      background: rgba(9, 22, 48, 0.88);
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      border-radius: var(--radius);
-      padding: 1.1rem 1.2rem;
+      align-self: start;
+      margin-top: 1.1rem;
+      background: rgba(5, 14, 32, 0.9);
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      border-radius: var(--radius-sm);
       box-shadow: var(--shadow);
-      width: min(320px, 100%);
-      backdrop-filter: blur(3px);
+      padding: 1rem 1rem 0.9rem;
     }
 
-    .trust-panel strong {
-      display: block;
-      margin-bottom: 0.65rem;
-      font-size: 1.05rem;
-    }
-
-    .trust-panel ul {
-      list-style: none;
+    .trust-box ul {
       margin: 0;
       padding: 0;
+      list-style: none;
       display: grid;
       gap: 0.45rem;
-      color: #dbe6ff;
+      color: #e4edff;
       font-size: 0.95rem;
+      font-weight: 600;
     }
 
-    .trust-panel li::before { content: "✔ "; color: #7ce99f; }
+    .trust-box li::before {
+      content: "✔";
+      color: #ffcf3f;
+      margin-right: 0.5rem;
+      font-size: 0.86rem;
+      vertical-align: 1px;
+    }
 
-    section { padding: 4rem 0; }
+    section { padding: 3.3rem 0; }
+
+    h2 {
+      margin: 0 0 1.35rem;
+      font-size: clamp(1.75rem, 3vw, 2.2rem);
+      line-height: 1.15;
+      letter-spacing: 0.15px;
+    }
 
     .dark-section {
       background: var(--navy);
       color: var(--white);
     }
 
-    h2 {
-      margin: 0 0 1.5rem;
-      font-size: clamp(1.65rem, 3vw, 2.25rem);
-      line-height: 1.2;
-    }
+    .center-title { text-align: center; }
 
-    .section-intro {
-      color: #ccd9f8;
-      margin-bottom: 2rem;
-    }
-
-    .cards {
+    .services {
       display: grid;
-      gap: 1rem;
       grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 0.95rem;
     }
 
-    .card {
-      background: #152d59;
-      border: 1px solid #24457f;
-      border-radius: 12px;
-      padding: 1.1rem;
+    .service-card {
+      background: var(--navy-2);
+      border: 1px solid #264473;
+      border-radius: var(--radius-sm);
+      min-height: 192px;
       display: flex;
       flex-direction: column;
-      gap: 0.8rem;
-      min-height: 205px;
+      justify-content: space-between;
+      overflow: hidden;
     }
 
-    .card h3 { margin: 0; font-size: 1.05rem; }
+    .service-card .content {
+      padding: 1rem 0.9rem 0.8rem;
+    }
 
-    .card p {
+    .service-card h3 {
+      margin: 0 0 0.5rem;
+      font-size: 1rem;
+      line-height: 1.28;
+      color: #f5f8ff;
+    }
+
+    .service-card p {
       margin: 0;
-      color: #bdd0f5;
-      font-size: 0.93rem;
-      flex: 1;
+      color: #c6d5f0;
+      font-size: 0.89rem;
+      line-height: 1.4;
     }
 
-    .mini-btn {
-      display: inline-block;
-      align-self: start;
-      background: var(--yellow);
-      color: #16223a;
-      padding: 0.5rem 0.8rem;
-      border-radius: 999px;
-      font-weight: 700;
-      font-size: 0.87rem;
+    .service-footer {
+      background: var(--red);
+      padding: 0.7rem 0.9rem;
+      border-top: 1px solid var(--red-dark);
     }
 
-    .mid-cta {
+    .service-footer .btn {
+      width: 100%;
+      padding: 0.58rem 0.8rem;
+      font-size: 0.85rem;
+    }
+
+    .cta-band {
       background: var(--red);
       color: var(--white);
       text-align: center;
-      padding: 3rem 0;
+      padding: 2.85rem 0;
     }
 
-    .mid-cta p {
-      margin-top: -0.5rem;
-      margin-bottom: 1.25rem;
-      color: #ffdddd;
+    .cta-band h2 { margin-bottom: 0.45rem; }
+
+    .cta-band p {
+      margin: 0 0 1.2rem;
+      font-size: 1.03rem;
+      color: #ffe4e4;
     }
 
-    .features {
+    .why-grid {
       display: grid;
-      gap: 1rem;
       grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 0;
+      border-top: 1px solid rgba(210, 224, 255, 0.25);
+      border-bottom: 1px solid rgba(210, 224, 255, 0.25);
+      margin-top: 1.2rem;
+    }
+
+    .why-item {
+      text-align: center;
+      padding: 1.3rem 0.8rem 1.2rem;
+      border-right: 1px solid rgba(210, 224, 255, 0.25);
+    }
+
+    .why-item:last-child { border-right: 0; }
+
+    .why-icon {
+      width: 44px;
+      height: 44px;
+      border: 1px solid #4c6594;
+      background: #153360;
+      margin: 0 auto 0.7rem;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      font-size: 1.1rem;
+    }
+
+    .why-item h3 {
+      margin: 0;
+      font-size: 1rem;
+      color: #e8f0ff;
+    }
+
+    .light-section {
+      background: var(--light);
       text-align: center;
     }
 
-    .feature {
-      background: #132a54;
-      border: 1px solid #284778;
-      border-radius: var(--radius);
-      padding: 1.3rem 1rem;
-    }
-
-    .icon {
-      width: 52px;
-      height: 52px;
-      border-radius: 50%;
-      margin: 0 auto 0.65rem;
-      display: grid;
-      place-items: center;
-      font-size: 1.3rem;
-      background: #204076;
-      border: 1px solid #3d63a0;
-    }
-
-    .light { background: var(--light); }
-
     .areas {
-      display: flex;
-      gap: 0.6rem;
-      flex-wrap: wrap;
-      margin-bottom: 1rem;
-    }
-
-    .area-pill {
-      background: #fff;
-      border: 1px solid #d5def0;
-      color: #16345f;
-      border-radius: 999px;
-      padding: 0.45rem 0.85rem;
+      margin: 0.25rem 0 0.9rem;
+      color: #1e355b;
+      font-size: 1rem;
       font-weight: 600;
     }
 
+    .areas span:not(:last-child)::after {
+      content: "|";
+      color: #8ca0bd;
+      margin: 0 0.52rem;
+      font-weight: 500;
+    }
+
+    .light-copy {
+      margin: 0;
+      color: #546885;
+      font-size: 0.98rem;
+    }
+
     .steps {
+      margin-top: 1rem;
       display: grid;
-      gap: 1rem;
       grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
     }
 
     .step {
       background: #fff;
-      border: 1px solid #dde5f3;
-      border-radius: var(--radius);
-      padding: 1.25rem;
+      border: 1px solid #d7deea;
+      border-radius: var(--radius-sm);
+      padding: 1.15rem 1rem;
     }
 
-    .step .icon { margin-left: 0; }
-
-    .faq {
-      max-width: 920px;
-      margin: 0 auto;
+    .step-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: #11305d;
+      color: #fff;
+      margin: 0 auto 0.65rem;
       display: grid;
-      gap: 0.7rem;
+      place-items: center;
+      font-weight: 700;
+      border: 2px solid #294d81;
+    }
+
+    .step h3 {
+      margin: 0;
+      font-size: 1.02rem;
+      color: #142847;
+    }
+
+    .faq-wrap {
+      max-width: 980px;
+      margin: 1.1rem auto 0;
+      text-align: left;
+      display: grid;
+      gap: 0.55rem;
     }
 
     .faq-item {
       background: #fff;
-      border: 1px solid #d8e0ef;
-      border-radius: 12px;
+      border: 1px solid #d8dfea;
+      border-radius: 0;
       overflow: hidden;
     }
 
     .faq-btn {
       width: 100%;
-      text-align: left;
       background: #fff;
       border: 0;
-      padding: 1rem 1rem;
-      font-size: 1rem;
+      padding: 0.92rem 1rem;
+      font-size: 0.98rem;
       font-weight: 700;
+      color: #162a49;
+      text-align: left;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -318,26 +388,27 @@
     }
 
     .faq-answer {
-      padding: 0 1rem 1rem;
-      color: #415778;
       display: none;
+      padding: 0 1rem 0.9rem;
+      color: #4f6484;
+      font-size: 0.95rem;
     }
 
     .faq-item.open .faq-answer { display: block; }
 
     footer {
-      background: #0a1730;
-      color: #c4d2ef;
-      padding: 1.5rem 0 calc(1.5rem + env(safe-area-inset-bottom));
-      font-size: 0.94rem;
+      background: #0b1731;
+      color: #c9d5eb;
+      padding: 1.15rem 0;
+      font-size: 0.92rem;
     }
 
     .footer-inner {
       display: flex;
-      flex-wrap: wrap;
-      gap: 0.8rem;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
     }
 
     .footer-links {
@@ -346,63 +417,69 @@
       flex-wrap: wrap;
     }
 
-    .sticky-call {
-      position: fixed;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      z-index: 999;
-      background: rgba(9, 22, 48, 0.96);
-      border-top: 1px solid rgba(255, 255, 255, 0.12);
-      padding: 0.55rem 0.8rem calc(0.55rem + env(safe-area-inset-bottom));
-      display: none;
+    @media (max-width: 1080px) {
+      .services { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .hero-inner {
+        grid-template-columns: 1fr;
+        min-height: auto;
+        padding: 2.8rem 0;
+      }
+      .trust-box {
+        justify-self: start;
+        margin-top: 0.2rem;
+      }
     }
 
-    .sticky-call .cta-btn { width: 100%; }
-
-    @media (max-width: 980px) {
-      .hero-grid { grid-template-columns: 1fr; }
-      .trust-panel { justify-self: start; }
-      .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .features { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    @media (max-width: 780px) {
+      .top-strip-inner {
+        grid-template-columns: 1fr;
+        gap: 0.45rem;
+        justify-items: center;
+        text-align: center;
+        padding: 0.6rem 0;
+      }
+      .top-strip .center-text { justify-self: center; }
+      .services { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .why-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .why-item:nth-child(2) { border-right: 0; }
+      .why-item:nth-child(-n + 2) { border-bottom: 1px solid rgba(210, 224, 255, 0.25); }
       .steps { grid-template-columns: 1fr; }
     }
 
-    @media (max-width: 640px) {
-      section { padding: 3rem 0; }
-      .hero { padding: 3.1rem 0 3.3rem; }
-      .urgent-strip .container { font-size: 0.95rem; }
-      .cards { grid-template-columns: 1fr; }
-      .sticky-call { display: block; }
-      footer { padding-bottom: 5rem; }
+    @media (max-width: 540px) {
+      .container { width: min(var(--container), calc(100% - 1.2rem)); }
+      section { padding: 2.6rem 0; }
+      .hero { background-position: 64% center; }
+      .services { grid-template-columns: 1fr; }
+      .hero-actions .btn { width: 100%; }
     }
   </style>
 </head>
 <body>
-  <div class="urgent-strip">
-    <div class="container">
+  <div class="top-strip">
+    <div class="container top-strip-inner">
       <span>Broken Down in Southampton?</span>
-      <a href="tel:02380000000" class="cta-btn cta-primary">Call Recovero Now</a>
+      <span class="center-text">Call Recovero Now</span>
+      <a href="tel:02380000000" class="btn btn-yellow">Call Now</a>
     </div>
   </div>
 
   <header class="hero">
-    <div class="container hero-grid">
-      <div>
+    <div class="container hero-inner">
+      <div class="hero-copy">
         <h1>Vehicle Recovery Southampton</h1>
         <p class="sub">Fast Help for Breakdowns &amp; Non-Starters</p>
-        <ul class="hero-list">
+        <ul class="hero-points">
           <li>24/7 Roadside Assistance</li>
           <li>Home Start &amp; Recovery</li>
           <li>Quick Phone Quotes</li>
         </ul>
         <div class="hero-actions">
-          <a href="tel:02380000000" class="cta-btn cta-primary">Call Now</a>
-          <a href="#callback" class="cta-btn cta-secondary">Request Call Back</a>
+          <a href="tel:02380000000" class="btn btn-yellow">Call Now</a>
+          <a href="tel:02380000000" class="btn btn-light">Request Call Back</a>
         </div>
       </div>
-      <aside class="trust-panel" aria-label="Trust points">
-        <strong>Why local drivers call Recovero</strong>
+      <aside class="trust-box" aria-label="Trust points">
         <ul>
           <li>Available 24/7</li>
           <li>Southampton Coverage</li>
@@ -415,135 +492,137 @@
 
   <section class="dark-section">
     <div class="container">
-      <h2>What Do You Need Help With?</h2>
-      <p class="section-intro">Choose your issue below and call to get straight-through support for vehicle recovery Southampton.</p>
-      <div class="cards">
-        <article class="card">
-          <h3>Breakdown Recovery</h3>
-          <p>Stopped on the roadside? We can help move your vehicle safely and quickly.</p>
-          <a href="tel:02380000000" class="mini-btn">Get Help</a>
+      <h2 class="center-title">What Do You Need Help With?</h2>
+      <div class="services">
+        <article class="service-card">
+          <div class="content">
+            <h3>Breakdown Recovery</h3>
+            <p>Fast support when your vehicle has stopped and needs safe local recovery.</p>
+          </div>
+          <div class="service-footer"><a href="tel:02380000000" class="btn btn-yellow">Get Help</a></div>
         </article>
-        <article class="card">
-          <h3>Car Won't Start</h3>
-          <p>At home, work or roadside, call Recovero for practical non-starter support.</p>
-          <a href="tel:02380000000" class="mini-btn">Get Help</a>
+        <article class="service-card">
+          <div class="content">
+            <h3>Car Won’t Start</h3>
+            <p>Home or roadside non-starter help with straightforward phone support.</p>
+          </div>
+          <div class="service-footer"><a href="tel:02380000000" class="btn btn-yellow">Get Help</a></div>
         </article>
-        <article class="card">
-          <h3>Flat Battery</h3>
-          <p>Battery gone flat? We'll help you get moving again or arrange safe recovery.</p>
-          <a href="tel:02380000000" class="mini-btn">Get Help</a>
+        <article class="service-card">
+          <div class="content">
+            <h3>Flat Battery</h3>
+            <p>Battery gone flat? Call Recovero for practical help in Southampton.</p>
+          </div>
+          <div class="service-footer"><a href="tel:02380000000" class="btn btn-yellow">Get Help</a></div>
         </article>
-        <article class="card">
-          <h3>Roadside Assistance</h3>
-          <p>Need roadside recovery Southampton right now? Speak to us and get immediate help.</p>
-          <a href="tel:02380000000" class="mini-btn">Get Help</a>
+        <article class="service-card">
+          <div class="content">
+            <h3>Roadside Assistance</h3>
+            <p>Get roadside support quickly with simple next steps over the phone.</p>
+          </div>
+          <div class="service-footer"><a href="tel:02380000000" class="btn btn-yellow">Get Help</a></div>
         </article>
-        <article class="card">
-          <h3>Non-Runner Transport</h3>
-          <p>Need to move a non-runner? We handle secure car recovery Southampton and local transport.</p>
-          <a href="tel:02380000000" class="mini-btn">Get Help</a>
+        <article class="service-card">
+          <div class="content">
+            <h3>Non-Runner Transport</h3>
+            <p>Need a non-runner moved? We can help with secure local transport.</p>
+          </div>
+          <div class="service-footer"><a href="tel:02380000000" class="btn btn-yellow">Get Help</a></div>
         </article>
       </div>
     </div>
   </section>
 
-  <section class="mid-cta">
+  <section class="cta-band">
     <div class="container">
       <h2>Need Help in Southampton Right Now?</h2>
       <p>Call Recovero and get a quote over the phone.</p>
-      <a href="tel:02380000000" class="cta-btn cta-primary">Call Now</a>
+      <a href="tel:02380000000" class="btn btn-yellow">Call Now</a>
     </div>
   </section>
 
   <section class="dark-section">
     <div class="container">
-      <h2 style="text-align:center;">Why Choose Recovero?</h2>
-      <div class="features">
-        <article class="feature">
-          <div class="icon">🕒</div>
+      <h2 class="center-title">Why Choose Recovero?</h2>
+      <div class="why-grid">
+        <article class="why-item">
+          <div class="why-icon">🕒</div>
           <h3>24/7 Support</h3>
-          <p>Day or night, call when you need breakdown recovery Southampton.</p>
         </article>
-        <article class="feature">
-          <div class="icon">📍</div>
+        <article class="why-item">
+          <div class="why-icon">📍</div>
           <h3>Local &amp; Reliable</h3>
-          <p>Focused on Southampton and nearby areas for dependable local support.</p>
         </article>
-        <article class="feature">
-          <div class="icon">🚗</div>
+        <article class="why-item">
+          <div class="why-icon">🚐</div>
           <h3>Cars, Vans &amp; More</h3>
-          <p>From small cars to vans, we help with a wide range of recovery needs.</p>
         </article>
-        <article class="feature">
-          <div class="icon">🤝</div>
+        <article class="why-item">
+          <div class="why-icon">🤝</div>
           <h3>Quick &amp; Friendly Service</h3>
-          <p>Clear communication, practical help and a straightforward phone quote.</p>
         </article>
       </div>
     </div>
   </section>
 
-  <section class="light">
+  <section class="light-section">
     <div class="container">
       <h2>Serving Southampton &amp; Nearby Areas</h2>
-      <div class="areas">
-        <span class="area-pill">Southampton</span>
-        <span class="area-pill">Totton</span>
-        <span class="area-pill">Eastleigh</span>
-        <span class="area-pill">Hedge End</span>
-        <span class="area-pill">Shirley</span>
-        <span class="area-pill">Portswood</span>
-      </div>
-      <p>Wherever you are across the local area, call Recovero for roadside recovery Southampton and nearby locations.</p>
+      <p class="areas">
+        <span>Southampton</span>
+        <span>Totton</span>
+        <span>Eastleigh</span>
+        <span>Hedge End</span>
+        <span>Shirley</span>
+        <span>Portswood</span>
+      </p>
+      <p class="light-copy">Call Recovero for breakdown and recovery support across Southampton and nearby locations.</p>
     </div>
   </section>
 
-  <section class="light" id="callback" style="padding-top: 0;">
+  <section class="light-section" id="how-it-works" style="padding-top: 0;">
     <div class="container">
       <h2>How It Works</h2>
       <div class="steps">
         <article class="step">
-          <div class="icon">1</div>
+          <div class="step-icon">1</div>
           <h3>Call Recovero</h3>
-          <p>Ring us on <a href="tel:02380000000"><strong>02380 000000</strong></a> and tell us what’s happened.</p>
         </article>
         <article class="step">
-          <div class="icon">2</div>
+          <div class="step-icon">2</div>
           <h3>Tell Us Your Location</h3>
-          <p>Share your location in Southampton so we can organise the right help quickly.</p>
         </article>
         <article class="step">
-          <div class="icon">3</div>
+          <div class="step-icon">3</div>
           <h3>Get Help On The Way</h3>
-          <p>We’ll confirm your quote and get support moving to you as soon as possible.</p>
         </article>
       </div>
     </div>
   </section>
 
-  <section class="light" style="padding-top: 0;">
+  <section class="light-section" style="padding-top: 0;">
     <div class="container">
       <h2>Frequently Asked Questions</h2>
-      <div class="faq">
+      <div class="faq-wrap">
         <article class="faq-item open">
-          <button class="faq-btn" type="button">Do you cover Southampton and nearby areas? <span>+</span></button>
-          <div class="faq-answer">Yes, Recovero covers Southampton and surrounding places including Totton, Eastleigh, Hedge End, Shirley and Portswood.</div>
+          <button type="button" class="faq-btn">Do you cover Southampton and nearby areas? <span>+</span></button>
+          <div class="faq-answer">Yes, Recovero covers Southampton and nearby areas including Totton, Eastleigh, Hedge End, Shirley and Portswood.</div>
         </article>
         <article class="faq-item">
-          <button class="faq-btn" type="button">Can you help if my car won’t start at home? <span>+</span></button>
-          <div class="faq-answer">Yes. If your vehicle won’t start at home, call us and we’ll arrange the right support.</div>
+          <button type="button" class="faq-btn">Can you help if my car won’t start at home? <span>+</span></button>
+          <div class="faq-answer">Yes. If your car won’t start at home, call Recovero and we’ll organise the right help.</div>
         </article>
         <article class="faq-item">
-          <button class="faq-btn" type="button">Do you recover vans as well as cars? <span>+</span></button>
-          <div class="faq-answer">Yes, we assist with both cars and vans for local breakdown and recovery jobs.</div>
+          <button type="button" class="faq-btn">Do you recover vans as well as cars? <span>+</span></button>
+          <div class="faq-answer">Yes, we assist with vans as well as cars for Southampton recovery needs.</div>
         </article>
         <article class="faq-item">
-          <button class="faq-btn" type="button">Are you available 24/7? <span>+</span></button>
-          <div class="faq-answer">Yes, Recovero provides 24/7 call support for urgent recovery requests.</div>
+          <button type="button" class="faq-btn">Are you available 24/7? <span>+</span></button>
+          <div class="faq-answer">Yes, Recovero is available 24/7 for urgent recovery support.</div>
         </article>
         <article class="faq-item">
-          <button class="faq-btn" type="button">How do I get a quote? <span>+</span></button>
-          <div class="faq-answer">The quickest way is to call us. We’ll take your details and give you a clear quote over the phone.</div>
+          <button type="button" class="faq-btn">How do I get a quote? <span>+</span></button>
+          <div class="faq-answer">Call us on <a href="tel:02380000000"><strong>02380 000000</strong></a> and we’ll provide a quote over the phone.</div>
         </article>
       </div>
     </div>
@@ -560,10 +639,6 @@
     </div>
   </footer>
 
-  <div class="sticky-call">
-    <a href="tel:02380000000" class="cta-btn cta-primary">Call Recovero: 02380 000000</a>
-  </div>
-
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -579,8 +654,7 @@
   <script>
     document.querySelectorAll('.faq-btn').forEach((button) => {
       button.addEventListener('click', () => {
-        const item = button.parentElement;
-        item.classList.toggle('open');
+        button.parentElement.classList.toggle('open');
       });
     });
   </script>
