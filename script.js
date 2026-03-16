@@ -153,12 +153,6 @@ document.addEventListener('DOMContentLoaded', function () {
       roads: ['A3', 'A27', 'Purbrook & Cowplain'],
       href: '/locations/waterlooville-vehicle-recovery.html'
     },
-    southampton: {
-      title: 'Southampton',
-      summary: 'Fast vehicle recovery across Southampton for breakdowns, accidents, and non-runners.',
-      roads: ['M27', 'A33', 'Shirley & Bitterne'],
-      href: '/locations/southampton-vehicle-recovery.html'
-    },
     chichester: {
       title: 'Chichester',
       summary: '24/7 vehicle recovery across Chichester and nearby A27 and A259 routes.',
