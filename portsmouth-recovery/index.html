@@ -69,13 +69,23 @@
     }
 
     .hero {
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
       margin-top: 8px;
       border-radius: var(--radius-lg);
-      background: linear-gradient(165deg, #10263b 0%, #16324b 58%, #0f2235 100%);
+      background:
+        linear-gradient(165deg, rgba(6, 17, 28, 0.86) 0%, rgba(11, 29, 46, 0.8) 58%, rgba(15, 34, 53, 0.88) 100%),
+        url('/images/recovery-truck.jpg') center/cover no-repeat;
       color: #edf4ff;
       padding: 20px 16px;
       box-shadow: 0 18px 36px rgba(15, 34, 53, 0.25);
       border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .hero > * {
+      position: relative;
+      z-index: 1;
     }
 
     h1 {
@@ -213,6 +223,23 @@
       padding: 14px;
     }
 
+    .proof-media {
+      margin: 14px 0 0;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      box-shadow: 0 10px 24px rgba(15, 34, 53, 0.1);
+      aspect-ratio: 16 / 8;
+      max-height: 220px;
+    }
+
+    .proof-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
     .faq-grid details {
       background: var(--white);
       border: 1px solid var(--line);
@@ -250,23 +277,37 @@
       right: 0;
       bottom: 0;
       z-index: 80;
-      background: rgba(243, 239, 232, 0.96);
-      backdrop-filter: blur(8px);
-      border-top: 1px solid rgba(15, 34, 53, 0.15);
-      padding: 8px 10px calc(8px + env(safe-area-inset-bottom));
+      display: flex;
+      justify-content: center;
+      padding: 0 12px calc(10px + env(safe-area-inset-bottom));
+      pointer-events: none;
     }
 
     .sticky-actions {
-      width: min(1080px, 96vw);
-      margin: 0 auto;
+      width: min(560px, 100%);
+      margin: 0;
       display: grid;
       grid-template-columns: 1.25fr 1fr;
-      gap: 8px;
+      gap: 10px;
+      background: rgba(12, 29, 45, 0.9);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 18px;
+      padding: 10px;
+      box-shadow: 0 16px 28px rgba(8, 18, 30, 0.32);
+      pointer-events: auto;
     }
 
     .sticky .btn {
-      min-height: 48px;
+      min-height: 50px;
       font-size: 0.92rem;
+      border-radius: 12px;
+      line-height: 1;
+    }
+
+    .sticky .btn-secondary {
+      background: rgba(19, 40, 59, 0.95);
+      border-color: rgba(255, 255, 255, 0.2);
     }
 
     @media (min-width: 700px) {
@@ -279,6 +320,10 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 10px;
+      }
+
+      .proof-media {
+        max-width: 500px;
       }
     }
 
@@ -344,6 +389,9 @@
       <h2 class="section-title" id="coverage-title">Portsmouth coverage</h2>
       <div class="coverage">
         <p>We help drivers across Portsmouth and nearby areas including Southsea, Fratton, Hilsea, Cosham, North End, Eastney, the M275 and nearby routes.</p>
+        <figure class="proof-media">
+          <img src="/images/roadside-issues.jpg" alt="Recovero roadside assistance at a local breakdown scene" loading="lazy" width="1280" height="720">
+        </figure>
       </div>
     </section>
 
@@ -375,7 +423,7 @@
 
   <div class="sticky" role="navigation" aria-label="Sticky call to action">
     <div class="sticky-actions">
-      <a class="btn btn-primary" href="tel:+447366302341" aria-label="Call now">Call 07366 302341</a>
+      <a class="btn btn-primary" href="tel:+447366302341" aria-label="Call now">Call now</a>
       <a class="btn btn-secondary" href="https://wa.me/447366302341?text=Hi%20Recovero%2C%20I%20need%20vehicle%20recovery%20in%20Portsmouth.%20My%20location%20is%20____.%20Vehicle%3A%20____.%20Issue%3A%20____." target="_blank" rel="noopener" aria-label="WhatsApp location">WhatsApp</a>
     </div>
   </div>
