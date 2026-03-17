@@ -97,36 +97,36 @@
       padding:14px;
       box-shadow:0 10px 20px rgba(15,34,53,.07);
     }
-    #what-we-help-with{padding:28px 0 26px}
-    #what-we-help-with .grid{gap:12px}
-    .service-card{
+    #what-we-help-with{padding:28px 0 24px}
+    .help-grid{
       display:grid;
-      gap:0;
-      align-items:start;
-      overflow:hidden;
-      padding:0;
-      border-radius:17px;
+      grid-template-columns:1fr;
+      gap:12px;
+    }
+    .help-item{
+      margin:0;
+      border-radius:18px;
       border:1px solid rgba(15,34,53,.13);
-      box-shadow:0 12px 24px rgba(15,34,53,.08), 0 2px 6px rgba(15,34,53,.05);
       background:#fff;
-    }
-    .service-media{
-      aspect-ratio:16/9;
-      max-height:170px;
-      background:#e8e0d2;
-      border-bottom:1px solid rgba(15,34,53,.08);
+      box-shadow:0 10px 24px rgba(15,34,53,.07),0 2px 8px rgba(15,34,53,.05);
       overflow:hidden;
     }
-    .service-media img{
+    .help-photo{
+      margin:0;
+      aspect-ratio:16/9;
+      border-bottom:1px solid rgba(15,34,53,.09);
+      overflow:hidden;
+    }
+    .help-photo img{
       width:100%;
       height:100%;
-      object-fit:cover;
       display:block;
+      object-fit:cover;
     }
-    .service-copy{
+    .help-copy{
+      padding:12px 13px 13px;
       display:grid;
-      gap:3px;
-      padding:11px 12px 12px;
+      gap:4px;
     }
     h3{margin:0;font-size:.98rem;line-height:1.2}
     p{margin:0;color:var(--ink-soft);font-size:.88rem;line-height:1.4}
@@ -189,14 +189,9 @@
       .grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}
       .grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
       #what-we-help-with{padding:34px 0}
-      #what-we-help-with .grid{gap:14px}
-      .service-media{max-height:182px}
-      .service-copy{padding:12px 13px 13px}
+      .help-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
       h3{font-size:1rem}
       p{font-size:.9rem}
-      .service-card{
-        grid-template-rows:auto 1fr;
-      }
       .sticky{display:none}
     }
   </style>
@@ -232,42 +227,42 @@
 
     <section class="section" id="what-we-help-with">
       <h2 class="section-title">What we help with</h2>
-      <div class="grid three">
-        <article class="card service-card">
-          <div class="service-media">
+      <div class="help-grid">
+        <article class="help-item">
+          <figure class="help-photo">
             <img src="/breakdown-recovery.jpg" alt="Breakdown recovery truck assisting a stranded car" width="800" height="450" loading="lazy" decoding="async">
-          </div>
-          <div class="service-copy"><h3>Breakdown recovery</h3><p>Quick roadside recovery in Portsmouth.</p></div>
+          </figure>
+          <div class="help-copy"><h3>Breakdown recovery</h3><p>Quick roadside recovery in Portsmouth.</p></div>
         </article>
-        <article class="card service-card">
-          <div class="service-media">
+        <article class="help-item">
+          <figure class="help-photo">
             <img src="/images/non-start.jpg" alt="Vehicle that will not start outside a property" width="800" height="450" loading="lazy" decoding="async">
-          </div>
-          <div class="service-copy"><h3>Non-starts</h3><p>Help when your vehicle won’t start at home, work or roadside.</p></div>
+          </figure>
+          <div class="help-copy"><h3>Non-starts</h3><p>Help when your vehicle won’t start at home, work or roadside.</p></div>
         </article>
-        <article class="card service-card">
-          <div class="service-media">
+        <article class="help-item">
+          <figure class="help-photo">
             <img src="/flat-battery-help.jpg" alt="Flat battery roadside assistance" width="800" height="450" loading="lazy" decoding="async">
-          </div>
-          <div class="service-copy"><h3>Flat battery help</h3><p>Battery assistance and recovery if your car won’t start.</p></div>
+          </figure>
+          <div class="help-copy"><h3>Flat battery help</h3><p>Battery assistance and recovery if your car won’t start.</p></div>
         </article>
-        <article class="card service-card">
-          <div class="service-media">
+        <article class="help-item">
+          <figure class="help-photo">
             <img src="/accident-recovery.jpg" alt="Accident recovery support for a damaged vehicle" width="800" height="450" loading="lazy" decoding="async">
-          </div>
-          <div class="service-copy"><h3>Accident recovery</h3><p>Safe recovery after collisions and non-drivable incidents.</p></div>
+          </figure>
+          <div class="help-copy"><h3>Accident recovery</h3><p>Safe recovery after collisions and non-drivable incidents.</p></div>
         </article>
-        <article class="card service-card">
-          <div class="service-media">
+        <article class="help-item">
+          <figure class="help-photo">
             <img src="/images/vehicle-transport.jpg" alt="Local vehicle transport on a recovery truck" width="800" height="450" loading="lazy" decoding="async">
-          </div>
-          <div class="service-copy"><h3>Local vehicle transport</h3><p>Short-distance vehicle transport around Portsmouth.</p></div>
+          </figure>
+          <div class="help-copy"><h3>Local vehicle transport</h3><p>Short-distance vehicle transport around Portsmouth.</p></div>
         </article>
-        <article class="card service-card">
-          <div class="service-media">
+        <article class="help-item">
+          <figure class="help-photo">
             <img src="/images/roadside-issues.jpg" alt="Roadside vehicle issue with recovery assistance" width="800" height="450" loading="lazy" decoding="async">
-          </div>
-          <div class="service-copy"><h3>Roadside vehicle issues</h3><p>Urgent help for unexpected roadside vehicle problems.</p></div>
+          </figure>
+          <div class="help-copy"><h3>Roadside vehicle issues</h3><p>Urgent help for unexpected roadside vehicle problems.</p></div>
         </article>
       </div>
     </section>
