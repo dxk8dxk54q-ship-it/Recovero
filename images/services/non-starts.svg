@@ -1,0 +1,20 @@
+<svg width="640" height="380" viewBox="0 0 640 380" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Non-start recovery help at a driveway</title>
+  <desc id="desc">A car parked by a home with a recovery van arriving.</desc>
+  <rect width="640" height="380" fill="#F6F0E5"/>
+  <rect y="272" width="640" height="108" fill="#D8DEE6"/>
+  <rect x="48" y="116" width="172" height="120" rx="10" fill="#E7DED0"/>
+  <polygon points="36,124 134,62 232,124" fill="#203247"/>
+  <rect x="116" y="162" width="40" height="74" rx="6" fill="#C9B89F"/>
+  <rect x="72" y="148" width="30" height="28" rx="4" fill="#A9C0D8"/>
+  <rect x="164" y="148" width="30" height="28" rx="4" fill="#A9C0D8"/>
+  <rect x="248" y="198" width="170" height="56" rx="14" fill="#4C6078"/>
+  <rect x="278" y="176" width="66" height="32" rx="8" fill="#647A93"/>
+  <circle cx="284" cy="258" r="18" fill="#101A27"/>
+  <circle cx="380" cy="258" r="18" fill="#101A27"/>
+  <rect x="430" y="188" width="162" height="66" rx="12" fill="#2E4660"/>
+  <rect x="456" y="170" width="64" height="26" rx="7" fill="#3A5673"/>
+  <circle cx="464" cy="258" r="18" fill="#101A27"/>
+  <circle cx="556" cy="258" r="18" fill="#101A27"/>
+  <path d="M428 220H406" stroke="#F58220" stroke-width="7" stroke-linecap="round"/>
+</svg>

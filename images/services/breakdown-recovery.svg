@@ -1,0 +1,25 @@
+<svg width="640" height="380" viewBox="0 0 640 380" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Breakdown recovery vehicle assisting a car</title>
+  <desc id="desc">A recovery truck attending a car on the roadside.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F6F0E5"/>
+      <stop offset="1" stop-color="#ECE3D5"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="380" fill="url(#bg)"/>
+  <rect y="290" width="640" height="90" fill="#D5DCE5"/>
+  <rect x="20" y="268" width="600" height="8" rx="4" fill="#F58220" opacity="0.45"/>
+  <rect x="300" y="182" width="220" height="18" rx="9" fill="#203247"/>
+  <rect x="304" y="200" width="216" height="70" rx="10" fill="#2E4660"/>
+  <rect x="310" y="156" width="78" height="44" rx="8" fill="#3A5673"/>
+  <rect x="322" y="166" width="32" height="20" rx="4" fill="#A9C0D8"/>
+  <rect x="396" y="206" width="108" height="52" rx="8" fill="#F6F8FC"/>
+  <circle cx="352" cy="276" r="20" fill="#111B28"/>
+  <circle cx="486" cy="276" r="20" fill="#111B28"/>
+  <path d="M288 216L208 240" stroke="#F58220" stroke-width="8" stroke-linecap="round"/>
+  <rect x="116" y="216" width="150" height="48" rx="12" fill="#5C6D82"/>
+  <rect x="132" y="198" width="64" height="28" rx="8" fill="#6E8098"/>
+  <circle cx="148" cy="268" r="18" fill="#111B28"/>
+  <circle cx="230" cy="268" r="18" fill="#111B28"/>
+</svg>

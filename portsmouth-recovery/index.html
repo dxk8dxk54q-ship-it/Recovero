@@ -97,6 +97,28 @@
       padding:14px;
       box-shadow:0 10px 20px rgba(15,34,53,.07);
     }
+    .service-card{
+      display:grid;
+      gap:12px;
+      align-items:start;
+      overflow:hidden;
+    }
+    .service-media{
+      margin:-14px -14px 0;
+      aspect-ratio:16/9;
+      background:#e8e0d2;
+      border-bottom:1px solid rgba(15,34,53,.08);
+    }
+    .service-media img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+    .service-copy{
+      display:grid;
+      gap:4px;
+    }
     h3{margin:0 0 4px;font-size:1rem}
     p{margin:0;color:var(--ink-soft);font-size:.93rem}
 
@@ -157,6 +179,9 @@
       .trust-row{grid-template-columns:repeat(3,minmax(0,1fr))}
       .grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}
       .grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+      .service-card{
+        grid-template-rows:auto 1fr;
+      }
       .sticky{display:none}
     }
   </style>
@@ -193,12 +218,42 @@
     <section class="section" id="what-we-help-with">
       <h2 class="section-title">What we help with</h2>
       <div class="grid three">
-        <article class="card"><h3>Breakdown recovery</h3><p>Quick roadside pickup and onward recovery in Portsmouth.</p></article>
-        <article class="card"><h3>Non-starts</h3><p>Help when your vehicle won’t start at home, work or roadside.</p></article>
-        <article class="card"><h3>Flat battery help</h3><p>Battery-related callouts and recovery if your car won’t fire up.</p></article>
-        <article class="card"><h3>Accident recovery</h3><p>Safe recovery support after collisions and non-drivable incidents.</p></article>
-        <article class="card"><h3>Local vehicle transport</h3><p>Planned short-distance transport around Portsmouth and nearby.</p></article>
-        <article class="card"><h3>Roadside vehicle issues</h3><p>Urgent recovery help for unexpected problems on local routes.</p></article>
+        <article class="card service-card">
+          <div class="service-media">
+            <img src="/images/services/breakdown-recovery.svg" alt="Breakdown recovery vehicle assisting a car" width="640" height="380" loading="lazy" decoding="async">
+          </div>
+          <div class="service-copy"><h3>Breakdown recovery</h3><p>Quick roadside pickup and onward recovery in Portsmouth.</p></div>
+        </article>
+        <article class="card service-card">
+          <div class="service-media">
+            <img src="/images/services/non-starts.svg" alt="Non-start recovery help at a driveway" width="640" height="380" loading="lazy" decoding="async">
+          </div>
+          <div class="service-copy"><h3>Non-starts</h3><p>Help when your vehicle won’t start at home, work or roadside.</p></div>
+        </article>
+        <article class="card service-card">
+          <div class="service-media">
+            <img src="/images/services/flat-battery-help.svg" alt="Flat battery roadside assistance" width="640" height="380" loading="lazy" decoding="async">
+          </div>
+          <div class="service-copy"><h3>Flat battery help</h3><p>Battery callouts and recovery if your car won’t fire up.</p></div>
+        </article>
+        <article class="card service-card">
+          <div class="service-media">
+            <img src="/images/services/accident-recovery.svg" alt="Accident recovery support" width="640" height="380" loading="lazy" decoding="async">
+          </div>
+          <div class="service-copy"><h3>Accident recovery</h3><p>Safe recovery after collisions and non-drivable incidents.</p></div>
+        </article>
+        <article class="card service-card">
+          <div class="service-media">
+            <img src="/images/services/local-vehicle-transport.svg" alt="Local vehicle transport on a flatbed" width="640" height="380" loading="lazy" decoding="async">
+          </div>
+          <div class="service-copy"><h3>Local vehicle transport</h3><p>Short-distance vehicle transport around Portsmouth and nearby.</p></div>
+        </article>
+        <article class="card service-card">
+          <div class="service-media">
+            <img src="/images/services/roadside-vehicle-issues.svg" alt="Roadside vehicle issue support" width="640" height="380" loading="lazy" decoding="async">
+          </div>
+          <div class="service-copy"><h3>Roadside vehicle issues</h3><p>Urgent help for unexpected roadside vehicle problems.</p></div>
+        </article>
       </div>
     </section>
 

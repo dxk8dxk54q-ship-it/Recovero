@@ -1,0 +1,19 @@
+<svg width="640" height="380" viewBox="0 0 640 380" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Accident recovery support</title>
+  <desc id="desc">A recovery truck loading a damaged car in a safe roadside scene.</desc>
+  <rect width="640" height="380" fill="#F6F0E5"/>
+  <rect y="288" width="640" height="92" fill="#D5DDE6"/>
+  <rect x="300" y="186" width="228" height="18" rx="9" fill="#203247"/>
+  <rect x="304" y="204" width="224" height="70" rx="11" fill="#2E4660"/>
+  <rect x="312" y="160" width="76" height="44" rx="8" fill="#3A5673"/>
+  <circle cx="350" cy="278" r="20" fill="#101A27"/>
+  <circle cx="494" cy="278" r="20" fill="#101A27"/>
+  <path d="M288 220L212 244" stroke="#F58220" stroke-width="8" stroke-linecap="round"/>
+  <rect x="120" y="218" width="144" height="44" rx="12" fill="#667A8E"/>
+  <rect x="130" y="198" width="56" height="24" rx="6" fill="#7F92A6"/>
+  <path d="M236 230L254 244" stroke="#C54A3A" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="148" cy="268" r="18" fill="#101A27"/>
+  <circle cx="228" cy="268" r="18" fill="#101A27"/>
+  <path d="M72 278H108" stroke="#F58220" stroke-width="8" stroke-linecap="round"/>
+  <path d="M96 262V294" stroke="#F58220" stroke-width="8" stroke-linecap="round"/>
+</svg>
