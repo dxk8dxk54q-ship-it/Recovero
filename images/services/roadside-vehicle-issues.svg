@@ -1,0 +1,16 @@
+<svg width="640" height="380" viewBox="0 0 640 380" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Roadside vehicle issue support</title>
+  <desc id="desc">A stranded car at roadside with hazard warning and assistance.</desc>
+  <rect width="640" height="380" fill="#F6F0E5"/>
+  <rect y="286" width="640" height="94" fill="#D7DFE8"/>
+  <rect x="146" y="204" width="202" height="64" rx="14" fill="#4D627A"/>
+  <rect x="176" y="184" width="66" height="30" rx="8" fill="#667D95"/>
+  <circle cx="194" cy="274" r="20" fill="#101A27"/>
+  <circle cx="302" cy="274" r="20" fill="#101A27"/>
+  <path d="M382 236L404 198L426 236H382Z" fill="#F58220"/>
+  <rect x="410" y="198" width="160" height="70" rx="12" fill="#2E4660"/>
+  <rect x="430" y="174" width="64" height="28" rx="7" fill="#3C5874"/>
+  <circle cx="444" cy="274" r="20" fill="#101A27"/>
+  <circle cx="546" cy="274" r="20" fill="#101A27"/>
+  <path d="M394 226H414" stroke="#203247" stroke-width="4"/>
+</svg>
