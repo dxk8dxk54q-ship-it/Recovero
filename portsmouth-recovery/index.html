@@ -42,7 +42,7 @@
       color: var(--rcv-ink);
       background: var(--rcv-cream-100);
       line-height: 1.45;
-      padding-bottom: 106px;
+      padding-bottom: 92px;
     }
 
     img { max-width: 100%; display: block; }
@@ -536,21 +536,30 @@
 
     .mobile-sticky {
       position: fixed;
-      left: 12px;
-      right: 12px;
-      bottom: calc(10px + env(safe-area-inset-bottom));
+      left: 50%;
+      width: min(360px, calc(100vw - 24px));
+      transform: translateX(-50%);
+      bottom: calc(12px + env(safe-area-inset-bottom));
       z-index: 90;
       border-radius: 18px;
-      border: 1px solid rgba(19,38,58,0.14);
-      background: rgba(255,255,255,0.93);
-      backdrop-filter: blur(10px);
-      box-shadow: 0 12px 28px rgba(15,34,53,0.2);
-      padding: 10px;
-      display: grid;
-      gap: 8px;
+      border: 1px solid rgba(255,255,255,0.16);
+      background:
+        linear-gradient(145deg, rgba(13,31,50,0.96), rgba(19,41,66,0.93));
+      backdrop-filter: blur(8px) saturate(115%);
+      box-shadow:
+        0 18px 34px rgba(8,20,34,0.28),
+        0 2px 0 rgba(255,255,255,0.08) inset;
+      padding: 8px;
+      display: flex;
     }
 
-    .mobile-sticky .cta-btn { min-height: 46px; font-size: 0.95rem; }
+    .mobile-sticky .cta-btn {
+      width: 100%;
+      min-height: 44px;
+      font-size: 0.95rem;
+      border-radius: 12px;
+      box-shadow: 0 8px 18px rgba(245, 130, 32, 0.3);
+    }
 
     [data-animate] {
       opacity: 0;
@@ -757,9 +766,8 @@
     </section>
   </main>
 
-  <aside class="mobile-sticky" aria-label="Quick actions">
+  <aside class="mobile-sticky" aria-label="Quick call action">
     <a class="cta-btn cta-btn--primary" href="tel:+447366302341" aria-label="Call Recovero on 07366 302341">Call now</a>
-    <a class="cta-btn cta-btn--ghost" href="https://wa.me/447366302341?text=Hi%20Recovero%2C%20I%20need%20vehicle%20recovery%20in%20Portsmouth.%20My%20location%20is%20____.%20Vehicle%3A%20____.%20Issue%3A%20____." target="_blank" rel="noopener" aria-label="WhatsApp Recovero your location">WhatsApp</a>
   </aside>
 
   <script>
