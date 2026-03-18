@@ -4,30 +4,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex,follow">
-  <title>Portsmouth Vehicle Recovery | Call 07366 302341 | Recovero</title>
+  <title>Portsmouth Vehicle Recovery | Recovero</title>
   <meta name="description" content="Broken down in Portsmouth? Call Recovero now for fast local recovery support for breakdowns, non-starts, flat batteries, accident recovery and local vehicle transport.">
   <meta property="og:title" content="Broken down in Portsmouth? Call now for fast local recovery.">
-  <meta property="og:description" content="Breakdowns, non-starts, flat batteries, accident recovery and local vehicle transport in Portsmouth.">
+  <meta property="og:description" content="Breakdowns, non-starts, flat batteries, accident recovery and local vehicle transport.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://recovero.co.uk/portsmouth-recovery/">
-  <meta property="og:image" content="https://recovero.co.uk/images/recovery-truck.jpg">
+  <meta property="og:image" content="https://recovero.co.uk/breakdown-recovery.jpg">
   <link rel="canonical" href="https://recovero.co.uk/portsmouth-recovery/">
   <link rel="icon" href="/images/recovero-logo.png" type="image/png">
   <style>
     :root {
-      --navy: #0f2235;
-      --navy-soft: #1e3349;
-      --cream: #f3efe8;
-      --white: #ffffff;
-      --orange: #f58220;
-      --orange-deep: #d8690f;
-      --text-soft: #5d6876;
-      --line: rgba(15, 34, 53, 0.12);
-      --line-soft: rgba(15, 34, 53, 0.09);
-      --radius-lg: 20px;
-      --radius-md: 14px;
-      --shadow-soft: 0 10px 22px rgba(15, 34, 53, 0.055);
-      --shadow-mid: 0 16px 34px rgba(15, 34, 53, 0.11);
+      --rcv-navy-900: #0d1f32;
+      --rcv-navy-800: #132942;
+      --rcv-navy-700: #1a3552;
+      --rcv-cream-100: #f7f1e8;
+      --rcv-cream-200: #f2e9dc;
+      --rcv-orange-500: #f58220;
+      --rcv-orange-600: #dc6d12;
+      --rcv-ink: #13263a;
+      --rcv-muted: #5d6a79;
+      --rcv-white: #ffffff;
+      --rcv-line: rgba(19, 38, 58, 0.12);
+      --rcv-shadow-sm: 0 10px 22px rgba(10, 26, 43, 0.08);
+      --rcv-shadow-md: 0 16px 36px rgba(10, 26, 43, 0.13);
+      --rcv-r-lg: 24px;
+      --rcv-r-md: 16px;
+      --rcv-r-sm: 12px;
+      --rcv-transition: 240ms cubic-bezier(.2,.65,.2,1);
     }
 
     * { box-sizing: border-box; }
@@ -35,882 +39,692 @@
 
     body {
       font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-      background: var(--cream);
-      color: var(--navy);
+      color: var(--rcv-ink);
+      background: var(--rcv-cream-100);
       line-height: 1.45;
-      padding-bottom: 94px;
+      padding-bottom: 106px;
     }
 
+    img { max-width: 100%; display: block; }
     a { color: inherit; text-decoration: none; }
 
-    .container {
-      width: min(1080px, 92vw);
+    .ppc-shell {
+      width: min(1100px, 92vw);
       margin: 0 auto;
     }
 
-    .header {
-      padding: 14px 0 8px;
+    .ppc-section {
+      padding: 20px 0;
     }
 
-    .logo {
+    .ppc-heading {
+      margin: 0;
+      font-size: clamp(1.5rem, 4.5vw, 2.1rem);
+      line-height: 1.18;
+      letter-spacing: -0.02em;
+      color: var(--rcv-navy-900);
+    }
+
+    .ppc-intro {
+      margin: 10px 0 0;
+      color: var(--rcv-muted);
+      max-width: 68ch;
+    }
+
+    .surface {
+      background: var(--rcv-white);
+      border: 1px solid var(--rcv-line);
+      border-radius: var(--rcv-r-lg);
+      box-shadow: var(--rcv-shadow-sm);
+    }
+
+    .hero-reset {
+      color: var(--rcv-white);
+      margin-top: 14px;
+      border-radius: 28px;
+      padding: 18px;
+      background:
+        linear-gradient(160deg, rgba(8, 20, 34, 0.93), rgba(15, 36, 59, 0.88)),
+        radial-gradient(circle at 90% 0%, rgba(245, 130, 32, 0.24), transparent 52%),
+        linear-gradient(120deg, #11263d 0%, #1a3552 100%);
+      overflow: hidden;
+      position: relative;
+      box-shadow: var(--rcv-shadow-md);
+    }
+
+    .hero-reset::after {
+      content: "";
+      position: absolute;
+      inset: auto -80px -80px auto;
+      width: 220px;
+      height: 220px;
+      border-radius: 999px;
+      background: radial-gradient(circle, rgba(245, 130, 32, 0.22), transparent 68%);
+      pointer-events: none;
+    }
+
+    .brand-row {
       display: inline-flex;
       align-items: center;
       gap: 10px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      position: relative;
+      z-index: 1;
     }
 
-    .logo img {
+    .brand-row img {
       width: 34px;
       height: 34px;
-      border-radius: 8px;
+      border-radius: 10px;
     }
 
-    .logo span {
-      font-weight: 800;
-      letter-spacing: -0.01em;
-      font-size: 1rem;
-    }
-
-    .hero {
-      position: relative;
-      isolation: isolate;
-      overflow: hidden;
-      margin-top: 8px;
-      border-radius: var(--radius-lg);
-      background:
-        linear-gradient(165deg, rgba(6, 17, 28, 0.86) 0%, rgba(11, 29, 46, 0.8) 58%, rgba(15, 34, 53, 0.88) 100%),
-        url('/images/recovery-truck.jpg') center/cover no-repeat;
-      color: #edf4ff;
-      padding: 20px 16px;
-      box-shadow: 0 18px 36px rgba(15, 34, 53, 0.25);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .hero > * { position: relative; z-index: 1; }
-
-    h1 {
-      margin: 0 0 10px;
-      font-size: clamp(1.75rem, 7.1vw, 2.95rem);
-      line-height: 1.08;
-      letter-spacing: -0.02em;
-      text-wrap: balance;
-    }
-
-    .hero-sub {
+    .hero-reset h1 {
       margin: 0;
-      font-size: 1rem;
-      color: #dbe7f7;
-      text-wrap: balance;
+      font-size: clamp(1.7rem, 7vw, 2.5rem);
+      line-height: 1.15;
+      max-width: 20ch;
+      letter-spacing: -0.02em;
+      position: relative;
+      z-index: 1;
     }
 
-    .cta-wrap {
-      margin-top: 16px;
+    .hero-lead {
+      margin: 14px 0 0;
+      font-size: clamp(1rem, 3.8vw, 1.15rem);
+      color: rgba(255,255,255,0.9);
+      max-width: 60ch;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-actions {
       display: grid;
       gap: 10px;
+      margin-top: 20px;
+      position: relative;
+      z-index: 1;
     }
 
-    .btn {
+    .cta-btn {
+      border: 0;
+      border-radius: 999px;
+      min-height: 50px;
       display: inline-flex;
-      width: 100%;
-      min-height: 54px;
-      border-radius: 12px;
       align-items: center;
       justify-content: center;
-      font-weight: 800;
-      font-size: 1rem;
-      border: 1px solid transparent;
-      transition: transform 180ms ease, box-shadow 220ms ease, background-color 220ms ease, border-color 220ms ease;
-      will-change: transform;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      padding: 0 18px;
+      transition: transform var(--rcv-transition), box-shadow var(--rcv-transition), background-color var(--rcv-transition), border-color var(--rcv-transition), color var(--rcv-transition);
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
     }
 
-    .btn:hover,
-    .btn:focus-visible {
+    .cta-btn:active { transform: translateY(1px) scale(0.995); }
+    .cta-btn:focus-visible { outline: 3px solid rgba(245, 130, 32, 0.35); outline-offset: 2px; }
+
+    .cta-btn--primary {
+      background: var(--rcv-orange-500);
+      color: var(--rcv-white);
+      box-shadow: 0 10px 24px rgba(245, 130, 32, 0.34);
+    }
+
+    .cta-btn--primary:hover { background: var(--rcv-orange-600); transform: translateY(-1px); }
+
+    .cta-btn--ghost {
+      color: var(--rcv-white);
+      border: 1px solid rgba(255,255,255,0.33);
+      background: rgba(255,255,255,0.06);
+      backdrop-filter: blur(2px);
+    }
+
+    .cta-btn--ghost:hover {
+      background: rgba(255,255,255,0.13);
+      border-color: rgba(255,255,255,0.45);
       transform: translateY(-1px);
     }
 
-    .btn:active {
-      transform: translateY(1px) scale(0.99);
+    .hero-trust {
+      margin-top: 18px;
+      padding-top: 14px;
+      border-top: 1px solid rgba(255,255,255,0.2);
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+      position: relative;
+      z-index: 1;
     }
 
-    .btn-primary {
-      background: linear-gradient(180deg, var(--orange), var(--orange-deep));
-      color: #231205;
-      box-shadow: 0 12px 24px rgba(245, 130, 32, 0.35);
+    .hero-trust span {
+      font-size: 0.83rem;
+      color: rgba(255,255,255,0.92);
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.16);
+      border-radius: 999px;
+      padding: 8px 10px;
+      text-align: center;
     }
 
-    .btn-secondary {
-      background: rgba(255, 255, 255, 0.08);
-      color: #f2f7ff;
-      border-color: rgba(255, 255, 255, 0.28);
+    .help-grid {
+      margin-top: 16px;
+      display: grid;
+      gap: 12px;
     }
 
-    .trust-line {
-      margin-top: 14px;
-      background: linear-gradient(168deg, #ffffff 0%, #fbf4eb 100%);
-      color: var(--navy);
-      border: 1px solid rgba(245, 130, 32, 0.28);
-      border-radius: 14px;
-      padding: 12px;
-      box-shadow: var(--shadow-mid);
-      text-align: left;
+    .help-tile {
+      background: linear-gradient(150deg, #fff 0%, #fcfaf6 100%);
+      border: 1px solid var(--rcv-line);
+      border-radius: var(--rcv-r-md);
+      padding: 14px;
+      box-shadow: 0 8px 18px rgba(15, 34, 53, 0.04);
+      transition: transform var(--rcv-transition), box-shadow var(--rcv-transition), border-color var(--rcv-transition);
+      display: grid;
+      gap: 6px;
     }
 
-    .trust-kicker {
-      margin: 0 0 3px;
-      font-size: 0.76rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      font-weight: 700;
-      color: #ac6123;
+    .help-tile:hover,
+    .help-tile:focus-visible {
+      transform: translateY(-3px);
+      box-shadow: var(--rcv-shadow-sm);
+      border-color: rgba(245,130,32,0.46);
+      outline: none;
     }
 
-    .trust-main {
-      margin: 0;
-      font-size: 1.03rem;
-      font-weight: 800;
-      letter-spacing: -0.01em;
-    }
-
-    .trust-sub {
-      margin: 2px 0 0;
-      font-size: 0.84rem;
-      font-weight: 600;
-      color: var(--text-soft);
-    }
-
-    section { padding: 30px 0; }
-
-    .section-title {
-      margin: 0 0 12px;
-      font-size: clamp(1.35rem, 5vw, 2rem);
-      line-height: 1.15;
-      letter-spacing: -0.01em;
-    }
-
-    .tile {
-      background: var(--white);
-      border: 1px solid var(--line-soft);
-      border-radius: var(--radius-md);
-      box-shadow: var(--shadow-soft);
-      padding: 13px;
-    }
-
-    .tile-head {
-      display: flex;
-      align-items: center;
-      gap: 9px;
-      margin-bottom: 6px;
-    }
-
-    .tile-head h3 {
-      margin: 0;
-      font-size: 1rem;
-      line-height: 1.2;
-    }
-
-    .tile p,
-    .coverage p,
-    .final-cta p,
-    details p {
-      margin: 0;
-      color: var(--text-soft);
-      font-size: 0.92rem;
-    }
-
-    .icon-badge {
-      width: 24px;
-      height: 24px;
-      border-radius: 8px;
+    .tile-title {
       display: inline-flex;
       align-items: center;
-      justify-content: center;
-      color: var(--navy-soft);
-      background: #f5f8fc;
-      border: 1px solid rgba(15, 34, 53, 0.1);
-      flex-shrink: 0;
+      gap: 9px;
+      margin: 0;
+      font-size: 1rem;
+      color: var(--rcv-navy-900);
     }
 
-    .icon-badge svg {
-      width: 14px;
-      height: 14px;
-      display: block;
+    .tile-icon {
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      display: inline-grid;
+      place-items: center;
+      background: rgba(245,130,32,0.16);
+      color: var(--rcv-orange-600);
+      flex: none;
+    }
+
+    .tile-icon svg {
+      width: 16px;
+      height: 16px;
       stroke: currentColor;
-      stroke-width: 1.9;
       fill: none;
+      stroke-width: 2;
       stroke-linecap: round;
       stroke-linejoin: round;
     }
 
-    .services-panel {
-      background: linear-gradient(180deg, #fffdf9 0%, #fff7ed 100%);
-      border: 1px solid rgba(245, 130, 32, 0.24);
-      border-radius: var(--radius-lg);
-      padding: 15px;
-      box-shadow: 0 14px 30px rgba(15, 34, 53, 0.08);
-    }
-
-    .services-panel .section-title { margin-bottom: 6px; }
-
-    .services-intro {
-      margin: 0 0 14px;
-      color: var(--text-soft);
-      font-size: 0.95rem;
-      max-width: 48ch;
-    }
-
-    .service-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 8px;
-    }
-
-    .service-tile {
-      background: rgba(255, 255, 255, 0.92);
-      border: 1px solid rgba(15, 34, 53, 0.1);
-      border-radius: 12px;
-      padding: 12px 10px;
-      min-height: 112px;
-      transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease, background-color 220ms ease;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .service-tile::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-      background: linear-gradient(150deg, rgba(245, 130, 32, 0.08), transparent 56%);
-      opacity: 0;
-      transition: opacity 220ms ease;
-    }
-
-    .service-tile:hover,
-    .service-tile:focus-visible {
-      transform: translateY(-3px);
-      border-color: rgba(245, 130, 32, 0.32);
-      box-shadow: 0 12px 24px rgba(15, 34, 53, 0.1);
-      background: #fff;
-    }
-
-    .service-tile:hover::after,
-    .service-tile:focus-visible::after {
-      opacity: 1;
-    }
-
-    .service-tile:active {
-      transform: translateY(0) scale(0.99);
-      box-shadow: 0 7px 16px rgba(15, 34, 53, 0.11);
-    }
-
-    .service-tile h3 {
+    .help-tile p {
       margin: 0;
+      color: var(--rcv-muted);
       font-size: 0.95rem;
-      line-height: 1.2;
     }
 
-    .service-tile p {
-      margin-top: 6px;
-      font-size: 0.84rem;
-      color: var(--text-soft);
-    }
-
-    .section-emphasis .benefits-shell {
-      background: radial-gradient(circle at top right, rgba(245, 130, 32, 0.22), transparent 42%), linear-gradient(165deg, #142c42 0%, #0f2235 100%);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: var(--radius-lg);
-      box-shadow: 0 18px 35px rgba(10, 24, 38, 0.28);
+    .trust-wrap {
+      margin-top: 16px;
       padding: 16px;
-      color: #eaf2fb;
+      background:
+        linear-gradient(170deg, #fffaf1 0%, #ffffff 44%, #f8f2e9 100%);
+      border: 1px solid rgba(245, 130, 32, 0.24);
+      border-radius: 24px;
+      box-shadow: var(--rcv-shadow-sm);
     }
 
-    .benefits-shell .section-title { color: #f5f9ff; }
-
-    .benefits-intro {
-      margin: 0 0 14px;
-      color: #d7e4f4;
-      font-size: 0.94rem;
-      max-width: 47ch;
-    }
-
-    .benefit-grid {
+    .trust-list {
       display: grid;
-      grid-template-columns: 1fr;
-      gap: 9px;
+      gap: 12px;
+      margin-top: 16px;
     }
 
-    .benefit-grid .tile {
-      background: rgba(255, 255, 255, 0.93);
-      border-color: rgba(255, 255, 255, 0.4);
-      box-shadow: none;
+    .trust-card {
+      border-radius: var(--rcv-r-md);
+      border: 1px solid var(--rcv-line);
+      background: #fff;
+      padding: 14px;
+      transition: transform var(--rcv-transition), box-shadow var(--rcv-transition);
     }
 
-    .interactive-surface {
-      cursor: pointer;
-      transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease, background-color 220ms ease;
-      outline: none;
+    .trust-card h3 { margin: 0; font-size: 1rem; }
+    .trust-card p { margin: 6px 0 0; color: var(--rcv-muted); font-size: 0.93rem; }
+
+    .trust-card--featured {
+      background: linear-gradient(130deg, #fff 0%, #fff4e6 100%);
+      border-color: rgba(245,130,32,0.55);
+      box-shadow: 0 12px 24px rgba(245,130,32,0.16);
     }
 
-    .interactive-surface:hover,
-    .interactive-surface:focus-visible {
-      transform: translateY(-3px);
-      box-shadow: 0 13px 26px rgba(15, 34, 53, 0.13);
-      border-color: rgba(245, 130, 32, 0.4);
-    }
-
-    .interactive-surface:active {
-      transform: translateY(0) scale(0.99);
-      box-shadow: 0 8px 18px rgba(15, 34, 53, 0.13);
-    }
-
-    .interactive-surface .icon-badge {
-      transition: transform 200ms ease, border-color 220ms ease, background-color 220ms ease;
-    }
-
-    .interactive-surface:hover .icon-badge,
-    .interactive-surface:focus-visible .icon-badge {
-      transform: translateX(2px);
-      border-color: rgba(245, 130, 32, 0.4);
-      background: #fff4e8;
-    }
-
-    .service-tile h3,
-    .service-tile p,
-    .tile h3,
-    .tile p,
-    .step h3,
-    .step p,
-    .coverage p {
-      position: relative;
-      z-index: 1;
-    }
-
-    .tile--strong {
-      background: linear-gradient(165deg, #fef2df 0%, #ffe8c8 100%);
-      border-color: rgba(245, 130, 32, 0.62);
-      box-shadow: 0 10px 24px rgba(245, 130, 32, 0.24);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .tile--strong::after {
-      content: "";
-      position: absolute;
-      inset: auto -40% -58% auto;
-      width: 180px;
-      height: 180px;
-      border-radius: 999px;
-      background: radial-gradient(circle, rgba(245, 130, 32, 0.22), rgba(245, 130, 32, 0));
-      pointer-events: none;
-    }
-
-    .tile--strong h3 { font-size: 1.05rem; }
-
-    .tile--strong .icon-badge {
-      color: #a75d20;
-      border-color: rgba(245, 130, 32, 0.3);
-      background: #fff7ec;
-    }
+    .trust-card:hover { transform: translateY(-2px); box-shadow: var(--rcv-shadow-sm); }
 
     .process-shell {
-      background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
-      border: 1px solid rgba(15, 34, 53, 0.14);
-      border-radius: var(--radius-lg);
-      box-shadow: var(--shadow-soft);
-      padding: 14px;
+      margin-top: 16px;
+      padding: 14px 14px 4px;
     }
 
     .process-list {
       list-style: none;
-      margin: 4px 0 0;
-      padding: 0;
-      display: grid;
-      gap: 10px;
-      position: relative;
-    }
-
-    .process-list::before {
-      content: "";
-      position: absolute;
-      left: 16px;
-      top: 20px;
-      bottom: 20px;
-      width: 2px;
-      background: linear-gradient(180deg, rgba(15, 34, 53, 0.18), rgba(245, 130, 32, 0.5) 50%, rgba(15, 34, 53, 0.12));
-      transform: scaleY(0.08);
-      transform-origin: top;
-      transition: transform 540ms ease;
-      border-radius: 999px;
-    }
-
-    .process-list.is-visible::before {
-      transform: scaleY(1);
-    }
-
-    .step {
-      display: grid;
-      grid-template-columns: auto 1fr;
-      gap: 11px;
-      align-items: start;
-      position: relative;
-      padding: 6px 0 6px;
-      border-radius: 12px;
-      padding-left: 4px;
-      padding-right: 6px;
-    }
-
-    .step-number {
-      width: 32px;
-      height: 32px;
-      border-radius: 999px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 800;
-      color: #fff;
-      background: linear-gradient(180deg, var(--navy-soft), var(--navy));
-      font-size: 0.93rem;
-      margin-top: 2px;
-      box-shadow: 0 6px 14px rgba(15, 34, 53, 0.22);
-      position: relative;
-      z-index: 1;
-    }
-
-    .step-number::after {
-      content: "";
-      position: absolute;
-      inset: -4px;
-      border-radius: 999px;
-      border: 1px solid rgba(245, 130, 32, 0.36);
-      transition: border-color 220ms ease, transform 220ms ease;
-    }
-
-    .step.is-visible .step-number::after {
-      border-color: rgba(245, 130, 32, 0.58);
-      transform: scale(1.05);
-    }
-
-    .step h3 {
-      margin: 0 0 5px;
-      font-size: 1rem;
-      line-height: 1.2;
-    }
-
-    .coverage {
-      background: linear-gradient(180deg, #ecf3fb 0%, #f5f9ff 100%);
-      border: 1px solid rgba(30, 51, 73, 0.2);
-      border-radius: var(--radius-lg);
-      box-shadow: 0 10px 26px rgba(15, 34, 53, 0.08);
-      padding: 16px;
-      transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
-    }
-
-    .coverage.interactive-surface:hover,
-    .coverage.interactive-surface:focus-visible {
-      border-color: rgba(245, 130, 32, 0.38);
-      box-shadow: 0 14px 30px rgba(15, 34, 53, 0.12);
-    }
-
-    .coverage-pills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 7px;
-      margin-top: 10px;
-    }
-
-    .coverage-pills span {
-      border: 1px solid rgba(30, 51, 73, 0.2);
-      background: rgba(255, 255, 255, 0.85);
-      border-radius: 999px;
-      padding: 5px 10px;
-      font-size: 0.8rem;
-      font-weight: 600;
-      color: #27405a;
-    }
-
-    .proof-banner {
-      background: linear-gradient(165deg, #10263a 0%, #173653 100%);
-      border: 1px solid rgba(255, 255, 255, 0.14);
-      border-radius: var(--radius-lg);
-      box-shadow: 0 18px 34px rgba(12, 25, 38, 0.3);
-      padding: 14px;
-      color: #f1f7ff;
-      transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
-    }
-
-    .proof-banner.interactive-surface:hover,
-    .proof-banner.interactive-surface:focus-visible {
-      transform: translateY(-3px);
-      box-shadow: 0 21px 38px rgba(12, 25, 38, 0.34);
-      border-color: rgba(255, 255, 255, 0.22);
-    }
-
-    .proof-banner p {
-      margin: 0 0 10px;
-      font-size: 0.9rem;
-      color: #d2e1f2;
-    }
-
-    .proof-media {
       margin: 0;
-      border-radius: 14px;
-      overflow: hidden;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      box-shadow: 0 14px 30px rgba(8, 18, 30, 0.35);
-      aspect-ratio: 16 / 8;
-      max-height: 220px;
+      padding: 0;
       position: relative;
     }
 
-    .proof-media img {
+    .process-line {
+      position: absolute;
+      left: 18px;
+      top: 8px;
+      bottom: 44px;
+      width: 2px;
+      background: linear-gradient(to bottom, rgba(245,130,32,0.7), rgba(19,41,66,0.15));
+      transform-origin: top;
+      transform: scaleY(0);
+      transition: transform 700ms cubic-bezier(.2,.65,.2,1);
+    }
+
+    .process-shell.is-visible .process-line { transform: scaleY(1); }
+
+    .process-step {
+      position: relative;
+      padding: 0 0 18px 46px;
+    }
+
+    .step-dot {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(145deg, var(--rcv-orange-500), var(--rcv-orange-600));
+      color: #fff;
+      font-weight: 800;
+      box-shadow: 0 8px 18px rgba(245,130,32,0.25);
+    }
+
+    .step-panel {
+      border: 1px solid var(--rcv-line);
+      border-radius: var(--rcv-r-md);
+      background: #fff;
+      padding: 12px 14px;
+    }
+
+    .step-panel h3 { margin: 0; font-size: 1rem; }
+    .step-panel p { margin: 6px 0 0; color: var(--rcv-muted); font-size: 0.93rem; }
+
+    .coverage-card {
+      margin-top: 16px;
+      padding: 14px;
+      background: linear-gradient(170deg, #fff 0%, #fbf6ee 100%);
+      border-radius: var(--rcv-r-lg);
+      border: 1px solid var(--rcv-line);
+      box-shadow: var(--rcv-shadow-sm);
+    }
+
+    .coverage-card p {
+      margin: 10px 0 0;
+      color: var(--rcv-muted);
+    }
+
+    .coverage-media {
+      margin-top: 14px;
+      border-radius: 18px;
+      overflow: hidden;
+      min-height: 210px;
+      max-height: 340px;
+      border: 1px solid rgba(19, 38, 58, 0.12);
+    }
+
+    .coverage-media img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      display: block;
+      aspect-ratio: 16 / 9;
     }
 
-    .proof-caption {
-      position: absolute;
-      left: 10px;
-      right: 10px;
-      bottom: 10px;
-      background: rgba(9, 19, 30, 0.7);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      border-radius: 10px;
-      padding: 8px 10px;
-      font-size: 0.8rem;
-      color: #f6f9ff;
-      backdrop-filter: blur(4px);
+    .proof-note {
+      margin: 10px 4px 2px;
+      color: var(--rcv-navy-700);
+      font-size: 0.92rem;
+      font-weight: 600;
     }
 
-    .reveal {
+    .faq-list {
+      margin-top: 14px;
+      display: grid;
+      gap: 10px;
+    }
+
+    .faq-item {
+      border: 1px solid var(--rcv-line);
+      background: var(--rcv-white);
+      border-radius: 14px;
+      overflow: clip;
+    }
+
+    .faq-btn {
+      width: 100%;
+      border: 0;
+      text-align: left;
+      background: #fff;
+      color: var(--rcv-navy-900);
+      padding: 13px 14px;
+      font-weight: 650;
+      font-size: 0.95rem;
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .faq-btn span:last-child {
+      color: var(--rcv-orange-600);
+      font-size: 1.15rem;
+      line-height: 1;
+      transform: translateY(-1px);
+      transition: transform var(--rcv-transition);
+    }
+
+    .faq-item[open] .faq-btn span:last-child { transform: rotate(45deg); }
+
+    .faq-body {
+      margin: 0;
+      padding: 0 14px 13px;
+      color: var(--rcv-muted);
+      font-size: 0.92rem;
+    }
+
+    .close-cta {
+      margin: 18px 0 10px;
+      padding: 20px 16px;
+      border-radius: 24px;
+      color: #fff;
+      background:
+        linear-gradient(150deg, rgba(245,130,32,0.92), rgba(220,109,18,0.94)),
+        linear-gradient(120deg, #1a3552, #1a3552);
+      box-shadow: var(--rcv-shadow-md);
+    }
+
+    .close-cta h2 {
+      margin: 0;
+      font-size: clamp(1.4rem, 5vw, 2rem);
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+    }
+
+    .close-cta p { margin: 10px 0 0; color: rgba(255,255,255,0.92); max-width: 58ch; }
+
+    .close-actions {
+      margin-top: 14px;
+      display: grid;
+      gap: 9px;
+    }
+
+    .close-actions .cta-btn--ghost {
+      background: rgba(19,41,66,0.2);
+      border-color: rgba(255,255,255,0.46);
+    }
+
+    .mobile-sticky {
+      position: fixed;
+      left: 12px;
+      right: 12px;
+      bottom: calc(10px + env(safe-area-inset-bottom));
+      z-index: 90;
+      border-radius: 18px;
+      border: 1px solid rgba(19,38,58,0.14);
+      background: rgba(255,255,255,0.93);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 12px 28px rgba(15,34,53,0.2);
+      padding: 10px;
+      display: grid;
+      gap: 8px;
+    }
+
+    .mobile-sticky .cta-btn { min-height: 46px; font-size: 0.95rem; }
+
+    [data-animate] {
       opacity: 0;
-      transform: translateY(12px);
-      transition: opacity 320ms ease, transform 320ms ease;
+      transform: translateY(16px);
+      transition: opacity 520ms cubic-bezier(.2,.65,.2,1), transform 520ms cubic-bezier(.2,.65,.2,1);
     }
 
-    .reveal.is-visible {
+    [data-animate].is-visible {
       opacity: 1;
       transform: translateY(0);
     }
 
-    .faq-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 10px;
-    }
-
-    .faq-grid details {
-      background: var(--white);
-      border: 1px solid var(--line-soft);
-      border-radius: 12px;
-      padding: 11px 12px;
-      box-shadow: var(--shadow-soft);
-    }
-
-    .faq-grid summary {
-      font-weight: 700;
-      cursor: pointer;
-    }
-
-    .faq-grid details p {
-      margin-top: 8px;
-    }
-
-    .final-cta {
-      background: linear-gradient(155deg, #132b41 0%, #0f2235 78%);
-      color: #edf5ff;
-      border: 1px solid rgba(255, 255, 255, 0.14);
-      border-radius: var(--radius-lg);
-      box-shadow: 0 18px 32px rgba(10, 24, 38, 0.33);
-      padding: 18px 14px;
-      display: grid;
-      gap: 10px;
-    }
-
-    .final-cta .section-title { color: #f8fbff; }
-    .final-cta p { color: #d6e4f4; }
-
-    .final-cta .btn-secondary {
-      background: rgba(255, 255, 255, 0.08);
-      color: #eef5ff;
-      border-color: rgba(255, 255, 255, 0.22);
-    }
-
-    .footer {
-      padding: 18px 0 26px;
-      font-size: 0.86rem;
-      color: var(--text-soft);
-    }
-
-    .footer a { color: var(--navy); font-weight: 700; }
-
-    .sticky {
-      position: fixed;
-      left: 8px;
-      right: 8px;
-      bottom: 0;
-      z-index: 80;
-      display: flex;
-      justify-content: center;
-      padding: 0 0 calc(9px + env(safe-area-inset-bottom));
-      pointer-events: none;
-    }
-
-    .sticky-actions {
-      width: min(560px, 100%);
-      margin: 0;
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 7px;
-      background: rgba(11, 27, 42, 0.96);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      border-radius: 14px;
-      padding: 7px;
-      box-shadow: 0 12px 26px rgba(8, 18, 30, 0.34);
-      pointer-events: auto;
-    }
-
-    .sticky .btn-primary {
-      min-height: 50px;
-      font-size: 0.95rem;
-    }
-
-    .sticky .btn {
-      min-height: 48px;
-      font-size: 0.92rem;
-      border-radius: 10px;
-      line-height: 1;
-    }
-
-    .sticky .btn-secondary {
-      background: rgba(19, 40, 59, 0.96);
-      border-color: rgba(255, 255, 255, 0.2);
-      color: #e7eff8;
-      box-shadow: none;
-    }
-
-    @media (min-width: 700px) {
-      body { padding-bottom: 102px; }
-      section { padding: 36px 0; }
-      .hero { padding: 28px; }
-      .services-panel { padding: 20px; }
-      .faq-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .benefit-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-      .benefit-grid .tile--strong { grid-column: span 3; }
-      .process-shell { padding: 20px; }
-      .process-list::before { left: 19px; }
-
-      .final-buttons {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 10px;
+    @media (min-width: 640px) {
+      body { padding-bottom: 0; }
+      .hero-reset { padding: 24px; }
+      .hero-actions,
+      .close-actions {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
       }
-
-      .proof-media { max-width: 100%; max-height: 280px; }
-      .trust-line { display: inline-block; max-width: 620px; }
-
-      .sticky-actions {
-        grid-template-columns: 1.2fr 1fr;
-      }
-
-      .sticky .btn-primary {
-        min-height: 48px;
-        font-size: 0.92rem;
-      }
+      .help-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .trust-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .trust-card--featured { grid-column: 1 / -1; }
+      .mobile-sticky { display: none; }
+      .ppc-section { padding: 30px 0; }
     }
 
-    @media (min-width: 980px) {
-      .service-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-      .benefit-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-      .benefit-grid .tile--strong { grid-column: span 2; }
-      .final-cta { padding: 24px; }
+    @media (min-width: 900px) {
+      .hero-reset { padding: 32px; }
+      .hero-trust { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+      .help-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .trust-wrap { padding: 22px; }
+      .process-shell { padding: 18px 18px 6px; }
+      .coverage-card { padding: 18px; }
+      .close-cta { padding: 26px 24px; }
     }
 
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
       }
-
-      .reveal {
-        opacity: 1;
-        transform: none;
-      }
-
-      .process-list::before { transform: scaleY(1); }
+      [data-animate] { opacity: 1; transform: none; }
+      .process-line { transform: scaleY(1); }
     }
   </style>
 </head>
 <body>
-  <header class="header container" aria-label="Recovero header">
-    <a href="/" class="logo" aria-label="Recovero homepage">
-      <img src="/images/recovero-logo.png" alt="Recovero logo" width="34" height="34">
-      <span>Recovero</span>
-    </a>
-  </header>
-
-  <main class="container">
-    <section class="hero" aria-labelledby="hero-title">
+  <main class="ppc-shell">
+    <section class="hero-reset" aria-labelledby="hero-title">
+      <div class="brand-row">
+        <img src="/images/recovero-logo.png" alt="Recovero logo" width="34" height="34" loading="eager">
+        <span>Recovero</span>
+      </div>
       <h1 id="hero-title">Broken down in Portsmouth? Call now for fast local recovery.</h1>
-      <p class="hero-sub">Breakdowns, non-starts, flat batteries, accident recovery and local vehicle transport.</p>
-      <div class="cta-wrap">
-        <a class="btn btn-primary" href="tel:+447366302341" aria-label="Call Recovero on 07366 302341">Call now</a>
-        <a class="btn btn-secondary" href="https://wa.me/447366302341?text=Hi%20Recovero%2C%20I%20need%20vehicle%20recovery%20in%20Portsmouth.%20My%20location%20is%20____.%20Vehicle%3A%20____.%20Issue%3A%20____." target="_blank" rel="noopener" aria-label="WhatsApp Recovero your location">WhatsApp your location</a>
+      <p class="hero-lead">Breakdowns, non-starts, flat batteries, accident recovery and local vehicle transport.</p>
+      <div class="hero-actions">
+        <a class="cta-btn cta-btn--primary" href="tel:+447366302341" aria-label="Call Recovero on 07366 302341">Call now</a>
+        <a class="cta-btn cta-btn--ghost" href="https://wa.me/447366302341?text=Hi%20Recovero%2C%20I%20need%20vehicle%20recovery%20in%20Portsmouth.%20My%20location%20is%20____.%20Vehicle%3A%20____.%20Issue%3A%20____." target="_blank" rel="noopener" aria-label="WhatsApp Recovero your location">WhatsApp your location</a>
       </div>
-      <div class="trust-line" aria-label="Local trust proof">
-        <p class="trust-kicker">Trusted local support</p>
-        <p class="trust-main">1000+ jobs completed locally</p>
-        <p class="trust-sub">Portsmouth coverage • 24/7 phone line • Price confirmed before dispatch</p>
+      <div class="hero-trust" aria-label="Trust indicators">
+        <span>1000+ jobs completed locally</span>
+        <span>Portsmouth coverage</span>
+        <span>24/7 phone line</span>
+        <span>Price confirmed before dispatch</span>
       </div>
     </section>
 
-    <section class="reveal" data-reveal aria-labelledby="services-title">
-      <div class="services-panel">
-        <h2 class="section-title" id="services-title">What we help with</h2>
-        <p class="services-intro">Rapid support for the most common callouts in Portsmouth.</p>
-        <div class="service-grid">
-          <a class="service-tile interactive-surface reveal" data-reveal data-reveal-delay="0" href="#final-cta-section" aria-label="Get help with breakdown recovery"><div class="tile-head"><span class="icon-badge" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 16l2-5h14l2 5"></path><path d="M5 16v3h3"></path><path d="M19 16v3h-3"></path><circle cx="7" cy="16" r="1"></circle><circle cx="17" cy="16" r="1"></circle></svg></span><h3>Breakdown recovery</h3></div><p>Quick roadside recovery in Portsmouth.</p></a>
-          <a class="service-tile interactive-surface reveal" data-reveal data-reveal-delay="40" href="#final-cta-section" aria-label="Get help with non-starts"><div class="tile-head"><span class="icon-badge" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3v7"></path><path d="M9 7l3 3 3-3"></path><rect x="4" y="12" width="16" height="9" rx="2"></rect></svg></span><h3>Non-starts</h3></div><p>Help when your vehicle won’t start.</p></a>
-          <a class="service-tile interactive-surface reveal" data-reveal data-reveal-delay="80" href="#final-cta-section" aria-label="Get help with a flat battery"><div class="tile-head"><span class="icon-badge" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="7" y="6" width="10" height="12" rx="2"></rect><path d="M9 4h6"></path><path d="M12 8v8"></path></svg></span><h3>Flat battery help</h3></div><p>Battery assistance and recovery.</p></a>
-          <a class="service-tile interactive-surface reveal" data-reveal data-reveal-delay="120" href="#final-cta-section" aria-label="Get help with accident recovery"><div class="tile-head"><span class="icon-badge" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3l8 4v5c0 5-3.4 7.8-8 9-4.6-1.2-8-4-8-9V7z"></path><path d="M9 12l2 2 4-4"></path></svg></span><h3>Accident recovery</h3></div><p>Safe recovery for non-drivable vehicles.</p></a>
-          <a class="service-tile interactive-surface reveal" data-reveal data-reveal-delay="160" href="#final-cta-section" aria-label="Get help with vehicle transport"><div class="tile-head"><span class="icon-badge" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 7h10l3 3h3v5"></path><circle cx="8" cy="16" r="2"></circle><circle cx="17" cy="16" r="2"></circle></svg></span><h3>Local vehicle transport</h3></div><p>Short-distance transport around Portsmouth.</p></a>
-          <a class="service-tile interactive-surface reveal" data-reveal data-reveal-delay="200" href="#final-cta-section" aria-label="Get urgent roadside vehicle issue help"><div class="tile-head"><span class="icon-badge" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"></circle><path d="M12 8v4l2.8 2"></path></svg></span><h3>Roadside vehicle issues</h3></div><p>Urgent help for unexpected problems.</p></a>
+    <section class="ppc-section" aria-labelledby="help-title">
+      <h2 class="ppc-heading" id="help-title">What we help with</h2>
+      <p class="ppc-intro">Rapid support for the most common callouts in Portsmouth.</p>
+      <div class="help-grid">
+        <a class="help-tile" href="#final-cta" data-animate style="transition-delay:40ms">
+          <h3 class="tile-title"><span class="tile-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 16l2-5h14l2 5"></path><circle cx="7" cy="16" r="1.4"></circle><circle cx="17" cy="16" r="1.4"></circle></svg></span>Breakdown recovery</h3>
+          <p>Quick roadside recovery in Portsmouth.</p>
+        </a>
+        <a class="help-tile" href="#final-cta" data-animate style="transition-delay:80ms">
+          <h3 class="tile-title"><span class="tile-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3v8"></path><path d="M8.5 8.5L12 11.8l3.5-3.3"></path><rect x="4" y="13" width="16" height="8" rx="2"></rect></svg></span>Non-starts</h3>
+          <p>Help when your vehicle won’t start.</p>
+        </a>
+        <a class="help-tile" href="#final-cta" data-animate style="transition-delay:120ms">
+          <h3 class="tile-title"><span class="tile-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="14" height="10" rx="2"></rect><path d="M17 10h2l2 2v2h-4"></path><path d="M7 11v2"></path></svg></span>Flat battery help</h3>
+          <p>Battery assistance and recovery.</p>
+        </a>
+        <a class="help-tile" href="#final-cta" data-animate style="transition-delay:160ms">
+          <h3 class="tile-title"><span class="tile-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 14l-3 3"></path><path d="M17 10l3-3"></path><path d="M9 16l6-6"></path><path d="M3 20h6v-6"></path><path d="M21 4h-6v6"></path></svg></span>Accident recovery</h3>
+          <p>Safe recovery for non-drivable vehicles.</p>
+        </a>
+        <a class="help-tile" href="#final-cta" data-animate style="transition-delay:200ms">
+          <h3 class="tile-title"><span class="tile-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 7h10l3 3h3v5"></path><circle cx="8" cy="16" r="2"></circle><circle cx="17" cy="16" r="2"></circle></svg></span>Local vehicle transport</h3>
+          <p>Short-distance transport around Portsmouth.</p>
+        </a>
+        <a class="help-tile" href="#final-cta" data-animate style="transition-delay:240ms">
+          <h3 class="tile-title"><span class="tile-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 18h16"></path><path d="M12 3v8"></path><path d="M8 7l4 4 4-4"></path></svg></span>Roadside vehicle issues</h3>
+          <p>Urgent help for unexpected problems.</p>
+        </a>
+      </div>
+    </section>
+
+    <section class="ppc-section" aria-labelledby="why-title">
+      <div class="trust-wrap">
+        <h2 class="ppc-heading" id="why-title">Why drivers call Recovero</h2>
+        <p class="ppc-intro">A local-first service built for urgent callouts, clear communication and dependable support when you need it most.</p>
+        <div class="trust-list">
+          <article class="trust-card trust-card--featured" data-animate>
+            <h3>1000+ jobs done locally</h3>
+            <p>Trusted by drivers across Portsmouth for breakdown, non-start and roadside recovery support.</p>
+          </article>
+          <article class="trust-card" data-animate style="transition-delay:80ms">
+            <h3>Fast local response</h3>
+            <p>We connect you to available local recovery support.</p>
+          </article>
+          <article class="trust-card" data-animate style="transition-delay:120ms">
+            <h3>One number to call</h3>
+            <p>Tell us where you are and what’s happened.</p>
+          </article>
+          <article class="trust-card" data-animate style="transition-delay:160ms">
+            <h3>Clear pricing</h3>
+            <p>Price confirmed before dispatch.</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="section-emphasis reveal" data-reveal aria-labelledby="benefits-title">
-      <div class="benefits-shell">
-        <h2 class="section-title" id="benefits-title">Why drivers call Recovero</h2>
-        <p class="benefits-intro">A local-first service built for urgent callouts, clear communication and dependable support when you need it most.</p>
-        <div class="benefit-grid">
-          <a class="tile tile--strong reveal interactive-surface" data-reveal data-reveal-delay="0" href="tel:+447366302341" aria-label="Call now - 1000+ jobs done locally"><div class="tile-head"><span class="icon-badge" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3l2.7 5.4 6 .9-4.3 4.2 1 6-5.4-2.8-5.4 2.8 1-6L3.3 9.3l6-.9z"></path></svg></span><h3>1000+ jobs done locally</h3></div><p>Trusted by drivers across Portsmouth for breakdown, non-start and roadside recovery support.</p></a>
-          <a class="tile reveal interactive-surface" data-reveal data-reveal-delay="60" href="#final-cta-section" aria-label="Fast local response details"><div class="tile-head"><span class="icon-badge" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 12h18"></path><path d="M14 5l7 7-7 7"></path></svg></span><h3>Fast local response</h3></div><p>We connect you to available local recovery support.</p></a>
-          <a class="tile reveal interactive-surface" data-reveal data-reveal-delay="120" href="#final-cta-section" aria-label="One number to call"><div class="tile-head"><span class="icon-badge" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 6h16v12H4z"></path><path d="M8 10h8"></path><path d="M8 14h5"></path></svg></span><h3>One number to call</h3></div><p>Tell us where you are and what’s happened.</p></a>
-          <a class="tile reveal interactive-surface" data-reveal data-reveal-delay="180" href="#final-cta-section" aria-label="Clear pricing details"><div class="tile-head"><span class="icon-badge" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12h16"></path><path d="M12 4v16"></path><circle cx="12" cy="12" r="8"></circle></svg></span><h3>Clear pricing</h3></div><p>Price confirmed before dispatch.</p></a>
-        </div>
-      </div>
-    </section>
-
-    <section class="reveal" data-reveal aria-labelledby="how-title">
-      <h2 class="section-title" id="how-title">How it works</h2>
-      <div class="process-shell">
-        <ol class="process-list" data-process-line>
-          <li class="step reveal interactive-surface" data-reveal data-reveal-delay="0" role="link" tabindex="0" data-link="#final-cta-section"><span class="step-number">1</span><div><h3>Call us</h3><p>Tell us where you are and what’s happened.</p></div></li>
-          <li class="step reveal interactive-surface" data-reveal data-reveal-delay="80" role="link" tabindex="0" data-link="#final-cta-section"><span class="step-number">2</span><div><h3>We check availability</h3><p>We match your job with available local recovery support.</p></div></li>
-          <li class="step reveal interactive-surface" data-reveal data-reveal-delay="160" role="link" tabindex="0" data-link="#final-cta-section"><span class="step-number">3</span><div><h3>Get moving again</h3><p>Recovery or transport arranged with pricing confirmed first.</p></div></li>
+    <section class="ppc-section" aria-labelledby="how-title">
+      <h2 class="ppc-heading" id="how-title">How it works</h2>
+      <div class="process-shell surface" data-animate>
+        <ol class="process-list">
+          <span class="process-line" aria-hidden="true"></span>
+          <li class="process-step" data-animate>
+            <span class="step-dot" aria-hidden="true">1</span>
+            <div class="step-panel">
+              <h3>Call us</h3>
+              <p>Tell us where you are and what’s happened.</p>
+            </div>
+          </li>
+          <li class="process-step" data-animate style="transition-delay:80ms">
+            <span class="step-dot" aria-hidden="true">2</span>
+            <div class="step-panel">
+              <h3>We check availability</h3>
+              <p>We match your job with available local recovery support.</p>
+            </div>
+          </li>
+          <li class="process-step" data-animate style="transition-delay:120ms">
+            <span class="step-dot" aria-hidden="true">3</span>
+            <div class="step-panel">
+              <h3>Get moving again</h3>
+              <p>Recovery or transport arranged with pricing confirmed first.</p>
+            </div>
+          </li>
         </ol>
       </div>
     </section>
 
-    <section class="reveal" data-reveal aria-labelledby="coverage-title">
-      <h2 class="section-title" id="coverage-title">Portsmouth coverage</h2>
-      <div class="coverage interactive-surface" role="link" tabindex="0" data-link="#final-cta-section">
+    <section class="ppc-section" aria-labelledby="coverage-title">
+      <h2 class="ppc-heading" id="coverage-title">Portsmouth coverage</h2>
+      <div class="coverage-card" data-animate>
         <p>We help drivers across Portsmouth and nearby areas including Southsea, Fratton, Hilsea, Cosham, North End, Eastney, the M275 and nearby routes.</p>
-        <div class="coverage-pills"><span>Southsea</span><span>Fratton</span><span>Hilsea</span><span>Cosham</span><span>Eastney</span><span>M275</span></div>
-      </div>
-    </section>
-
-    <section class="reveal" data-reveal aria-labelledby="proof-title">
-      <div class="proof-banner interactive-surface" role="link" tabindex="0" data-link="#final-cta-section">
-        <h2 class="section-title" id="proof-title">Trusted for local recovery callouts</h2>
-        <p>Helping drivers across Portsmouth with breakdown, non-start and transport support.</p>
-        <figure class="proof-media">
-          <img src="/breakdown-recovery.jpg" alt="Breakdown recovery truck assisting a stranded vehicle" loading="lazy" width="1280" height="720">
-          <figcaption class="proof-caption">Real Portsmouth-area breakdown support from a local recovery team.</figcaption>
+        <figure class="coverage-media">
+          <img src="/breakdown-recovery.jpg" loading="lazy" width="1600" height="900" alt="Breakdown recovery truck assisting a stranded vehicle">
         </figure>
+        <p class="proof-note">Trusted for local recovery callouts across Portsmouth.</p>
       </div>
     </section>
 
-    <section class="reveal" data-reveal aria-labelledby="faq-title">
-      <h2 class="section-title" id="faq-title">FAQ</h2>
-      <div class="faq-grid">
-        <details><summary>Do I need to fill in a form?</summary><p>No. Call us directly.</p></details>
-        <details><summary>Can you help if the car won’t start at home?</summary><p>Yes, including home, work and roadside non-starts.</p></details>
-        <details><summary>Do you cover accident recovery?</summary><p>Yes, for non-drivable vehicles and roadside incidents.</p></details>
-        <details><summary>Will I know the price first?</summary><p>Yes, pricing is confirmed before dispatch.</p></details>
+    <section class="ppc-section" aria-labelledby="faq-title">
+      <h2 class="ppc-heading" id="faq-title">FAQ</h2>
+      <div class="faq-list">
+        <details class="faq-item" data-animate>
+          <summary class="faq-btn"><span>Do I need to fill in a form?</span><span aria-hidden="true">+</span></summary>
+          <p class="faq-body">No. Call us directly.</p>
+        </details>
+        <details class="faq-item" data-animate style="transition-delay:60ms">
+          <summary class="faq-btn"><span>Can you help if the car won’t start at home?</span><span aria-hidden="true">+</span></summary>
+          <p class="faq-body">Yes, including home, work and roadside non-starts.</p>
+        </details>
+        <details class="faq-item" data-animate style="transition-delay:100ms">
+          <summary class="faq-btn"><span>Do you cover accident recovery?</span><span aria-hidden="true">+</span></summary>
+          <p class="faq-body">Yes, for non-drivable vehicles and roadside incidents.</p>
+        </details>
+        <details class="faq-item" data-animate style="transition-delay:140ms">
+          <summary class="faq-btn"><span>Will I know the price first?</span><span aria-hidden="true">+</span></summary>
+          <p class="faq-body">Yes, pricing is confirmed before dispatch.</p>
+        </details>
       </div>
     </section>
 
-    <section class="reveal" data-reveal aria-labelledby="final-cta-title" id="final-cta-section">
-      <div class="final-cta">
-        <h2 class="section-title" id="final-cta-title" style="margin:0" tabindex="-1">Need recovery in Portsmouth now?</h2>
-        <p>Call now and tell us what’s happened. We’ll help you get moving.</p>
-        <div class="final-buttons">
-          <a class="btn btn-primary" href="tel:+447366302341" aria-label="Call Recovero in Portsmouth">Call 07366 302341</a>
-          <a class="btn btn-secondary" href="https://wa.me/447366302341?text=Hi%20Recovero%2C%20I%20need%20vehicle%20recovery%20in%20Portsmouth.%20My%20location%20is%20____.%20Vehicle%3A%20____.%20Issue%3A%20____." target="_blank" rel="noopener" aria-label="WhatsApp Recovero your location">WhatsApp your location</a>
-        </div>
+    <section class="close-cta" id="final-cta" aria-labelledby="final-cta-title">
+      <h2 id="final-cta-title">Need recovery in Portsmouth now?</h2>
+      <p>Call now and tell us what’s happened. We’ll help you get moving.</p>
+      <div class="close-actions">
+        <a class="cta-btn cta-btn--primary" href="tel:+447366302341" aria-label="Call Recovero on 07366 302341">Call now</a>
+        <a class="cta-btn cta-btn--ghost" href="https://wa.me/447366302341?text=Hi%20Recovero%2C%20I%20need%20vehicle%20recovery%20in%20Portsmouth.%20My%20location%20is%20____.%20Vehicle%3A%20____.%20Issue%3A%20____." target="_blank" rel="noopener" aria-label="WhatsApp Recovero your location">WhatsApp your location</a>
       </div>
     </section>
   </main>
 
-  <footer class="footer container">
-    <a href="/terms/">Terms &amp; Conditions</a> • <a href="/privacy-policy/">Privacy</a>
-  </footer>
-
-  <div class="sticky" role="navigation" aria-label="Sticky call to action">
-    <div class="sticky-actions">
-      <a class="btn btn-primary" href="tel:+447366302341" aria-label="Call now">Call now</a>
-      <a class="btn btn-secondary" href="https://wa.me/447366302341?text=Hi%20Recovero%2C%20I%20need%20vehicle%20recovery%20in%20Portsmouth.%20My%20location%20is%20____.%20Vehicle%3A%20____.%20Issue%3A%20____." target="_blank" rel="noopener" aria-label="WhatsApp location">WhatsApp</a>
-    </div>
-  </div>
+  <aside class="mobile-sticky" aria-label="Quick actions">
+    <a class="cta-btn cta-btn--primary" href="tel:+447366302341" aria-label="Call Recovero on 07366 302341">Call now</a>
+    <a class="cta-btn cta-btn--ghost" href="https://wa.me/447366302341?text=Hi%20Recovero%2C%20I%20need%20vehicle%20recovery%20in%20Portsmouth.%20My%20location%20is%20____.%20Vehicle%3A%20____.%20Issue%3A%20____." target="_blank" rel="noopener" aria-label="WhatsApp Recovero your location">WhatsApp</a>
+  </aside>
 
   <script>
-    (() => {
-      const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      const revealNodes = document.querySelectorAll('[data-reveal]');
-      const processLine = document.querySelector('[data-process-line]');
-      const tapTargets = document.querySelectorAll('[data-link]');
+    (function () {
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const animated = document.querySelectorAll('[data-animate]');
 
-      const navigateToTarget = (target) => {
-        if (!target) return;
-        const destination = document.querySelector(target);
-        if (!destination) return;
-        destination.scrollIntoView({ behavior: prefersReduced ? 'auto' : 'smooth', block: 'start' });
-      };
-
-      tapTargets.forEach((item) => {
-        item.addEventListener('click', () => navigateToTarget(item.dataset.link));
-        item.addEventListener('keydown', (event) => {
-          if (event.key !== 'Enter' && event.key !== ' ') return;
-          event.preventDefault();
-          navigateToTarget(item.dataset.link);
-        });
-      });
-
-      if (!revealNodes.length) return;
-
-      if (prefersReduced || !('IntersectionObserver' in window)) {
-        revealNodes.forEach((node) => node.classList.add('is-visible'));
-        if (processLine) processLine.classList.add('is-visible');
-        return;
-      }
-
-      const revealObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting) return;
-          const delay = Number(entry.target.dataset.revealDelay || 0);
-          window.setTimeout(() => entry.target.classList.add('is-visible'), delay);
-          observer.unobserve(entry.target);
-        });
-      }, { rootMargin: '0px 0px -8% 0px', threshold: 0.15 });
-
-      revealNodes.forEach((node) => revealObserver.observe(node));
-
-      if (processLine) {
-        const processObserver = new IntersectionObserver((entries, observer) => {
+      if (!reduceMotion && 'IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
           entries.forEach((entry) => {
             if (!entry.isIntersecting) return;
             entry.target.classList.add('is-visible');
+            if (entry.target.classList.contains('process-shell')) {
+              entry.target.classList.add('is-visible');
+            }
             observer.unobserve(entry.target);
           });
-        }, { threshold: 0.35 });
+        }, { threshold: 0.14, rootMargin: '0px 0px -40px 0px' });
 
-        processObserver.observe(processLine);
+        animated.forEach((el) => observer.observe(el));
+      } else {
+        animated.forEach((el) => el.classList.add('is-visible'));
+        const process = document.querySelector('.process-shell');
+        if (process) process.classList.add('is-visible');
       }
-    })();
+
+      const details = document.querySelectorAll('.faq-item');
+      details.forEach((item) => {
+        item.addEventListener('toggle', () => {
+          if (!item.open) return;
+          details.forEach((other) => {
+            if (other !== item) other.open = false;
+          });
+        });
+      });
+    }());
   </script>
 </body>
 </html>
