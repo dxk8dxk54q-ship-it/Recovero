@@ -258,6 +258,14 @@
       border-radius: 12px;
       padding: 12px 10px;
       min-height: 112px;
+      transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+    }
+
+    .service-tile:hover,
+    .service-tile:focus-within {
+      transform: translateY(-2px);
+      border-color: rgba(245, 130, 32, 0.32);
+      box-shadow: 0 10px 20px rgba(15, 34, 53, 0.09);
     }
 
     .service-tile h3 {
@@ -283,6 +291,13 @@
 
     .benefits-shell .section-title { color: #f5f9ff; }
 
+    .benefits-intro {
+      margin: 0 0 14px;
+      color: #d7e4f4;
+      font-size: 0.94rem;
+      max-width: 47ch;
+    }
+
     .benefit-grid {
       display: grid;
       grid-template-columns: 1fr;
@@ -299,6 +314,19 @@
       background: linear-gradient(165deg, #fef2df 0%, #ffe8c8 100%);
       border-color: rgba(245, 130, 32, 0.62);
       box-shadow: 0 10px 24px rgba(245, 130, 32, 0.24);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .tile--strong::after {
+      content: "";
+      position: absolute;
+      inset: auto -40% -58% auto;
+      width: 180px;
+      height: 180px;
+      border-radius: 999px;
+      background: radial-gradient(circle, rgba(245, 130, 32, 0.22), rgba(245, 130, 32, 0));
+      pointer-events: none;
     }
 
     .tile--strong h3 { font-size: 1.05rem; }
@@ -310,8 +338,8 @@
     }
 
     .process-shell {
-      background: #ffffff;
-      border: 1px solid var(--line);
+      background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+      border: 1px solid rgba(15, 34, 53, 0.14);
       border-radius: var(--radius-lg);
       box-shadow: var(--shadow-soft);
       padding: 14px;
@@ -319,10 +347,29 @@
 
     .process-list {
       list-style: none;
-      margin: 2px 0 0;
+      margin: 4px 0 0;
       padding: 0;
       display: grid;
-      gap: 8px;
+      gap: 10px;
+      position: relative;
+    }
+
+    .process-list::before {
+      content: "";
+      position: absolute;
+      left: 16px;
+      top: 20px;
+      bottom: 20px;
+      width: 2px;
+      background: linear-gradient(180deg, rgba(15, 34, 53, 0.18), rgba(245, 130, 32, 0.5) 50%, rgba(15, 34, 53, 0.12));
+      transform: scaleY(0.08);
+      transform-origin: top;
+      transition: transform 540ms ease;
+      border-radius: 999px;
+    }
+
+    .process-list.is-visible::before {
+      transform: scaleY(1);
     }
 
     .step {
@@ -331,20 +378,8 @@
       gap: 11px;
       align-items: start;
       position: relative;
-      padding: 4px 0 4px;
+      padding: 6px 0 6px;
     }
-
-    .step::after {
-      content: "";
-      position: absolute;
-      left: 16px;
-      top: 38px;
-      width: 2px;
-      height: calc(100% - 20px);
-      background: linear-gradient(180deg, rgba(15, 34, 53, 0.2), rgba(15, 34, 53, 0.05));
-    }
-
-    .step:last-child::after { display: none; }
 
     .step-number {
       width: 32px;
@@ -359,6 +394,16 @@
       font-size: 0.93rem;
       margin-top: 2px;
       box-shadow: 0 6px 14px rgba(15, 34, 53, 0.22);
+      position: relative;
+      z-index: 1;
+    }
+
+    .step-number::after {
+      content: "";
+      position: absolute;
+      inset: -4px;
+      border-radius: 999px;
+      border: 1px solid rgba(245, 130, 32, 0.36);
     }
 
     .step h3 {
@@ -393,27 +438,29 @@
     }
 
     .proof-banner {
-      background: linear-gradient(180deg, #fff4e3 0%, #ffefdb 100%);
-      border: 1px solid rgba(245, 130, 32, 0.32);
+      background: linear-gradient(165deg, #10263a 0%, #173653 100%);
+      border: 1px solid rgba(255, 255, 255, 0.14);
       border-radius: var(--radius-lg);
-      box-shadow: var(--shadow-soft);
+      box-shadow: 0 18px 34px rgba(12, 25, 38, 0.3);
       padding: 14px;
+      color: #f1f7ff;
     }
 
     .proof-banner p {
       margin: 0 0 10px;
       font-size: 0.9rem;
-      color: #5c4632;
+      color: #d2e1f2;
     }
 
     .proof-media {
       margin: 0;
       border-radius: 14px;
       overflow: hidden;
-      border: 1px solid rgba(245, 130, 32, 0.32);
-      box-shadow: 0 14px 24px rgba(103, 57, 20, 0.16);
-      aspect-ratio: 16 / 9;
-      max-height: 240px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 14px 30px rgba(8, 18, 30, 0.35);
+      aspect-ratio: 16 / 8;
+      max-height: 220px;
+      position: relative;
     }
 
     .proof-media img {
@@ -421,6 +468,31 @@
       height: 100%;
       object-fit: cover;
       display: block;
+    }
+
+    .proof-caption {
+      position: absolute;
+      left: 10px;
+      right: 10px;
+      bottom: 10px;
+      background: rgba(9, 19, 30, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 10px;
+      padding: 8px 10px;
+      font-size: 0.8rem;
+      color: #f6f9ff;
+      backdrop-filter: blur(4px);
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(12px);
+      transition: opacity 320ms ease, transform 320ms ease;
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
     }
 
     .faq-grid {
@@ -520,9 +592,11 @@
       section { padding: 36px 0; }
       .hero { padding: 28px; }
       .services-panel { padding: 20px; }
-      .benefit-grid,
       .faq-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .benefit-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .benefit-grid .tile--strong { grid-column: span 3; }
       .process-shell { padding: 20px; }
+      .process-list::before { left: 19px; }
 
       .final-buttons {
         display: grid;
@@ -530,14 +604,30 @@
         gap: 10px;
       }
 
-      .proof-media { max-width: 650px; }
+      .proof-media { max-width: 100%; max-height: 280px; }
       .trust-line { display: inline-block; max-width: 620px; }
     }
 
     @media (min-width: 980px) {
       .service-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
       .benefit-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+      .benefit-grid .tile--strong { grid-column: span 2; }
       .final-cta { padding: 24px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+
+      .process-list::before { transform: scaleY(1); }
     }
   </style>
 </head>
@@ -564,7 +654,7 @@
       </div>
     </section>
 
-    <section aria-labelledby="services-title">
+    <section class="reveal" data-reveal aria-labelledby="services-title">
       <div class="services-panel">
         <h2 class="section-title" id="services-title">What we help with</h2>
         <p class="services-intro">Rapid support for the most common callouts in Portsmouth.</p>
@@ -579,30 +669,31 @@
       </div>
     </section>
 
-    <section class="section-emphasis" aria-labelledby="benefits-title">
+    <section class="section-emphasis reveal" data-reveal aria-labelledby="benefits-title">
       <div class="benefits-shell">
         <h2 class="section-title" id="benefits-title">Why drivers call Recovero</h2>
+        <p class="benefits-intro">A local-first service built for urgent callouts, clear communication and dependable support when you need it most.</p>
         <div class="benefit-grid">
-          <article class="tile"><div class="tile-head"><span class="icon-badge" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 12h18"></path><path d="M14 5l7 7-7 7"></path></svg></span><h3>Fast local response</h3></div><p>We connect you to available local recovery support.</p></article>
-          <article class="tile"><div class="tile-head"><span class="icon-badge" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 6h16v12H4z"></path><path d="M8 10h8"></path><path d="M8 14h5"></path></svg></span><h3>One number to call</h3></div><p>Tell us where you are and what’s happened.</p></article>
-          <article class="tile"><div class="tile-head"><span class="icon-badge" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12h16"></path><path d="M12 4v16"></path><circle cx="12" cy="12" r="8"></circle></svg></span><h3>Clear pricing</h3></div><p>Price confirmed before dispatch.</p></article>
-          <article class="tile tile--strong"><div class="tile-head"><span class="icon-badge" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3l2.7 5.4 6 .9-4.3 4.2 1 6-5.4-2.8-5.4 2.8 1-6L3.3 9.3l6-.9z"></path></svg></span><h3>1000+ jobs done locally</h3></div><p>Trusted by drivers across Portsmouth.</p></article>
+          <article class="tile tile--strong reveal" data-reveal data-reveal-delay="0"><div class="tile-head"><span class="icon-badge" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3l2.7 5.4 6 .9-4.3 4.2 1 6-5.4-2.8-5.4 2.8 1-6L3.3 9.3l6-.9z"></path></svg></span><h3>1000+ jobs done locally</h3></div><p>Trusted by drivers across Portsmouth for breakdown, non-start and roadside recovery support.</p></article>
+          <article class="tile reveal" data-reveal data-reveal-delay="60"><div class="tile-head"><span class="icon-badge" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 12h18"></path><path d="M14 5l7 7-7 7"></path></svg></span><h3>Fast local response</h3></div><p>We connect you to available local recovery support.</p></article>
+          <article class="tile reveal" data-reveal data-reveal-delay="120"><div class="tile-head"><span class="icon-badge" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 6h16v12H4z"></path><path d="M8 10h8"></path><path d="M8 14h5"></path></svg></span><h3>One number to call</h3></div><p>Tell us where you are and what’s happened.</p></article>
+          <article class="tile reveal" data-reveal data-reveal-delay="180"><div class="tile-head"><span class="icon-badge" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12h16"></path><path d="M12 4v16"></path><circle cx="12" cy="12" r="8"></circle></svg></span><h3>Clear pricing</h3></div><p>Price confirmed before dispatch.</p></article>
         </div>
       </div>
     </section>
 
-    <section aria-labelledby="how-title">
+    <section class="reveal" data-reveal aria-labelledby="how-title">
       <h2 class="section-title" id="how-title">How it works</h2>
       <div class="process-shell">
-        <ol class="process-list">
-          <li class="step"><span class="step-number">1</span><div><h3>Call us</h3><p>Tell us where you are and what’s happened.</p></div></li>
-          <li class="step"><span class="step-number">2</span><div><h3>We check availability</h3><p>We match your job with available local recovery support.</p></div></li>
-          <li class="step"><span class="step-number">3</span><div><h3>Get moving again</h3><p>Recovery or transport arranged with pricing confirmed first.</p></div></li>
+        <ol class="process-list" data-process-line>
+          <li class="step reveal" data-reveal data-reveal-delay="0"><span class="step-number">1</span><div><h3>Call us</h3><p>Tell us where you are and what’s happened.</p></div></li>
+          <li class="step reveal" data-reveal data-reveal-delay="80"><span class="step-number">2</span><div><h3>We check availability</h3><p>We match your job with available local recovery support.</p></div></li>
+          <li class="step reveal" data-reveal data-reveal-delay="160"><span class="step-number">3</span><div><h3>Get moving again</h3><p>Recovery or transport arranged with pricing confirmed first.</p></div></li>
         </ol>
       </div>
     </section>
 
-    <section aria-labelledby="coverage-title">
+    <section class="reveal" data-reveal aria-labelledby="coverage-title">
       <h2 class="section-title" id="coverage-title">Portsmouth coverage</h2>
       <div class="coverage">
         <p>We help drivers across Portsmouth and nearby areas including Southsea, Fratton, Hilsea, Cosham, North End, Eastney, the M275 and nearby routes.</p>
@@ -610,17 +701,18 @@
       </div>
     </section>
 
-    <section aria-labelledby="proof-title">
+    <section class="reveal" data-reveal aria-labelledby="proof-title">
       <div class="proof-banner">
-        <h2 class="section-title" id="proof-title">Real roadside support, locally</h2>
-        <p>Trusted by Portsmouth drivers for breakdown callouts and safe vehicle recovery.</p>
+        <h2 class="section-title" id="proof-title">Trusted for local recovery callouts</h2>
+        <p>Helping drivers across Portsmouth with breakdown, non-start and transport support.</p>
         <figure class="proof-media">
           <img src="/breakdown-recovery.jpg" alt="Breakdown recovery truck assisting a stranded vehicle" loading="lazy" width="1280" height="720">
+          <figcaption class="proof-caption">Real Portsmouth-area breakdown support from a local recovery team.</figcaption>
         </figure>
       </div>
     </section>
 
-    <section aria-labelledby="faq-title">
+    <section class="reveal" data-reveal aria-labelledby="faq-title">
       <h2 class="section-title" id="faq-title">FAQ</h2>
       <div class="faq-grid">
         <details><summary>Do I need to fill in a form?</summary><p>No. Call us directly.</p></details>
@@ -630,7 +722,7 @@
       </div>
     </section>
 
-    <section aria-labelledby="final-cta-title">
+    <section class="reveal" data-reveal aria-labelledby="final-cta-title">
       <div class="final-cta">
         <h2 class="section-title" id="final-cta-title" style="margin:0">Need recovery in Portsmouth now?</h2>
         <p>Call now and tell us what’s happened. We’ll help you get moving.</p>
@@ -652,5 +744,44 @@
       <a class="btn btn-secondary" href="https://wa.me/447366302341?text=Hi%20Recovero%2C%20I%20need%20vehicle%20recovery%20in%20Portsmouth.%20My%20location%20is%20____.%20Vehicle%3A%20____.%20Issue%3A%20____." target="_blank" rel="noopener" aria-label="WhatsApp location">WhatsApp</a>
     </div>
   </div>
+
+  <script>
+    (() => {
+      const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const revealNodes = document.querySelectorAll('[data-reveal]');
+      const processLine = document.querySelector('[data-process-line]');
+
+      if (!revealNodes.length) return;
+
+      if (prefersReduced || !('IntersectionObserver' in window)) {
+        revealNodes.forEach((node) => node.classList.add('is-visible'));
+        if (processLine) processLine.classList.add('is-visible');
+        return;
+      }
+
+      const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          const delay = Number(entry.target.dataset.revealDelay || 0);
+          window.setTimeout(() => entry.target.classList.add('is-visible'), delay);
+          observer.unobserve(entry.target);
+        });
+      }, { rootMargin: '0px 0px -8% 0px', threshold: 0.15 });
+
+      revealNodes.forEach((node) => revealObserver.observe(node));
+
+      if (processLine) {
+        const processObserver = new IntersectionObserver((entries, observer) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          });
+        }, { threshold: 0.35 });
+
+        processObserver.observe(processLine);
+      }
+    })();
+  </script>
 </body>
 </html>
