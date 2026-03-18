@@ -42,7 +42,7 @@
       color: var(--rcv-ink);
       background: var(--rcv-cream-100);
       line-height: 1.45;
-      padding-bottom: 108px;
+      padding-bottom: calc(108px + env(safe-area-inset-bottom));
     }
 
     img { max-width: 100%; display: block; }
@@ -534,27 +534,33 @@
       border-color: rgba(255,255,255,0.46);
     }
 
-    .mobile-sticky {
+    .ports-cta-dock {
       position: fixed;
-      left: 50%;
-      width: min(430px, calc(100vw - 24px));
-      transform: translateX(-50%);
-      bottom: calc(8px + env(safe-area-inset-bottom));
+      left: 0;
+      right: 0;
+      bottom: 0;
       z-index: 90;
-      border-radius: 16px;
-      border: 1px solid rgba(255,255,255,0.16);
-      background: linear-gradient(145deg, #0d1f32, #132942);
-      box-shadow: 0 12px 26px rgba(8, 20, 34, 0.3);
-      padding: 6px;
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 6px;
+      pointer-events: none;
     }
 
-    .mobile-sticky__btn {
-      min-height: 54px;
-      border-radius: 11px;
-      padding: 8px 10px;
+    .ports-cta-bar {
+      width: min(1100px, 92vw);
+      margin: 0 auto calc(10px + env(safe-area-inset-bottom));
+      padding: 6px;
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      background: linear-gradient(145deg, #0d1f32, #132942);
+      box-shadow: 0 10px 22px rgba(8, 20, 34, 0.24);
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+      pointer-events: auto;
+    }
+
+    .ports-cta-btn {
+      min-height: 52px;
+      border-radius: 12px;
+      padding: 8px 11px;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -562,26 +568,24 @@
       gap: 2px;
       line-height: 1.2;
       border: 1px solid transparent;
-      transition: transform var(--rcv-transition), background-color var(--rcv-transition), border-color var(--rcv-transition), box-shadow var(--rcv-transition);
+      transition: transform var(--rcv-transition), background-color var(--rcv-transition), border-color var(--rcv-transition);
       -webkit-tap-highlight-color: transparent;
     }
 
-    .mobile-sticky__btn:active {
-      transform: translateY(1px) scale(0.995);
-    }
+    .ports-cta-btn:active { transform: translateY(1px) scale(0.995); }
 
-    .mobile-sticky__btn:focus-visible {
+    .ports-cta-btn:focus-visible {
       outline: 3px solid rgba(245, 130, 32, 0.35);
       outline-offset: 1px;
     }
 
-    .mobile-sticky__btn-main {
+    .ports-cta-label {
       font-weight: 800;
       font-size: 0.95rem;
       letter-spacing: 0.01em;
     }
 
-    .mobile-sticky__btn-sub {
+    .ports-cta-subtext {
       font-size: 0.68rem;
       opacity: 0.95;
       white-space: nowrap;
@@ -589,26 +593,24 @@
       text-overflow: ellipsis;
     }
 
-    .mobile-sticky__btn--call {
+    .ports-cta-btn--call {
       background: linear-gradient(150deg, #f58220, #dc6d12);
       color: #fff;
-      box-shadow: 0 7px 14px rgba(245, 130, 32, 0.35);
+      box-shadow: 0 6px 12px rgba(245, 130, 32, 0.28);
     }
 
-    .mobile-sticky__btn--call:hover {
-      background: linear-gradient(150deg, #f68c31, #e17318);
-    }
+    .ports-cta-btn--call:hover { background: linear-gradient(150deg, #f68c31, #e17318); }
 
-    .mobile-sticky__btn--whatsapp {
+    .ports-cta-btn--whatsapp {
       background: #132942;
       color: #fff;
-      border-color: rgba(255, 255, 255, 0.26);
-      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+      border-color: rgba(255, 255, 255, 0.24);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
     }
 
-    .mobile-sticky__btn--whatsapp:hover {
+    .ports-cta-btn--whatsapp:hover {
       background: #1a3552;
-      border-color: rgba(255, 255, 255, 0.36);
+      border-color: rgba(255, 255, 255, 0.34);
     }
 
     [data-animate] {
@@ -630,7 +632,7 @@
       }
       .help-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .trust-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .mobile-sticky { display: none; }
+      .ports-cta-dock { display: none; }
       .ppc-section { padding: 30px 0; }
     }
 
@@ -816,15 +818,17 @@
     </section>
   </main>
 
-  <aside class="mobile-sticky" aria-label="Quick actions">
-    <a class="mobile-sticky__btn mobile-sticky__btn--call" href="tel:+447366302341" aria-label="Call Recovero on 07366 302341">
-      <span class="mobile-sticky__btn-main">Call</span>
-      <span class="mobile-sticky__btn-sub">Recovero 24/7 roadside help</span>
-    </a>
-    <a class="mobile-sticky__btn mobile-sticky__btn--whatsapp" href="https://wa.me/447366302341?text=Hi%20Recovero%2C%20I%20need%20vehicle%20recovery%20in%20Portsmouth.%20My%20location%20is%20____.%20Vehicle%3A%20____.%20Issue%3A%20____." target="_blank" rel="noopener" aria-label="WhatsApp Recovero if you cannot talk">
-      <span class="mobile-sticky__btn-main">WhatsApp</span>
-      <span class="mobile-sticky__btn-sub">Best if you can’t talk.</span>
-    </a>
+  <aside class="ports-cta-dock" aria-label="Quick actions">
+    <div class="ports-cta-bar" role="group" aria-label="Contact Recovero quickly">
+      <a class="ports-cta-btn ports-cta-btn--call" href="tel:+447366302341" aria-label="Call Recovero on 07366 302341">
+        <span class="ports-cta-label">Call</span>
+        <span class="ports-cta-subtext">Recovero 24/7 roadside help</span>
+      </a>
+      <a class="ports-cta-btn ports-cta-btn--whatsapp" href="https://wa.me/447366302341?text=Hi%20Recovero%2C%20I%20need%20vehicle%20recovery%20in%20Portsmouth.%20My%20location%20is%20____.%20Vehicle%3A%20____.%20Issue%3A%20____." target="_blank" rel="noopener" aria-label="WhatsApp Recovero if you cannot talk">
+        <span class="ports-cta-label">WhatsApp</span>
+        <span class="ports-cta-subtext">Best if you can’t talk.</span>
+      </a>
+    </div>
   </aside>
 
   <script>
