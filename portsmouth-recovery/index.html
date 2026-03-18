@@ -42,7 +42,7 @@
       color: var(--rcv-ink);
       background: var(--rcv-cream-100);
       line-height: 1.45;
-      padding-bottom: 92px;
+      padding-bottom: 108px;
     }
 
     img { max-width: 100%; display: block; }
@@ -537,28 +537,78 @@
     .mobile-sticky {
       position: fixed;
       left: 50%;
-      width: min(360px, calc(100vw - 24px));
+      width: min(430px, calc(100vw - 24px));
       transform: translateX(-50%);
-      bottom: calc(12px + env(safe-area-inset-bottom));
+      bottom: calc(8px + env(safe-area-inset-bottom));
       z-index: 90;
-      border-radius: 18px;
+      border-radius: 16px;
       border: 1px solid rgba(255,255,255,0.16);
-      background:
-        linear-gradient(145deg, rgba(13,31,50,0.96), rgba(19,41,66,0.93));
-      backdrop-filter: blur(8px) saturate(115%);
-      box-shadow:
-        0 18px 34px rgba(8,20,34,0.28),
-        0 2px 0 rgba(255,255,255,0.08) inset;
-      padding: 8px;
-      display: flex;
+      background: linear-gradient(145deg, #0d1f32, #132942);
+      box-shadow: 0 12px 26px rgba(8, 20, 34, 0.3);
+      padding: 6px;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 6px;
     }
 
-    .mobile-sticky .cta-btn {
-      width: 100%;
-      min-height: 44px;
+    .mobile-sticky__btn {
+      min-height: 54px;
+      border-radius: 11px;
+      padding: 8px 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 2px;
+      line-height: 1.2;
+      border: 1px solid transparent;
+      transition: transform var(--rcv-transition), background-color var(--rcv-transition), border-color var(--rcv-transition), box-shadow var(--rcv-transition);
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .mobile-sticky__btn:active {
+      transform: translateY(1px) scale(0.995);
+    }
+
+    .mobile-sticky__btn:focus-visible {
+      outline: 3px solid rgba(245, 130, 32, 0.35);
+      outline-offset: 1px;
+    }
+
+    .mobile-sticky__btn-main {
+      font-weight: 800;
       font-size: 0.95rem;
-      border-radius: 12px;
-      box-shadow: 0 8px 18px rgba(245, 130, 32, 0.3);
+      letter-spacing: 0.01em;
+    }
+
+    .mobile-sticky__btn-sub {
+      font-size: 0.68rem;
+      opacity: 0.95;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .mobile-sticky__btn--call {
+      background: linear-gradient(150deg, #f58220, #dc6d12);
+      color: #fff;
+      box-shadow: 0 7px 14px rgba(245, 130, 32, 0.35);
+    }
+
+    .mobile-sticky__btn--call:hover {
+      background: linear-gradient(150deg, #f68c31, #e17318);
+    }
+
+    .mobile-sticky__btn--whatsapp {
+      background: #132942;
+      color: #fff;
+      border-color: rgba(255, 255, 255, 0.26);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    }
+
+    .mobile-sticky__btn--whatsapp:hover {
+      background: #1a3552;
+      border-color: rgba(255, 255, 255, 0.36);
     }
 
     [data-animate] {
@@ -766,8 +816,15 @@
     </section>
   </main>
 
-  <aside class="mobile-sticky" aria-label="Quick call action">
-    <a class="cta-btn cta-btn--primary" href="tel:+447366302341" aria-label="Call Recovero on 07366 302341">Call now</a>
+  <aside class="mobile-sticky" aria-label="Quick actions">
+    <a class="mobile-sticky__btn mobile-sticky__btn--call" href="tel:+447366302341" aria-label="Call Recovero on 07366 302341">
+      <span class="mobile-sticky__btn-main">Call</span>
+      <span class="mobile-sticky__btn-sub">Recovero 24/7 roadside help</span>
+    </a>
+    <a class="mobile-sticky__btn mobile-sticky__btn--whatsapp" href="https://wa.me/447366302341?text=Hi%20Recovero%2C%20I%20need%20vehicle%20recovery%20in%20Portsmouth.%20My%20location%20is%20____.%20Vehicle%3A%20____.%20Issue%3A%20____." target="_blank" rel="noopener" aria-label="WhatsApp Recovero if you cannot talk">
+      <span class="mobile-sticky__btn-main">WhatsApp</span>
+      <span class="mobile-sticky__btn-sub">Best if you can’t talk.</span>
+    </a>
   </aside>
 
   <script>
