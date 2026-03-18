@@ -122,11 +122,16 @@
     .hero-reset h1 {
       margin: 0;
       font-size: clamp(1.7rem, 7vw, 2.5rem);
-      line-height: 1.15;
+      line-height: 1.08;
       max-width: 20ch;
       letter-spacing: -0.02em;
       position: relative;
       z-index: 1;
+      text-wrap: balance;
+    }
+
+    .hero-headline-accent {
+      color: var(--rcv-orange-500);
     }
 
     .hero-lead {
@@ -599,7 +604,7 @@
         <img src="/images/recovero-logo.png" alt="Recovero logo" width="34" height="34" loading="eager">
         <span>Recovero</span>
       </div>
-      <h1 id="hero-title">Broken down in Portsmouth? Call now for fast local recovery.</h1>
+      <h1 id="hero-title">Need car recovery in Portsmouth?<br>Get <span class="hero-headline-accent">fast local help</span> now.</h1>
       <p class="hero-lead">Breakdowns, non-starts, flat batteries, accident recovery and local vehicle transport.</p>
       <div class="hero-actions">
         <a class="cta-btn cta-btn--primary" href="tel:+447366302341" aria-label="Call Recovero on 07366 302341">Call now</a>
