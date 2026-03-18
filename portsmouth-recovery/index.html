@@ -84,9 +84,9 @@
       border-radius: 28px;
       padding: 18px;
       background:
-        linear-gradient(160deg, rgba(8, 20, 34, 0.93), rgba(15, 36, 59, 0.88)),
+        linear-gradient(160deg, rgba(8, 20, 34, 0.9), rgba(15, 36, 59, 0.82)),
         radial-gradient(circle at 90% 0%, rgba(245, 130, 32, 0.24), transparent 52%),
-        linear-gradient(120deg, #11263d 0%, #1a3552 100%);
+        url('/images/recovery-truck.jpg') center 34% / cover no-repeat;
       overflow: hidden;
       position: relative;
       box-shadow: var(--rcv-shadow-md);
@@ -146,7 +146,7 @@
     .hero-actions {
       display: grid;
       gap: 10px;
-      margin-top: 20px;
+      margin-top: 16px;
       position: relative;
       z-index: 1;
     }
@@ -191,8 +191,8 @@
     }
 
     .hero-trust {
-      margin-top: 18px;
-      padding-top: 14px;
+      margin-top: 14px;
+      padding-top: 12px;
       border-top: 1px solid rgba(255,255,255,0.2);
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -566,7 +566,6 @@
     @media (min-width: 640px) {
       body { padding-bottom: 0; }
       .hero-reset { padding: 24px; }
-      .hero-actions,
       .close-actions {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
@@ -608,7 +607,6 @@
       <p class="hero-lead">Breakdowns, non-starts, flat batteries, accident recovery and local vehicle transport.</p>
       <div class="hero-actions">
         <a class="cta-btn cta-btn--primary" href="tel:+447366302341" aria-label="Call Recovero on 07366 302341">Call now</a>
-        <a class="cta-btn cta-btn--ghost" href="https://wa.me/447366302341?text=Hi%20Recovero%2C%20I%20need%20vehicle%20recovery%20in%20Portsmouth.%20My%20location%20is%20____.%20Vehicle%3A%20____.%20Issue%3A%20____." target="_blank" rel="noopener" aria-label="WhatsApp Recovero your location">WhatsApp your location</a>
       </div>
       <div class="hero-trust" aria-label="Trust indicators">
         <span>1000+ jobs completed locally</span>
