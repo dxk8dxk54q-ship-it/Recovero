@@ -118,6 +118,17 @@
       font-weight: 800;
       font-size: 1rem;
       border: 1px solid transparent;
+      transition: transform 180ms ease, box-shadow 220ms ease, background-color 220ms ease, border-color 220ms ease;
+      will-change: transform;
+    }
+
+    .btn:hover,
+    .btn:focus-visible {
+      transform: translateY(-1px);
+    }
+
+    .btn:active {
+      transform: translateY(1px) scale(0.99);
     }
 
     .btn-primary {
@@ -258,14 +269,37 @@
       border-radius: 12px;
       padding: 12px 10px;
       min-height: 112px;
-      transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+      transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease, background-color 220ms ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-tile::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background: linear-gradient(150deg, rgba(245, 130, 32, 0.08), transparent 56%);
+      opacity: 0;
+      transition: opacity 220ms ease;
     }
 
     .service-tile:hover,
-    .service-tile:focus-within {
-      transform: translateY(-2px);
+    .service-tile:focus-visible {
+      transform: translateY(-3px);
       border-color: rgba(245, 130, 32, 0.32);
-      box-shadow: 0 10px 20px rgba(15, 34, 53, 0.09);
+      box-shadow: 0 12px 24px rgba(15, 34, 53, 0.1);
+      background: #fff;
+    }
+
+    .service-tile:hover::after,
+    .service-tile:focus-visible::after {
+      opacity: 1;
+    }
+
+    .service-tile:active {
+      transform: translateY(0) scale(0.99);
+      box-shadow: 0 7px 16px rgba(15, 34, 53, 0.11);
     }
 
     .service-tile h3 {
@@ -308,6 +342,46 @@
       background: rgba(255, 255, 255, 0.93);
       border-color: rgba(255, 255, 255, 0.4);
       box-shadow: none;
+    }
+
+    .interactive-surface {
+      cursor: pointer;
+      transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease, background-color 220ms ease;
+      outline: none;
+    }
+
+    .interactive-surface:hover,
+    .interactive-surface:focus-visible {
+      transform: translateY(-3px);
+      box-shadow: 0 13px 26px rgba(15, 34, 53, 0.13);
+      border-color: rgba(245, 130, 32, 0.4);
+    }
+
+    .interactive-surface:active {
+      transform: translateY(0) scale(0.99);
+      box-shadow: 0 8px 18px rgba(15, 34, 53, 0.13);
+    }
+
+    .interactive-surface .icon-badge {
+      transition: transform 200ms ease, border-color 220ms ease, background-color 220ms ease;
+    }
+
+    .interactive-surface:hover .icon-badge,
+    .interactive-surface:focus-visible .icon-badge {
+      transform: translateX(2px);
+      border-color: rgba(245, 130, 32, 0.4);
+      background: #fff4e8;
+    }
+
+    .service-tile h3,
+    .service-tile p,
+    .tile h3,
+    .tile p,
+    .step h3,
+    .step p,
+    .coverage p {
+      position: relative;
+      z-index: 1;
     }
 
     .tile--strong {
@@ -379,6 +453,9 @@
       align-items: start;
       position: relative;
       padding: 6px 0 6px;
+      border-radius: 12px;
+      padding-left: 4px;
+      padding-right: 6px;
     }
 
     .step-number {
@@ -404,6 +481,12 @@
       inset: -4px;
       border-radius: 999px;
       border: 1px solid rgba(245, 130, 32, 0.36);
+      transition: border-color 220ms ease, transform 220ms ease;
+    }
+
+    .step.is-visible .step-number::after {
+      border-color: rgba(245, 130, 32, 0.58);
+      transform: scale(1.05);
     }
 
     .step h3 {
@@ -418,6 +501,13 @@
       border-radius: var(--radius-lg);
       box-shadow: 0 10px 26px rgba(15, 34, 53, 0.08);
       padding: 16px;
+      transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+    }
+
+    .coverage.interactive-surface:hover,
+    .coverage.interactive-surface:focus-visible {
+      border-color: rgba(245, 130, 32, 0.38);
+      box-shadow: 0 14px 30px rgba(15, 34, 53, 0.12);
     }
 
     .coverage-pills {
@@ -444,6 +534,14 @@
       box-shadow: 0 18px 34px rgba(12, 25, 38, 0.3);
       padding: 14px;
       color: #f1f7ff;
+      transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+    }
+
+    .proof-banner.interactive-surface:hover,
+    .proof-banner.interactive-surface:focus-visible {
+      transform: translateY(-3px);
+      box-shadow: 0 21px 38px rgba(12, 25, 38, 0.34);
+      border-color: rgba(255, 255, 255, 0.22);
     }
 
     .proof-banner p {
@@ -562,7 +660,7 @@
       width: min(560px, 100%);
       margin: 0;
       display: grid;
-      grid-template-columns: 1.2fr 1fr;
+      grid-template-columns: 1fr;
       gap: 7px;
       background: rgba(11, 27, 42, 0.96);
       backdrop-filter: blur(10px);
@@ -571,6 +669,11 @@
       padding: 7px;
       box-shadow: 0 12px 26px rgba(8, 18, 30, 0.34);
       pointer-events: auto;
+    }
+
+    .sticky .btn-primary {
+      min-height: 50px;
+      font-size: 0.95rem;
     }
 
     .sticky .btn {
@@ -606,6 +709,15 @@
 
       .proof-media { max-width: 100%; max-height: 280px; }
       .trust-line { display: inline-block; max-width: 620px; }
+
+      .sticky-actions {
+        grid-template-columns: 1.2fr 1fr;
+      }
+
+      .sticky .btn-primary {
+        min-height: 48px;
+        font-size: 0.92rem;
+      }
     }
 
     @media (min-width: 980px) {
@@ -644,7 +756,7 @@
       <h1 id="hero-title">Broken down in Portsmouth? Call now for fast local recovery.</h1>
       <p class="hero-sub">Breakdowns, non-starts, flat batteries, accident recovery and local vehicle transport.</p>
       <div class="cta-wrap">
-        <a class="btn btn-primary" href="tel:+447366302341" aria-label="Call Recovero on 07366 302341">Call 07366 302341</a>
+        <a class="btn btn-primary" href="tel:+447366302341" aria-label="Call Recovero on 07366 302341">Call now</a>
         <a class="btn btn-secondary" href="https://wa.me/447366302341?text=Hi%20Recovero%2C%20I%20need%20vehicle%20recovery%20in%20Portsmouth.%20My%20location%20is%20____.%20Vehicle%3A%20____.%20Issue%3A%20____." target="_blank" rel="noopener" aria-label="WhatsApp Recovero your location">WhatsApp your location</a>
       </div>
       <div class="trust-line" aria-label="Local trust proof">
@@ -659,12 +771,12 @@
         <h2 class="section-title" id="services-title">What we help with</h2>
         <p class="services-intro">Rapid support for the most common callouts in Portsmouth.</p>
         <div class="service-grid">
-          <article class="service-tile"><div class="tile-head"><span class="icon-badge" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 16l2-5h14l2 5"></path><path d="M5 16v3h3"></path><path d="M19 16v3h-3"></path><circle cx="7" cy="16" r="1"></circle><circle cx="17" cy="16" r="1"></circle></svg></span><h3>Breakdown recovery</h3></div><p>Quick roadside recovery in Portsmouth.</p></article>
-          <article class="service-tile"><div class="tile-head"><span class="icon-badge" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3v7"></path><path d="M9 7l3 3 3-3"></path><rect x="4" y="12" width="16" height="9" rx="2"></rect></svg></span><h3>Non-starts</h3></div><p>Help when your vehicle won’t start.</p></article>
-          <article class="service-tile"><div class="tile-head"><span class="icon-badge" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="7" y="6" width="10" height="12" rx="2"></rect><path d="M9 4h6"></path><path d="M12 8v8"></path></svg></span><h3>Flat battery help</h3></div><p>Battery assistance and recovery.</p></article>
-          <article class="service-tile"><div class="tile-head"><span class="icon-badge" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3l8 4v5c0 5-3.4 7.8-8 9-4.6-1.2-8-4-8-9V7z"></path><path d="M9 12l2 2 4-4"></path></svg></span><h3>Accident recovery</h3></div><p>Safe recovery for non-drivable vehicles.</p></article>
-          <article class="service-tile"><div class="tile-head"><span class="icon-badge" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 7h10l3 3h3v5"></path><circle cx="8" cy="16" r="2"></circle><circle cx="17" cy="16" r="2"></circle></svg></span><h3>Local vehicle transport</h3></div><p>Short-distance transport around Portsmouth.</p></article>
-          <article class="service-tile"><div class="tile-head"><span class="icon-badge" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"></circle><path d="M12 8v4l2.8 2"></path></svg></span><h3>Roadside vehicle issues</h3></div><p>Urgent help for unexpected problems.</p></article>
+          <a class="service-tile interactive-surface reveal" data-reveal data-reveal-delay="0" href="#final-cta-section" aria-label="Get help with breakdown recovery"><div class="tile-head"><span class="icon-badge" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 16l2-5h14l2 5"></path><path d="M5 16v3h3"></path><path d="M19 16v3h-3"></path><circle cx="7" cy="16" r="1"></circle><circle cx="17" cy="16" r="1"></circle></svg></span><h3>Breakdown recovery</h3></div><p>Quick roadside recovery in Portsmouth.</p></a>
+          <a class="service-tile interactive-surface reveal" data-reveal data-reveal-delay="40" href="#final-cta-section" aria-label="Get help with non-starts"><div class="tile-head"><span class="icon-badge" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3v7"></path><path d="M9 7l3 3 3-3"></path><rect x="4" y="12" width="16" height="9" rx="2"></rect></svg></span><h3>Non-starts</h3></div><p>Help when your vehicle won’t start.</p></a>
+          <a class="service-tile interactive-surface reveal" data-reveal data-reveal-delay="80" href="#final-cta-section" aria-label="Get help with a flat battery"><div class="tile-head"><span class="icon-badge" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="7" y="6" width="10" height="12" rx="2"></rect><path d="M9 4h6"></path><path d="M12 8v8"></path></svg></span><h3>Flat battery help</h3></div><p>Battery assistance and recovery.</p></a>
+          <a class="service-tile interactive-surface reveal" data-reveal data-reveal-delay="120" href="#final-cta-section" aria-label="Get help with accident recovery"><div class="tile-head"><span class="icon-badge" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3l8 4v5c0 5-3.4 7.8-8 9-4.6-1.2-8-4-8-9V7z"></path><path d="M9 12l2 2 4-4"></path></svg></span><h3>Accident recovery</h3></div><p>Safe recovery for non-drivable vehicles.</p></a>
+          <a class="service-tile interactive-surface reveal" data-reveal data-reveal-delay="160" href="#final-cta-section" aria-label="Get help with vehicle transport"><div class="tile-head"><span class="icon-badge" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 7h10l3 3h3v5"></path><circle cx="8" cy="16" r="2"></circle><circle cx="17" cy="16" r="2"></circle></svg></span><h3>Local vehicle transport</h3></div><p>Short-distance transport around Portsmouth.</p></a>
+          <a class="service-tile interactive-surface reveal" data-reveal data-reveal-delay="200" href="#final-cta-section" aria-label="Get urgent roadside vehicle issue help"><div class="tile-head"><span class="icon-badge" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"></circle><path d="M12 8v4l2.8 2"></path></svg></span><h3>Roadside vehicle issues</h3></div><p>Urgent help for unexpected problems.</p></a>
         </div>
       </div>
     </section>
@@ -674,10 +786,10 @@
         <h2 class="section-title" id="benefits-title">Why drivers call Recovero</h2>
         <p class="benefits-intro">A local-first service built for urgent callouts, clear communication and dependable support when you need it most.</p>
         <div class="benefit-grid">
-          <article class="tile tile--strong reveal" data-reveal data-reveal-delay="0"><div class="tile-head"><span class="icon-badge" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3l2.7 5.4 6 .9-4.3 4.2 1 6-5.4-2.8-5.4 2.8 1-6L3.3 9.3l6-.9z"></path></svg></span><h3>1000+ jobs done locally</h3></div><p>Trusted by drivers across Portsmouth for breakdown, non-start and roadside recovery support.</p></article>
-          <article class="tile reveal" data-reveal data-reveal-delay="60"><div class="tile-head"><span class="icon-badge" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 12h18"></path><path d="M14 5l7 7-7 7"></path></svg></span><h3>Fast local response</h3></div><p>We connect you to available local recovery support.</p></article>
-          <article class="tile reveal" data-reveal data-reveal-delay="120"><div class="tile-head"><span class="icon-badge" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 6h16v12H4z"></path><path d="M8 10h8"></path><path d="M8 14h5"></path></svg></span><h3>One number to call</h3></div><p>Tell us where you are and what’s happened.</p></article>
-          <article class="tile reveal" data-reveal data-reveal-delay="180"><div class="tile-head"><span class="icon-badge" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12h16"></path><path d="M12 4v16"></path><circle cx="12" cy="12" r="8"></circle></svg></span><h3>Clear pricing</h3></div><p>Price confirmed before dispatch.</p></article>
+          <a class="tile tile--strong reveal interactive-surface" data-reveal data-reveal-delay="0" href="tel:+447366302341" aria-label="Call now - 1000+ jobs done locally"><div class="tile-head"><span class="icon-badge" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3l2.7 5.4 6 .9-4.3 4.2 1 6-5.4-2.8-5.4 2.8 1-6L3.3 9.3l6-.9z"></path></svg></span><h3>1000+ jobs done locally</h3></div><p>Trusted by drivers across Portsmouth for breakdown, non-start and roadside recovery support.</p></a>
+          <a class="tile reveal interactive-surface" data-reveal data-reveal-delay="60" href="#final-cta-section" aria-label="Fast local response details"><div class="tile-head"><span class="icon-badge" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 12h18"></path><path d="M14 5l7 7-7 7"></path></svg></span><h3>Fast local response</h3></div><p>We connect you to available local recovery support.</p></a>
+          <a class="tile reveal interactive-surface" data-reveal data-reveal-delay="120" href="#final-cta-section" aria-label="One number to call"><div class="tile-head"><span class="icon-badge" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 6h16v12H4z"></path><path d="M8 10h8"></path><path d="M8 14h5"></path></svg></span><h3>One number to call</h3></div><p>Tell us where you are and what’s happened.</p></a>
+          <a class="tile reveal interactive-surface" data-reveal data-reveal-delay="180" href="#final-cta-section" aria-label="Clear pricing details"><div class="tile-head"><span class="icon-badge" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12h16"></path><path d="M12 4v16"></path><circle cx="12" cy="12" r="8"></circle></svg></span><h3>Clear pricing</h3></div><p>Price confirmed before dispatch.</p></a>
         </div>
       </div>
     </section>
@@ -686,23 +798,23 @@
       <h2 class="section-title" id="how-title">How it works</h2>
       <div class="process-shell">
         <ol class="process-list" data-process-line>
-          <li class="step reveal" data-reveal data-reveal-delay="0"><span class="step-number">1</span><div><h3>Call us</h3><p>Tell us where you are and what’s happened.</p></div></li>
-          <li class="step reveal" data-reveal data-reveal-delay="80"><span class="step-number">2</span><div><h3>We check availability</h3><p>We match your job with available local recovery support.</p></div></li>
-          <li class="step reveal" data-reveal data-reveal-delay="160"><span class="step-number">3</span><div><h3>Get moving again</h3><p>Recovery or transport arranged with pricing confirmed first.</p></div></li>
+          <li class="step reveal interactive-surface" data-reveal data-reveal-delay="0" role="link" tabindex="0" data-link="#final-cta-section"><span class="step-number">1</span><div><h3>Call us</h3><p>Tell us where you are and what’s happened.</p></div></li>
+          <li class="step reveal interactive-surface" data-reveal data-reveal-delay="80" role="link" tabindex="0" data-link="#final-cta-section"><span class="step-number">2</span><div><h3>We check availability</h3><p>We match your job with available local recovery support.</p></div></li>
+          <li class="step reveal interactive-surface" data-reveal data-reveal-delay="160" role="link" tabindex="0" data-link="#final-cta-section"><span class="step-number">3</span><div><h3>Get moving again</h3><p>Recovery or transport arranged with pricing confirmed first.</p></div></li>
         </ol>
       </div>
     </section>
 
     <section class="reveal" data-reveal aria-labelledby="coverage-title">
       <h2 class="section-title" id="coverage-title">Portsmouth coverage</h2>
-      <div class="coverage">
+      <div class="coverage interactive-surface" role="link" tabindex="0" data-link="#final-cta-section">
         <p>We help drivers across Portsmouth and nearby areas including Southsea, Fratton, Hilsea, Cosham, North End, Eastney, the M275 and nearby routes.</p>
         <div class="coverage-pills"><span>Southsea</span><span>Fratton</span><span>Hilsea</span><span>Cosham</span><span>Eastney</span><span>M275</span></div>
       </div>
     </section>
 
     <section class="reveal" data-reveal aria-labelledby="proof-title">
-      <div class="proof-banner">
+      <div class="proof-banner interactive-surface" role="link" tabindex="0" data-link="#final-cta-section">
         <h2 class="section-title" id="proof-title">Trusted for local recovery callouts</h2>
         <p>Helping drivers across Portsmouth with breakdown, non-start and transport support.</p>
         <figure class="proof-media">
@@ -722,9 +834,9 @@
       </div>
     </section>
 
-    <section class="reveal" data-reveal aria-labelledby="final-cta-title">
+    <section class="reveal" data-reveal aria-labelledby="final-cta-title" id="final-cta-section">
       <div class="final-cta">
-        <h2 class="section-title" id="final-cta-title" style="margin:0">Need recovery in Portsmouth now?</h2>
+        <h2 class="section-title" id="final-cta-title" style="margin:0" tabindex="-1">Need recovery in Portsmouth now?</h2>
         <p>Call now and tell us what’s happened. We’ll help you get moving.</p>
         <div class="final-buttons">
           <a class="btn btn-primary" href="tel:+447366302341" aria-label="Call Recovero in Portsmouth">Call 07366 302341</a>
@@ -750,6 +862,23 @@
       const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       const revealNodes = document.querySelectorAll('[data-reveal]');
       const processLine = document.querySelector('[data-process-line]');
+      const tapTargets = document.querySelectorAll('[data-link]');
+
+      const navigateToTarget = (target) => {
+        if (!target) return;
+        const destination = document.querySelector(target);
+        if (!destination) return;
+        destination.scrollIntoView({ behavior: prefersReduced ? 'auto' : 'smooth', block: 'start' });
+      };
+
+      tapTargets.forEach((item) => {
+        item.addEventListener('click', () => navigateToTarget(item.dataset.link));
+        item.addEventListener('keydown', (event) => {
+          if (event.key !== 'Enter' && event.key !== ' ') return;
+          event.preventDefault();
+          navigateToTarget(item.dataset.link);
+        });
+      });
 
       if (!revealNodes.length) return;
 
