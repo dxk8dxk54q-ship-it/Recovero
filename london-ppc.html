@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vehicle Recovery London | Recovero</title>
+  <meta name="description" content="Need urgent vehicle recovery in London? Call Recovero now for fast breakdown recovery, roadside help, non-runner transport and towing across London." />
+  <style>
+    :root {
+      --bg: #0a0d14;
+      --bg-soft: #121826;
+      --card: #171f2e;
+      --line: #2c3548;
+      --text: #f5f7fb;
+      --muted: #b6c0d0;
+      --accent: #ffb100;
+      --accent-strong: #ff9000;
+      --danger: #ff4d38;
+      --success: #31d081;
+      --max: 1120px;
+      --radius: 14px;
+      --shadow: 0 16px 32px rgba(0, 0, 0, 0.38);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Inter, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.4;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      width: min(var(--max), calc(100% - 2rem));
+      margin-inline: auto;
+    }
+
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(10, 13, 20, 0.92);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(10px);
+    }
+
+    .header-inner {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .logo {
+      font-size: 1.35rem;
+      font-weight: 800;
+      letter-spacing: 0.4px;
+    }
+
+    .logo span { color: var(--accent); }
+
+    .phone-btn,
+    .cta,
+    .sticky-call {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.55rem;
+      border-radius: 12px;
+      font-weight: 800;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: all 0.18s ease;
+      min-height: 48px;
+      padding: 0.72rem 1rem;
+      text-align: center;
+    }
+
+    .phone-btn {
+      background: var(--accent);
+      color: #221703;
+    }
+
+    .phone-btn:hover,
+    .cta:hover,
+    .sticky-call:hover { background: var(--accent-strong); }
+
+    .hero {
+      position: relative;
+      isolation: isolate;
+      background:
+        linear-gradient(100deg, rgba(10, 13, 20, 0.95) 0%, rgba(10, 13, 20, 0.84) 46%, rgba(10, 13, 20, 0.7) 100%),
+        url("images/recovery-truck.jpg") center / cover no-repeat;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .hero-inner {
+      padding: clamp(2rem, 5vw, 4.5rem) 0 clamp(2.3rem, 5vw, 4rem);
+      max-width: 760px;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 8vw, 3.8rem);
+      line-height: 1.02;
+      margin: 0;
+      letter-spacing: 0.2px;
+    }
+
+    .hero p {
+      margin: 1rem 0 1.1rem;
+      color: #dde3ef;
+      font-size: clamp(1rem, 3.3vw, 1.22rem);
+      max-width: 60ch;
+    }
+
+    .trust-list {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.65rem;
+      margin: 0 0 1.35rem;
+      padding: 0;
+      list-style: none;
+      max-width: 680px;
+    }
+
+    .trust-list li {
+      background: rgba(16, 22, 34, 0.78);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 10px;
+      padding: 0.62rem 0.72rem;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #f0f4fc;
+    }
+
+    .cta {
+      background: var(--accent);
+      color: #1e1403;
+      padding-inline: 1.5rem;
+      font-size: 1.08rem;
+      box-shadow: var(--shadow);
+    }
+
+    .cta-note {
+      margin: 0.65rem 0 0;
+      color: #d1daea;
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    section {
+      padding: 2.4rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    h2 {
+      margin: 0 0 1rem;
+      font-size: clamp(1.35rem, 5vw, 2rem);
+      line-height: 1.1;
+    }
+
+    .section-lead {
+      margin: 0 0 1.3rem;
+      color: var(--muted);
+      max-width: 62ch;
+    }
+
+    .grid {
+      display: grid;
+      gap: 0.8rem;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .card {
+      background: linear-gradient(180deg, #192132 0%, #141b2b 100%);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 0.9rem;
+    }
+
+    .service {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      font-weight: 700;
+    }
+
+    .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 3px;
+      background: var(--danger);
+      flex-shrink: 0;
+    }
+
+    .reasons .card { padding: 0.88rem 0.95rem; }
+
+    .reasons ul,
+    .coverage ul,
+    .process {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 0.72rem;
+    }
+
+    .reasons li,
+    .coverage li,
+    .process li {
+      background: var(--bg-soft);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 0.78rem 0.9rem;
+      font-weight: 600;
+    }
+
+    .reasons li::before {
+      content: "✓ ";
+      color: var(--success);
+      font-weight: 800;
+    }
+
+    .coverage p {
+      margin: 0 0 0.9rem;
+      color: var(--muted);
+    }
+
+    .process li {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      align-items: center;
+      gap: 0.72rem;
+    }
+
+    .step-number {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: inline-grid;
+      place-items: center;
+      background: var(--accent);
+      color: #1d1405;
+      font-weight: 800;
+      font-size: 0.88rem;
+    }
+
+    .final-cta {
+      background: radial-gradient(circle at 50% 0%, rgba(255, 177, 0, 0.18), transparent 56%), var(--bg);
+      text-align: center;
+      padding-bottom: 7rem;
+    }
+
+    .final-cta p {
+      margin: 0.5rem auto 1.1rem;
+      color: var(--muted);
+      max-width: 58ch;
+    }
+
+    .final-cta .cta { min-width: min(92vw, 350px); }
+
+    .phone-repeat {
+      margin-top: 0.75rem;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #dbe5f8;
+    }
+
+    footer {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 1rem 0 6.5rem;
+      text-align: center;
+      color: #d4deef;
+      font-size: 0.93rem;
+    }
+
+    .sticky-call-wrap {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1001;
+      background: rgba(10, 13, 20, 0.96);
+      border-top: 1px solid rgba(255, 255, 255, 0.16);
+      padding: 0.65rem;
+      backdrop-filter: blur(8px);
+    }
+
+    .sticky-call {
+      width: 100%;
+      background: var(--accent);
+      color: #201604;
+      font-size: 1.02rem;
+      min-height: 52px;
+    }
+
+    @media (min-width: 760px) {
+      .grid.services { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .split { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+      .sticky-call-wrap { display: none; }
+      footer { padding-bottom: 1.2rem; }
+    }
+
+    @media (max-width: 540px) {
+      .phone-btn { padding-inline: 0.8rem; font-size: 0.9rem; }
+      .trust-list { grid-template-columns: 1fr; }
+      .grid { grid-template-columns: 1fr; }
+      .header-inner { min-height: 66px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="header" aria-label="Header">
+    <div class="container header-inner">
+      <div class="logo" aria-label="Recovero">Recover<span>o</span></div>
+      <a class="phone-btn" href="tel:07366302341" aria-label="Call Recovero now on 07366 302341">Call 07366 302341</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-label="Vehicle recovery London">
+      <div class="container hero-inner">
+        <h1>Need Vehicle Recovery in London? Call Now.</h1>
+        <p>Fast, local vehicle recovery for breakdowns, non-runners, roadside issues and urgent callouts across London.</p>
+        <ul class="trust-list" aria-label="Key trust points">
+          <li>Fast response across London</li>
+          <li>Cars, vans and non-runners</li>
+          <li>Open 24/7</li>
+        </ul>
+        <a class="cta" href="tel:07366302341" aria-label="Call now for fast vehicle recovery in London">CALL NOW</a>
+        <p class="cta-note">Speak to us now for fast vehicle recovery in London.</p>
+      </div>
+    </section>
+
+    <section aria-labelledby="help-with">
+      <div class="container">
+        <h2 id="help-with">What We Help With</h2>
+        <div class="grid services">
+          <article class="card service"><span class="dot" aria-hidden="true"></span>Breakdown recovery</article>
+          <article class="card service"><span class="dot" aria-hidden="true"></span>Non-runner transport</article>
+          <article class="card service"><span class="dot" aria-hidden="true"></span>Roadside recovery</article>
+          <article class="card service"><span class="dot" aria-hidden="true"></span>Accident recovery</article>
+          <article class="card service"><span class="dot" aria-hidden="true"></span>Flat battery and jump starts</article>
+          <article class="card service"><span class="dot" aria-hidden="true"></span>Wrong fuel recovery</article>
+          <article class="card service"><span class="dot" aria-hidden="true"></span>Car and van towing</article>
+        </div>
+      </div>
+    </section>
+
+    <section class="reasons" aria-labelledby="reasons-call">
+      <div class="container split">
+        <div>
+          <h2 id="reasons-call">Why Call Recovero</h2>
+          <p class="section-lead">When you are stuck in London, you need fast answers and real help right away.</p>
+          <ul>
+            <li>Fast call handling</li>
+            <li>Local London coverage</li>
+            <li>Help for cars and vans</li>
+            <li>24/7 availability</li>
+            <li>Clear pricing before booking</li>
+            <li>Friendly, professional service</li>
+          </ul>
+        </div>
+        <div class="coverage">
+          <h2>London Coverage</h2>
+          <p>Recovero covers London and surrounding areas, including Central, North, South, East and West London.</p>
+          <ul>
+            <li>Regular callouts in Croydon, Wembley, Ilford, Romford and Enfield</li>
+            <li>Also covering Stratford, Heathrow, Ealing, Hounslow, Barking, Brent, Camden, Hackney and Greenwich</li>
+            <li>Serving Greater London for urgent breakdown and recovery support</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="process-title">
+      <div class="container">
+        <h2 id="process-title">How It Works</h2>
+        <ul class="process">
+          <li><span class="step-number">1</span><span>Call us now.</span></li>
+          <li><span class="step-number">2</span><span>Tell us your location and vehicle issue.</span></li>
+          <li><span class="step-number">3</span><span>Get recovery arranged fast.</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="final-cta" aria-label="Final call to action">
+      <div class="container">
+        <h2>Need Vehicle Recovery in London Right Now?</h2>
+        <p>Do not wait at the roadside. Call Recovero now and get urgent local recovery support.</p>
+        <a class="cta" href="tel:07366302341" aria-label="Call Recovero now for vehicle recovery">CALL NOW</a>
+        <div class="phone-repeat">Call 07366 302341</div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Recovero vehicle recovery London · 24/7 callouts · 07366 302341
+  </footer>
+
+  <div class="sticky-call-wrap" aria-label="Sticky mobile call bar">
+    <a class="sticky-call" href="tel:07366302341" aria-label="Tap to call Recovero now">📞 Call Recovero Now</a>
+  </div>
+</body>
+</html>
