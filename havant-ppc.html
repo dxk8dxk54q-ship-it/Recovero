@@ -40,6 +40,65 @@
             border-bottom: 3px solid var(--recovero-orange);
         }
 
+        .recovero-brand {
+            min-width: 0;
+        }
+
+        .brand-badge {
+            width: 2.45rem;
+            height: 2.45rem;
+            border-radius: 9999px;
+            background: radial-gradient(circle at 30% 30%, #ffb365 0%, #f38317 48%, #cb6208 100%);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            box-shadow: 0 8px 20px rgba(243, 131, 23, 0.45);
+            display: grid;
+            place-items: center;
+            flex-shrink: 0;
+        }
+
+        .brand-badge span {
+            color: #fff;
+            font-weight: 800;
+            font-size: 0.95rem;
+            letter-spacing: 0.02em;
+            transform: translateY(-0.5px);
+        }
+
+        .brand-name {
+            font-size: clamp(1.2rem, 4.6vw, 1.78rem);
+            font-weight: 800;
+            letter-spacing: 0.02em;
+            line-height: 1;
+            color: #fff;
+        }
+
+        .brand-sub {
+            font-size: 0.58rem;
+            color: #d1d5db;
+            text-transform: uppercase;
+            letter-spacing: 0.34em;
+            font-weight: 600;
+            margin-top: 0.35rem;
+            line-height: 1;
+            display: block;
+        }
+
+        .header-call-btn {
+            padding: 0.62rem 1rem;
+            border-radius: 9999px;
+            font-size: 0.8rem;
+            letter-spacing: 0.1em;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        @media (min-width: 640px) {
+            .header-call-btn {
+                padding: 0.7rem 1.25rem;
+                font-size: 0.84rem;
+            }
+        }
+
         .btn-pulse {
             animation: pulse-orange 2s infinite;
         }
@@ -100,27 +159,20 @@
 <body class="antialiased">
 
     <!-- Sticky Header -->
-    <header class="fixed top-0 w-full z-50 bg-recovero-black/95 text-white py-4 px-4 md:px-12 flex justify-between items-center sticky-header">
-        <div class="flex items-center gap-3">
-            <div class="bg-recovero-orange p-1.5 rounded-full">
-                <i data-lucide="truck" class="text-white w-6 h-6"></i>
+    <header class="fixed top-0 w-full z-50 bg-recovero-black/95 text-white py-3.5 px-4 md:px-12 flex justify-between items-center gap-3 sticky-header">
+        <div class="recovero-brand flex items-center gap-3">
+            <div class="brand-badge" aria-hidden="true">
+                <span>R</span>
             </div>
-            <div>
-                <span class="font-extrabold text-2xl tracking-tight block leading-none">RECOVERO</span>
-                <span class="text-[10px] uppercase tracking-[0.2em] text-gray-400 font-bold">The Network</span>
+            <div class="min-w-0">
+                <span class="brand-name block">RECOVERO</span>
+                <span class="brand-sub">THE NETWORK</span>
             </div>
         </div>
-        
-        <nav class="hidden lg:flex gap-8 items-center text-sm font-semibold uppercase tracking-wider">
-            <a href="#services" class="hover:text-recovero-orange transition">Services</a>
-            <a href="#network" class="hover:text-recovero-orange transition">Portsmouth Network</a>
-            <a href="#how" class="hover:text-recovero-orange transition">How it Works</a>
-        </nav>
 
-        <a href="tel:0800123456" class="bg-recovero-orange text-white px-6 py-2.5 rounded-lg font-bold flex items-center gap-2 btn-pulse hover:brightness-110 transition active:scale-95">
-            <i data-lucide="phone-call" class="w-5 h-5"></i>
-            <span class="hidden md:inline uppercase tracking-tighter">Emergency Call</span>
-            <span class="md:hidden">CALL</span>
+        <a href="tel:0800123456" class="header-call-btn bg-recovero-orange text-white font-extrabold flex items-center gap-2 btn-pulse hover:brightness-110 transition active:scale-95">
+            <i data-lucide="phone-call" class="w-4 h-4"></i>
+            <span class="uppercase">Call</span>
         </a>
     </header>
 
