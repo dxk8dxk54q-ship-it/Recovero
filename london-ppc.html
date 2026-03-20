@@ -4,23 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Vehicle Recovery London | Recovero</title>
-  <meta name="description" content="Urgent vehicle recovery in London. Call Recovero now for fast help with breakdowns, roadside issues, non-runners, towing and accident recovery across London." />
+  <meta name="description" content="Urgent London vehicle recovery. Call Recovero now for 24/7 breakdown recovery, towing, roadside recovery and non-runner transport." />
   <style>
     :root {
-      --bg: #070a12;
-      --bg-2: #0f1421;
-      --panel: #111a2d;
-      --panel-2: #18233b;
-      --line: rgba(190, 212, 255, 0.18);
-      --text: #f3f6ff;
-      --muted: #b7c0d9;
-      --accent: #ffb300;
-      --accent-strong: #ff9200;
-      --danger: #ff5e45;
-      --ok: #36d687;
-      --max: 1160px;
-      --radius: 16px;
-      --shadow: 0 20px 48px rgba(0, 0, 0, 0.45);
+      --bg: #050912;
+      --bg-soft: #0b1322;
+      --ink: #eef3ff;
+      --muted: #a9b5d0;
+      --line: rgba(171, 194, 234, 0.2);
+      --panel: rgba(13, 20, 36, 0.82);
+      --accent: #ffba22;
+      --accent-strong: #ff9800;
+      --max: 1140px;
+      --radius: 18px;
+      --shadow: 0 26px 54px rgba(0, 0, 0, 0.44);
     }
 
     * { box-sizing: border-box; }
@@ -28,14 +25,13 @@
 
     body {
       font-family: Inter, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      color: var(--text);
+      color: var(--ink);
       background:
-        radial-gradient(1400px 800px at 90% -5%, rgba(64, 116, 255, 0.16), transparent 58%),
-        radial-gradient(900px 600px at -10% 42%, rgba(255, 179, 0, 0.1), transparent 60%),
-        var(--bg);
-      line-height: 1.45;
+        radial-gradient(900px 450px at 86% -8%, rgba(87, 123, 255, 0.26), transparent 60%),
+        radial-gradient(720px 420px at -8% 38%, rgba(255, 170, 16, 0.14), transparent 56%),
+        linear-gradient(180deg, #050912 0%, #060b16 42%, #050810 100%);
+      line-height: 1.35;
       -webkit-font-smoothing: antialiased;
-      text-rendering: optimizeLegibility;
     }
 
     a { color: inherit; text-decoration: none; }
@@ -45,47 +41,26 @@
       margin-inline: auto;
     }
 
-    .urgency-strip {
-      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-      background: linear-gradient(90deg, #2f1110, #4f1a16 40%, #251115);
-      color: #fff0ed;
-      font-weight: 700;
-      font-size: 0.86rem;
-      letter-spacing: 0.02em;
-    }
-
-    .urgency-strip .container {
-      min-height: 38px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    .top-alert {
+      min-height: 36px;
+      display: grid;
+      place-items: center;
       text-align: center;
-      gap: 0.45rem;
-    }
-
-    .pulse-dot {
-      width: 9px;
-      height: 9px;
-      border-radius: 50%;
-      background: var(--danger);
-      box-shadow: 0 0 0 0 rgba(255, 94, 69, 0.7);
-      animation: pulse 1.8s infinite;
-      flex-shrink: 0;
-    }
-
-    @keyframes pulse {
-      0% { box-shadow: 0 0 0 0 rgba(255, 94, 69, 0.8); }
-      70% { box-shadow: 0 0 0 8px rgba(255, 94, 69, 0); }
-      100% { box-shadow: 0 0 0 0 rgba(255, 94, 69, 0); }
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      color: #ffe4c0;
+      background: linear-gradient(90deg, #2f160f, #4f2110, #2f160f);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     }
 
     .header {
       position: sticky;
       top: 0;
       z-index: 999;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
       backdrop-filter: blur(12px);
-      background: rgba(7, 10, 18, 0.82);
+      background: rgba(5, 9, 18, 0.78);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     }
 
     .header-inner {
@@ -97,7 +72,7 @@
     }
 
     .logo {
-      font-size: 1.36rem;
+      font-size: 1.35rem;
       font-weight: 900;
       letter-spacing: 0.01em;
     }
@@ -106,536 +81,666 @@
 
     .call-btn,
     .hero-cta,
-    .final-cta-btn,
+    .final-cta,
     .sticky-call {
       display: inline-flex;
       align-items: center;
       justify-content: center;
+      gap: 0.48rem;
       border-radius: 12px;
-      border: 1px solid transparent;
-      font-weight: 800;
-      min-height: 48px;
-      transition: transform 0.16s ease, background-color 0.16s ease;
-    }
-
-    .call-btn,
-    .hero-cta,
-    .final-cta-btn,
-    .sticky-call {
+      border: 1px solid rgba(255, 190, 45, 0.22);
       background: linear-gradient(180deg, var(--accent) 0%, var(--accent-strong) 100%);
-      color: #261701;
-      box-shadow: 0 8px 28px rgba(255, 150, 0, 0.3);
+      box-shadow: 0 12px 24px rgba(255, 152, 0, 0.26);
+      color: #2f1b00;
+      font-weight: 800;
+      transition: transform 0.16s ease;
     }
 
     .call-btn:hover,
     .hero-cta:hover,
-    .final-cta-btn:hover,
+    .final-cta:hover,
     .sticky-call:hover {
       transform: translateY(-1px);
     }
 
-    .call-btn { padding: 0.72rem 1rem; font-size: 0.92rem; }
+    .call-btn { min-height: 46px; padding: 0.66rem 0.95rem; font-size: 0.92rem; }
 
     .hero {
-      padding: clamp(1.3rem, 3vw, 2.2rem) 0 clamp(2rem, 5vw, 3.8rem);
+      padding: clamp(1.5rem, 4vw, 3rem) 0 clamp(2.2rem, 6vw, 4rem);
+      position: relative;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+      mask-image: radial-gradient(circle at 50% 35%, black 28%, transparent 76%);
+      opacity: 0.3;
+      pointer-events: none;
     }
 
     .hero-grid {
       display: grid;
-      gap: 1rem;
-      grid-template-columns: 1.03fr 0.97fr;
-      align-items: stretch;
-    }
-
-    .hero-copy {
-      padding: clamp(1.1rem, 3.2vw, 2.2rem);
-      background: linear-gradient(160deg, rgba(17, 26, 45, 0.92), rgba(12, 18, 31, 0.98));
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      display: grid;
-      align-content: center;
+      grid-template-columns: 1.02fr 0.98fr;
+      gap: clamp(1rem, 2.8vw, 2rem);
+      align-items: center;
+      position: relative;
+      z-index: 1;
     }
 
     h1 {
       margin: 0;
-      font-size: clamp(1.95rem, 7.2vw, 3.6rem);
-      line-height: 0.98;
-      letter-spacing: -0.015em;
-      max-width: 12ch;
+      font-size: clamp(2rem, 7.2vw, 4rem);
+      line-height: 0.95;
+      letter-spacing: -0.03em;
+      max-width: 10ch;
     }
 
     .hero-sub {
-      margin: 0.95rem 0 1.1rem;
-      color: #d9e2f4;
-      max-width: 52ch;
-      font-size: clamp(0.98rem, 2.8vw, 1.13rem);
+      margin: 1rem 0 1.1rem;
+      color: #d6def0;
+      font-size: clamp(1rem, 2.4vw, 1.15rem);
+      max-width: 45ch;
     }
 
-    .trust-points {
-      margin: 0 0 1.3rem;
+    .trust-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 0 0 1.1rem;
       padding: 0;
       list-style: none;
-      display: grid;
-      gap: 0.54rem;
-      max-width: 420px;
     }
 
-    .trust-points li {
-      display: flex;
-      gap: 0.55rem;
-      align-items: center;
-      font-size: 0.95rem;
-      font-weight: 650;
+    .trust-row li {
+      padding: 0.38rem 0.66rem;
+      border-radius: 999px;
+      border: 1px solid rgba(160, 187, 235, 0.34);
+      color: #eaf0ff;
+      font-size: 0.82rem;
+      font-weight: 680;
+      background: rgba(16, 24, 42, 0.65);
     }
 
-    .trust-points li::before {
-      content: "";
-      width: 10px;
-      height: 10px;
-      border-radius: 2px;
-      background: var(--ok);
-      flex-shrink: 0;
-    }
-
-    .hero-cta { padding: 0.84rem 1.55rem; width: fit-content; font-size: 1.07rem; }
+    .hero-cta { min-height: 52px; padding: 0.75rem 1.25rem; font-size: 1rem; }
 
     .hero-note {
       margin: 0.6rem 0 0;
-      color: #bfcae4;
-      font-size: 0.9rem;
+      color: #adb9d5;
+      font-size: 0.84rem;
       font-weight: 600;
     }
 
-    .hero-visual {
-      position: relative;
+    .hero-graphic {
+      background: linear-gradient(165deg, rgba(15, 24, 42, 0.95), rgba(10, 15, 30, 0.98));
+      border: 1px solid var(--line);
       border-radius: calc(var(--radius) + 4px);
-      overflow: hidden;
-      border: 1px solid rgba(255, 255, 255, 0.16);
-      min-height: 420px;
       box-shadow: var(--shadow);
+      min-height: clamp(300px, 52vw, 440px);
+      position: relative;
+      overflow: hidden;
       isolation: isolate;
     }
 
-    .hero-visual img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      filter: saturate(1.06) contrast(1.07);
-    }
-
-    .hero-visual::after {
+    .hero-graphic::before,
+    .hero-graphic::after {
       content: "";
       position: absolute;
-      inset: 0;
-      background:
-        linear-gradient(180deg, rgba(7, 10, 18, 0.2) 0%, rgba(7, 10, 18, 0.66) 100%),
-        radial-gradient(circle at 12% 12%, rgba(255, 179, 0, 0.22), transparent 40%);
-      z-index: 1;
+      border-radius: 50%;
+      filter: blur(28px);
+      z-index: 0;
     }
 
-    .live-panel {
+    .hero-graphic::before {
+      width: 190px;
+      height: 190px;
+      right: -30px;
+      top: -24px;
+      background: rgba(71, 123, 255, 0.45);
+    }
+
+    .hero-graphic::after {
+      width: 160px;
+      height: 160px;
+      left: -25px;
+      bottom: -48px;
+      background: rgba(255, 169, 20, 0.28);
+    }
+
+    .scene {
       position: absolute;
-      inset: auto 0.8rem 0.8rem 0.8rem;
-      z-index: 2;
-      background: rgba(9, 13, 24, 0.86);
+      inset: 1rem;
+      z-index: 1;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(171, 194, 234, 0.24);
+      background:
+        linear-gradient(180deg, rgba(27, 44, 74, 0.9), rgba(14, 20, 34, 0.96) 66%),
+        radial-gradient(circle at 15% 10%, rgba(255, 176, 48, 0.14), transparent 42%);
+    }
+
+    .road {
+      position: absolute;
+      bottom: 18%;
+      left: -8%;
+      width: 118%;
+      height: 22%;
+      border-radius: 18px;
+      transform: rotate(-3deg);
+      background: linear-gradient(180deg, #1b273d, #121a2a);
+      border: 1px solid rgba(200, 217, 245, 0.15);
+    }
+
+    .route-line {
+      position: absolute;
+      width: 140%;
+      left: -20%;
+      top: 20%;
+      height: 44%;
+      border-radius: 50%;
+      border: 1px dashed rgba(141, 171, 224, 0.26);
+      transform: rotate(-8deg);
+    }
+
+    .truck {
+      position: absolute;
+      right: 18%;
+      bottom: 27%;
+      width: 190px;
+      height: 84px;
+      filter: drop-shadow(0 12px 18px rgba(0, 0, 0, 0.45));
+    }
+
+    .truck-bed,
+    .truck-cab,
+    .car {
+      position: absolute;
+      border-radius: 8px;
       border: 1px solid rgba(255, 255, 255, 0.2);
-      border-radius: 13px;
-      padding: 0.72rem 0.78rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 1rem;
-      font-size: 0.89rem;
     }
 
-    .live-panel strong { font-size: 0.94rem; }
-
-    section {
-      padding: clamp(2.2rem, 5vw, 3.6rem) 0;
+    .truck-bed {
+      left: 0;
+      bottom: 16px;
+      width: 126px;
+      height: 28px;
+      background: linear-gradient(180deg, #2d4f89, #1f3964);
     }
 
-    h2 {
-      margin: 0 0 1rem;
-      font-size: clamp(1.35rem, 4.9vw, 2.1rem);
-      line-height: 1.1;
-      letter-spacing: -0.01em;
+    .truck-cab {
+      right: 0;
+      bottom: 16px;
+      width: 62px;
+      height: 38px;
+      background: linear-gradient(180deg, #ffbf33, #d18809);
+      border-color: rgba(59, 31, 0, 0.36);
     }
 
-    .problem-grid {
-      display: grid;
-      grid-template-columns: repeat(12, 1fr);
-      gap: 0.8rem;
+    .truck-cab::after {
+      content: "";
+      position: absolute;
+      width: 23px;
+      height: 13px;
+      border-radius: 4px;
+      background: rgba(38, 61, 96, 0.72);
+      right: 7px;
+      top: 8px;
     }
 
-    .problem-card {
-      grid-column: span 6;
-      border-radius: 14px;
-      border: 1px solid var(--line);
-      background: linear-gradient(180deg, #131d32 0%, #0f1829 100%);
-      padding: 0.95rem;
-      display: grid;
-      gap: 0.4rem;
-      min-height: 118px;
+    .car {
+      left: 10px;
+      bottom: 42px;
+      width: 84px;
+      height: 20px;
+      background: linear-gradient(180deg, #dae4f9, #8ca0c9);
     }
 
-    .problem-card:nth-child(3n) {
-      background: linear-gradient(180deg, #1c2237 0%, #111a2d 100%);
+    .wheel {
+      position: absolute;
+      bottom: 0;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      border: 2px solid rgba(26, 35, 52, 0.9);
+      background: #0f1727;
     }
 
-    .problem-tag {
-      width: fit-content;
+    .w1 { left: 22px; }
+    .w2 { left: 93px; }
+    .w3 { right: 22px; }
+
+    .pin {
+      position: absolute;
+      left: 18%;
+      top: 23%;
+      width: 22px;
+      height: 22px;
+      border-radius: 50% 50% 50% 0;
+      transform: rotate(-45deg);
+      background: linear-gradient(180deg, #ffbf2f, #ff9700);
+      box-shadow: 0 0 0 6px rgba(255, 183, 34, 0.15);
+    }
+
+    .pin::after {
+      content: "";
+      position: absolute;
+      inset: 6px;
+      border-radius: 50%;
+      transform: rotate(45deg);
+      background: #1c2e4d;
+    }
+
+    .scene-label {
+      position: absolute;
+      right: 0.75rem;
+      top: 0.75rem;
+      padding: 0.36rem 0.62rem;
       border-radius: 999px;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      color: #d5dff3;
-      padding: 0.15rem 0.56rem;
-      font-size: 0.72rem;
+      font-size: 0.74rem;
       font-weight: 700;
       letter-spacing: 0.04em;
       text-transform: uppercase;
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      background: rgba(10, 16, 30, 0.7);
     }
 
-    .problem-card h3 {
+    .section-title {
+      margin: 0 0 1rem;
+      font-size: clamp(1.4rem, 4.7vw, 2.1rem);
+      line-height: 1.02;
+      letter-spacing: -0.02em;
+    }
+
+    section { padding: clamp(2.1rem, 6vw, 4rem) 0; }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.65rem;
+    }
+
+    .service-tile {
+      display: grid;
+      gap: 0.22rem;
+      padding: 0.82rem 0.9rem;
+      border: 1px solid rgba(169, 190, 229, 0.25);
+      border-radius: 14px;
+      background: linear-gradient(145deg, rgba(15, 23, 41, 0.92), rgba(9, 15, 27, 0.82));
+    }
+
+    .service-tag {
+      color: #99abd0;
+      text-transform: uppercase;
+      font-size: 0.68rem;
+      font-weight: 760;
+      letter-spacing: 0.08em;
+    }
+
+    .service-tile h3 {
       margin: 0;
-      font-size: 1.03rem;
+      font-size: 1rem;
       line-height: 1.2;
     }
 
-    .problem-card p {
+    .service-tile p {
       margin: 0;
-      color: #bcc8e2;
-      font-size: 0.91rem;
+      color: #b8c3dd;
+      font-size: 0.83rem;
     }
 
-    .why-layout {
-      display: grid;
-      gap: 0.95rem;
-      grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
-      align-items: start;
+    .benefits {
+      position: relative;
+      overflow: hidden;
     }
 
-    .why-main {
-      background: linear-gradient(165deg, rgba(15, 20, 33, 0.98), rgba(18, 28, 48, 0.95));
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      padding: 1.1rem;
-    }
-
-    .why-main ul {
-      margin: 0;
-      padding: 0;
-      list-style: none;
-      display: grid;
-      gap: 0.58rem;
-    }
-
-    .why-main li {
-      display: grid;
-      grid-template-columns: auto 1fr;
-      gap: 0.62rem;
-      align-items: start;
-      background: rgba(255, 255, 255, 0.03);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 11px;
-      padding: 0.64rem;
-      font-weight: 640;
-    }
-
-    .why-main li::before {
-      content: "→";
-      color: var(--accent);
-      font-weight: 800;
-    }
-
-    .why-side {
-      display: grid;
-      gap: 0.76rem;
-    }
-
-    .why-chip {
-      border-radius: 12px;
-      border: 1px solid rgba(255, 255, 255, 0.16);
-      background: linear-gradient(180deg, #10172a, #0c1323);
-      padding: 0.88rem;
-      font-weight: 650;
-    }
-
-    .coverage-band {
+    .benefits::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(100deg, rgba(12, 19, 34, 0.84), rgba(9, 14, 24, 0.96));
       border-top: 1px solid rgba(255, 255, 255, 0.08);
       border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-      background: linear-gradient(95deg, #0d1424, #111c32 50%, #10172b);
     }
 
-    .coverage-band p {
-      margin: 0 0 0.9rem;
-      color: #c7d2ea;
-      max-width: 70ch;
+    .benefit-layout {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      gap: 0.7rem;
+      grid-template-columns: 1.15fr 0.85fr;
+      align-items: start;
     }
 
-    .area-chips {
+    .benefit-stack { display: grid; gap: 0.58rem; }
+
+    .benefit-strip {
       display: flex;
-      flex-wrap: wrap;
-      gap: 0.55rem;
-      margin: 0;
-      padding: 0;
-      list-style: none;
+      justify-content: space-between;
+      gap: 1rem;
+      border-radius: 12px;
+      border: 1px solid rgba(165, 190, 236, 0.22);
+      padding: 0.72rem 0.82rem;
+      background: rgba(13, 21, 37, 0.76);
+      font-weight: 680;
     }
 
-    .area-chips li {
-      border-radius: 999px;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      padding: 0.4rem 0.68rem;
-      font-size: 0.88rem;
-      color: #eef3ff;
-      background: rgba(5, 9, 18, 0.34);
+    .benefit-strip span { color: #f2f6ff; }
+
+    .benefit-strip em {
+      color: #ffc54e;
+      font-style: normal;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
     }
 
-    .process-line {
-      display: grid;
-      gap: 0.9rem;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-
-    .process-step {
-      border-radius: 13px;
-      border: 1px solid var(--line);
-      background: linear-gradient(180deg, #10182a, #0d1525);
+    .benefit-side {
+      border: 1px solid rgba(165, 190, 236, 0.2);
+      border-radius: 14px;
       padding: 0.95rem;
+      background: linear-gradient(165deg, rgba(15, 23, 40, 0.94), rgba(8, 13, 25, 0.92));
       display: grid;
-      gap: 0.45rem;
-      align-content: start;
+      gap: 0.5rem;
+    }
+
+    .benefit-side div {
+      border-bottom: 1px dashed rgba(164, 186, 226, 0.25);
+      padding-bottom: 0.5rem;
+      font-weight: 650;
+      color: #dce6fb;
+    }
+
+    .benefit-side div:last-child { border-bottom: 0; padding-bottom: 0; }
+
+    .coverage {
       position: relative;
     }
 
-    .process-step:not(:last-child)::after {
+    .coverage-map {
+      padding: 1rem;
+      border-radius: var(--radius);
+      border: 1px solid rgba(165, 190, 236, 0.25);
+      background:
+        linear-gradient(150deg, rgba(13, 21, 37, 0.94), rgba(9, 14, 27, 0.92)),
+        repeating-linear-gradient(145deg, transparent 0 16px, rgba(130, 157, 203, 0.06) 16px 17px);
+      box-shadow: var(--shadow);
+    }
+
+    .region-row,
+    .area-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.52rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .region-row { margin-bottom: 0.7rem; }
+
+    .region-row li,
+    .area-row li {
+      border-radius: 999px;
+      border: 1px solid rgba(177, 202, 243, 0.28);
+      background: rgba(7, 13, 24, 0.62);
+      padding: 0.38rem 0.7rem;
+    }
+
+    .region-row li {
+      font-size: 0.84rem;
+      font-weight: 720;
+      color: #f4f7ff;
+    }
+
+    .area-row li {
+      font-size: 0.77rem;
+      color: #becbe6;
+    }
+
+    .process {
+      padding-top: clamp(2.1rem, 5vw, 3.4rem);
+    }
+
+    .timeline {
+      display: grid;
+      gap: 0.8rem;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      position: relative;
+    }
+
+    .timeline::before {
       content: "";
       position: absolute;
-      right: -0.5rem;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 10px;
-      height: 2px;
-      background: rgba(255, 255, 255, 0.28);
+      left: 5%;
+      right: 5%;
+      top: 20px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(164, 188, 235, 0.5), transparent);
+    }
+
+    .step {
+      position: relative;
+      padding-top: 0.1rem;
+      display: grid;
+      gap: 0.4rem;
     }
 
     .step-no {
-      width: 30px;
-      height: 30px;
-      border-radius: 999px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 199, 87, 0.4);
+      background: linear-gradient(180deg, #ffbf2e, #f09300);
+      color: #261600;
+      font-weight: 900;
       display: grid;
       place-items: center;
-      font-size: 0.82rem;
-      font-weight: 900;
-      color: #261701;
-      background: var(--accent);
+      z-index: 1;
     }
 
-    .process-step p { margin: 0; color: #d6e0f4; }
+    .step h3 {
+      margin: 0;
+      font-size: 1.03rem;
+    }
 
-    .final-block {
-      border-radius: calc(var(--radius) + 4px);
-      border: 1px solid rgba(255, 255, 255, 0.16);
-      background:
-        radial-gradient(circle at 10% 0%, rgba(255, 179, 0, 0.24), transparent 38%),
-        linear-gradient(150deg, #101726, #0a0f1d 65%);
-      box-shadow: var(--shadow);
-      padding: clamp(1.3rem, 4vw, 2rem);
+    .step p {
+      margin: 0;
+      color: #b7c5e0;
+      max-width: 30ch;
+      font-size: 0.9rem;
+    }
+
+    .final {
       text-align: center;
+      border-radius: calc(var(--radius) + 6px);
+      border: 1px solid rgba(177, 203, 243, 0.24);
+      background:
+        radial-gradient(circle at 50% -15%, rgba(255, 186, 34, 0.21), transparent 45%),
+        linear-gradient(145deg, rgba(14, 23, 42, 0.95), rgba(7, 11, 20, 0.96));
+      box-shadow: var(--shadow);
+      padding: clamp(1.2rem, 4.5vw, 2rem);
     }
 
-    .final-block h2 { margin-bottom: 0.7rem; }
-
-    .final-block p {
-      margin: 0 auto 1rem;
-      color: #c2cee8;
-      max-width: 48ch;
+    .final h2 {
+      margin: 0;
+      font-size: clamp(1.45rem, 5.5vw, 2.2rem);
+      letter-spacing: -0.02em;
+      line-height: 1.05;
     }
 
-    .final-cta-btn {
-      min-width: min(100%, 340px);
-      padding: 0.92rem 1.3rem;
-      font-size: 1.11rem;
+    .final p {
+      margin: 0.65rem auto 1rem;
+      color: #c3cfe8;
+      max-width: 40ch;
+      font-size: 0.95rem;
     }
 
-    .final-phone {
-      margin-top: 0.72rem;
-      color: #e9f0ff;
+    .final-cta {
+      min-height: 52px;
+      min-width: min(100%, 335px);
+      font-size: 1.04rem;
+      padding: 0.75rem 1.25rem;
+    }
+
+    .phone-line {
+      margin-top: 0.62rem;
+      color: #f4f8ff;
       font-weight: 760;
-      letter-spacing: 0.02em;
+      letter-spacing: 0.03em;
+      font-size: 0.95rem;
     }
 
     footer {
-      padding: 1rem 0 6.4rem;
       text-align: center;
-      color: #aeb9d4;
-      font-size: 0.88rem;
+      padding: 0.95rem 0 6rem;
+      color: #8e9ebf;
+      font-size: 0.79rem;
     }
 
-    .sticky-call-wrap {
+    .sticky-wrap {
       position: fixed;
       left: 0;
       right: 0;
       bottom: 0;
       z-index: 1000;
-      padding: 0.52rem 0.58rem;
-      border-top: 1px solid rgba(255, 255, 255, 0.18);
-      background: rgba(7, 10, 18, 0.95);
-      backdrop-filter: blur(10px);
+      padding: 0.45rem 0.55rem;
+      border-top: 1px solid rgba(188, 209, 244, 0.2);
+      background: rgba(6, 10, 18, 0.88);
+      backdrop-filter: blur(9px);
     }
 
     .sticky-call {
       width: 100%;
-      min-height: 54px;
-      font-size: 1.02rem;
+      min-height: 48px;
+      border-radius: 14px;
+      font-size: 0.98rem;
     }
 
     @media (max-width: 980px) {
       .hero-grid,
-      .why-layout,
-      .process-line {
+      .benefit-layout,
+      .timeline {
         grid-template-columns: 1fr;
       }
 
-      .hero-visual { min-height: 300px; }
-      .process-step:not(:last-child)::after { display: none; }
+      .timeline::before { display: none; }
+      .hero-graphic { min-height: 300px; }
+      .truck { right: 10%; transform: scale(0.88); }
     }
 
-    @media (max-width: 700px) {
-      .problem-card { grid-column: span 12; }
-      .urgency-strip .container { min-height: 34px; font-size: 0.8rem; }
-      .call-btn { font-size: 0.86rem; padding-inline: 0.8rem; }
+    @media (max-width: 760px) {
+      .services-grid { grid-template-columns: 1fr; }
       .header-inner { min-height: 66px; }
+      .call-btn { padding-inline: 0.8rem; font-size: 0.84rem; }
+      .top-alert { font-size: 0.76rem; padding: 0.35rem 0.45rem; }
     }
 
     @media (min-width: 900px) {
-      .sticky-call-wrap { display: none; }
+      .sticky-wrap { display: none; }
       footer { padding-bottom: 1.1rem; }
     }
   </style>
 </head>
 <body>
-  <div class="urgency-strip" role="status" aria-label="24/7 recovery alert">
-    <div class="container">
-      <span class="pulse-dot" aria-hidden="true"></span>
-      <span>Broken Down in London? Call Recovero Now · 24/7 Vehicle Recovery Across London</span>
-    </div>
-  </div>
+  <div class="top-alert">Broken Down in London? Call Recovero Now · 24/7</div>
 
   <header class="header" aria-label="Recovero header">
     <div class="container header-inner">
-      <div class="logo" aria-label="Recovero logo">Recover<span>o</span></div>
-      <a class="call-btn" href="tel:07366302341" aria-label="Call Recovero now">CALL NOW · 07366 302341</a>
+      <div class="logo">Recover<span>o</span></div>
+      <a class="call-btn" href="tel:07366302341" aria-label="Call Recovero now">📞 CALL NOW · 07366 302341</a>
     </div>
   </header>
 
   <main>
     <section class="hero" aria-label="Vehicle Recovery London hero">
       <div class="container hero-grid">
-        <div class="hero-copy">
-          <h1>Vehicle Recovery London. Fast. Direct. 24/7.</h1>
-          <p class="hero-sub">Fast vehicle recovery for breakdowns, roadside issues, non-runners and urgent callouts across London.</p>
-          <ul class="trust-points" aria-label="Key trust points">
-            <li>24/7 London coverage</li>
-            <li>Cars, vans and non-runners</li>
+        <div>
+          <h1>Vehicle Recovery London Fast. Direct. 24/7.</h1>
+          <p class="hero-sub">Urgent recovery for cars, vans and non-runners across London.</p>
+          <ul class="trust-row" aria-label="Key trust points">
             <li>Fast call handling</li>
+            <li>London-wide coverage</li>
+            <li>Cars, vans, non-runners</li>
           </ul>
-          <a class="hero-cta" href="tel:07366302341" aria-label="Call Recovero now for fast vehicle recovery in London">CALL NOW</a>
-          <p class="hero-note">Speak to Recovero now for fast vehicle recovery in London.</p>
+          <a class="hero-cta" href="tel:07366302341" aria-label="Call Recovero now for fast vehicle recovery in London">📞 Call Recovero Now</a>
+          <p class="hero-note">One quick call. Clear next steps.</p>
         </div>
 
-        <aside class="hero-visual" aria-label="Recovery support visual panel">
-          <img src="images/recovery-truck.jpg" alt="Recovery truck assisting a vehicle in an urban setting" />
-          <div class="live-panel">
-            <strong>London recovery support</strong>
-            <span>Cars · Vans · Non-runners</span>
+        <aside class="hero-graphic" aria-label="Illustrated recovery scene in London">
+          <div class="scene">
+            <div class="scene-label">London live callout</div>
+            <div class="route-line"></div>
+            <div class="pin"></div>
+            <div class="road"></div>
+            <div class="truck">
+              <div class="car"></div>
+              <div class="truck-bed"></div>
+              <div class="truck-cab"></div>
+              <div class="wheel w1"></div>
+              <div class="wheel w2"></div>
+              <div class="wheel w3"></div>
+            </div>
           </div>
         </aside>
       </div>
     </section>
 
-    <section aria-labelledby="problem-title">
+    <section aria-labelledby="services-title">
       <div class="container">
-        <h2 id="problem-title">What You Need Help With Right Now</h2>
-        <div class="problem-grid">
-          <article class="problem-card">
-            <span class="problem-tag">Breakdown</span>
-            <h3>Broken down vehicle</h3>
-            <p>Stuck roadside or at home and need urgent recovery.</p>
-          </article>
-          <article class="problem-card">
-            <span class="problem-tag">Transport</span>
-            <h3>Non-runner transport</h3>
-            <p>Vehicle will not start and needs moving safely.</p>
-          </article>
-          <article class="problem-card">
-            <span class="problem-tag">Roadside</span>
-            <h3>Roadside recovery</h3>
-            <p>Quick support when your journey stops unexpectedly.</p>
-          </article>
-          <article class="problem-card">
-            <span class="problem-tag">Battery</span>
-            <h3>Flat battery / jump start</h3>
-            <p>No ignition power and need immediate help to move.</p>
-          </article>
-          <article class="problem-card">
-            <span class="problem-tag">Fuel</span>
-            <h3>Wrong fuel recovery</h3>
-            <p>Misfuelled vehicle assistance with fast next steps.</p>
-          </article>
-          <article class="problem-card">
-            <span class="problem-tag">Accident</span>
-            <h3>Accident recovery</h3>
-            <p>Post-incident vehicle movement without delays.</p>
-          </article>
-          <article class="problem-card">
-            <span class="problem-tag">Towing</span>
-            <h3>Car and van towing</h3>
-            <p>Need your car or van recovered across London.</p>
-          </article>
+        <h2 id="services-title" class="section-title">Services at a Glance</h2>
+        <div class="services-grid">
+          <article class="service-tile"><span class="service-tag">Service</span><h3>Breakdown recovery</h3><p>Fast pickup when your vehicle stops.</p></article>
+          <article class="service-tile"><span class="service-tag">Service</span><h3>Non-runner transport</h3><p>Safe transport for vehicles that will not start.</p></article>
+          <article class="service-tile"><span class="service-tag">Service</span><h3>Roadside recovery</h3><p>Help where you are, day or night.</p></article>
+          <article class="service-tile"><span class="service-tag">Service</span><h3>Flat battery / jump start</h3><p>Quick support when ignition power is gone.</p></article>
+          <article class="service-tile"><span class="service-tag">Service</span><h3>Wrong fuel recovery</h3><p>Misfuelled? Get rapid recovery arranged.</p></article>
+          <article class="service-tile"><span class="service-tag">Service</span><h3>Accident recovery</h3><p>Prompt vehicle movement after incidents.</p></article>
+          <article class="service-tile"><span class="service-tag">Service</span><h3>Car and van towing</h3><p>Direct towing support across London.</p></article>
         </div>
       </div>
     </section>
 
-    <section aria-labelledby="why-title">
-      <div class="container why-layout">
-        <div class="why-main">
-          <h2 id="why-title">Why Drivers Call Recovero</h2>
-          <ul>
-            <li>Fast response across London with urgent callout focus.</li>
-            <li>Clear communication from call to recovery.</li>
-            <li>Cars and vans covered, including non-runners.</li>
-            <li>24/7 availability for day, night and weekend breakdowns.</li>
-          </ul>
+    <section class="benefits" aria-labelledby="why-title">
+      <div class="container benefit-layout">
+        <div>
+          <h2 id="why-title" class="section-title">Why Drivers Choose Recovero</h2>
+          <div class="benefit-stack">
+            <div class="benefit-strip"><span>Fast call handling</span><em>Immediate</em></div>
+            <div class="benefit-strip"><span>London-wide coverage</span><em>Always on</em></div>
+            <div class="benefit-strip"><span>Cars, vans and non-runners</span><em>Flexible</em></div>
+            <div class="benefit-strip"><span>24/7 urgent callouts</span><em>Day & night</em></div>
+          </div>
         </div>
-        <div class="why-side" aria-label="Recovery strengths">
-          <div class="why-chip">Local London coverage, not vague national messaging.</div>
-          <div class="why-chip">Straightforward service designed for stressful moments.</div>
-          <div class="why-chip">Built for fast phone response when time matters.</div>
-        </div>
+        <aside class="benefit-side" aria-label="Additional Recovero benefits">
+          <div>Clear next steps</div>
+          <div>Straightforward service</div>
+          <div>Built for stressful moments</div>
+        </aside>
       </div>
     </section>
 
-    <section class="coverage-band" aria-labelledby="coverage-title">
-      <div class="container">
-        <h2 id="coverage-title">London Coverage</h2>
-        <p>Recovero supports callouts across Central, North, South, East, West and Greater London, including surrounding urban routes.</p>
-        <ul class="area-chips" aria-label="Areas covered">
+    <section class="coverage" aria-labelledby="coverage-title">
+      <div class="container coverage-map">
+        <h2 id="coverage-title" class="section-title">London Coverage</h2>
+        <ul class="region-row" aria-label="Main London coverage regions">
           <li>Central London</li>
           <li>North London</li>
           <li>South London</li>
           <li>East London</li>
           <li>West London</li>
           <li>Greater London</li>
+        </ul>
+        <ul class="area-row" aria-label="Additional areas">
           <li>Croydon</li>
           <li>Wembley</li>
-          <li>Ilford</li>
-          <li>Romford</li>
-          <li>Enfield</li>
           <li>Stratford</li>
+          <li>Ilford</li>
           <li>Ealing</li>
           <li>Hounslow</li>
-          <li>Barking</li>
+          <li>Enfield</li>
           <li>Camden</li>
           <li>Greenwich</li>
           <li>Hackney</li>
@@ -643,42 +748,43 @@
       </div>
     </section>
 
-    <section aria-labelledby="process-title">
+    <section class="process" aria-labelledby="process-title">
       <div class="container">
-        <h2 id="process-title">3 Fast Steps</h2>
-        <div class="process-line" role="list">
-          <article class="process-step" role="listitem">
+        <h2 id="process-title" class="section-title">3-Step Recovery Process</h2>
+        <div class="timeline" role="list">
+          <article class="step" role="listitem">
             <span class="step-no">1</span>
-            <p><strong>Call Recovero</strong><br/>Tap call and speak to us right away.</p>
+            <h3>Call Recovero</h3>
+            <p>Tap to speak to us straight away.</p>
           </article>
-          <article class="process-step" role="listitem">
+          <article class="step" role="listitem">
             <span class="step-no">2</span>
-            <p><strong>Share location + issue</strong><br/>Tell us where you are and what happened.</p>
+            <h3>Tell us location + issue</h3>
+            <p>Share where you are and what happened.</p>
           </article>
-          <article class="process-step" role="listitem">
+          <article class="step" role="listitem">
             <span class="step-no">3</span>
-            <p><strong>Get recovery arranged fast</strong><br/>We move quickly to support your next step.</p>
+            <h3>Get recovery arranged fast</h3>
+            <p>We move quickly and guide the next step.</p>
           </article>
         </div>
       </div>
     </section>
 
     <section aria-label="Final call to action">
-      <div class="container final-block">
-        <h2>Need Vehicle Recovery in London Right Now?</h2>
-        <p>Stuck roadside, at work, or at home? Call Recovero now and get urgent London vehicle recovery support.</p>
-        <a class="final-cta-btn" href="tel:07366302341" aria-label="Call Recovero now">CALL NOW</a>
-        <div class="final-phone">07366 302341</div>
+      <div class="container final">
+        <h2>Need Help Right Now?</h2>
+        <p>Call Recovero for fast London vehicle recovery.</p>
+        <a class="final-cta" href="tel:07366302341" aria-label="Call Recovero now">📞 CALL NOW</a>
+        <div class="phone-line">07366 302341</div>
       </div>
     </section>
   </main>
 
-  <footer>
-    Recovero · London vehicle recovery · 24/7
-  </footer>
+  <footer>Recovero · London vehicle recovery · 24/7</footer>
 
-  <div class="sticky-call-wrap" aria-label="Mobile sticky call bar">
-    <a class="sticky-call" href="tel:07366302341" aria-label="Tap to call Recovero now">📞 CALL NOW · RECOVERO</a>
+  <div class="sticky-wrap" aria-label="Mobile sticky call button">
+    <a class="sticky-call" href="tel:07366302341" aria-label="Tap to call Recovero now">📞 Call Now · Recovero London</a>
   </div>
 </body>
 </html>
